@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTests", "NUnitTests\NU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTests", "XUnitTests\XUnitTests.csproj", "{F4EE4471-8E97-428E-A25F-09A838712461}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{34E5995E-FC6C-449B-8FCA-EAE493025B81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,7 @@ Global
 		SolutionGuid = {B0B94980-5385-4EC6-A0EE-C9A191DDFC05}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F4EE4471-8E97-428E-A25F-09A838712461} = {34E5995E-FC6C-449B-8FCA-EAE493025B81}
+		{AD731173-5BFC-4021-B834-AC391BBFDC40} = {34E5995E-FC6C-449B-8FCA-EAE493025B81}
 	EndGlobalSection
 EndGlobal
