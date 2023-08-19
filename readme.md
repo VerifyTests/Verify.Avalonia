@@ -8,7 +8,7 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 
 **Currently only supported in XUnit since [AvaloniaTestAttribute results in incorrect TestContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
 
-Leverages [Headless Testing](https://docs.avaloniaui.net/docs/next/concepts/headless).
+Leverages [Avalonia Headless Testing](https://docs.avaloniaui.net/docs/next/concepts/headless).
 
 See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-xunit) and [Headless Testing with NUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-nunit) for more information.
 
