@@ -19,7 +19,7 @@
   
   <ItemGroup>
     <!-- We need it so tests can use generated controls by name -->
-    <InternalsVisibleTo Include="TestableApp.Headless.NUnit" />
-    <InternalsVisibleTo Include="TestableApp.Headless.XUnit" />
+    <InternalsVisibleTo Include="NUnitTests" />
+    <InternalsVisibleTo Include="XUnitTests" />
   </ItemGroup>
 </Project>
