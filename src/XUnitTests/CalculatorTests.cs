@@ -5,6 +5,7 @@ using TestableApp.Views;
 
 namespace TestableApp.Headless.XUnit;
 
+[UsesVerify]
 public class CalculatorTests
 {
     [AvaloniaFact]
