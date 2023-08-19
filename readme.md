@@ -29,14 +29,7 @@ public static void Init() =>
 public static void Init() =>
     VerifyAvalonia.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable-1' title='Start of snippet'>anchor</a></sup>
-<a id='snippet-enable-2'></a>
-```cs
-[ModuleInitializer]
-public static void Init() =>
-    VerifyAvalonia.Initialize();
-```
-<sup><a href='/src/XUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable-2' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:
