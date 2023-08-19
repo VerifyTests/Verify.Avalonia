@@ -120,8 +120,3 @@ public class CalculatorTests
 [Cannot_Divide_By_Zero.verified.verified.png](/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png):
 
 <img src="/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png" width="200px">
-
-
-## Icon
-
-[Gem](https://thenounproject.com/term/gem/2247823/) designed by [Adnen Kadri](https://thenounproject.com/adnen.kadri/) from [The Noun Project](https://thenounproject.com).
