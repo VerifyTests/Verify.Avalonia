@@ -6,32 +6,24 @@ namespace TestableApp.ViewModels;
 public partial class MainWindowViewModel : ObservableObject
 {
     [ObservableProperty]
-    private double? _firstOperand, _secondOperand;
+    double? _firstOperand, _secondOperand;
 
     [ObservableProperty]
-    private string? _result;
+    string? _result;
 
     [RelayCommand]
-    private void Add()
-    {
+    void Add() =>
         Result = (FirstOperand + SecondOperand)?.ToString();
-    }
-    
+
     [RelayCommand]
-    private void Subtract()
-    {
+    void Subtract() =>
         Result = (FirstOperand - SecondOperand)?.ToString();
-    }
-    
+
     [RelayCommand]
-    private void Multiply()
-    {
+    void Multiply() =>
         Result = (FirstOperand * SecondOperand)?.ToString();
-    }
-    
+
     [RelayCommand]
-    private void Divide()
-    {
+    void Divide() =>
         Result = SecondOperand == 0 ? "Cannot divide by zero!" : (FirstOperand / SecondOperand)?.ToString();
-    }
 }
