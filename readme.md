@@ -4,7 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/5ywtfx5oc257d4tr?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-avalonia)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Avalonia.svg)](https://www.nuget.org/packages/Verify.Avalonia/)
 
-Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Avalonia UIs.
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of [Avalonia UIs](https://avaloniaui.net/).
 
 **Currently only supported in XUnit since [AvaloniaTestAttribute results in incorrect TestContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
 
