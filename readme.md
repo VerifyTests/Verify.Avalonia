@@ -6,7 +6,7 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Avalonia UIs.
 
-**Currently only supported in XUnit since [[AvaloniaTest] results in incorrect TestContext.CurrentContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
+**Currently only supported in XUnit since [AvaloniaTestAttribute results in incorrect TestContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
 
 Leverages [Headless Testing](https://docs.avaloniaui.net/docs/next/concepts/headless).
 
