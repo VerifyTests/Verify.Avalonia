@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using VerifyTests;
-
-public static class ModuleInit
+﻿public static class ModuleInit
 {
     #region Enable
 

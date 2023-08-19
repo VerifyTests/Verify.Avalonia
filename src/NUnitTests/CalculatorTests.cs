@@ -1,7 +1,6 @@
 using Avalonia.Headless;
 using Avalonia.Headless.NUnit;
 using Avalonia.Input;
-using NUnit.Framework;
 using TestableApp.ViewModels;
 using TestableApp.Views;
 

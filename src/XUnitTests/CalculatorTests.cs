@@ -3,7 +3,6 @@ using Avalonia.Headless.XUnit;
 using Avalonia.Input;
 using TestableApp.ViewModels;
 using TestableApp.Views;
-using Xunit;
 
 namespace TestableApp.Headless.XUnit;
 
