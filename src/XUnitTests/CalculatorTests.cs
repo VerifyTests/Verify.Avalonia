@@ -1,10 +1,3 @@
-using Avalonia.Headless.XUnit;
-using Avalonia.Input;
-using TestableApp.ViewModels;
-using TestableApp.Views;
-
-namespace TestableApp.Headless.XUnit;
-
 [UsesVerify]
 public class CalculatorTests
 {

@@ -6,6 +6,11 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Avalonia UIs.
 
+**Currently only supported in XUnit since [[AvaloniaTest] results in incorrect TestContext.CurrentContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
+
+Leverages [Headless Testing](https://docs.avaloniaui.net/docs/next/concepts/headless).
+
+See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-xunit) and [Headless Testing with NUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-nunit) for more information.
 
 
 ## NuGet package
@@ -47,19 +52,13 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
 
 ## Test
 
-<!-- snippet: NUnitTests/CalculatorTests.cs -->
-<a id='snippet-NUnitTests/CalculatorTests.cs'></a>
+<!-- snippet: XunitTests/CalculatorTests.cs -->
+<a id='snippet-XunitTests/CalculatorTests.cs'></a>
 ```cs
-using Avalonia.Headless.NUnit;
-using Avalonia.Input;
-using TestableApp.ViewModels;
-using TestableApp.Views;
-
-namespace TestableApp.Headless.NUnit;
-
+[UsesVerify]
 public class CalculatorTests
 {
-    [AvaloniaTest]
+    [AvaloniaFact]
     public Task Should_Add_Numbers()
     {
         var window = new MainWindow
@@ -80,11 +79,11 @@ public class CalculatorTests
         window.AddButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
-        Assert.That(window.ResultBox.Text, Is.EqualTo("30"));
+        Assert.Equal("30", window.ResultBox.Text);
         return Verify(window);
     }
 
-    [AvaloniaTest]
+    [AvaloniaFact]
     public Task Cannot_Divide_By_Zero()
     {
         var window = new MainWindow
@@ -102,12 +101,12 @@ public class CalculatorTests
         window.DivideButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
-        Assert.That(window.ResultBox.Text, Is.EqualTo("Cannot divide by zero!"));
+        Assert.Equal("Cannot divide by zero!", window.ResultBox.Text);
         return Verify(window);
     }
 }
 ```
-<sup><a href='/src/NUnitTests/CalculatorTests.cs#L1-L56' title='Snippet source file'>snippet source</a> | <a href='#snippet-NUnitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L50' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
