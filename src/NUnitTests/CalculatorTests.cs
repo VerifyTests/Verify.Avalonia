@@ -1,4 +1,3 @@
-using Avalonia.Headless;
 using Avalonia.Headless.NUnit;
 using Avalonia.Input;
 using TestableApp.ViewModels;

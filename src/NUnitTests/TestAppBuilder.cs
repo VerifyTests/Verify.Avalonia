@@ -1,8 +1,4 @@
-﻿using Avalonia;
-using Avalonia.Headless;
-using TestableApp;
-
-[assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
+﻿[assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
 
 public class TestAppBuilder
 {
