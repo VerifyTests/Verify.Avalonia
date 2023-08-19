@@ -1,4 +1,7 @@
-﻿namespace VerifyTests;
+﻿using Avalonia.Controls;
+using Avalonia.Headless;
+
+namespace VerifyTests;
 
 public static class VerifyAvalonia
 {
@@ -14,17 +17,24 @@ public static class VerifyAvalonia
         Initialized = true;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
-      //  VerifierSettings.RegisterFileConverter<Window>(WindowToImage);
+        VerifierSettings.RegisterFileConverter<TopLevel>(TopLevelToImage);
     }
 
-    // static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
-    // {
-    //     var pngStream = WpfUtils.ScreenCapture(window);
-    //     return new(null,
-    //         new List<Target>
-    //         {
-    //             new("xml", window.ToXamlString()),
-    //             new("png", pngStream)
-    //         });
-    // }
+    static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)
+    {
+        var bitmap = topLevel.CaptureRenderedFrame();
+        var memoryStream = new MemoryStream();
+        if (bitmap == null)
+        {
+            throw new("No RenderedFrame");
+        }
+
+        bitmap.Save(memoryStream);
+        memoryStream.Position = 0;
+        return new(null,
+            new List<Target>
+            {
+                new("png", memoryStream)
+            });
+    }
 }
