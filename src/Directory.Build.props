@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <LangVersion>11</LangVersion>
+    <NoWarn>CS1591;CS0649;CS8632;CA1416</NoWarn>
+    <Version>4.1.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageTags>Xaml, Wpf, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Xaml and Wpf bits.</Description>
+  </PropertyGroup>
+</Project>

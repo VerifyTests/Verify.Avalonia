@@ -1,0 +1,5 @@
+﻿<MyUserControl xmlns="clr-namespace:Tests;assembly=Tests" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <av:Grid>
+    <av:Button>Button</av:Button>
+  </av:Grid>
+</MyUserControl>
