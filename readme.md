@@ -110,12 +110,17 @@ public class CalculatorTests
 <!-- endSnippet -->
 
 
-## Result in the following snapshot
+## Result in the following snapshots
+
+[Should_Add_Numbers.verified.verified.png](/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png):
+
+<img src="/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png" width="200px">
 
 
 [Cannot_Divide_By_Zero.verified.verified.png](/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png):
 
 <img src="/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png" width="200px">
+
 
 ## Icon
 
