@@ -1,6 +1,6 @@
 ﻿[assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
 
-public class TestAppBuilder
+public static class TestAppBuilder
 {
     public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>()
         .UseSkia()

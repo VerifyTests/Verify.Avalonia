@@ -9,7 +9,7 @@ namespace TestableApp.Headless.XUnit;
 public class CalculatorTests
 {
     [AvaloniaFact]
-    public void Should_Add_Numbers()
+    public Task Should_Add_Numbers()
     {
         var window = new MainWindow
         {
@@ -29,11 +29,11 @@ public class CalculatorTests
         window.AddButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
-        Assert.Equal("30", window.ResultBox.Text);
+        return Verify(window);
     }
 
     [AvaloniaFact]
-    public void Cannot_Divide_By_Zero()
+    public Task Cannot_Divide_By_Zero()
     {
         var window = new MainWindow
         {
@@ -50,6 +50,6 @@ public class CalculatorTests
         window.DivideButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
-        Assert.Equal("Cannot divide by zero!", window.ResultBox.Text);
+        return Verify(window);
     }
 }
