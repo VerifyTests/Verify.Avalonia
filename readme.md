@@ -48,6 +48,7 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
 <sup><a href='/src/TestableApp/TestableApp.csproj#L22-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-internalsvisibleto' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
 ## Initialize AvaloniaTestApplication
 
 The `[AvaloniaTestApplication]` attribute wires the tests in the current project with the specific application. It needs to be defined once per project in any file. Verify.Avalonia requires that `UseHeadlessDrawing` is disabled and `.UseSkia()` is set.
