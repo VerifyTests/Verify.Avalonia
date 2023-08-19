@@ -1,5 +1,0 @@
-﻿[TestFixture]
-public class TheTests
-{
-
-}
