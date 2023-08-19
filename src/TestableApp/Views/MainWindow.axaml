@@ -9,6 +9,7 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="Simple Calculator"
         SizeToContent="WidthAndHeight"
+        Background="LightGray"
         CanResize="False">
   <StackPanel Spacing="10" Margin="10" HorizontalAlignment="Left">
     <TextBox Name="FirstOperandInput" Text="{Binding FirstOperand, Mode=TwoWay}" Watermark="Operand 1" />

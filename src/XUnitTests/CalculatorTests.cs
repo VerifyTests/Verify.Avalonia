@@ -11,11 +11,8 @@ public class CalculatorTests
 
         window.Show();
 
-        // Set values to the input boxes by simulating text input:
-        window.FirstOperandInput.Focus();
-        window.KeyTextInput("10");
-
-        // Or directly to the control:
+        // Set values to the input boxes
+        window.FirstOperandInput.Text = "10";
         window.SecondOperandInput.Text = "20";
 
         // Raise click event on the button:
@@ -36,8 +33,7 @@ public class CalculatorTests
 
         window.Show();
 
-        // Set values to the input boxes by simulating text input:
-        window.SecondOperandInput.Text = "10";
+        // Set values to the input boxes
         window.SecondOperandInput.Text = "0";
 
         // Raise click event on the button:
