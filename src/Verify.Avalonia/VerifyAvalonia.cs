@@ -22,19 +22,19 @@ public static class VerifyAvalonia
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)
     {
-        var bitmap = topLevel.CaptureRenderedFrame();
-        var memoryStream = new MemoryStream();
+        using var bitmap = topLevel.CaptureRenderedFrame();
+        var stream = new MemoryStream();
         if (bitmap == null)
         {
             throw new("No RenderedFrame");
         }
 
-        bitmap.Save(memoryStream);
-        memoryStream.Position = 0;
-        return new(null,
+        bitmap.Save(stream);
+        return new(
+            null,
             new List<Target>
             {
-                new("png", memoryStream)
+                new("png", stream)
             });
     }
 }
