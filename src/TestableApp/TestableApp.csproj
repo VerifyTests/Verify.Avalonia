@@ -18,10 +18,11 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.3" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
   </ItemGroup>
-  
+
+  <!-- begin-snippet: InternalsVisibleTo -->
   <ItemGroup>
-    <!-- We need it so tests can use generated controls by name -->
     <InternalsVisibleTo Include="NUnitTests" />
     <InternalsVisibleTo Include="XUnitTests" />
   </ItemGroup>
+  <!-- end-snippet -->
 </Project>
