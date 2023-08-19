@@ -8,7 +8,7 @@ namespace TestableApp.Headless.NUnit;
 public class CalculatorTests
 {
     [AvaloniaTest]
-    public void Should_Add_Numbers()
+    public Task Should_Add_Numbers()
     {
         var window = new MainWindow
         {
@@ -29,10 +29,11 @@ public class CalculatorTests
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
         Assert.That(window.ResultBox.Text, Is.EqualTo("30"));
+        return Verify(window);
     }
 
     [AvaloniaTest]
-    public void Cannot_Divide_By_Zero()
+    public Task Cannot_Divide_By_Zero()
     {
         var window = new MainWindow
         {
@@ -50,5 +51,6 @@ public class CalculatorTests
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
         Assert.That(window.ResultBox.Text, Is.EqualTo("Cannot divide by zero!"));
+        return Verify(window);
     }
 }

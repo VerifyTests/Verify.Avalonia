@@ -29,6 +29,7 @@ public class CalculatorTests
         window.AddButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
+        Assert.Equal("30", window.ResultBox.Text);
         return Verify(window);
     }
 
@@ -50,6 +51,7 @@ public class CalculatorTests
         window.DivideButton.Focus();
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
+        Assert.Equal("Cannot divide by zero!", window.ResultBox.Text);
         return Verify(window);
     }
 }

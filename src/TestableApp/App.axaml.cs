@@ -4,6 +4,7 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using TestableApp.ViewModels;
 using TestableApp.Views;
+// ReSharper disable PartialTypeWithSinglePart
 
 namespace TestableApp;
 
