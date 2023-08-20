@@ -1,5 +1,4 @@
-﻿using Avalonia.Controls;
-using Avalonia.Headless;
+﻿using Avalonia.Headless;
 
 namespace VerifyTests;
 

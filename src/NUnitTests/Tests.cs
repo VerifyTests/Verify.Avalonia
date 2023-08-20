@@ -15,7 +15,10 @@ public class Tests
         WriteType(visual, convertersPath);
         foreach (var type in typeof(Window).Assembly.GetTypes().Where(_ => _.IsAssignableTo(visual)))
         {
-            WriteType(type, convertersPath);
+            if (type.IsPublic)
+            {
+                WriteType(type, convertersPath);
+            }
         }
     }
 
@@ -64,6 +67,6 @@ public class Tests
 
         builder.AppendLine("    }");
         builder.AppendLine("}");
-        File.WriteAllText(Path.Combine(convertersPath, type.Name)+".cs", builder.ToString());
+        File.WriteAllText(Path.Combine(convertersPath, $"{type.Name}Converter.cs"), builder.ToString());
     }
 }
