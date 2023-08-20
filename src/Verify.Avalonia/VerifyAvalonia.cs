@@ -18,6 +18,12 @@ public static partial class VerifyAvalonia
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<TopLevel>(TopLevelToImage);
         AddConverters();
+
+        VerifierSettings.AddExtraSettings(
+            _ =>
+            {
+                _.Converters.Add(new ThicknessConverter());
+            });
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)

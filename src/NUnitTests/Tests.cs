@@ -17,7 +17,7 @@ public class Tests
     public void Types()
     {
         var solutionDirectory = AttributeReader.GetSolutionDirectory();
-        var convertersPath = Path.Combine(solutionDirectory, @"Verify.Avalonia\Converters\");
+        var convertersPath = Path.Combine(solutionDirectory, @"Verify.Avalonia\GeneratedConverters\");
         foreach (var file in Directory.EnumerateFiles(convertersPath))
         {
             File.Delete(file);
@@ -40,8 +40,9 @@ public class Tests
 
     static void WriteConvertersFile(string solutionDirectory, List<Type> types)
     {
-        var path = Path.Combine(solutionDirectory, @"Verify.Avalonia\Converters\VerifyAvalonia_Converters.cs");
+        var path = Path.Combine(solutionDirectory, @"Verify.Avalonia\VerifyAvalonia_Converters.cs");
 
+        File.Delete(path);
         using var writer = File.CreateText(path);
         writer.WriteLine(
             """
