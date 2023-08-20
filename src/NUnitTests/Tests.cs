@@ -35,10 +35,15 @@ public class Tests
             WriteType(type, convertersPath);
         }
 
-        var convertersFilePath = Path.Combine(solutionDirectory, @"Verify.Avalonia\Converters\VerifyAvalonia_Converters.cs");
+        WriteConvertersFile(solutionDirectory, types);
+    }
 
-        using var converterFile = File.CreateText(convertersFilePath);
-        converterFile.WriteLine(
+    static void WriteConvertersFile(string solutionDirectory, List<Type> types)
+    {
+        var path = Path.Combine(solutionDirectory, @"Verify.Avalonia\Converters\VerifyAvalonia_Converters.cs");
+
+        using var writer = File.CreateText(path);
+        writer.WriteLine(
             """
             namespace VerifyTests;
 
@@ -51,10 +56,11 @@ public class Tests
             """);
         foreach (var type in types)
         {
-            converterFile.WriteLine(
+            writer.WriteLine(
                 $"                _.Converters.Add(new {type.Name}Converter());");
         }
-        converterFile.WriteLine(
+
+        writer.WriteLine(
             """
                          });
             }
