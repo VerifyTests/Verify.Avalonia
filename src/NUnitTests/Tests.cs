@@ -193,20 +193,20 @@ public class Tests
             {
                 builder.AppendLine(
                     $$"""
-                               if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
-                               {
-                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
-                               }
+                              if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
+                              {
+                                  writer.WriteMember(value, value.{{name}}, "{{name}}");
+                              }
                       """);
             }
             else
             {
                 builder.AppendLine(
                     $$"""
-                               if (!{{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})).Equals(value.{{name}}))
-                               {
-                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
-                               }
+                              if (!{{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})).Equals(value.{{name}}))
+                              {
+                                  writer.WriteMember(value, value.{{name}}, "{{name}}");
+                              }
                       """);
             }
         }

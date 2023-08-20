@@ -21,10 +21,10 @@ class ComboBoxConverter :
          {
              writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
          }
-         if (ComboBox.SelectionBoxItemProperty.GetUnsetValue(typeof(ComboBox)) != value.SelectionBoxItem)
-         {
-             writer.WriteMember(value, value.SelectionBoxItem, "SelectionBoxItem");
-         }
+        if (ComboBox.SelectionBoxItemProperty.GetUnsetValue(typeof(ComboBox)) != value.SelectionBoxItem)
+        {
+            writer.WriteMember(value, value.SelectionBoxItem, "SelectionBoxItem");
+        }
          if (ComboBox.PlaceholderTextProperty.GetDefaultValue(typeof(ComboBox)) != value.PlaceholderText)
          {
              writer.WriteMember(value, value.PlaceholderText, "PlaceholderText");

@@ -13,9 +13,9 @@ class MenuBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MenuBase value)
     {
-         if (!MenuBase.IsOpenProperty.GetUnsetValue(typeof(MenuBase)).Equals(value.IsOpen))
-         {
-             writer.WriteMember(value, value.IsOpen, "IsOpen");
-         }
+        if (!MenuBase.IsOpenProperty.GetUnsetValue(typeof(MenuBase)).Equals(value.IsOpen))
+        {
+            writer.WriteMember(value, value.IsOpen, "IsOpen");
+        }
     }
 }

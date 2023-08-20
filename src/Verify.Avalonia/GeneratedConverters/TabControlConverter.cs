@@ -29,13 +29,13 @@ class TabControlConverter :
          {
              writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
          }
-         if (TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContent)
-         {
-             writer.WriteMember(value, value.SelectedContent, "SelectedContent");
-         }
-         if (TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContentTemplate)
-         {
-             writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
-         }
+        if (TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContent)
+        {
+            writer.WriteMember(value, value.SelectedContent, "SelectedContent");
+        }
+        if (TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContentTemplate)
+        {
+            writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
+        }
     }
 }

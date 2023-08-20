@@ -12,10 +12,10 @@ class VisualConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Visual value)
     {
-         if (!Visual.BoundsProperty.GetUnsetValue(typeof(Visual)).Equals(value.Bounds))
-         {
-             writer.WriteMember(value, value.Bounds, "Bounds");
-         }
+        if (!Visual.BoundsProperty.GetUnsetValue(typeof(Visual)).Equals(value.Bounds))
+        {
+            writer.WriteMember(value, value.Bounds, "Bounds");
+        }
          if (!Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)).Equals(value.ClipToBounds))
          {
              writer.WriteMember(value, value.ClipToBounds, "ClipToBounds");
@@ -41,10 +41,10 @@ class VisualConverter :
          {
              writer.WriteMember(value, value.Effect, "Effect");
          }
-         if (!Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)).Equals(value.HasMirrorTransform))
-         {
-             writer.WriteMember(value, value.HasMirrorTransform, "HasMirrorTransform");
-         }
+        if (!Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)).Equals(value.HasMirrorTransform))
+        {
+            writer.WriteMember(value, value.HasMirrorTransform, "HasMirrorTransform");
+        }
          if (Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)) != value.RenderTransform)
          {
              writer.WriteMember(value, value.RenderTransform, "RenderTransform");

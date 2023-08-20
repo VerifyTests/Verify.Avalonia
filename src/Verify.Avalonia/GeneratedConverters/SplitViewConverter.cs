@@ -49,9 +49,9 @@ class SplitViewConverter :
          {
              writer.WriteMember(value, value.UseLightDismissOverlayMode, "UseLightDismissOverlayMode");
          }
-         if (SplitView.TemplateSettingsProperty.GetUnsetValue(typeof(SplitView)) != value.TemplateSettings)
-         {
-             writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
-         }
+        if (SplitView.TemplateSettingsProperty.GetUnsetValue(typeof(SplitView)) != value.TemplateSettings)
+        {
+            writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
+        }
     }
 }

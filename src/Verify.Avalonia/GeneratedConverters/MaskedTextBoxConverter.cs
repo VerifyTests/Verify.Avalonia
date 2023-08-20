@@ -29,14 +29,14 @@ class MaskedTextBoxConverter :
          {
              writer.WriteMember(value, value.Mask, "Mask");
          }
-         if (!MaskedTextBox.MaskCompletedProperty.GetUnsetValue(typeof(MaskedTextBox)).Equals(value.MaskCompleted))
-         {
-             writer.WriteMember(value, value.MaskCompleted, "MaskCompleted");
-         }
-         if (!MaskedTextBox.MaskFullProperty.GetUnsetValue(typeof(MaskedTextBox)).Equals(value.MaskFull))
-         {
-             writer.WriteMember(value, value.MaskFull, "MaskFull");
-         }
+        if (!MaskedTextBox.MaskCompletedProperty.GetUnsetValue(typeof(MaskedTextBox)).Equals(value.MaskCompleted))
+        {
+            writer.WriteMember(value, value.MaskCompleted, "MaskCompleted");
+        }
+        if (!MaskedTextBox.MaskFullProperty.GetUnsetValue(typeof(MaskedTextBox)).Equals(value.MaskFull))
+        {
+            writer.WriteMember(value, value.MaskFull, "MaskFull");
+        }
          writer.WriteMember(value, value.MaskProvider, "MaskProvider");
          if (!MaskedTextBox.PromptCharProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.PromptChar))
          {

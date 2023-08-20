@@ -13,9 +13,9 @@ class RefreshVisualizerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RefreshVisualizer value)
     {
-         if (!RefreshVisualizer.OrientationProperty.GetUnsetValue(typeof(RefreshVisualizer)).Equals(value.Orientation))
-         {
-             writer.WriteMember(value, value.Orientation, "Orientation");
-         }
+        if (!RefreshVisualizer.OrientationProperty.GetUnsetValue(typeof(RefreshVisualizer)).Equals(value.Orientation))
+        {
+            writer.WriteMember(value, value.Orientation, "Orientation");
+        }
     }
 }

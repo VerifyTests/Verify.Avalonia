@@ -114,18 +114,18 @@ class TextBoxConverter :
          {
              writer.WriteMember(value, value.NewLine, "NewLine");
          }
-         if (!TextBox.CanCutProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanCut))
-         {
-             writer.WriteMember(value, value.CanCut, "CanCut");
-         }
-         if (!TextBox.CanCopyProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanCopy))
-         {
-             writer.WriteMember(value, value.CanCopy, "CanCopy");
-         }
-         if (!TextBox.CanPasteProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanPaste))
-         {
-             writer.WriteMember(value, value.CanPaste, "CanPaste");
-         }
+        if (!TextBox.CanCutProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanCut))
+        {
+            writer.WriteMember(value, value.CanCut, "CanCut");
+        }
+        if (!TextBox.CanCopyProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanCopy))
+        {
+            writer.WriteMember(value, value.CanCopy, "CanCopy");
+        }
+        if (!TextBox.CanPasteProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanPaste))
+        {
+            writer.WriteMember(value, value.CanPaste, "CanPaste");
+        }
          if (!TextBox.IsUndoEnabledProperty.GetDefaultValue(typeof(TextBox)).Equals(value.IsUndoEnabled))
          {
              writer.WriteMember(value, value.IsUndoEnabled, "IsUndoEnabled");
@@ -134,13 +134,13 @@ class TextBoxConverter :
          {
              writer.WriteMember(value, value.UndoLimit, "UndoLimit");
          }
-         if (!TextBox.CanUndoProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanUndo))
-         {
-             writer.WriteMember(value, value.CanUndo, "CanUndo");
-         }
-         if (!TextBox.CanRedoProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanRedo))
-         {
-             writer.WriteMember(value, value.CanRedo, "CanRedo");
-         }
+        if (!TextBox.CanUndoProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanUndo))
+        {
+            writer.WriteMember(value, value.CanUndo, "CanUndo");
+        }
+        if (!TextBox.CanRedoProperty.GetUnsetValue(typeof(TextBox)).Equals(value.CanRedo))
+        {
+            writer.WriteMember(value, value.CanRedo, "CanRedo");
+        }
     }
 }

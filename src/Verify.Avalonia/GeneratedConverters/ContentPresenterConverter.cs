@@ -77,10 +77,10 @@ class ContentPresenterConverter :
          {
              writer.WriteMember(value, value.MaxLines, "MaxLines");
          }
-         if (ContentPresenter.ChildProperty.GetUnsetValue(typeof(ContentPresenter)) != value.Child)
-         {
-             writer.WriteMember(value, value.Child, "Child");
-         }
+        if (ContentPresenter.ChildProperty.GetUnsetValue(typeof(ContentPresenter)) != value.Child)
+        {
+            writer.WriteMember(value, value.Child, "Child");
+        }
          if (ContentPresenter.ContentProperty.GetDefaultValue(typeof(ContentPresenter)) != value.Content)
          {
              writer.WriteMember(value, value.Content, "Content");

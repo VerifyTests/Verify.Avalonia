@@ -23,10 +23,10 @@ class ItemsControlConverter :
          {
              writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
          }
-         if (!ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)).Equals(value.ItemCount))
-         {
-             writer.WriteMember(value, value.ItemCount, "ItemCount");
-         }
+        if (!ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)).Equals(value.ItemCount))
+        {
+            writer.WriteMember(value, value.ItemCount, "ItemCount");
+        }
          if (ItemsControl.ItemsPanelProperty.GetDefaultValue(typeof(ItemsControl)) != value.ItemsPanel)
          {
              writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");

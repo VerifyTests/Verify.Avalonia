@@ -22,13 +22,13 @@ class TreeViewConverter :
          {
              writer.WriteMember(value, value.SelectionMode, "SelectionMode");
          }
-         if (TreeView.SelectedItemProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItem)
-         {
-             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
-         }
-         if (TreeView.SelectedItemsProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItems)
-         {
-             writer.WriteMember(value, value.SelectedItems, "SelectedItems");
-         }
+        if (TreeView.SelectedItemProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItem)
+        {
+            writer.WriteMember(value, value.SelectedItem, "SelectedItem");
+        }
+        if (TreeView.SelectedItemsProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItems)
+        {
+            writer.WriteMember(value, value.SelectedItems, "SelectedItems");
+        }
     }
 }

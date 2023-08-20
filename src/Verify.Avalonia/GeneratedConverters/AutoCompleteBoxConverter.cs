@@ -46,10 +46,10 @@ class AutoCompleteBoxConverter :
          {
              writer.WriteMember(value, value.Text, "Text");
          }
-         if (AutoCompleteBox.SearchTextProperty.GetUnsetValue(typeof(AutoCompleteBox)) != value.SearchText)
-         {
-             writer.WriteMember(value, value.SearchText, "SearchText");
-         }
+        if (AutoCompleteBox.SearchTextProperty.GetUnsetValue(typeof(AutoCompleteBox)) != value.SearchText)
+        {
+            writer.WriteMember(value, value.SearchText, "SearchText");
+        }
          if (!AutoCompleteBox.FilterModeProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.FilterMode))
          {
              writer.WriteMember(value, value.FilterMode, "FilterMode");

@@ -25,13 +25,13 @@ class SelectableTextBlockConverter :
          {
              writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
          }
-         if (SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.SelectedText)
-         {
-             writer.WriteMember(value, value.SelectedText, "SelectedText");
-         }
-         if (!SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)).Equals(value.CanCopy))
-         {
-             writer.WriteMember(value, value.CanCopy, "CanCopy");
-         }
+        if (SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.SelectedText)
+        {
+            writer.WriteMember(value, value.SelectedText, "SelectedText");
+        }
+        if (!SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)).Equals(value.CanCopy))
+        {
+            writer.WriteMember(value, value.CanCopy, "CanCopy");
+        }
     }
 }

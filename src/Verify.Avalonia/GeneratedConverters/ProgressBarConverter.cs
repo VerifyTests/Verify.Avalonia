@@ -13,10 +13,10 @@ class ProgressBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ProgressBar value)
     {
-         if (!ProgressBar.PercentageProperty.GetUnsetValue(typeof(ProgressBar)).Equals(value.Percentage))
-         {
-             writer.WriteMember(value, value.Percentage, "Percentage");
-         }
+        if (!ProgressBar.PercentageProperty.GetUnsetValue(typeof(ProgressBar)).Equals(value.Percentage))
+        {
+            writer.WriteMember(value, value.Percentage, "Percentage");
+        }
          writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
          if (!ProgressBar.IsIndeterminateProperty.GetDefaultValue(typeof(ProgressBar)).Equals(value.IsIndeterminate))
          {

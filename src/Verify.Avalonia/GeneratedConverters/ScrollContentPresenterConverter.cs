@@ -21,18 +21,18 @@ class ScrollContentPresenterConverter :
          {
              writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
          }
-         if (!ScrollContentPresenter.ExtentProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Extent))
-         {
-             writer.WriteMember(value, value.Extent, "Extent");
-         }
+        if (!ScrollContentPresenter.ExtentProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Extent))
+        {
+            writer.WriteMember(value, value.Extent, "Extent");
+        }
          if (!ScrollContentPresenter.OffsetProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.Offset))
          {
              writer.WriteMember(value, value.Offset, "Offset");
          }
-         if (!ScrollContentPresenter.ViewportProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Viewport))
-         {
-             writer.WriteMember(value, value.Viewport, "Viewport");
-         }
+        if (!ScrollContentPresenter.ViewportProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Viewport))
+        {
+            writer.WriteMember(value, value.Viewport, "Viewport");
+        }
          if (!ScrollContentPresenter.HorizontalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.HorizontalSnapPointsType))
          {
              writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");

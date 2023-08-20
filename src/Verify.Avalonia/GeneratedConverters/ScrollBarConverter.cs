@@ -25,10 +25,10 @@ class ScrollBarConverter :
          {
              writer.WriteMember(value, value.Orientation, "Orientation");
          }
-         if (!ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)).Equals(value.IsExpanded))
-         {
-             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
-         }
+        if (!ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)).Equals(value.IsExpanded))
+        {
+            writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+        }
          if (!ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.AllowAutoHide))
          {
              writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");

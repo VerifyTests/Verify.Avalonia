@@ -37,10 +37,10 @@ class ButtonConverter :
          {
              writer.WriteMember(value, value.IsCancel, "IsCancel");
          }
-         if (!Button.IsPressedProperty.GetUnsetValue(typeof(Button)).Equals(value.IsPressed))
-         {
-             writer.WriteMember(value, value.IsPressed, "IsPressed");
-         }
+        if (!Button.IsPressedProperty.GetUnsetValue(typeof(Button)).Equals(value.IsPressed))
+        {
+            writer.WriteMember(value, value.IsPressed, "IsPressed");
+        }
          if (Button.FlyoutProperty.GetDefaultValue(typeof(Button)) != value.Flyout)
          {
              writer.WriteMember(value, value.Flyout, "Flyout");

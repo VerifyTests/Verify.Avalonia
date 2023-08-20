@@ -13,22 +13,22 @@ class TopLevelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
-         if (!TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ClientSize))
-         {
-             writer.WriteMember(value, value.ClientSize, "ClientSize");
-         }
-         if (!TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.FrameSize))
-         {
-             writer.WriteMember(value, value.FrameSize, "FrameSize");
-         }
+        if (!TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ClientSize))
+        {
+            writer.WriteMember(value, value.ClientSize, "ClientSize");
+        }
+        if (!TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.FrameSize))
+        {
+            writer.WriteMember(value, value.FrameSize, "FrameSize");
+        }
          if (TopLevel.TransparencyLevelHintProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyLevelHint)
          {
              writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
          }
-         if (!TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ActualTransparencyLevel))
-         {
-             writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
-         }
+        if (!TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ActualTransparencyLevel))
+        {
+            writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
+        }
          if (TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyBackgroundFallback)
          {
              writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");

@@ -21,9 +21,9 @@ class TreeViewItemConverter :
          {
              writer.WriteMember(value, value.IsSelected, "IsSelected");
          }
-         if (!TreeViewItem.LevelProperty.GetUnsetValue(typeof(TreeViewItem)).Equals(value.Level))
-         {
-             writer.WriteMember(value, value.Level, "Level");
-         }
+        if (!TreeViewItem.LevelProperty.GetUnsetValue(typeof(TreeViewItem)).Equals(value.Level))
+        {
+            writer.WriteMember(value, value.Level, "Level");
+        }
     }
 }

@@ -34,18 +34,18 @@ class WindowConverter :
          {
              writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
          }
-         if (!Window.IsExtendedIntoWindowDecorationsProperty.GetUnsetValue(typeof(Window)).Equals(value.IsExtendedIntoWindowDecorations))
-         {
-             writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
-         }
-         if (!Window.WindowDecorationMarginProperty.GetUnsetValue(typeof(Window)).Equals(value.WindowDecorationMargin))
-         {
-             writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
-         }
-         if (!Window.OffScreenMarginProperty.GetUnsetValue(typeof(Window)).Equals(value.OffScreenMargin))
-         {
-             writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
-         }
+        if (!Window.IsExtendedIntoWindowDecorationsProperty.GetUnsetValue(typeof(Window)).Equals(value.IsExtendedIntoWindowDecorations))
+        {
+            writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
+        }
+        if (!Window.WindowDecorationMarginProperty.GetUnsetValue(typeof(Window)).Equals(value.WindowDecorationMargin))
+        {
+            writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
+        }
+        if (!Window.OffScreenMarginProperty.GetUnsetValue(typeof(Window)).Equals(value.OffScreenMargin))
+        {
+            writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
+        }
          if (!Window.SystemDecorationsProperty.GetDefaultValue(typeof(Window)).Equals(value.SystemDecorations))
          {
              writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");

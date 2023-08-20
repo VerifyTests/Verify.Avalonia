@@ -17,14 +17,14 @@ class SelectingItemsControlConverter :
          {
              writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
          }
-         if (!SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)).Equals(value.SelectedIndex))
-         {
-             writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
-         }
-         if (SelectingItemsControl.SelectedItemProperty.GetUnsetValue(typeof(SelectingItemsControl)) != value.SelectedItem)
-         {
-             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
-         }
+        if (!SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)).Equals(value.SelectedIndex))
+        {
+            writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
+        }
+        if (SelectingItemsControl.SelectedItemProperty.GetUnsetValue(typeof(SelectingItemsControl)) != value.SelectedItem)
+        {
+            writer.WriteMember(value, value.SelectedItem, "SelectedItem");
+        }
          if (SelectingItemsControl.SelectedValueBindingProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.SelectedValueBinding)
          {
              writer.WriteMember(value, value.SelectedValueBinding, "SelectedValueBinding");

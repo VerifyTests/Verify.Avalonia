@@ -49,10 +49,10 @@ class LayoutableConverter :
          {
              writer.WriteMember(value, value.VerticalAlignment, "VerticalAlignment");
          }
-         if (!Layoutable.DesiredSizeProperty.GetUnsetValue(typeof(Layoutable)).Equals(value.DesiredSize))
-         {
-             writer.WriteMember(value, value.DesiredSize, "DesiredSize");
-         }
+        if (!Layoutable.DesiredSizeProperty.GetUnsetValue(typeof(Layoutable)).Equals(value.DesiredSize))
+        {
+            writer.WriteMember(value, value.DesiredSize, "DesiredSize");
+        }
          writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
          writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
          if (!Layoutable.UseLayoutRoundingProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.UseLayoutRounding))

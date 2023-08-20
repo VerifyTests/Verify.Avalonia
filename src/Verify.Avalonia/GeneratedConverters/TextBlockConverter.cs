@@ -54,9 +54,9 @@ class TextBlockConverter :
          {
              writer.WriteMember(value, value.TextDecorations, "TextDecorations");
          }
-         if (TextBlock.InlinesProperty.GetUnsetValue(typeof(TextBlock)) != value.Inlines)
-         {
-             writer.WriteMember(value, value.Inlines, "Inlines");
-         }
+        if (TextBlock.InlinesProperty.GetUnsetValue(typeof(TextBlock)) != value.Inlines)
+        {
+            writer.WriteMember(value, value.Inlines, "Inlines");
+        }
     }
 }

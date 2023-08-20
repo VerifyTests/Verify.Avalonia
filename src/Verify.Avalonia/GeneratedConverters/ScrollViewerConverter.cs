@@ -13,34 +13,34 @@ class ScrollViewerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollViewer value)
     {
-         if (!ScrollViewer.ExtentProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.Extent))
-         {
-             writer.WriteMember(value, value.Extent, "Extent");
-         }
+        if (!ScrollViewer.ExtentProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.Extent))
+        {
+            writer.WriteMember(value, value.Extent, "Extent");
+        }
          if (!ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)).Equals(value.Offset))
          {
              writer.WriteMember(value, value.Offset, "Offset");
          }
-         if (!ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.Viewport))
-         {
-             writer.WriteMember(value, value.Viewport, "Viewport");
-         }
-         if (!ScrollViewer.LargeChangeProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.LargeChange))
-         {
-             writer.WriteMember(value, value.LargeChange, "LargeChange");
-         }
-         if (!ScrollViewer.SmallChangeProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.SmallChange))
-         {
-             writer.WriteMember(value, value.SmallChange, "SmallChange");
-         }
+        if (!ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.Viewport))
+        {
+            writer.WriteMember(value, value.Viewport, "Viewport");
+        }
+        if (!ScrollViewer.LargeChangeProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.LargeChange))
+        {
+            writer.WriteMember(value, value.LargeChange, "LargeChange");
+        }
+        if (!ScrollViewer.SmallChangeProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.SmallChange))
+        {
+            writer.WriteMember(value, value.SmallChange, "SmallChange");
+        }
          writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
-         if (!ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.ScrollBarMaximum))
-         {
-             writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
-         }
-         if (!ScrollViewer.IsExpandedProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.IsExpanded))
-         {
-             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
-         }
+        if (!ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.ScrollBarMaximum))
+        {
+            writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
+        }
+        if (!ScrollViewer.IsExpandedProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.IsExpanded))
+        {
+            writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+        }
     }
 }
