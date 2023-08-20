@@ -59,6 +59,11 @@ public class Tests
                 continue;
             }
 
+            if (property.GetCustomAttribute<ObsoleteAttribute>() != null)
+            {
+                continue;
+            }
+
             builder.AppendLine(
                 $"""
                           writer.WriteMember(value, value.{property.Name}, "{property.Name}");
