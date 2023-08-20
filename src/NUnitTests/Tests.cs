@@ -65,6 +65,10 @@ public class Tests
             {
                 continue;
             }
+            if(property.PropertyType.FullName!.StartsWith("System.Action"))
+            {
+                continue;
+            }
 
             builder.AppendLine(
                 $"""

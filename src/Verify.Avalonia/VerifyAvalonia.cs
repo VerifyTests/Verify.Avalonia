@@ -30,7 +30,7 @@ public static class VerifyAvalonia
 
         bitmap.Save(stream);
         return new(
-            null,
+            topLevel,
             new List<Target>
             {
                 new("png", stream)
