@@ -95,34 +95,39 @@ public class Tests
               """);
         foreach (var property in type.GetProperties(BindingFlags.Instance | BindingFlags.Public))
         {
-            if (property.DeclaringType != type)
-            {
-                continue;
-            }
-
-            if (property.GetCustomAttribute<ObsoleteAttribute>() != null)
-            {
-                continue;
-            }
-
-            if (ignoredTypes.Any(ignoredType => ignoredType.IsAssignableFrom(property.PropertyType)))
-            {
-                continue;
-            }
-            //
-            // if (typeof(Delegate).IsAssignableFrom(property.PropertyType))
-            // {
-            //     continue;
-            // }
-
-            builder.AppendLine(
-                $"""
-                          writer.WriteMember(value, value.{property.Name}, "{property.Name}");
-                 """);
+            AppendProperty(type, property, builder);
         }
 
         builder.AppendLine("    }");
         builder.AppendLine("}");
         File.WriteAllText(Path.Combine(convertersPath, $"{type.Name}Converter.cs"), builder.ToString());
+    }
+
+    static void AppendProperty(Type type, PropertyInfo property, StringBuilder builder)
+    {
+        if (property.DeclaringType != type)
+        {
+            return;
+        }
+
+        if (property.GetCustomAttribute<ObsoleteAttribute>() != null)
+        {
+            return;
+        }
+
+        if (ignoredTypes.Any(ignoredType => ignoredType.IsAssignableFrom(property.PropertyType)))
+        {
+            return;
+        }
+        //
+        // if (typeof(Delegate).IsAssignableFrom(property.PropertyType))
+        // {
+        //     continue;
+        // }
+
+        builder.AppendLine(
+            $"""
+                      writer.WriteMember(value, value.{property.Name}, "{property.Name}");
+             """);
     }
 }
