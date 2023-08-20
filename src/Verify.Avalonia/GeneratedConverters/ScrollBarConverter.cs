@@ -13,33 +13,33 @@ class ScrollBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
-         if (!ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ViewportSize))
-         {
-             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
-         }
-         if (!ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Visibility))
-         {
-             writer.WriteMember(value, value.Visibility, "Visibility");
-         }
-         if (!ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Orientation))
-         {
-             writer.WriteMember(value, value.Orientation, "Orientation");
-         }
+        if (!ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ViewportSize))
+        {
+            writer.WriteMember(value, value.ViewportSize, "ViewportSize");
+        }
+        if (!ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Visibility))
+        {
+            writer.WriteMember(value, value.Visibility, "Visibility");
+        }
+        if (!ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Orientation))
+        {
+            writer.WriteMember(value, value.Orientation, "Orientation");
+        }
         if (!ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)).Equals(value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
-         if (!ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.AllowAutoHide))
-         {
-             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
-         }
-         if (!ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.HideDelay))
-         {
-             writer.WriteMember(value, value.HideDelay, "HideDelay");
-         }
-         if (!ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ShowDelay))
-         {
-             writer.WriteMember(value, value.ShowDelay, "ShowDelay");
-         }
+        if (!ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.AllowAutoHide))
+        {
+            writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
+        }
+        if (!ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.HideDelay))
+        {
+            writer.WriteMember(value, value.HideDelay, "HideDelay");
+        }
+        if (!ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ShowDelay))
+        {
+            writer.WriteMember(value, value.ShowDelay, "ShowDelay");
+        }
     }
 }

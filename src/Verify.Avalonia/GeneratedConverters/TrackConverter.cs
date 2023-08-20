@@ -13,45 +13,45 @@ class TrackConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Track value)
     {
-         if (!Track.MinimumProperty.GetDefaultValue(typeof(Track)).Equals(value.Minimum))
-         {
-             writer.WriteMember(value, value.Minimum, "Minimum");
-         }
-         if (!Track.MaximumProperty.GetDefaultValue(typeof(Track)).Equals(value.Maximum))
-         {
-             writer.WriteMember(value, value.Maximum, "Maximum");
-         }
-         if (!Track.ValueProperty.GetDefaultValue(typeof(Track)).Equals(value.Value))
-         {
-             writer.WriteMember(value, value.Value, "Value");
-         }
-         if (!Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)).Equals(value.ViewportSize))
-         {
-             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
-         }
-         if (!Track.OrientationProperty.GetDefaultValue(typeof(Track)).Equals(value.Orientation))
-         {
-             writer.WriteMember(value, value.Orientation, "Orientation");
-         }
-         if (Track.ThumbProperty.GetDefaultValue(typeof(Track)) != value.Thumb)
-         {
-             writer.WriteMember(value, value.Thumb, "Thumb");
-         }
-         if (Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.IncreaseButton)
-         {
-             writer.WriteMember(value, value.IncreaseButton, "IncreaseButton");
-         }
-         if (Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.DecreaseButton)
-         {
-             writer.WriteMember(value, value.DecreaseButton, "DecreaseButton");
-         }
-         if (!Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)).Equals(value.IsDirectionReversed))
-         {
-             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
-         }
-         if (!Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)).Equals(value.IgnoreThumbDrag))
-         {
-             writer.WriteMember(value, value.IgnoreThumbDrag, "IgnoreThumbDrag");
-         }
+        if (!Track.MinimumProperty.GetDefaultValue(typeof(Track)).Equals(value.Minimum))
+        {
+            writer.WriteMember(value, value.Minimum, "Minimum");
+        }
+        if (!Track.MaximumProperty.GetDefaultValue(typeof(Track)).Equals(value.Maximum))
+        {
+            writer.WriteMember(value, value.Maximum, "Maximum");
+        }
+        if (!Track.ValueProperty.GetDefaultValue(typeof(Track)).Equals(value.Value))
+        {
+            writer.WriteMember(value, value.Value, "Value");
+        }
+        if (!Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)).Equals(value.ViewportSize))
+        {
+            writer.WriteMember(value, value.ViewportSize, "ViewportSize");
+        }
+        if (!Track.OrientationProperty.GetDefaultValue(typeof(Track)).Equals(value.Orientation))
+        {
+            writer.WriteMember(value, value.Orientation, "Orientation");
+        }
+        if (Track.ThumbProperty.GetDefaultValue(typeof(Track)) != value.Thumb)
+        {
+            writer.WriteMember(value, value.Thumb, "Thumb");
+        }
+        if (Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.IncreaseButton)
+        {
+            writer.WriteMember(value, value.IncreaseButton, "IncreaseButton");
+        }
+        if (Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.DecreaseButton)
+        {
+            writer.WriteMember(value, value.DecreaseButton, "DecreaseButton");
+        }
+        if (!Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)).Equals(value.IsDirectionReversed))
+        {
+            writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
+        }
+        if (!Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)).Equals(value.IgnoreThumbDrag))
+        {
+            writer.WriteMember(value, value.IgnoreThumbDrag, "IgnoreThumbDrag");
+        }
     }
 }

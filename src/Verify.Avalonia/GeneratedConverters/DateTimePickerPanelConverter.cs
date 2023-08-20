@@ -13,22 +13,22 @@ class DateTimePickerPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DateTimePickerPanel value)
     {
-         if (!DateTimePickerPanel.PanelTypeProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.PanelType))
-         {
-             writer.WriteMember(value, value.PanelType, "PanelType");
-         }
-         if (!DateTimePickerPanel.ItemHeightProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.ItemHeight))
-         {
-             writer.WriteMember(value, value.ItemHeight, "ItemHeight");
-         }
-         if (DateTimePickerPanel.ItemFormatProperty.GetDefaultValue(typeof(DateTimePickerPanel)) != value.ItemFormat)
-         {
-             writer.WriteMember(value, value.ItemFormat, "ItemFormat");
-         }
-         if (!DateTimePickerPanel.ShouldLoopProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.ShouldLoop))
-         {
-             writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
-         }
+        if (!DateTimePickerPanel.PanelTypeProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.PanelType))
+        {
+            writer.WriteMember(value, value.PanelType, "PanelType");
+        }
+        if (!DateTimePickerPanel.ItemHeightProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.ItemHeight))
+        {
+            writer.WriteMember(value, value.ItemHeight, "ItemHeight");
+        }
+        if (DateTimePickerPanel.ItemFormatProperty.GetDefaultValue(typeof(DateTimePickerPanel)) != value.ItemFormat)
+        {
+            writer.WriteMember(value, value.ItemFormat, "ItemFormat");
+        }
+        if (!DateTimePickerPanel.ShouldLoopProperty.GetDefaultValue(typeof(DateTimePickerPanel)).Equals(value.ShouldLoop))
+        {
+            writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
+        }
          writer.WriteMember(value, value.MinimumValue, "MinimumValue");
          writer.WriteMember(value, value.MaximumValue, "MaximumValue");
          writer.WriteMember(value, value.SelectedValue, "SelectedValue");

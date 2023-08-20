@@ -13,42 +13,42 @@ class SplitViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SplitView value)
     {
-         if (!SplitView.CompactPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.CompactPaneLength))
-         {
-             writer.WriteMember(value, value.CompactPaneLength, "CompactPaneLength");
-         }
-         if (!SplitView.DisplayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.DisplayMode))
-         {
-             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
-         }
-         if (!SplitView.IsPaneOpenProperty.GetDefaultValue(typeof(SplitView)).Equals(value.IsPaneOpen))
-         {
-             writer.WriteMember(value, value.IsPaneOpen, "IsPaneOpen");
-         }
-         if (!SplitView.OpenPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.OpenPaneLength))
-         {
-             writer.WriteMember(value, value.OpenPaneLength, "OpenPaneLength");
-         }
-         if (SplitView.PaneBackgroundProperty.GetDefaultValue(typeof(SplitView)) != value.PaneBackground)
-         {
-             writer.WriteMember(value, value.PaneBackground, "PaneBackground");
-         }
-         if (!SplitView.PanePlacementProperty.GetDefaultValue(typeof(SplitView)).Equals(value.PanePlacement))
-         {
-             writer.WriteMember(value, value.PanePlacement, "PanePlacement");
-         }
-         if (SplitView.PaneProperty.GetDefaultValue(typeof(SplitView)) != value.Pane)
-         {
-             writer.WriteMember(value, value.Pane, "Pane");
-         }
-         if (SplitView.PaneTemplateProperty.GetDefaultValue(typeof(SplitView)) != value.PaneTemplate)
-         {
-             writer.WriteMember(value, value.PaneTemplate, "PaneTemplate");
-         }
-         if (!SplitView.UseLightDismissOverlayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.UseLightDismissOverlayMode))
-         {
-             writer.WriteMember(value, value.UseLightDismissOverlayMode, "UseLightDismissOverlayMode");
-         }
+        if (!SplitView.CompactPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.CompactPaneLength))
+        {
+            writer.WriteMember(value, value.CompactPaneLength, "CompactPaneLength");
+        }
+        if (!SplitView.DisplayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.DisplayMode))
+        {
+            writer.WriteMember(value, value.DisplayMode, "DisplayMode");
+        }
+        if (!SplitView.IsPaneOpenProperty.GetDefaultValue(typeof(SplitView)).Equals(value.IsPaneOpen))
+        {
+            writer.WriteMember(value, value.IsPaneOpen, "IsPaneOpen");
+        }
+        if (!SplitView.OpenPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.OpenPaneLength))
+        {
+            writer.WriteMember(value, value.OpenPaneLength, "OpenPaneLength");
+        }
+        if (SplitView.PaneBackgroundProperty.GetDefaultValue(typeof(SplitView)) != value.PaneBackground)
+        {
+            writer.WriteMember(value, value.PaneBackground, "PaneBackground");
+        }
+        if (!SplitView.PanePlacementProperty.GetDefaultValue(typeof(SplitView)).Equals(value.PanePlacement))
+        {
+            writer.WriteMember(value, value.PanePlacement, "PanePlacement");
+        }
+        if (SplitView.PaneProperty.GetDefaultValue(typeof(SplitView)) != value.Pane)
+        {
+            writer.WriteMember(value, value.Pane, "Pane");
+        }
+        if (SplitView.PaneTemplateProperty.GetDefaultValue(typeof(SplitView)) != value.PaneTemplate)
+        {
+            writer.WriteMember(value, value.PaneTemplate, "PaneTemplate");
+        }
+        if (!SplitView.UseLightDismissOverlayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.UseLightDismissOverlayMode))
+        {
+            writer.WriteMember(value, value.UseLightDismissOverlayMode, "UseLightDismissOverlayMode");
+        }
         if (SplitView.TemplateSettingsProperty.GetUnsetValue(typeof(SplitView)) != value.TemplateSettings)
         {
             writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");

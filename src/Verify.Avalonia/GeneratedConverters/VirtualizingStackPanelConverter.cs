@@ -13,18 +13,18 @@ class VirtualizingStackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VirtualizingStackPanel value)
     {
-         if (!VirtualizingStackPanel.OrientationProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.Orientation))
-         {
-             writer.WriteMember(value, value.Orientation, "Orientation");
-         }
-         if (!VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.AreHorizontalSnapPointsRegular))
-         {
-             writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
-         }
-         if (!VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.AreVerticalSnapPointsRegular))
-         {
-             writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
-         }
+        if (!VirtualizingStackPanel.OrientationProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.Orientation))
+        {
+            writer.WriteMember(value, value.Orientation, "Orientation");
+        }
+        if (!VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.AreHorizontalSnapPointsRegular))
+        {
+            writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
+        }
+        if (!VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(typeof(VirtualizingStackPanel)).Equals(value.AreVerticalSnapPointsRegular))
+        {
+            writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
+        }
          writer.WriteMember(value, value.FirstRealizedIndex, "FirstRealizedIndex");
          writer.WriteMember(value, value.LastRealizedIndex, "LastRealizedIndex");
     }

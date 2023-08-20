@@ -17,9 +17,9 @@ class DataValidationErrorsConverter :
         {
             writer.WriteMember(value, value.Owner, "Owner");
         }
-         if (DataValidationErrors.ErrorTemplateProperty.GetDefaultValue(typeof(DataValidationErrors)) != value.ErrorTemplate)
-         {
-             writer.WriteMember(value, value.ErrorTemplate, "ErrorTemplate");
-         }
+        if (DataValidationErrors.ErrorTemplateProperty.GetDefaultValue(typeof(DataValidationErrors)) != value.ErrorTemplate)
+        {
+            writer.WriteMember(value, value.ErrorTemplate, "ErrorTemplate");
+        }
     }
 }

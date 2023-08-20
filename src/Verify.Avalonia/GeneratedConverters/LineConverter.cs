@@ -13,13 +13,13 @@ class LineConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Line value)
     {
-         if (!Line.StartPointProperty.GetDefaultValue(typeof(Line)).Equals(value.StartPoint))
-         {
-             writer.WriteMember(value, value.StartPoint, "StartPoint");
-         }
-         if (!Line.EndPointProperty.GetDefaultValue(typeof(Line)).Equals(value.EndPoint))
-         {
-             writer.WriteMember(value, value.EndPoint, "EndPoint");
-         }
+        if (!Line.StartPointProperty.GetDefaultValue(typeof(Line)).Equals(value.StartPoint))
+        {
+            writer.WriteMember(value, value.StartPoint, "StartPoint");
+        }
+        if (!Line.EndPointProperty.GetDefaultValue(typeof(Line)).Equals(value.EndPoint))
+        {
+            writer.WriteMember(value, value.EndPoint, "EndPoint");
+        }
     }
 }

@@ -13,26 +13,26 @@ class BorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Border value)
     {
-         if (Border.BackgroundProperty.GetDefaultValue(typeof(Border)) != value.Background)
-         {
-             writer.WriteMember(value, value.Background, "Background");
-         }
-         if (Border.BorderBrushProperty.GetDefaultValue(typeof(Border)) != value.BorderBrush)
-         {
-             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
-         }
-         if (!Border.BorderThicknessProperty.GetDefaultValue(typeof(Border)).Equals(value.BorderThickness))
-         {
-             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
-         }
-         if (!Border.CornerRadiusProperty.GetDefaultValue(typeof(Border)).Equals(value.CornerRadius))
-         {
-             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
-         }
-         if (!Border.BoxShadowProperty.GetDefaultValue(typeof(Border)).Equals(value.BoxShadow))
-         {
-             writer.WriteMember(value, value.BoxShadow, "BoxShadow");
-         }
+        if (Border.BackgroundProperty.GetDefaultValue(typeof(Border)) != value.Background)
+        {
+            writer.WriteMember(value, value.Background, "Background");
+        }
+        if (Border.BorderBrushProperty.GetDefaultValue(typeof(Border)) != value.BorderBrush)
+        {
+            writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+        }
+        if (!Border.BorderThicknessProperty.GetDefaultValue(typeof(Border)).Equals(value.BorderThickness))
+        {
+            writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+        }
+        if (!Border.CornerRadiusProperty.GetDefaultValue(typeof(Border)).Equals(value.CornerRadius))
+        {
+            writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+        }
+        if (!Border.BoxShadowProperty.GetDefaultValue(typeof(Border)).Equals(value.BoxShadow))
+        {
+            writer.WriteMember(value, value.BoxShadow, "BoxShadow");
+        }
          writer.WriteMember(value, value.ClipToBoundsRadius, "ClipToBoundsRadius");
     }
 }

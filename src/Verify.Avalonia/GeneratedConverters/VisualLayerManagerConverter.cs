@@ -15,10 +15,10 @@ class VisualLayerManagerConverter :
     {
          writer.WriteMember(value, value.IsPopup, "IsPopup");
          writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
-         if (VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(typeof(VisualLayerManager)) != value.ChromeOverlayLayer)
-         {
-             writer.WriteMember(value, value.ChromeOverlayLayer, "ChromeOverlayLayer");
-         }
+        if (VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(typeof(VisualLayerManager)) != value.ChromeOverlayLayer)
+        {
+            writer.WriteMember(value, value.ChromeOverlayLayer, "ChromeOverlayLayer");
+        }
          writer.WriteMember(value, value.OverlayLayer, "OverlayLayer");
          writer.WriteMember(value, value.LightDismissOverlayLayer, "LightDismissOverlayLayer");
     }

@@ -17,9 +17,9 @@ class TabItemConverter :
         {
             writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
         }
-         if (!TabItem.IsSelectedProperty.GetDefaultValue(typeof(TabItem)).Equals(value.IsSelected))
-         {
-             writer.WriteMember(value, value.IsSelected, "IsSelected");
-         }
+        if (!TabItem.IsSelectedProperty.GetDefaultValue(typeof(TabItem)).Equals(value.IsSelected))
+        {
+            writer.WriteMember(value, value.IsSelected, "IsSelected");
+        }
     }
 }

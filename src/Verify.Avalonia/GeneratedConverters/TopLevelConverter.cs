@@ -21,22 +21,22 @@ class TopLevelConverter :
         {
             writer.WriteMember(value, value.FrameSize, "FrameSize");
         }
-         if (TopLevel.TransparencyLevelHintProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyLevelHint)
-         {
-             writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
-         }
+        if (TopLevel.TransparencyLevelHintProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyLevelHint)
+        {
+            writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
+        }
         if (!TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ActualTransparencyLevel))
         {
             writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
         }
-         if (TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyBackgroundFallback)
-         {
-             writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
-         }
-         if (TopLevel.RequestedThemeVariantProperty.GetDefaultValue(typeof(TopLevel)) != value.RequestedThemeVariant)
-         {
-             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
-         }
+        if (TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(typeof(TopLevel)) != value.TransparencyBackgroundFallback)
+        {
+            writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
+        }
+        if (TopLevel.RequestedThemeVariantProperty.GetDefaultValue(typeof(TopLevel)) != value.RequestedThemeVariant)
+        {
+            writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
+        }
          writer.WriteMember(value, value.PlatformImpl, "PlatformImpl");
          writer.WriteMember(value, value.RendererDiagnostics, "RendererDiagnostics");
          writer.WriteMember(value, value.RenderScaling, "RenderScaling");

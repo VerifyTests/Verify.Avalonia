@@ -14,10 +14,10 @@ class PanelConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Panel value)
     {
          writer.WriteMember(value, value.Children, "Children");
-         if (Panel.BackgroundProperty.GetDefaultValue(typeof(Panel)) != value.Background)
-         {
-             writer.WriteMember(value, value.Background, "Background");
-         }
+        if (Panel.BackgroundProperty.GetDefaultValue(typeof(Panel)) != value.Background)
+        {
+            writer.WriteMember(value, value.Background, "Background");
+        }
          writer.WriteMember(value, value.IsItemsHost, "IsItemsHost");
     }
 }

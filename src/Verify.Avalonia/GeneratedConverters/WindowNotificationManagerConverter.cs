@@ -13,13 +13,13 @@ class WindowNotificationManagerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WindowNotificationManager value)
     {
-         if (!WindowNotificationManager.PositionProperty.GetDefaultValue(typeof(WindowNotificationManager)).Equals(value.Position))
-         {
-             writer.WriteMember(value, value.Position, "Position");
-         }
-         if (!WindowNotificationManager.MaxItemsProperty.GetDefaultValue(typeof(WindowNotificationManager)).Equals(value.MaxItems))
-         {
-             writer.WriteMember(value, value.MaxItems, "MaxItems");
-         }
+        if (!WindowNotificationManager.PositionProperty.GetDefaultValue(typeof(WindowNotificationManager)).Equals(value.Position))
+        {
+            writer.WriteMember(value, value.Position, "Position");
+        }
+        if (!WindowNotificationManager.MaxItemsProperty.GetDefaultValue(typeof(WindowNotificationManager)).Equals(value.MaxItems))
+        {
+            writer.WriteMember(value, value.MaxItems, "MaxItems");
+        }
     }
 }

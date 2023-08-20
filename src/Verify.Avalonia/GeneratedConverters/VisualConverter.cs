@@ -16,46 +16,46 @@ class VisualConverter :
         {
             writer.WriteMember(value, value.Bounds, "Bounds");
         }
-         if (!Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)).Equals(value.ClipToBounds))
-         {
-             writer.WriteMember(value, value.ClipToBounds, "ClipToBounds");
-         }
-         if (Visual.ClipProperty.GetDefaultValue(typeof(Visual)) != value.Clip)
-         {
-             writer.WriteMember(value, value.Clip, "Clip");
-         }
+        if (!Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)).Equals(value.ClipToBounds))
+        {
+            writer.WriteMember(value, value.ClipToBounds, "ClipToBounds");
+        }
+        if (Visual.ClipProperty.GetDefaultValue(typeof(Visual)) != value.Clip)
+        {
+            writer.WriteMember(value, value.Clip, "Clip");
+        }
          writer.WriteMember(value, value.IsEffectivelyVisible, "IsEffectivelyVisible");
-         if (!Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)).Equals(value.IsVisible))
-         {
-             writer.WriteMember(value, value.IsVisible, "IsVisible");
-         }
-         if (!Visual.OpacityProperty.GetDefaultValue(typeof(Visual)).Equals(value.Opacity))
-         {
-             writer.WriteMember(value, value.Opacity, "Opacity");
-         }
-         if (Visual.OpacityMaskProperty.GetDefaultValue(typeof(Visual)) != value.OpacityMask)
-         {
-             writer.WriteMember(value, value.OpacityMask, "OpacityMask");
-         }
-         if (Visual.EffectProperty.GetDefaultValue(typeof(Visual)) != value.Effect)
-         {
-             writer.WriteMember(value, value.Effect, "Effect");
-         }
+        if (!Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)).Equals(value.IsVisible))
+        {
+            writer.WriteMember(value, value.IsVisible, "IsVisible");
+        }
+        if (!Visual.OpacityProperty.GetDefaultValue(typeof(Visual)).Equals(value.Opacity))
+        {
+            writer.WriteMember(value, value.Opacity, "Opacity");
+        }
+        if (Visual.OpacityMaskProperty.GetDefaultValue(typeof(Visual)) != value.OpacityMask)
+        {
+            writer.WriteMember(value, value.OpacityMask, "OpacityMask");
+        }
+        if (Visual.EffectProperty.GetDefaultValue(typeof(Visual)) != value.Effect)
+        {
+            writer.WriteMember(value, value.Effect, "Effect");
+        }
         if (!Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)).Equals(value.HasMirrorTransform))
         {
             writer.WriteMember(value, value.HasMirrorTransform, "HasMirrorTransform");
         }
-         if (Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)) != value.RenderTransform)
-         {
-             writer.WriteMember(value, value.RenderTransform, "RenderTransform");
-         }
-         if (!Visual.RenderTransformOriginProperty.GetDefaultValue(typeof(Visual)).Equals(value.RenderTransformOrigin))
-         {
-             writer.WriteMember(value, value.RenderTransformOrigin, "RenderTransformOrigin");
-         }
-         if (!Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)).Equals(value.ZIndex))
-         {
-             writer.WriteMember(value, value.ZIndex, "ZIndex");
-         }
+        if (Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)) != value.RenderTransform)
+        {
+            writer.WriteMember(value, value.RenderTransform, "RenderTransform");
+        }
+        if (!Visual.RenderTransformOriginProperty.GetDefaultValue(typeof(Visual)).Equals(value.RenderTransformOrigin))
+        {
+            writer.WriteMember(value, value.RenderTransformOrigin, "RenderTransformOrigin");
+        }
+        if (!Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)).Equals(value.ZIndex))
+        {
+            writer.WriteMember(value, value.ZIndex, "ZIndex");
+        }
     }
 }

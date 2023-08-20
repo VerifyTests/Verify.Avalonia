@@ -13,10 +13,10 @@ class PopupRootConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, PopupRoot value)
     {
-         if (PopupRoot.TransformProperty.GetDefaultValue(typeof(PopupRoot)) != value.Transform)
-         {
-             writer.WriteMember(value, value.Transform, "Transform");
-         }
+        if (PopupRoot.TransformProperty.GetDefaultValue(typeof(PopupRoot)) != value.Transform)
+        {
+            writer.WriteMember(value, value.Transform, "Transform");
+        }
          writer.WriteMember(value, value.ParentTopLevel, "ParentTopLevel");
     }
 }

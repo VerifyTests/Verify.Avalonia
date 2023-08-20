@@ -13,29 +13,29 @@ class GridSplitterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
     {
-         if (!GridSplitter.ResizeDirectionProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ResizeDirection))
-         {
-             writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
-         }
-         if (!GridSplitter.ResizeBehaviorProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ResizeBehavior))
-         {
-             writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
-         }
-         if (!GridSplitter.ShowsPreviewProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ShowsPreview))
-         {
-             writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
-         }
-         if (!GridSplitter.KeyboardIncrementProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.KeyboardIncrement))
-         {
-             writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
-         }
-         if (!GridSplitter.DragIncrementProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.DragIncrement))
-         {
-             writer.WriteMember(value, value.DragIncrement, "DragIncrement");
-         }
-         if (GridSplitter.PreviewContentProperty.GetDefaultValue(typeof(GridSplitter)) != value.PreviewContent)
-         {
-             writer.WriteMember(value, value.PreviewContent, "PreviewContent");
-         }
+        if (!GridSplitter.ResizeDirectionProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ResizeDirection))
+        {
+            writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
+        }
+        if (!GridSplitter.ResizeBehaviorProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ResizeBehavior))
+        {
+            writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
+        }
+        if (!GridSplitter.ShowsPreviewProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.ShowsPreview))
+        {
+            writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
+        }
+        if (!GridSplitter.KeyboardIncrementProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.KeyboardIncrement))
+        {
+            writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
+        }
+        if (!GridSplitter.DragIncrementProperty.GetDefaultValue(typeof(GridSplitter)).Equals(value.DragIncrement))
+        {
+            writer.WriteMember(value, value.DragIncrement, "DragIncrement");
+        }
+        if (GridSplitter.PreviewContentProperty.GetDefaultValue(typeof(GridSplitter)) != value.PreviewContent)
+        {
+            writer.WriteMember(value, value.PreviewContent, "PreviewContent");
+        }
     }
 }

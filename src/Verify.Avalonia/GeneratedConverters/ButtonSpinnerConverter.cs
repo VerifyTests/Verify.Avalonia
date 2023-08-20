@@ -13,17 +13,17 @@ class ButtonSpinnerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ButtonSpinner value)
     {
-         if (!ButtonSpinner.AllowSpinProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.AllowSpin))
-         {
-             writer.WriteMember(value, value.AllowSpin, "AllowSpin");
-         }
-         if (!ButtonSpinner.ShowButtonSpinnerProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.ShowButtonSpinner))
-         {
-             writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
-         }
-         if (!ButtonSpinner.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.ButtonSpinnerLocation))
-         {
-             writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
-         }
+        if (!ButtonSpinner.AllowSpinProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.AllowSpin))
+        {
+            writer.WriteMember(value, value.AllowSpin, "AllowSpin");
+        }
+        if (!ButtonSpinner.ShowButtonSpinnerProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.ShowButtonSpinner))
+        {
+            writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
+        }
+        if (!ButtonSpinner.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(ButtonSpinner)).Equals(value.ButtonSpinnerLocation))
+        {
+            writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
+        }
     }
 }

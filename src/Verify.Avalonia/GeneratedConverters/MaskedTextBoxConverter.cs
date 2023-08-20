@@ -13,22 +13,22 @@ class MaskedTextBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MaskedTextBox value)
     {
-         if (!MaskedTextBox.AsciiOnlyProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.AsciiOnly))
-         {
-             writer.WriteMember(value, value.AsciiOnly, "AsciiOnly");
-         }
-         if (MaskedTextBox.CultureProperty.GetDefaultValue(typeof(MaskedTextBox)) != value.Culture)
-         {
-             writer.WriteMember(value, value.Culture, "Culture");
-         }
-         if (!MaskedTextBox.HidePromptOnLeaveProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.HidePromptOnLeave))
-         {
-             writer.WriteMember(value, value.HidePromptOnLeave, "HidePromptOnLeave");
-         }
-         if (MaskedTextBox.MaskProperty.GetDefaultValue(typeof(MaskedTextBox)) != value.Mask)
-         {
-             writer.WriteMember(value, value.Mask, "Mask");
-         }
+        if (!MaskedTextBox.AsciiOnlyProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.AsciiOnly))
+        {
+            writer.WriteMember(value, value.AsciiOnly, "AsciiOnly");
+        }
+        if (MaskedTextBox.CultureProperty.GetDefaultValue(typeof(MaskedTextBox)) != value.Culture)
+        {
+            writer.WriteMember(value, value.Culture, "Culture");
+        }
+        if (!MaskedTextBox.HidePromptOnLeaveProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.HidePromptOnLeave))
+        {
+            writer.WriteMember(value, value.HidePromptOnLeave, "HidePromptOnLeave");
+        }
+        if (MaskedTextBox.MaskProperty.GetDefaultValue(typeof(MaskedTextBox)) != value.Mask)
+        {
+            writer.WriteMember(value, value.Mask, "Mask");
+        }
         if (!MaskedTextBox.MaskCompletedProperty.GetUnsetValue(typeof(MaskedTextBox)).Equals(value.MaskCompleted))
         {
             writer.WriteMember(value, value.MaskCompleted, "MaskCompleted");
@@ -38,17 +38,17 @@ class MaskedTextBoxConverter :
             writer.WriteMember(value, value.MaskFull, "MaskFull");
         }
          writer.WriteMember(value, value.MaskProvider, "MaskProvider");
-         if (!MaskedTextBox.PromptCharProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.PromptChar))
-         {
-             writer.WriteMember(value, value.PromptChar, "PromptChar");
-         }
-         if (!MaskedTextBox.ResetOnPromptProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.ResetOnPrompt))
-         {
-             writer.WriteMember(value, value.ResetOnPrompt, "ResetOnPrompt");
-         }
-         if (!MaskedTextBox.ResetOnSpaceProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.ResetOnSpace))
-         {
-             writer.WriteMember(value, value.ResetOnSpace, "ResetOnSpace");
-         }
+        if (!MaskedTextBox.PromptCharProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.PromptChar))
+        {
+            writer.WriteMember(value, value.PromptChar, "PromptChar");
+        }
+        if (!MaskedTextBox.ResetOnPromptProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.ResetOnPrompt))
+        {
+            writer.WriteMember(value, value.ResetOnPrompt, "ResetOnPrompt");
+        }
+        if (!MaskedTextBox.ResetOnSpaceProperty.GetDefaultValue(typeof(MaskedTextBox)).Equals(value.ResetOnSpace))
+        {
+            writer.WriteMember(value, value.ResetOnSpace, "ResetOnSpace");
+        }
     }
 }

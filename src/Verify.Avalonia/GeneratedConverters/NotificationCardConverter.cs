@@ -17,9 +17,9 @@ class NotificationCardConverter :
         {
             writer.WriteMember(value, value.IsClosing, "IsClosing");
         }
-         if (!NotificationCard.IsClosedProperty.GetDefaultValue(typeof(NotificationCard)).Equals(value.IsClosed))
-         {
-             writer.WriteMember(value, value.IsClosed, "IsClosed");
-         }
+        if (!NotificationCard.IsClosedProperty.GetDefaultValue(typeof(NotificationCard)).Equals(value.IsClosed))
+        {
+            writer.WriteMember(value, value.IsClosed, "IsClosed");
+        }
     }
 }

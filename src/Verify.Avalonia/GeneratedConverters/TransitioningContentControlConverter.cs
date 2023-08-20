@@ -13,9 +13,9 @@ class TransitioningContentControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TransitioningContentControl value)
     {
-         if (TransitioningContentControl.PageTransitionProperty.GetDefaultValue(typeof(TransitioningContentControl)) != value.PageTransition)
-         {
-             writer.WriteMember(value, value.PageTransition, "PageTransition");
-         }
+        if (TransitioningContentControl.PageTransitionProperty.GetDefaultValue(typeof(TransitioningContentControl)) != value.PageTransition)
+        {
+            writer.WriteMember(value, value.PageTransition, "PageTransition");
+        }
     }
 }

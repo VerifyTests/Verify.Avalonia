@@ -13,43 +13,43 @@ class CalendarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Calendar value)
     {
-         if (!Calendar.FirstDayOfWeekProperty.GetDefaultValue(typeof(Calendar)).Equals(value.FirstDayOfWeek))
-         {
-             writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
-         }
-         if (!Calendar.IsTodayHighlightedProperty.GetDefaultValue(typeof(Calendar)).Equals(value.IsTodayHighlighted))
-         {
-             writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
-         }
-         if (Calendar.HeaderBackgroundProperty.GetDefaultValue(typeof(Calendar)) != value.HeaderBackground)
-         {
-             writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");
-         }
-         if (!Calendar.DisplayModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayMode))
-         {
-             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
-         }
-         if (!Calendar.SelectionModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectionMode))
-         {
-             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
-         }
-         if (!Calendar.SelectedDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectedDate))
-         {
-             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
-         }
+        if (!Calendar.FirstDayOfWeekProperty.GetDefaultValue(typeof(Calendar)).Equals(value.FirstDayOfWeek))
+        {
+            writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
+        }
+        if (!Calendar.IsTodayHighlightedProperty.GetDefaultValue(typeof(Calendar)).Equals(value.IsTodayHighlighted))
+        {
+            writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
+        }
+        if (Calendar.HeaderBackgroundProperty.GetDefaultValue(typeof(Calendar)) != value.HeaderBackground)
+        {
+            writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");
+        }
+        if (!Calendar.DisplayModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayMode))
+        {
+            writer.WriteMember(value, value.DisplayMode, "DisplayMode");
+        }
+        if (!Calendar.SelectionModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectionMode))
+        {
+            writer.WriteMember(value, value.SelectionMode, "SelectionMode");
+        }
+        if (!Calendar.SelectedDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectedDate))
+        {
+            writer.WriteMember(value, value.SelectedDate, "SelectedDate");
+        }
          writer.WriteMember(value, value.SelectedDates, "SelectedDates");
-         if (!Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDate))
-         {
-             writer.WriteMember(value, value.DisplayDate, "DisplayDate");
-         }
-         if (!Calendar.DisplayDateStartProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateStart))
-         {
-             writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
-         }
+        if (!Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDate))
+        {
+            writer.WriteMember(value, value.DisplayDate, "DisplayDate");
+        }
+        if (!Calendar.DisplayDateStartProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateStart))
+        {
+            writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
+        }
          writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
-         if (!Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateEnd))
-         {
-             writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");
-         }
+        if (!Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateEnd))
+        {
+            writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");
+        }
     }
 }

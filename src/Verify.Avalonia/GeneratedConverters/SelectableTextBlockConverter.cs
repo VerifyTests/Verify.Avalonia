@@ -13,18 +13,18 @@ class SelectableTextBlockConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectableTextBlock value)
     {
-         if (SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionBrush)
-         {
-             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
-         }
-         if (!SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionStart))
-         {
-             writer.WriteMember(value, value.SelectionStart, "SelectionStart");
-         }
-         if (!SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionEnd))
-         {
-             writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
-         }
+        if (SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionBrush)
+        {
+            writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
+        }
+        if (!SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionStart))
+        {
+            writer.WriteMember(value, value.SelectionStart, "SelectionStart");
+        }
+        if (!SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionEnd))
+        {
+            writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
+        }
         if (SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.SelectedText)
         {
             writer.WriteMember(value, value.SelectedText, "SelectedText");

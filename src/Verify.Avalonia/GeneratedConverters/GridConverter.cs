@@ -13,10 +13,10 @@ class GridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Grid value)
     {
-         if (!Grid.ShowGridLinesProperty.GetDefaultValue(typeof(Grid)).Equals(value.ShowGridLines))
-         {
-             writer.WriteMember(value, value.ShowGridLines, "ShowGridLines");
-         }
+        if (!Grid.ShowGridLinesProperty.GetDefaultValue(typeof(Grid)).Equals(value.ShowGridLines))
+        {
+            writer.WriteMember(value, value.ShowGridLines, "ShowGridLines");
+        }
          writer.WriteMember(value, value.ColumnDefinitions, "ColumnDefinitions");
          writer.WriteMember(value, value.RowDefinitions, "RowDefinitions");
     }

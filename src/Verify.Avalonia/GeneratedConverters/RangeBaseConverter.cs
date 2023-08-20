@@ -13,25 +13,25 @@ class RangeBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RangeBase value)
     {
-         if (!RangeBase.MinimumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Minimum))
-         {
-             writer.WriteMember(value, value.Minimum, "Minimum");
-         }
-         if (!RangeBase.MaximumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Maximum))
-         {
-             writer.WriteMember(value, value.Maximum, "Maximum");
-         }
-         if (!RangeBase.ValueProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Value))
-         {
-             writer.WriteMember(value, value.Value, "Value");
-         }
-         if (!RangeBase.SmallChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.SmallChange))
-         {
-             writer.WriteMember(value, value.SmallChange, "SmallChange");
-         }
-         if (!RangeBase.LargeChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.LargeChange))
-         {
-             writer.WriteMember(value, value.LargeChange, "LargeChange");
-         }
+        if (!RangeBase.MinimumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Minimum))
+        {
+            writer.WriteMember(value, value.Minimum, "Minimum");
+        }
+        if (!RangeBase.MaximumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Maximum))
+        {
+            writer.WriteMember(value, value.Maximum, "Maximum");
+        }
+        if (!RangeBase.ValueProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Value))
+        {
+            writer.WriteMember(value, value.Value, "Value");
+        }
+        if (!RangeBase.SmallChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.SmallChange))
+        {
+            writer.WriteMember(value, value.SmallChange, "SmallChange");
+        }
+        if (!RangeBase.LargeChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.LargeChange))
+        {
+            writer.WriteMember(value, value.LargeChange, "LargeChange");
+        }
     }
 }

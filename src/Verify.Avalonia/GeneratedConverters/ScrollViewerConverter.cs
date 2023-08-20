@@ -17,10 +17,10 @@ class ScrollViewerConverter :
         {
             writer.WriteMember(value, value.Extent, "Extent");
         }
-         if (!ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)).Equals(value.Offset))
-         {
-             writer.WriteMember(value, value.Offset, "Offset");
-         }
+        if (!ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)).Equals(value.Offset))
+        {
+            writer.WriteMember(value, value.Offset, "Offset");
+        }
         if (!ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)).Equals(value.Viewport))
         {
             writer.WriteMember(value, value.Viewport, "Viewport");

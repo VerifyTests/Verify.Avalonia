@@ -13,49 +13,49 @@ class TemplatedControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TemplatedControl value)
     {
-         if (TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Background)
-         {
-             writer.WriteMember(value, value.Background, "Background");
-         }
-         if (TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)) != value.BorderBrush)
-         {
-             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
-         }
-         if (!TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.BorderThickness))
-         {
-             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
-         }
-         if (!TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.CornerRadius))
-         {
-             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
-         }
-         if (TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)) != value.FontFamily)
-         {
-             writer.WriteMember(value, value.FontFamily, "FontFamily");
-         }
-         if (!TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontSize))
-         {
-             writer.WriteMember(value, value.FontSize, "FontSize");
-         }
-         if (!TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStyle))
-         {
-             writer.WriteMember(value, value.FontStyle, "FontStyle");
-         }
-         if (!TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontWeight))
-         {
-             writer.WriteMember(value, value.FontWeight, "FontWeight");
-         }
-         if (!TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStretch))
-         {
-             writer.WriteMember(value, value.FontStretch, "FontStretch");
-         }
-         if (TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Foreground)
-         {
-             writer.WriteMember(value, value.Foreground, "Foreground");
-         }
-         if (!TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.Padding))
-         {
-             writer.WriteMember(value, value.Padding, "Padding");
-         }
+        if (TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Background)
+        {
+            writer.WriteMember(value, value.Background, "Background");
+        }
+        if (TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)) != value.BorderBrush)
+        {
+            writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+        }
+        if (!TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.BorderThickness))
+        {
+            writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+        }
+        if (!TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.CornerRadius))
+        {
+            writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+        }
+        if (TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)) != value.FontFamily)
+        {
+            writer.WriteMember(value, value.FontFamily, "FontFamily");
+        }
+        if (!TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontSize))
+        {
+            writer.WriteMember(value, value.FontSize, "FontSize");
+        }
+        if (!TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStyle))
+        {
+            writer.WriteMember(value, value.FontStyle, "FontStyle");
+        }
+        if (!TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontWeight))
+        {
+            writer.WriteMember(value, value.FontWeight, "FontWeight");
+        }
+        if (!TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStretch))
+        {
+            writer.WriteMember(value, value.FontStretch, "FontStretch");
+        }
+        if (TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Foreground)
+        {
+            writer.WriteMember(value, value.Foreground, "Foreground");
+        }
+        if (!TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.Padding))
+        {
+            writer.WriteMember(value, value.Padding, "Padding");
+        }
     }
 }

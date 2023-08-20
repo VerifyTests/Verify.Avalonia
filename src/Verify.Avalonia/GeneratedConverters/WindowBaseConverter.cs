@@ -22,10 +22,10 @@ class WindowBaseConverter :
         {
             writer.WriteMember(value, value.Owner, "Owner");
         }
-         if (!WindowBase.TopmostProperty.GetDefaultValue(typeof(WindowBase)).Equals(value.Topmost))
-         {
-             writer.WriteMember(value, value.Topmost, "Topmost");
-         }
+        if (!WindowBase.TopmostProperty.GetDefaultValue(typeof(WindowBase)).Equals(value.Topmost))
+        {
+            writer.WriteMember(value, value.Topmost, "Topmost");
+        }
          writer.WriteMember(value, value.DesktopScaling, "DesktopScaling");
     }
 }
