@@ -2,7 +2,7 @@
 
 namespace VerifyTests;
 
-public static class VerifyAvalonia
+public static partial class VerifyAvalonia
 {
     public static bool Initialized { get; private set; }
 
@@ -17,6 +17,7 @@ public static class VerifyAvalonia
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<TopLevel>(TopLevelToImage);
+        AddConverters();
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)
