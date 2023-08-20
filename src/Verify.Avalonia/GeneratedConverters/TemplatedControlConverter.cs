@@ -57,9 +57,5 @@ class TemplatedControlConverter :
          {
              writer.WriteMember(value, value.Padding, "Padding");
          }
-         if (TemplatedControl.TemplateProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Template)
-         {
-             writer.WriteMember(value, value.Template, "Template");
-         }
     }
 }

@@ -14,15 +14,7 @@
     FontFamily: Inter,
     FontSize: 14.0,
     Foreground: Black,
-    Padding: 10,6,6,5,
-    Template: {
-      $type: ControlTemplate,
-      Content: {
-        Type: Func<IServiceProvider, object>,
-        Target: XamlIlRuntimeHelpers.<>c__DisplayClass1_0<Control>,
-        Method: System.Object DeferredTransformationFactoryV2(System.IServiceProvider)
-      }
-    }
+    Padding: 10,6,6,5
   },
   SecondOperandInput: {
     SelectionBrush: #ff0078d7,
@@ -39,15 +31,7 @@
     FontFamily: Inter,
     FontSize: 14.0,
     Foreground: Black,
-    Padding: 10,6,6,5,
-    Template: {
-      $type: ControlTemplate,
-      Content: {
-        Type: Func<IServiceProvider, object>,
-        Target: XamlIlRuntimeHelpers.<>c__DisplayClass1_0<Control>,
-        Method: System.Object DeferredTransformationFactoryV2(System.IServiceProvider)
-      }
-    }
+    Padding: 10,6,6,5
   },
   AddButton: {
     Command: {
