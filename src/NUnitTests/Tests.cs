@@ -50,6 +50,7 @@ public class Tests
 
         builder.AppendLine(
             $$"""
+
                   public static void WriteMembers(VerifyJsonWriter writer, {{type.Name}} value)
                   {
               """);
