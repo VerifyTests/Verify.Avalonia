@@ -9,3 +9,5 @@ global using Avalonia.Controls.Presenters;
 global using Avalonia.Controls.Primitives;
 global using Avalonia.Controls.Remote;
 global using Avalonia.Controls.Shapes;
+global using Avalonia.Layout;
+global using Path = Avalonia.Controls.Shapes.Path;
