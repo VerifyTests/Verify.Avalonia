@@ -5,6 +5,7 @@ class SliderConverter :
     public override void Write(VerifyJsonWriter writer, Slider value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         RangeBaseConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

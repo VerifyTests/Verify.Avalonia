@@ -5,6 +5,7 @@ class MenuItemConverter :
     public override void Write(VerifyJsonWriter writer, MenuItem value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         HeaderedSelectingItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

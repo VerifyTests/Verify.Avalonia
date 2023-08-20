@@ -5,6 +5,7 @@ class TabStripItemConverter :
     public override void Write(VerifyJsonWriter writer, TabStripItem value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ListBoxItemConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

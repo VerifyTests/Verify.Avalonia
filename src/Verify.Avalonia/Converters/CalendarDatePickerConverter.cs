@@ -5,6 +5,7 @@ class CalendarDatePickerConverter :
     public override void Write(VerifyJsonWriter writer, CalendarDatePicker value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         TemplatedControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

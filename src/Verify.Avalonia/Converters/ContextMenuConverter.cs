@@ -5,6 +5,7 @@ class ContextMenuConverter :
     public override void Write(VerifyJsonWriter writer, ContextMenu value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         MenuBaseConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

@@ -5,6 +5,7 @@ class LayoutableConverter :
     public override void Write(VerifyJsonWriter writer, Layoutable value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         VisualConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

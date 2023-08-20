@@ -5,6 +5,7 @@ class TransitioningContentControlConverter :
     public override void Write(VerifyJsonWriter writer, TransitioningContentControl value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ContentControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

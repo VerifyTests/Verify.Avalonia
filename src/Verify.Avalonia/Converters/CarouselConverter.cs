@@ -5,6 +5,7 @@ class CarouselConverter :
     public override void Write(VerifyJsonWriter writer, Carousel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         SelectingItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

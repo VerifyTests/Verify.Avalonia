@@ -37,4 +37,23 @@ public static partial class VerifyAvalonia
                 new("png", stream)
             });
     }
+
+    internal static void WriteGeneratedMembers(VerifyJsonWriter writer, object value)
+    {
+        var type = value.GetType();
+        if (type.Name.Contains("MainWindow"))
+        {
+            Debug.WriteLine("a");
+        }
+        foreach (var field in type.GetFields(
+                     BindingFlags.Instance | BindingFlags.GetField | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
+        {
+            
+            if (field.IsAssembly)
+            {
+                var fieldValue = field.GetValue(value);
+                writer.WriteMember(value, fieldValue, field.Name);
+            }
+        }
+    }
 }

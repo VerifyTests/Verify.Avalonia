@@ -5,6 +5,7 @@ class DockPanelConverter :
     public override void Write(VerifyJsonWriter writer, DockPanel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

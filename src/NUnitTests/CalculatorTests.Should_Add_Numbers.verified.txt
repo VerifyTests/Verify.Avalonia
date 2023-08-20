@@ -1,4 +1,228 @@
 ﻿{
+  FirstOperandInput: {
+    ContextFlyout: {
+      $type: MenuFlyout,
+      Items: {
+        $type: ItemCollection,
+        $values: [
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          },
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          },
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          }
+        ]
+      },
+      Placement: Bottom,
+      IsOpen: false
+    },
+    IsLoaded: true,
+    Focusable: true,
+    IsEnabled: true,
+    IsKeyboardFocusWithin: false,
+    IsFocused: false,
+    IsHitTestVisible: true,
+    IsPointerOver: false,
+    IsTabStop: true,
+    IsEffectivelyEnabled: true,
+    TabIndex: 2147483647
+  },
+  SecondOperandInput: {
+    ContextFlyout: {
+      $type: MenuFlyout,
+      Items: {
+        $type: ItemCollection,
+        $values: [
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          },
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          },
+          {
+            IsLoaded: false,
+            Focusable: true,
+            IsEnabled: true,
+            IsKeyboardFocusWithin: false,
+            IsFocused: false,
+            IsHitTestVisible: true,
+            IsPointerOver: false,
+            IsTabStop: true,
+            IsEffectivelyEnabled: false,
+            TabIndex: 2147483647
+          }
+        ]
+      },
+      Placement: Bottom,
+      IsOpen: false
+    },
+    IsLoaded: true,
+    Focusable: true,
+    IsEnabled: true,
+    IsKeyboardFocusWithin: false,
+    IsFocused: false,
+    IsHitTestVisible: true,
+    IsPointerOver: false,
+    IsTabStop: true,
+    IsEffectivelyEnabled: true,
+    TabIndex: 2147483647
+  },
+  AddButton: {
+    ClickMode: Release,
+    Command: {
+      $type: RelayCommand
+    },
+    IsDefault: false,
+    IsCancel: false,
+    IsPressed: false,
+    Content: +,
+    Presenter: {
+      IsLoaded: true,
+      Focusable: false,
+      IsEnabled: true,
+      IsKeyboardFocusWithin: false,
+      IsFocused: false,
+      IsHitTestVisible: true,
+      IsPointerOver: false,
+      IsTabStop: true,
+      IsEffectivelyEnabled: true,
+      TabIndex: 2147483647
+    },
+    HorizontalContentAlignment: Center,
+    VerticalContentAlignment: Stretch
+  },
+  SubtractButton: {
+    ClickMode: Release,
+    Command: {
+      $type: RelayCommand
+    },
+    IsDefault: false,
+    IsCancel: false,
+    IsPressed: false,
+    Content: -,
+    Presenter: {
+      IsLoaded: true,
+      Focusable: false,
+      IsEnabled: true,
+      IsKeyboardFocusWithin: false,
+      IsFocused: false,
+      IsHitTestVisible: true,
+      IsPointerOver: false,
+      IsTabStop: true,
+      IsEffectivelyEnabled: true,
+      TabIndex: 2147483647
+    },
+    HorizontalContentAlignment: Center,
+    VerticalContentAlignment: Stretch
+  },
+  MultiplyButton: {
+    ClickMode: Release,
+    Command: {
+      $type: RelayCommand
+    },
+    IsDefault: false,
+    IsCancel: false,
+    IsPressed: false,
+    Content: *,
+    Presenter: {
+      IsLoaded: true,
+      Focusable: false,
+      IsEnabled: true,
+      IsKeyboardFocusWithin: false,
+      IsFocused: false,
+      IsHitTestVisible: true,
+      IsPointerOver: false,
+      IsTabStop: true,
+      IsEffectivelyEnabled: true,
+      TabIndex: 2147483647
+    },
+    HorizontalContentAlignment: Center,
+    VerticalContentAlignment: Stretch
+  },
+  DivideButton: {
+    ClickMode: Release,
+    Command: {
+      $type: RelayCommand
+    },
+    IsDefault: false,
+    IsCancel: false,
+    IsPressed: false,
+    Content: /,
+    Presenter: {
+      IsLoaded: true,
+      Focusable: false,
+      IsEnabled: true,
+      IsKeyboardFocusWithin: false,
+      IsFocused: false,
+      IsHitTestVisible: true,
+      IsPointerOver: false,
+      IsTabStop: true,
+      IsEffectivelyEnabled: true,
+      TabIndex: 2147483647
+    },
+    HorizontalContentAlignment: Center,
+    VerticalContentAlignment: Stretch
+  },
+  ResultBox: {
+    IsLoaded: true,
+    Focusable: false,
+    IsEnabled: true,
+    IsKeyboardFocusWithin: false,
+    IsFocused: false,
+    IsHitTestVisible: true,
+    IsPointerOver: false,
+    IsTabStop: true,
+    IsEffectivelyEnabled: true,
+    TabIndex: 2147483647
+  },
   Content: {
     IsLoaded: true,
     Focusable: false,

@@ -5,6 +5,7 @@ class VirtualizingStackPanelConverter :
     public override void Write(VerifyJsonWriter writer, VirtualizingStackPanel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         VirtualizingPanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

@@ -5,6 +5,7 @@ class DatePickerPresenterConverter :
     public override void Write(VerifyJsonWriter writer, DatePickerPresenter value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PickerPresenterBaseConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

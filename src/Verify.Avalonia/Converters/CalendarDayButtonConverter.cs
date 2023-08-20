@@ -5,6 +5,7 @@ class CalendarDayButtonConverter :
     public override void Write(VerifyJsonWriter writer, CalendarDayButton value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ButtonConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

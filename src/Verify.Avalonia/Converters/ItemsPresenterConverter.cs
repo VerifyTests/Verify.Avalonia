@@ -5,6 +5,7 @@ class ItemsPresenterConverter :
     public override void Write(VerifyJsonWriter writer, ItemsPresenter value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

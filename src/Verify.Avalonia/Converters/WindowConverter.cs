@@ -5,6 +5,7 @@ class WindowConverter :
     public override void Write(VerifyJsonWriter writer, Window value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         WindowBaseConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

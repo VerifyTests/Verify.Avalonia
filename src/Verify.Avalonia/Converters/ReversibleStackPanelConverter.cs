@@ -5,6 +5,7 @@ class ReversibleStackPanelConverter :
     public override void Write(VerifyJsonWriter writer, ReversibleStackPanel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         StackPanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

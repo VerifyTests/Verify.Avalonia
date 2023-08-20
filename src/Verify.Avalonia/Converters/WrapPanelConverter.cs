@@ -5,6 +5,7 @@ class WrapPanelConverter :
     public override void Write(VerifyJsonWriter writer, WrapPanel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

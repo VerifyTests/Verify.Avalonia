@@ -5,6 +5,7 @@ class FlyoutPresenterConverter :
     public override void Write(VerifyJsonWriter writer, FlyoutPresenter value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ContentControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

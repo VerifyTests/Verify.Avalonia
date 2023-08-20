@@ -5,6 +5,7 @@ class ImageConverter :
     public override void Write(VerifyJsonWriter writer, Image value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

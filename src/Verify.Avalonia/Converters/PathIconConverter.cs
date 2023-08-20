@@ -5,6 +5,7 @@ class PathIconConverter :
     public override void Write(VerifyJsonWriter writer, PathIcon value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         IconElementConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

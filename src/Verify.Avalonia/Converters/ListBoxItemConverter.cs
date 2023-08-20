@@ -5,6 +5,7 @@ class ListBoxItemConverter :
     public override void Write(VerifyJsonWriter writer, ListBoxItem value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ContentControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

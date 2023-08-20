@@ -5,6 +5,7 @@ class ThemeVariantScopeConverter :
     public override void Write(VerifyJsonWriter writer, ThemeVariantScope value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         DecoratorConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

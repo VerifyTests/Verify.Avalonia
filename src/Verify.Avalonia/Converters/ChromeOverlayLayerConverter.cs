@@ -5,6 +5,7 @@ class ChromeOverlayLayerConverter :
     public override void Write(VerifyJsonWriter writer, ChromeOverlayLayer value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

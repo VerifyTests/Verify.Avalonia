@@ -5,6 +5,7 @@ class ControlConverter :
     public override void Write(VerifyJsonWriter writer, Control value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         InputElementConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

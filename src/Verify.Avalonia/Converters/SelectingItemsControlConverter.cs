@@ -5,6 +5,7 @@ class SelectingItemsControlConverter :
     public override void Write(VerifyJsonWriter writer, SelectingItemsControl value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

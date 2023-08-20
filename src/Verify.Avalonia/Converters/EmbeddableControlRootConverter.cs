@@ -5,6 +5,7 @@ class EmbeddableControlRootConverter :
     public override void Write(VerifyJsonWriter writer, EmbeddableControlRoot value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         TopLevelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

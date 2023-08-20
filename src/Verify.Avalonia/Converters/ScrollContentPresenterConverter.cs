@@ -5,6 +5,7 @@ class ScrollContentPresenterConverter :
     public override void Write(VerifyJsonWriter writer, ScrollContentPresenter value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ContentPresenterConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

@@ -5,6 +5,7 @@ class TabItemConverter :
     public override void Write(VerifyJsonWriter writer, TabItem value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         HeaderedContentControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

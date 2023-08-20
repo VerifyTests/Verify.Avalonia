@@ -5,6 +5,7 @@ class TreeViewConverter :
     public override void Write(VerifyJsonWriter writer, TreeView value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

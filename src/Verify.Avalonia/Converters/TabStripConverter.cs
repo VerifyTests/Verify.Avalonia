@@ -5,6 +5,7 @@ class TabStripConverter :
     public override void Write(VerifyJsonWriter writer, TabStrip value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         SelectingItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

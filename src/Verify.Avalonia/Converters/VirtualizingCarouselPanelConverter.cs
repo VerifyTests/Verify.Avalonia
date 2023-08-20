@@ -5,6 +5,7 @@ class VirtualizingCarouselPanelConverter :
     public override void Write(VerifyJsonWriter writer, VirtualizingCarouselPanel value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         VirtualizingPanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

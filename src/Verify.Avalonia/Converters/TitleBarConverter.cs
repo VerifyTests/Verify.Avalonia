@@ -5,6 +5,7 @@ class TitleBarConverter :
     public override void Write(VerifyJsonWriter writer, TitleBar value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         TemplatedControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

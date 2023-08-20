@@ -5,6 +5,7 @@ class UniformGridConverter :
     public override void Write(VerifyJsonWriter writer, UniformGrid value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PanelConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

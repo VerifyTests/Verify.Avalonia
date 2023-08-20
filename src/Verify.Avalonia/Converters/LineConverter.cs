@@ -5,6 +5,7 @@ class LineConverter :
     public override void Write(VerifyJsonWriter writer, Line value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ShapeConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

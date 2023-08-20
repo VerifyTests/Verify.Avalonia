@@ -5,6 +5,7 @@ class ComboBoxConverter :
     public override void Write(VerifyJsonWriter writer, ComboBox value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         SelectingItemsControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

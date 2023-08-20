@@ -5,6 +5,7 @@ class TimePickerPresenterConverter :
     public override void Write(VerifyJsonWriter writer, TimePickerPresenter value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         PickerPresenterBaseConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

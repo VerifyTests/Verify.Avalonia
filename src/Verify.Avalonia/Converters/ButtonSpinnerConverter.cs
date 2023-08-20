@@ -5,6 +5,7 @@ class ButtonSpinnerConverter :
     public override void Write(VerifyJsonWriter writer, ButtonSpinner value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         SpinnerConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

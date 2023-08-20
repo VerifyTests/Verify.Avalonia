@@ -5,6 +5,7 @@ class VisualConverter :
     public override void Write(VerifyJsonWriter writer, Visual value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         writer.WriteEndObject();
     }

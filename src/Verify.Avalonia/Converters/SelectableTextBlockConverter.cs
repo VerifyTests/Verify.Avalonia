@@ -5,6 +5,7 @@ class SelectableTextBlockConverter :
     public override void Write(VerifyJsonWriter writer, SelectableTextBlock value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         TextBlockConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

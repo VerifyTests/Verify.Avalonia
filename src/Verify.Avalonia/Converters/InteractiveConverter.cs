@@ -5,6 +5,7 @@ class InteractiveConverter :
     public override void Write(VerifyJsonWriter writer, Interactive value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         LayoutableConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

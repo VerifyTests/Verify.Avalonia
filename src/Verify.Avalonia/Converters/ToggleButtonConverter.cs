@@ -5,6 +5,7 @@ class ToggleButtonConverter :
     public override void Write(VerifyJsonWriter writer, ToggleButton value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ButtonConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

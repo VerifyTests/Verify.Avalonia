@@ -5,6 +5,7 @@ class NotificationCardConverter :
     public override void Write(VerifyJsonWriter writer, NotificationCard value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         ContentControlConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

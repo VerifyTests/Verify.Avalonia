@@ -5,6 +5,7 @@ class ToggleSplitButtonConverter :
     public override void Write(VerifyJsonWriter writer, ToggleSplitButton value)
     {
         writer.WriteStartObject();
+        VerifyAvalonia.WriteGeneratedMembers(writer, value);
         WriteMembers(writer, value);
         SplitButtonConverter.WriteMembers(writer, value);
         writer.WriteEndObject();

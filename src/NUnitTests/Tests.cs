@@ -28,6 +28,7 @@ public class Tests
             .Concat(
                 typeof(InputElement).Assembly.GetTypes())
             .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
+            .OrderBy(GetDepth)
             .ToList();
         types.Add(visual);
         foreach (var type in types)
@@ -61,6 +62,18 @@ public class Tests
             """);
     }
 
+    static int GetDepth(Type type)
+    {
+        int level = 0;
+        while (type != typeof(object))
+        {
+            level++;
+            type = type!.BaseType!;
+        }
+
+        return level;
+    }
+
     static void WriteType(Type type, string convertersPath)
     {
         var builder = new StringBuilder();
@@ -73,6 +86,7 @@ public class Tests
                   public override void Write(VerifyJsonWriter writer, {{type.Name}} value)
                   {
                       writer.WriteStartObject();
+                      VerifyAvalonia.WriteGeneratedMembers(writer, value);
                       WriteMembers(writer, value);
               """);
         if (type != typeof(Visual))
