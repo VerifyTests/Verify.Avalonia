@@ -69,7 +69,7 @@ public class Tests
 
     static int GetDepth(Type type)
     {
-        int level = 0;
+        var level = 0;
         while (type != typeof(object))
         {
             level++;
@@ -134,7 +134,7 @@ public class Tests
             return;
         }
 
-        if (ignoredTypes.Any(ignoredType => ignoredType.IsAssignableFrom(property.PropertyType)))
+        if (ignoredTypes.Any(_ => _.IsAssignableFrom(property.PropertyType)))
         {
             return;
         }
@@ -144,6 +144,7 @@ public class Tests
         //     continue;
         // }
 
+        
         builder.AppendLine(
             $"""
                       writer.WriteMember(value, value.{property.Name}, "{property.Name}");
