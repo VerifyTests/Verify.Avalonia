@@ -13,17 +13,53 @@ class TemplatedControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TemplatedControl value)
     {
-         writer.WriteMember(value, value.Background, "Background");
-         writer.WriteMember(value, value.BorderBrush, "BorderBrush");
-         writer.WriteMember(value, value.BorderThickness, "BorderThickness");
-         writer.WriteMember(value, value.CornerRadius, "CornerRadius");
-         writer.WriteMember(value, value.FontFamily, "FontFamily");
-         writer.WriteMember(value, value.FontSize, "FontSize");
-         writer.WriteMember(value, value.FontStyle, "FontStyle");
-         writer.WriteMember(value, value.FontWeight, "FontWeight");
-         writer.WriteMember(value, value.FontStretch, "FontStretch");
-         writer.WriteMember(value, value.Foreground, "Foreground");
-         writer.WriteMember(value, value.Padding, "Padding");
-         writer.WriteMember(value, value.Template, "Template");
+         if (TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)) == value.Background)
+         {
+             writer.WriteMember(value, value.Background, "Background");
+         }
+         if (TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)) == value.BorderBrush)
+         {
+             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+         }
+         if (TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)) == value.BorderThickness)
+         {
+             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+         }
+         if (TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)) == value.CornerRadius)
+         {
+             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+         }
+         if (TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)) == value.FontFamily)
+         {
+             writer.WriteMember(value, value.FontFamily, "FontFamily");
+         }
+         if (TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)) == value.FontSize)
+         {
+             writer.WriteMember(value, value.FontSize, "FontSize");
+         }
+         if (TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)) == value.FontStyle)
+         {
+             writer.WriteMember(value, value.FontStyle, "FontStyle");
+         }
+         if (TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)) == value.FontWeight)
+         {
+             writer.WriteMember(value, value.FontWeight, "FontWeight");
+         }
+         if (TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)) == value.FontStretch)
+         {
+             writer.WriteMember(value, value.FontStretch, "FontStretch");
+         }
+         if (TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)) == value.Foreground)
+         {
+             writer.WriteMember(value, value.Foreground, "Foreground");
+         }
+         if (TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)) == value.Padding)
+         {
+             writer.WriteMember(value, value.Padding, "Padding");
+         }
+         if (TemplatedControl.TemplateProperty.GetDefaultValue(typeof(TemplatedControl)) == value.Template)
+         {
+             writer.WriteMember(value, value.Template, "Template");
+         }
     }
 }

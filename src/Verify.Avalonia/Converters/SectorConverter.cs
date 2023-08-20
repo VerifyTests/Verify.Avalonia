@@ -13,7 +13,13 @@ class SectorConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Sector value)
     {
-         writer.WriteMember(value, value.StartAngle, "StartAngle");
-         writer.WriteMember(value, value.SweepAngle, "SweepAngle");
+         if (Sector.StartAngleProperty.GetDefaultValue(typeof(Sector)) == value.StartAngle)
+         {
+             writer.WriteMember(value, value.StartAngle, "StartAngle");
+         }
+         if (Sector.SweepAngleProperty.GetDefaultValue(typeof(Sector)) == value.SweepAngle)
+         {
+             writer.WriteMember(value, value.SweepAngle, "SweepAngle");
+         }
     }
 }

@@ -13,11 +13,29 @@ class TabControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabControl value)
     {
-         writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
-         writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
-         writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
-         writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
-         writer.WriteMember(value, value.SelectedContent, "SelectedContent");
-         writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
+         if (TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)) == value.HorizontalContentAlignment)
+         {
+             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
+         }
+         if (TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)) == value.VerticalContentAlignment)
+         {
+             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
+         }
+         if (TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)) == value.TabStripPlacement)
+         {
+             writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
+         }
+         if (TabControl.ContentTemplateProperty.GetDefaultValue(typeof(TabControl)) == value.ContentTemplate)
+         {
+             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
+         }
+         if (TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)) == value.SelectedContent)
+         {
+             writer.WriteMember(value, value.SelectedContent, "SelectedContent");
+         }
+         if (TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)) == value.SelectedContentTemplate)
+         {
+             writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
+         }
     }
 }

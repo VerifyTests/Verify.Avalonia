@@ -13,15 +13,45 @@ class ScrollContentPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollContentPresenter value)
     {
-         writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
-         writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
-         writer.WriteMember(value, value.Extent, "Extent");
-         writer.WriteMember(value, value.Offset, "Offset");
-         writer.WriteMember(value, value.Viewport, "Viewport");
-         writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");
-         writer.WriteMember(value, value.VerticalSnapPointsType, "VerticalSnapPointsType");
-         writer.WriteMember(value, value.HorizontalSnapPointsAlignment, "HorizontalSnapPointsAlignment");
-         writer.WriteMember(value, value.VerticalSnapPointsAlignment, "VerticalSnapPointsAlignment");
-         writer.WriteMember(value, value.IsScrollChainingEnabled, "IsScrollChainingEnabled");
+         if (ScrollContentPresenter.CanHorizontallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.CanHorizontallyScroll)
+         {
+             writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
+         }
+         if (ScrollContentPresenter.CanVerticallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.CanVerticallyScroll)
+         {
+             writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
+         }
+         if (ScrollContentPresenter.ExtentProperty.GetUnsetValue(typeof(ScrollContentPresenter)) == value.Extent)
+         {
+             writer.WriteMember(value, value.Extent, "Extent");
+         }
+         if (ScrollContentPresenter.OffsetProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.Offset)
+         {
+             writer.WriteMember(value, value.Offset, "Offset");
+         }
+         if (ScrollContentPresenter.ViewportProperty.GetUnsetValue(typeof(ScrollContentPresenter)) == value.Viewport)
+         {
+             writer.WriteMember(value, value.Viewport, "Viewport");
+         }
+         if (ScrollContentPresenter.HorizontalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.HorizontalSnapPointsType)
+         {
+             writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");
+         }
+         if (ScrollContentPresenter.VerticalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.VerticalSnapPointsType)
+         {
+             writer.WriteMember(value, value.VerticalSnapPointsType, "VerticalSnapPointsType");
+         }
+         if (ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.HorizontalSnapPointsAlignment)
+         {
+             writer.WriteMember(value, value.HorizontalSnapPointsAlignment, "HorizontalSnapPointsAlignment");
+         }
+         if (ScrollContentPresenter.VerticalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.VerticalSnapPointsAlignment)
+         {
+             writer.WriteMember(value, value.VerticalSnapPointsAlignment, "VerticalSnapPointsAlignment");
+         }
+         if (ScrollContentPresenter.IsScrollChainingEnabledProperty.GetDefaultValue(typeof(ScrollContentPresenter)) == value.IsScrollChainingEnabled)
+         {
+             writer.WriteMember(value, value.IsScrollChainingEnabled, "IsScrollChainingEnabled");
+         }
     }
 }

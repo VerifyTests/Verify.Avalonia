@@ -13,10 +13,25 @@ class RangeBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RangeBase value)
     {
-         writer.WriteMember(value, value.Minimum, "Minimum");
-         writer.WriteMember(value, value.Maximum, "Maximum");
-         writer.WriteMember(value, value.Value, "Value");
-         writer.WriteMember(value, value.SmallChange, "SmallChange");
-         writer.WriteMember(value, value.LargeChange, "LargeChange");
+         if (RangeBase.MinimumProperty.GetDefaultValue(typeof(RangeBase)) == value.Minimum)
+         {
+             writer.WriteMember(value, value.Minimum, "Minimum");
+         }
+         if (RangeBase.MaximumProperty.GetDefaultValue(typeof(RangeBase)) == value.Maximum)
+         {
+             writer.WriteMember(value, value.Maximum, "Maximum");
+         }
+         if (RangeBase.ValueProperty.GetDefaultValue(typeof(RangeBase)) == value.Value)
+         {
+             writer.WriteMember(value, value.Value, "Value");
+         }
+         if (RangeBase.SmallChangeProperty.GetDefaultValue(typeof(RangeBase)) == value.SmallChange)
+         {
+             writer.WriteMember(value, value.SmallChange, "SmallChange");
+         }
+         if (RangeBase.LargeChangeProperty.GetDefaultValue(typeof(RangeBase)) == value.LargeChange)
+         {
+             writer.WriteMember(value, value.LargeChange, "LargeChange");
+         }
     }
 }

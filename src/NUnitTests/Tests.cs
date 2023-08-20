@@ -94,10 +94,10 @@ public class Tests
                       VerifyAvalonia.WriteGeneratedMembers(writer, value);
                       WriteMembers(writer, value);
               """);
+
         if (type != typeof(Visual))
         {
-            builder.AppendLine(
-                $"        {type.BaseType!.Name}Converter.WriteMembers(writer, value);");
+            builder.AppendLine($"        {type.BaseType!.Name}Converter.WriteMembers(writer, value);");
         }
 
         builder.AppendLine(
@@ -144,10 +144,38 @@ public class Tests
         //     continue;
         // }
 
-        
-        builder.AppendLine(
-            $"""
-                      writer.WriteMember(value, value.{property.Name}, "{property.Name}");
-             """);
+        var name = property.Name;
+        var attachedProperty = type.GetField($"{name}Property");
+        if (attachedProperty == null)
+        {
+            builder.AppendLine(
+                $"""
+                          writer.WriteMember(value, value.{name}, "{name}");
+                 """);
+            return;
+        }
+
+        var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
+        if (genericType == typeof(StyledProperty<>))
+        {
+            builder.AppendLine(
+                $$"""
+                           if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) == value.{{name}})
+                           {
+                               writer.WriteMember(value, value.{{name}}, "{{name}}");
+                           }
+                  """);
+            return;
+        }
+        if (genericType == typeof(DirectProperty<,>))
+        {
+            builder.AppendLine(
+                $$"""
+                           if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) == value.{{name}})
+                           {
+                               writer.WriteMember(value, value.{{name}}, "{{name}}");
+                           }
+                  """);
+        }
     }
 }

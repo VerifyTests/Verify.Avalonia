@@ -13,12 +13,33 @@ class SelectingItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectingItemsControl value)
     {
-         writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
-         writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
-         writer.WriteMember(value, value.SelectedItem, "SelectedItem");
-         writer.WriteMember(value, value.SelectedValueBinding, "SelectedValueBinding");
-         writer.WriteMember(value, value.SelectedValue, "SelectedValue");
-         writer.WriteMember(value, value.IsTextSearchEnabled, "IsTextSearchEnabled");
-         writer.WriteMember(value, value.WrapSelection, "WrapSelection");
+         if (SelectingItemsControl.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(SelectingItemsControl)) == value.AutoScrollToSelectedItem)
+         {
+             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
+         }
+         if (SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)) == value.SelectedIndex)
+         {
+             writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
+         }
+         if (SelectingItemsControl.SelectedItemProperty.GetUnsetValue(typeof(SelectingItemsControl)) == value.SelectedItem)
+         {
+             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
+         }
+         if (SelectingItemsControl.SelectedValueBindingProperty.GetDefaultValue(typeof(SelectingItemsControl)) == value.SelectedValueBinding)
+         {
+             writer.WriteMember(value, value.SelectedValueBinding, "SelectedValueBinding");
+         }
+         if (SelectingItemsControl.SelectedValueProperty.GetDefaultValue(typeof(SelectingItemsControl)) == value.SelectedValue)
+         {
+             writer.WriteMember(value, value.SelectedValue, "SelectedValue");
+         }
+         if (SelectingItemsControl.IsTextSearchEnabledProperty.GetDefaultValue(typeof(SelectingItemsControl)) == value.IsTextSearchEnabled)
+         {
+             writer.WriteMember(value, value.IsTextSearchEnabled, "IsTextSearchEnabled");
+         }
+         if (SelectingItemsControl.WrapSelectionProperty.GetDefaultValue(typeof(SelectingItemsControl)) == value.WrapSelection)
+         {
+             writer.WriteMember(value, value.WrapSelection, "WrapSelection");
+         }
     }
 }

@@ -13,23 +13,34 @@ class ScrollViewerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollViewer value)
     {
-         writer.WriteMember(value, value.BringIntoViewOnFocusChange, "BringIntoViewOnFocusChange");
-         writer.WriteMember(value, value.Extent, "Extent");
-         writer.WriteMember(value, value.Offset, "Offset");
-         writer.WriteMember(value, value.Viewport, "Viewport");
-         writer.WriteMember(value, value.LargeChange, "LargeChange");
-         writer.WriteMember(value, value.SmallChange, "SmallChange");
-         writer.WriteMember(value, value.HorizontalScrollBarVisibility, "HorizontalScrollBarVisibility");
-         writer.WriteMember(value, value.VerticalScrollBarVisibility, "VerticalScrollBarVisibility");
+         if (ScrollViewer.ExtentProperty.GetUnsetValue(typeof(ScrollViewer)) == value.Extent)
+         {
+             writer.WriteMember(value, value.Extent, "Extent");
+         }
+         if (ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)) == value.Offset)
+         {
+             writer.WriteMember(value, value.Offset, "Offset");
+         }
+         if (ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)) == value.Viewport)
+         {
+             writer.WriteMember(value, value.Viewport, "Viewport");
+         }
+         if (ScrollViewer.LargeChangeProperty.GetUnsetValue(typeof(ScrollViewer)) == value.LargeChange)
+         {
+             writer.WriteMember(value, value.LargeChange, "LargeChange");
+         }
+         if (ScrollViewer.SmallChangeProperty.GetUnsetValue(typeof(ScrollViewer)) == value.SmallChange)
+         {
+             writer.WriteMember(value, value.SmallChange, "SmallChange");
+         }
          writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
-         writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
-         writer.WriteMember(value, value.IsExpanded, "IsExpanded");
-         writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");
-         writer.WriteMember(value, value.VerticalSnapPointsType, "VerticalSnapPointsType");
-         writer.WriteMember(value, value.HorizontalSnapPointsAlignment, "HorizontalSnapPointsAlignment");
-         writer.WriteMember(value, value.VerticalSnapPointsAlignment, "VerticalSnapPointsAlignment");
-         writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
-         writer.WriteMember(value, value.IsScrollChainingEnabled, "IsScrollChainingEnabled");
-         writer.WriteMember(value, value.IsScrollInertiaEnabled, "IsScrollInertiaEnabled");
+         if (ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)) == value.ScrollBarMaximum)
+         {
+             writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
+         }
+         if (ScrollViewer.IsExpandedProperty.GetUnsetValue(typeof(ScrollViewer)) == value.IsExpanded)
+         {
+             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+         }
     }
 }

@@ -13,6 +13,9 @@ class PathConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Path value)
     {
-         writer.WriteMember(value, value.Data, "Data");
+         if (Path.DataProperty.GetDefaultValue(typeof(Path)) == value.Data)
+         {
+             writer.WriteMember(value, value.Data, "Data");
+         }
     }
 }

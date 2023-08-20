@@ -13,23 +13,74 @@ class AutoCompleteBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, AutoCompleteBox value)
     {
-         writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");
-         writer.WriteMember(value, value.IsTextCompletionEnabled, "IsTextCompletionEnabled");
-         writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
-         writer.WriteMember(value, value.MinimumPopulateDelay, "MinimumPopulateDelay");
-         writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
-         writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
+         if (AutoCompleteBox.MinimumPrefixLengthProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.MinimumPrefixLength)
+         {
+             writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");
+         }
+         if (AutoCompleteBox.IsTextCompletionEnabledProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.IsTextCompletionEnabled)
+         {
+             writer.WriteMember(value, value.IsTextCompletionEnabled, "IsTextCompletionEnabled");
+         }
+         if (AutoCompleteBox.ItemTemplateProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.ItemTemplate)
+         {
+             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
+         }
+         if (AutoCompleteBox.MinimumPopulateDelayProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.MinimumPopulateDelay)
+         {
+             writer.WriteMember(value, value.MinimumPopulateDelay, "MinimumPopulateDelay");
+         }
+         if (AutoCompleteBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.MaxDropDownHeight)
+         {
+             writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
+         }
+         if (AutoCompleteBox.IsDropDownOpenProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.IsDropDownOpen)
+         {
+             writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
+         }
          writer.WriteMember(value, value.ValueMemberBinding, "ValueMemberBinding");
-         writer.WriteMember(value, value.SelectedItem, "SelectedItem");
-         writer.WriteMember(value, value.Text, "Text");
-         writer.WriteMember(value, value.SearchText, "SearchText");
-         writer.WriteMember(value, value.FilterMode, "FilterMode");
-         writer.WriteMember(value, value.Watermark, "Watermark");
-         writer.WriteMember(value, value.ItemFilter, "ItemFilter");
-         writer.WriteMember(value, value.TextFilter, "TextFilter");
-         writer.WriteMember(value, value.ItemSelector, "ItemSelector");
-         writer.WriteMember(value, value.TextSelector, "TextSelector");
-         writer.WriteMember(value, value.AsyncPopulator, "AsyncPopulator");
-         writer.WriteMember(value, value.ItemsSource, "ItemsSource");
+         if (AutoCompleteBox.SelectedItemProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.SelectedItem)
+         {
+             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
+         }
+         if (AutoCompleteBox.TextProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.Text)
+         {
+             writer.WriteMember(value, value.Text, "Text");
+         }
+         if (AutoCompleteBox.SearchTextProperty.GetUnsetValue(typeof(AutoCompleteBox)) == value.SearchText)
+         {
+             writer.WriteMember(value, value.SearchText, "SearchText");
+         }
+         if (AutoCompleteBox.FilterModeProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.FilterMode)
+         {
+             writer.WriteMember(value, value.FilterMode, "FilterMode");
+         }
+         if (AutoCompleteBox.WatermarkProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.Watermark)
+         {
+             writer.WriteMember(value, value.Watermark, "Watermark");
+         }
+         if (AutoCompleteBox.ItemFilterProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.ItemFilter)
+         {
+             writer.WriteMember(value, value.ItemFilter, "ItemFilter");
+         }
+         if (AutoCompleteBox.TextFilterProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.TextFilter)
+         {
+             writer.WriteMember(value, value.TextFilter, "TextFilter");
+         }
+         if (AutoCompleteBox.ItemSelectorProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.ItemSelector)
+         {
+             writer.WriteMember(value, value.ItemSelector, "ItemSelector");
+         }
+         if (AutoCompleteBox.TextSelectorProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.TextSelector)
+         {
+             writer.WriteMember(value, value.TextSelector, "TextSelector");
+         }
+         if (AutoCompleteBox.AsyncPopulatorProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.AsyncPopulator)
+         {
+             writer.WriteMember(value, value.AsyncPopulator, "AsyncPopulator");
+         }
+         if (AutoCompleteBox.ItemsSourceProperty.GetDefaultValue(typeof(AutoCompleteBox)) == value.ItemsSource)
+         {
+             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
+         }
     }
 }

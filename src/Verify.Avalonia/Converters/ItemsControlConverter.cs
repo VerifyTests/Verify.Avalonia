@@ -13,14 +13,32 @@ class ItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsControl value)
     {
-         writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");
+         if (ItemsControl.DisplayMemberBindingProperty.GetDefaultValue(typeof(ItemsControl)) == value.DisplayMemberBinding)
+         {
+             writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");
+         }
          writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
          writer.WriteMember(value, value.Items, "Items");
-         writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
-         writer.WriteMember(value, value.ItemCount, "ItemCount");
-         writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
-         writer.WriteMember(value, value.ItemsSource, "ItemsSource");
-         writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
+         if (ItemsControl.ItemContainerThemeProperty.GetDefaultValue(typeof(ItemsControl)) == value.ItemContainerTheme)
+         {
+             writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
+         }
+         if (ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)) == value.ItemCount)
+         {
+             writer.WriteMember(value, value.ItemCount, "ItemCount");
+         }
+         if (ItemsControl.ItemsPanelProperty.GetDefaultValue(typeof(ItemsControl)) == value.ItemsPanel)
+         {
+             writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
+         }
+         if (ItemsControl.ItemsSourceProperty.GetDefaultValue(typeof(ItemsControl)) == value.ItemsSource)
+         {
+             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
+         }
+         if (ItemsControl.ItemTemplateProperty.GetDefaultValue(typeof(ItemsControl)) == value.ItemTemplate)
+         {
+             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
+         }
          writer.WriteMember(value, value.Presenter, "Presenter");
          writer.WriteMember(value, value.ItemsPanelRoot, "ItemsPanelRoot");
          writer.WriteMember(value, value.ItemsView, "ItemsView");

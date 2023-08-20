@@ -13,11 +13,26 @@ class BorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Border value)
     {
-         writer.WriteMember(value, value.Background, "Background");
-         writer.WriteMember(value, value.BorderBrush, "BorderBrush");
-         writer.WriteMember(value, value.BorderThickness, "BorderThickness");
-         writer.WriteMember(value, value.CornerRadius, "CornerRadius");
-         writer.WriteMember(value, value.BoxShadow, "BoxShadow");
+         if (Border.BackgroundProperty.GetDefaultValue(typeof(Border)) == value.Background)
+         {
+             writer.WriteMember(value, value.Background, "Background");
+         }
+         if (Border.BorderBrushProperty.GetDefaultValue(typeof(Border)) == value.BorderBrush)
+         {
+             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+         }
+         if (Border.BorderThicknessProperty.GetDefaultValue(typeof(Border)) == value.BorderThickness)
+         {
+             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+         }
+         if (Border.CornerRadiusProperty.GetDefaultValue(typeof(Border)) == value.CornerRadius)
+         {
+             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+         }
+         if (Border.BoxShadowProperty.GetDefaultValue(typeof(Border)) == value.BoxShadow)
+         {
+             writer.WriteMember(value, value.BoxShadow, "BoxShadow");
+         }
          writer.WriteMember(value, value.ClipToBoundsRadius, "ClipToBoundsRadius");
     }
 }

@@ -13,7 +13,13 @@ class RectangleConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Rectangle value)
     {
-         writer.WriteMember(value, value.RadiusX, "RadiusX");
-         writer.WriteMember(value, value.RadiusY, "RadiusY");
+         if (Rectangle.RadiusXProperty.GetDefaultValue(typeof(Rectangle)) == value.RadiusX)
+         {
+             writer.WriteMember(value, value.RadiusX, "RadiusX");
+         }
+         if (Rectangle.RadiusYProperty.GetDefaultValue(typeof(Rectangle)) == value.RadiusY)
+         {
+             writer.WriteMember(value, value.RadiusY, "RadiusY");
+         }
     }
 }

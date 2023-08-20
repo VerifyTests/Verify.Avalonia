@@ -13,11 +13,29 @@ class GridSplitterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
     {
-         writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
-         writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
-         writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
-         writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
-         writer.WriteMember(value, value.DragIncrement, "DragIncrement");
-         writer.WriteMember(value, value.PreviewContent, "PreviewContent");
+         if (GridSplitter.ResizeDirectionProperty.GetDefaultValue(typeof(GridSplitter)) == value.ResizeDirection)
+         {
+             writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
+         }
+         if (GridSplitter.ResizeBehaviorProperty.GetDefaultValue(typeof(GridSplitter)) == value.ResizeBehavior)
+         {
+             writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
+         }
+         if (GridSplitter.ShowsPreviewProperty.GetDefaultValue(typeof(GridSplitter)) == value.ShowsPreview)
+         {
+             writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
+         }
+         if (GridSplitter.KeyboardIncrementProperty.GetDefaultValue(typeof(GridSplitter)) == value.KeyboardIncrement)
+         {
+             writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
+         }
+         if (GridSplitter.DragIncrementProperty.GetDefaultValue(typeof(GridSplitter)) == value.DragIncrement)
+         {
+             writer.WriteMember(value, value.DragIncrement, "DragIncrement");
+         }
+         if (GridSplitter.PreviewContentProperty.GetDefaultValue(typeof(GridSplitter)) == value.PreviewContent)
+         {
+             writer.WriteMember(value, value.PreviewContent, "PreviewContent");
+         }
     }
 }

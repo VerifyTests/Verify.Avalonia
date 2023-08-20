@@ -13,8 +13,17 @@ class ButtonSpinnerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ButtonSpinner value)
     {
-         writer.WriteMember(value, value.AllowSpin, "AllowSpin");
-         writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
-         writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
+         if (ButtonSpinner.AllowSpinProperty.GetDefaultValue(typeof(ButtonSpinner)) == value.AllowSpin)
+         {
+             writer.WriteMember(value, value.AllowSpin, "AllowSpin");
+         }
+         if (ButtonSpinner.ShowButtonSpinnerProperty.GetDefaultValue(typeof(ButtonSpinner)) == value.ShowButtonSpinner)
+         {
+             writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
+         }
+         if (ButtonSpinner.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(ButtonSpinner)) == value.ButtonSpinnerLocation)
+         {
+             writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
+         }
     }
 }

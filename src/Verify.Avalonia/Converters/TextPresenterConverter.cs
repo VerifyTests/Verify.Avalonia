@@ -13,27 +13,72 @@ class TextPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TextPresenter value)
     {
-         writer.WriteMember(value, value.Background, "Background");
-         writer.WriteMember(value, value.Text, "Text");
-         writer.WriteMember(value, value.PreeditText, "PreeditText");
+         if (TextPresenter.BackgroundProperty.GetDefaultValue(typeof(TextPresenter)) == value.Background)
+         {
+             writer.WriteMember(value, value.Background, "Background");
+         }
+         if (TextPresenter.TextProperty.GetDefaultValue(typeof(TextPresenter)) == value.Text)
+         {
+             writer.WriteMember(value, value.Text, "Text");
+         }
+         if (TextPresenter.PreeditTextProperty.GetDefaultValue(typeof(TextPresenter)) == value.PreeditText)
+         {
+             writer.WriteMember(value, value.PreeditText, "PreeditText");
+         }
          writer.WriteMember(value, value.FontFamily, "FontFamily");
          writer.WriteMember(value, value.FontSize, "FontSize");
          writer.WriteMember(value, value.FontStyle, "FontStyle");
          writer.WriteMember(value, value.FontWeight, "FontWeight");
          writer.WriteMember(value, value.FontStretch, "FontStretch");
          writer.WriteMember(value, value.Foreground, "Foreground");
-         writer.WriteMember(value, value.TextWrapping, "TextWrapping");
-         writer.WriteMember(value, value.LineHeight, "LineHeight");
-         writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
-         writer.WriteMember(value, value.TextAlignment, "TextAlignment");
+         if (TextPresenter.TextWrappingProperty.GetDefaultValue(typeof(TextPresenter)) == value.TextWrapping)
+         {
+             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
+         }
+         if (TextPresenter.LineHeightProperty.GetDefaultValue(typeof(TextPresenter)) == value.LineHeight)
+         {
+             writer.WriteMember(value, value.LineHeight, "LineHeight");
+         }
+         if (TextPresenter.LetterSpacingProperty.GetDefaultValue(typeof(TextPresenter)) == value.LetterSpacing)
+         {
+             writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
+         }
+         if (TextPresenter.TextAlignmentProperty.GetDefaultValue(typeof(TextPresenter)) == value.TextAlignment)
+         {
+             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
+         }
          writer.WriteMember(value, value.TextLayout, "TextLayout");
-         writer.WriteMember(value, value.CaretIndex, "CaretIndex");
-         writer.WriteMember(value, value.PasswordChar, "PasswordChar");
-         writer.WriteMember(value, value.RevealPassword, "RevealPassword");
-         writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
-         writer.WriteMember(value, value.SelectionForegroundBrush, "SelectionForegroundBrush");
-         writer.WriteMember(value, value.CaretBrush, "CaretBrush");
-         writer.WriteMember(value, value.SelectionStart, "SelectionStart");
-         writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
+         if (TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)) == value.CaretIndex)
+         {
+             writer.WriteMember(value, value.CaretIndex, "CaretIndex");
+         }
+         if (TextPresenter.PasswordCharProperty.GetDefaultValue(typeof(TextPresenter)) == value.PasswordChar)
+         {
+             writer.WriteMember(value, value.PasswordChar, "PasswordChar");
+         }
+         if (TextPresenter.RevealPasswordProperty.GetDefaultValue(typeof(TextPresenter)) == value.RevealPassword)
+         {
+             writer.WriteMember(value, value.RevealPassword, "RevealPassword");
+         }
+         if (TextPresenter.SelectionBrushProperty.GetDefaultValue(typeof(TextPresenter)) == value.SelectionBrush)
+         {
+             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
+         }
+         if (TextPresenter.SelectionForegroundBrushProperty.GetDefaultValue(typeof(TextPresenter)) == value.SelectionForegroundBrush)
+         {
+             writer.WriteMember(value, value.SelectionForegroundBrush, "SelectionForegroundBrush");
+         }
+         if (TextPresenter.CaretBrushProperty.GetDefaultValue(typeof(TextPresenter)) == value.CaretBrush)
+         {
+             writer.WriteMember(value, value.CaretBrush, "CaretBrush");
+         }
+         if (TextPresenter.SelectionStartProperty.GetDefaultValue(typeof(TextPresenter)) == value.SelectionStart)
+         {
+             writer.WriteMember(value, value.SelectionStart, "SelectionStart");
+         }
+         if (TextPresenter.SelectionEndProperty.GetDefaultValue(typeof(TextPresenter)) == value.SelectionEnd)
+         {
+             writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
+         }
     }
 }

@@ -13,14 +13,41 @@ class DatePickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DatePicker value)
     {
-         writer.WriteMember(value, value.DayFormat, "DayFormat");
-         writer.WriteMember(value, value.DayVisible, "DayVisible");
-         writer.WriteMember(value, value.MaxYear, "MaxYear");
-         writer.WriteMember(value, value.MinYear, "MinYear");
-         writer.WriteMember(value, value.MonthFormat, "MonthFormat");
-         writer.WriteMember(value, value.MonthVisible, "MonthVisible");
-         writer.WriteMember(value, value.YearFormat, "YearFormat");
-         writer.WriteMember(value, value.YearVisible, "YearVisible");
-         writer.WriteMember(value, value.SelectedDate, "SelectedDate");
+         if (DatePicker.DayFormatProperty.GetDefaultValue(typeof(DatePicker)) == value.DayFormat)
+         {
+             writer.WriteMember(value, value.DayFormat, "DayFormat");
+         }
+         if (DatePicker.DayVisibleProperty.GetDefaultValue(typeof(DatePicker)) == value.DayVisible)
+         {
+             writer.WriteMember(value, value.DayVisible, "DayVisible");
+         }
+         if (DatePicker.MaxYearProperty.GetDefaultValue(typeof(DatePicker)) == value.MaxYear)
+         {
+             writer.WriteMember(value, value.MaxYear, "MaxYear");
+         }
+         if (DatePicker.MinYearProperty.GetDefaultValue(typeof(DatePicker)) == value.MinYear)
+         {
+             writer.WriteMember(value, value.MinYear, "MinYear");
+         }
+         if (DatePicker.MonthFormatProperty.GetDefaultValue(typeof(DatePicker)) == value.MonthFormat)
+         {
+             writer.WriteMember(value, value.MonthFormat, "MonthFormat");
+         }
+         if (DatePicker.MonthVisibleProperty.GetDefaultValue(typeof(DatePicker)) == value.MonthVisible)
+         {
+             writer.WriteMember(value, value.MonthVisible, "MonthVisible");
+         }
+         if (DatePicker.YearFormatProperty.GetDefaultValue(typeof(DatePicker)) == value.YearFormat)
+         {
+             writer.WriteMember(value, value.YearFormat, "YearFormat");
+         }
+         if (DatePicker.YearVisibleProperty.GetDefaultValue(typeof(DatePicker)) == value.YearVisible)
+         {
+             writer.WriteMember(value, value.YearVisible, "YearVisible");
+         }
+         if (DatePicker.SelectedDateProperty.GetDefaultValue(typeof(DatePicker)) == value.SelectedDate)
+         {
+             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
+         }
     }
 }

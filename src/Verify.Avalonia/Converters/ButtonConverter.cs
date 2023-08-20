@@ -13,13 +13,37 @@ class ButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Button value)
     {
-         writer.WriteMember(value, value.ClickMode, "ClickMode");
-         writer.WriteMember(value, value.Command, "Command");
-         writer.WriteMember(value, value.HotKey, "HotKey");
-         writer.WriteMember(value, value.CommandParameter, "CommandParameter");
-         writer.WriteMember(value, value.IsDefault, "IsDefault");
-         writer.WriteMember(value, value.IsCancel, "IsCancel");
-         writer.WriteMember(value, value.IsPressed, "IsPressed");
-         writer.WriteMember(value, value.Flyout, "Flyout");
+         if (Button.ClickModeProperty.GetDefaultValue(typeof(Button)) == value.ClickMode)
+         {
+             writer.WriteMember(value, value.ClickMode, "ClickMode");
+         }
+         if (Button.CommandProperty.GetDefaultValue(typeof(Button)) == value.Command)
+         {
+             writer.WriteMember(value, value.Command, "Command");
+         }
+         if (Button.HotKeyProperty.GetDefaultValue(typeof(Button)) == value.HotKey)
+         {
+             writer.WriteMember(value, value.HotKey, "HotKey");
+         }
+         if (Button.CommandParameterProperty.GetDefaultValue(typeof(Button)) == value.CommandParameter)
+         {
+             writer.WriteMember(value, value.CommandParameter, "CommandParameter");
+         }
+         if (Button.IsDefaultProperty.GetDefaultValue(typeof(Button)) == value.IsDefault)
+         {
+             writer.WriteMember(value, value.IsDefault, "IsDefault");
+         }
+         if (Button.IsCancelProperty.GetDefaultValue(typeof(Button)) == value.IsCancel)
+         {
+             writer.WriteMember(value, value.IsCancel, "IsCancel");
+         }
+         if (Button.IsPressedProperty.GetUnsetValue(typeof(Button)) == value.IsPressed)
+         {
+             writer.WriteMember(value, value.IsPressed, "IsPressed");
+         }
+         if (Button.FlyoutProperty.GetDefaultValue(typeof(Button)) == value.Flyout)
+         {
+             writer.WriteMember(value, value.Flyout, "Flyout");
+         }
     }
 }

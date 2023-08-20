@@ -13,11 +13,29 @@ class SliderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Slider value)
     {
-         writer.WriteMember(value, value.Ticks, "Ticks");
-         writer.WriteMember(value, value.Orientation, "Orientation");
-         writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
-         writer.WriteMember(value, value.IsSnapToTickEnabled, "IsSnapToTickEnabled");
-         writer.WriteMember(value, value.TickFrequency, "TickFrequency");
-         writer.WriteMember(value, value.TickPlacement, "TickPlacement");
+         if (Slider.TicksProperty.GetDefaultValue(typeof(Slider)) == value.Ticks)
+         {
+             writer.WriteMember(value, value.Ticks, "Ticks");
+         }
+         if (Slider.OrientationProperty.GetDefaultValue(typeof(Slider)) == value.Orientation)
+         {
+             writer.WriteMember(value, value.Orientation, "Orientation");
+         }
+         if (Slider.IsDirectionReversedProperty.GetDefaultValue(typeof(Slider)) == value.IsDirectionReversed)
+         {
+             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
+         }
+         if (Slider.IsSnapToTickEnabledProperty.GetDefaultValue(typeof(Slider)) == value.IsSnapToTickEnabled)
+         {
+             writer.WriteMember(value, value.IsSnapToTickEnabled, "IsSnapToTickEnabled");
+         }
+         if (Slider.TickFrequencyProperty.GetDefaultValue(typeof(Slider)) == value.TickFrequency)
+         {
+             writer.WriteMember(value, value.TickFrequency, "TickFrequency");
+         }
+         if (Slider.TickPlacementProperty.GetDefaultValue(typeof(Slider)) == value.TickPlacement)
+         {
+             writer.WriteMember(value, value.TickPlacement, "TickPlacement");
+         }
     }
 }

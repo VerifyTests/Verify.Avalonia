@@ -13,12 +13,30 @@ class TopLevelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
-         writer.WriteMember(value, value.ClientSize, "ClientSize");
-         writer.WriteMember(value, value.FrameSize, "FrameSize");
-         writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
-         writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
-         writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
-         writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
+         if (TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)) == value.ClientSize)
+         {
+             writer.WriteMember(value, value.ClientSize, "ClientSize");
+         }
+         if (TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)) == value.FrameSize)
+         {
+             writer.WriteMember(value, value.FrameSize, "FrameSize");
+         }
+         if (TopLevel.TransparencyLevelHintProperty.GetDefaultValue(typeof(TopLevel)) == value.TransparencyLevelHint)
+         {
+             writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
+         }
+         if (TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)) == value.ActualTransparencyLevel)
+         {
+             writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
+         }
+         if (TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(typeof(TopLevel)) == value.TransparencyBackgroundFallback)
+         {
+             writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
+         }
+         if (TopLevel.RequestedThemeVariantProperty.GetDefaultValue(typeof(TopLevel)) == value.RequestedThemeVariant)
+         {
+             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
+         }
          writer.WriteMember(value, value.PlatformImpl, "PlatformImpl");
          writer.WriteMember(value, value.RendererDiagnostics, "RendererDiagnostics");
          writer.WriteMember(value, value.RenderScaling, "RenderScaling");

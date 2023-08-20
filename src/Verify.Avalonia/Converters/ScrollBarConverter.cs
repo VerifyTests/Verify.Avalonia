@@ -13,12 +13,33 @@ class ScrollBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
-         writer.WriteMember(value, value.ViewportSize, "ViewportSize");
-         writer.WriteMember(value, value.Visibility, "Visibility");
-         writer.WriteMember(value, value.Orientation, "Orientation");
-         writer.WriteMember(value, value.IsExpanded, "IsExpanded");
-         writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
-         writer.WriteMember(value, value.HideDelay, "HideDelay");
-         writer.WriteMember(value, value.ShowDelay, "ShowDelay");
+         if (ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)) == value.ViewportSize)
+         {
+             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
+         }
+         if (ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)) == value.Visibility)
+         {
+             writer.WriteMember(value, value.Visibility, "Visibility");
+         }
+         if (ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)) == value.Orientation)
+         {
+             writer.WriteMember(value, value.Orientation, "Orientation");
+         }
+         if (ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)) == value.IsExpanded)
+         {
+             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+         }
+         if (ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)) == value.AllowAutoHide)
+         {
+             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
+         }
+         if (ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)) == value.HideDelay)
+         {
+             writer.WriteMember(value, value.HideDelay, "HideDelay");
+         }
+         if (ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)) == value.ShowDelay)
+         {
+             writer.WriteMember(value, value.ShowDelay, "ShowDelay");
+         }
     }
 }

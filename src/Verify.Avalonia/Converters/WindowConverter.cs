@@ -14,21 +14,66 @@ class WindowConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Window value)
     {
          writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
-         writer.WriteMember(value, value.SizeToContent, "SizeToContent");
-         writer.WriteMember(value, value.Title, "Title");
-         writer.WriteMember(value, value.ExtendClientAreaToDecorationsHint, "ExtendClientAreaToDecorationsHint");
-         writer.WriteMember(value, value.ExtendClientAreaChromeHints, "ExtendClientAreaChromeHints");
-         writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
-         writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
-         writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
-         writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
-         writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");
-         writer.WriteMember(value, value.ShowActivated, "ShowActivated");
-         writer.WriteMember(value, value.ShowInTaskbar, "ShowInTaskbar");
-         writer.WriteMember(value, value.WindowState, "WindowState");
-         writer.WriteMember(value, value.CanResize, "CanResize");
-         writer.WriteMember(value, value.Icon, "Icon");
-         writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");
+         if (Window.SizeToContentProperty.GetDefaultValue(typeof(Window)) == value.SizeToContent)
+         {
+             writer.WriteMember(value, value.SizeToContent, "SizeToContent");
+         }
+         if (Window.TitleProperty.GetDefaultValue(typeof(Window)) == value.Title)
+         {
+             writer.WriteMember(value, value.Title, "Title");
+         }
+         if (Window.ExtendClientAreaToDecorationsHintProperty.GetDefaultValue(typeof(Window)) == value.ExtendClientAreaToDecorationsHint)
+         {
+             writer.WriteMember(value, value.ExtendClientAreaToDecorationsHint, "ExtendClientAreaToDecorationsHint");
+         }
+         if (Window.ExtendClientAreaChromeHintsProperty.GetDefaultValue(typeof(Window)) == value.ExtendClientAreaChromeHints)
+         {
+             writer.WriteMember(value, value.ExtendClientAreaChromeHints, "ExtendClientAreaChromeHints");
+         }
+         if (Window.ExtendClientAreaTitleBarHeightHintProperty.GetDefaultValue(typeof(Window)) == value.ExtendClientAreaTitleBarHeightHint)
+         {
+             writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
+         }
+         if (Window.IsExtendedIntoWindowDecorationsProperty.GetUnsetValue(typeof(Window)) == value.IsExtendedIntoWindowDecorations)
+         {
+             writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
+         }
+         if (Window.WindowDecorationMarginProperty.GetUnsetValue(typeof(Window)) == value.WindowDecorationMargin)
+         {
+             writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
+         }
+         if (Window.OffScreenMarginProperty.GetUnsetValue(typeof(Window)) == value.OffScreenMargin)
+         {
+             writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
+         }
+         if (Window.SystemDecorationsProperty.GetDefaultValue(typeof(Window)) == value.SystemDecorations)
+         {
+             writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");
+         }
+         if (Window.ShowActivatedProperty.GetDefaultValue(typeof(Window)) == value.ShowActivated)
+         {
+             writer.WriteMember(value, value.ShowActivated, "ShowActivated");
+         }
+         if (Window.ShowInTaskbarProperty.GetDefaultValue(typeof(Window)) == value.ShowInTaskbar)
+         {
+             writer.WriteMember(value, value.ShowInTaskbar, "ShowInTaskbar");
+         }
+         if (Window.WindowStateProperty.GetDefaultValue(typeof(Window)) == value.WindowState)
+         {
+             writer.WriteMember(value, value.WindowState, "WindowState");
+         }
+         if (Window.CanResizeProperty.GetDefaultValue(typeof(Window)) == value.CanResize)
+         {
+             writer.WriteMember(value, value.CanResize, "CanResize");
+         }
+         if (Window.IconProperty.GetDefaultValue(typeof(Window)) == value.Icon)
+         {
+             writer.WriteMember(value, value.Icon, "Icon");
+         }
+         if (Window.WindowStartupLocationProperty.GetDefaultValue(typeof(Window)) == value.WindowStartupLocation)
+         {
+             writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");
+         }
          writer.WriteMember(value, value.Position, "Position");
     }
 }

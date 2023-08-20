@@ -13,16 +13,46 @@ class InputElementConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, InputElement value)
     {
-         writer.WriteMember(value, value.Focusable, "Focusable");
-         writer.WriteMember(value, value.IsEnabled, "IsEnabled");
-         writer.WriteMember(value, value.Cursor, "Cursor");
-         writer.WriteMember(value, value.IsKeyboardFocusWithin, "IsKeyboardFocusWithin");
-         writer.WriteMember(value, value.IsFocused, "IsFocused");
-         writer.WriteMember(value, value.IsHitTestVisible, "IsHitTestVisible");
-         writer.WriteMember(value, value.IsPointerOver, "IsPointerOver");
-         writer.WriteMember(value, value.IsTabStop, "IsTabStop");
-         writer.WriteMember(value, value.IsEffectivelyEnabled, "IsEffectivelyEnabled");
-         writer.WriteMember(value, value.TabIndex, "TabIndex");
+         if (InputElement.FocusableProperty.GetDefaultValue(typeof(InputElement)) == value.Focusable)
+         {
+             writer.WriteMember(value, value.Focusable, "Focusable");
+         }
+         if (InputElement.IsEnabledProperty.GetDefaultValue(typeof(InputElement)) == value.IsEnabled)
+         {
+             writer.WriteMember(value, value.IsEnabled, "IsEnabled");
+         }
+         if (InputElement.CursorProperty.GetDefaultValue(typeof(InputElement)) == value.Cursor)
+         {
+             writer.WriteMember(value, value.Cursor, "Cursor");
+         }
+         if (InputElement.IsKeyboardFocusWithinProperty.GetUnsetValue(typeof(InputElement)) == value.IsKeyboardFocusWithin)
+         {
+             writer.WriteMember(value, value.IsKeyboardFocusWithin, "IsKeyboardFocusWithin");
+         }
+         if (InputElement.IsFocusedProperty.GetUnsetValue(typeof(InputElement)) == value.IsFocused)
+         {
+             writer.WriteMember(value, value.IsFocused, "IsFocused");
+         }
+         if (InputElement.IsHitTestVisibleProperty.GetDefaultValue(typeof(InputElement)) == value.IsHitTestVisible)
+         {
+             writer.WriteMember(value, value.IsHitTestVisible, "IsHitTestVisible");
+         }
+         if (InputElement.IsPointerOverProperty.GetUnsetValue(typeof(InputElement)) == value.IsPointerOver)
+         {
+             writer.WriteMember(value, value.IsPointerOver, "IsPointerOver");
+         }
+         if (InputElement.IsTabStopProperty.GetDefaultValue(typeof(InputElement)) == value.IsTabStop)
+         {
+             writer.WriteMember(value, value.IsTabStop, "IsTabStop");
+         }
+         if (InputElement.IsEffectivelyEnabledProperty.GetUnsetValue(typeof(InputElement)) == value.IsEffectivelyEnabled)
+         {
+             writer.WriteMember(value, value.IsEffectivelyEnabled, "IsEffectivelyEnabled");
+         }
+         if (InputElement.TabIndexProperty.GetDefaultValue(typeof(InputElement)) == value.TabIndex)
+         {
+             writer.WriteMember(value, value.TabIndex, "TabIndex");
+         }
          writer.WriteMember(value, value.KeyBindings, "KeyBindings");
          writer.WriteMember(value, value.GestureRecognizers, "GestureRecognizers");
     }
