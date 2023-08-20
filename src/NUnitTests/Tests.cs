@@ -28,9 +28,8 @@ public class Tests
             .Concat(
                 typeof(InputElement).Assembly.GetTypes())
             .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
-            .OrderBy(GetDepth)
+            .OrderByDescending(GetDepth)
             .ToList();
-        types.Add(visual);
         foreach (var type in types)
         {
             WriteType(type, convertersPath);
