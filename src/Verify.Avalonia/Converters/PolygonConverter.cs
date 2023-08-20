@@ -13,7 +13,7 @@ class PolygonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Polygon value)
     {
-         if (Polygon.PointsProperty.GetDefaultValue(typeof(Polygon)) == value.Points)
+         if (Polygon.PointsProperty.GetDefaultValue(typeof(Polygon)) != value.Points)
          {
              writer.WriteMember(value, value.Points, "Points");
          }

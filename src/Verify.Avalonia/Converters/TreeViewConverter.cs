@@ -14,19 +14,19 @@ class TreeViewConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TreeView value)
     {
          writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
-         if (TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)) == value.AutoScrollToSelectedItem)
+         if (TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)) != value.AutoScrollToSelectedItem)
          {
              writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
          }
-         if (TreeView.SelectionModeProperty.GetDefaultValue(typeof(TreeView)) == value.SelectionMode)
+         if (TreeView.SelectionModeProperty.GetDefaultValue(typeof(TreeView)) != value.SelectionMode)
          {
              writer.WriteMember(value, value.SelectionMode, "SelectionMode");
          }
-         if (TreeView.SelectedItemProperty.GetUnsetValue(typeof(TreeView)) == value.SelectedItem)
+         if (TreeView.SelectedItemProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItem)
          {
              writer.WriteMember(value, value.SelectedItem, "SelectedItem");
          }
-         if (TreeView.SelectedItemsProperty.GetUnsetValue(typeof(TreeView)) == value.SelectedItems)
+         if (TreeView.SelectedItemsProperty.GetUnsetValue(typeof(TreeView)) != value.SelectedItems)
          {
              writer.WriteMember(value, value.SelectedItems, "SelectedItems");
          }

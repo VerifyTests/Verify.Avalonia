@@ -13,32 +13,32 @@ class MenuItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MenuItem value)
     {
-         if (MenuItem.CommandProperty.GetDefaultValue(typeof(MenuItem)) == value.Command)
+         if (MenuItem.CommandProperty.GetDefaultValue(typeof(MenuItem)) != value.Command)
          {
              writer.WriteMember(value, value.Command, "Command");
          }
-         if (MenuItem.HotKeyProperty.GetDefaultValue(typeof(MenuItem)) == value.HotKey)
+         if (MenuItem.HotKeyProperty.GetDefaultValue(typeof(MenuItem)) != value.HotKey)
          {
              writer.WriteMember(value, value.HotKey, "HotKey");
          }
-         if (MenuItem.CommandParameterProperty.GetDefaultValue(typeof(MenuItem)) == value.CommandParameter)
+         if (MenuItem.CommandParameterProperty.GetDefaultValue(typeof(MenuItem)) != value.CommandParameter)
          {
              writer.WriteMember(value, value.CommandParameter, "CommandParameter");
          }
-         if (MenuItem.IconProperty.GetDefaultValue(typeof(MenuItem)) == value.Icon)
+         if (MenuItem.IconProperty.GetDefaultValue(typeof(MenuItem)) != value.Icon)
          {
              writer.WriteMember(value, value.Icon, "Icon");
          }
-         if (MenuItem.InputGestureProperty.GetDefaultValue(typeof(MenuItem)) == value.InputGesture)
+         if (MenuItem.InputGestureProperty.GetDefaultValue(typeof(MenuItem)) != value.InputGesture)
          {
              writer.WriteMember(value, value.InputGesture, "InputGesture");
          }
          writer.WriteMember(value, value.IsSelected, "IsSelected");
-         if (MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)) == value.IsSubMenuOpen)
+         if (MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)) != value.IsSubMenuOpen)
          {
              writer.WriteMember(value, value.IsSubMenuOpen, "IsSubMenuOpen");
          }
-         if (MenuItem.StaysOpenOnClickProperty.GetDefaultValue(typeof(MenuItem)) == value.StaysOpenOnClick)
+         if (MenuItem.StaysOpenOnClickProperty.GetDefaultValue(typeof(MenuItem)) != value.StaysOpenOnClick)
          {
              writer.WriteMember(value, value.StaysOpenOnClick, "StaysOpenOnClick");
          }

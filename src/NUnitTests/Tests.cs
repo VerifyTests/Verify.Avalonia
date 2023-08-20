@@ -156,22 +156,24 @@ public class Tests
         }
 
         var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
+
         if (genericType == typeof(StyledProperty<>))
         {
             builder.AppendLine(
                 $$"""
-                           if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) == value.{{name}})
+                           if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) != value.{{name}})
                            {
                                writer.WriteMember(value, value.{{name}}, "{{name}}");
                            }
                   """);
             return;
         }
+
         if (genericType == typeof(DirectProperty<,>))
         {
             builder.AppendLine(
                 $$"""
-                           if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) == value.{{name}})
+                           if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
                            {
                                writer.WriteMember(value, value.{{name}}, "{{name}}");
                            }

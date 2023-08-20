@@ -14,59 +14,59 @@ class CalendarDatePickerConverter :
     public static void WriteMembers(VerifyJsonWriter writer, CalendarDatePicker value)
     {
          writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
-         if (CalendarDatePicker.DisplayDateProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.DisplayDate)
+         if (CalendarDatePicker.DisplayDateProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.DisplayDate)
          {
              writer.WriteMember(value, value.DisplayDate, "DisplayDate");
          }
-         if (CalendarDatePicker.DisplayDateStartProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.DisplayDateStart)
+         if (CalendarDatePicker.DisplayDateStartProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.DisplayDateStart)
          {
              writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
          }
-         if (CalendarDatePicker.DisplayDateEndProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.DisplayDateEnd)
+         if (CalendarDatePicker.DisplayDateEndProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.DisplayDateEnd)
          {
              writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");
          }
-         if (CalendarDatePicker.FirstDayOfWeekProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.FirstDayOfWeek)
+         if (CalendarDatePicker.FirstDayOfWeekProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.FirstDayOfWeek)
          {
              writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
          }
-         if (CalendarDatePicker.IsDropDownOpenProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.IsDropDownOpen)
+         if (CalendarDatePicker.IsDropDownOpenProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.IsDropDownOpen)
          {
              writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
          }
-         if (CalendarDatePicker.IsTodayHighlightedProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.IsTodayHighlighted)
+         if (CalendarDatePicker.IsTodayHighlightedProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.IsTodayHighlighted)
          {
              writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
          }
-         if (CalendarDatePicker.SelectedDateProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.SelectedDate)
+         if (CalendarDatePicker.SelectedDateProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.SelectedDate)
          {
              writer.WriteMember(value, value.SelectedDate, "SelectedDate");
          }
-         if (CalendarDatePicker.SelectedDateFormatProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.SelectedDateFormat)
+         if (CalendarDatePicker.SelectedDateFormatProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.SelectedDateFormat)
          {
              writer.WriteMember(value, value.SelectedDateFormat, "SelectedDateFormat");
          }
-         if (CalendarDatePicker.CustomDateFormatStringProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.CustomDateFormatString)
+         if (CalendarDatePicker.CustomDateFormatStringProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.CustomDateFormatString)
          {
              writer.WriteMember(value, value.CustomDateFormatString, "CustomDateFormatString");
          }
-         if (CalendarDatePicker.TextProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.Text)
+         if (CalendarDatePicker.TextProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.Text)
          {
              writer.WriteMember(value, value.Text, "Text");
          }
-         if (CalendarDatePicker.WatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.Watermark)
+         if (CalendarDatePicker.WatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.Watermark)
          {
              writer.WriteMember(value, value.Watermark, "Watermark");
          }
-         if (CalendarDatePicker.UseFloatingWatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.UseFloatingWatermark)
+         if (CalendarDatePicker.UseFloatingWatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.UseFloatingWatermark)
          {
              writer.WriteMember(value, value.UseFloatingWatermark, "UseFloatingWatermark");
          }
-         if (CalendarDatePicker.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.HorizontalContentAlignment)
+         if (CalendarDatePicker.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.HorizontalContentAlignment)
          {
              writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
          }
-         if (CalendarDatePicker.VerticalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)) == value.VerticalContentAlignment)
+         if (CalendarDatePicker.VerticalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)) != value.VerticalContentAlignment)
          {
              writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
          }

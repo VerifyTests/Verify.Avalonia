@@ -13,7 +13,7 @@ class LabelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Label value)
     {
-         if (Label.TargetProperty.GetDefaultValue(typeof(Label)) == value.Target)
+         if (Label.TargetProperty.GetDefaultValue(typeof(Label)) != value.Target)
          {
              writer.WriteMember(value, value.Target, "Target");
          }

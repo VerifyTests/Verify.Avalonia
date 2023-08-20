@@ -13,15 +13,15 @@ class ImageConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Image value)
     {
-         if (Image.SourceProperty.GetDefaultValue(typeof(Image)) == value.Source)
+         if (Image.SourceProperty.GetDefaultValue(typeof(Image)) != value.Source)
          {
              writer.WriteMember(value, value.Source, "Source");
          }
-         if (Image.StretchProperty.GetDefaultValue(typeof(Image)) == value.Stretch)
+         if (Image.StretchProperty.GetDefaultValue(typeof(Image)) != value.Stretch)
          {
              writer.WriteMember(value, value.Stretch, "Stretch");
          }
-         if (Image.StretchDirectionProperty.GetDefaultValue(typeof(Image)) == value.StretchDirection)
+         if (Image.StretchDirectionProperty.GetDefaultValue(typeof(Image)) != value.StretchDirection)
          {
              writer.WriteMember(value, value.StretchDirection, "StretchDirection");
          }

@@ -13,11 +13,11 @@ class CalendarItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CalendarItem value)
     {
-         if (CalendarItem.HeaderBackgroundProperty.GetDefaultValue(typeof(CalendarItem)) == value.HeaderBackground)
+         if (CalendarItem.HeaderBackgroundProperty.GetDefaultValue(typeof(CalendarItem)) != value.HeaderBackground)
          {
              writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");
          }
-         if (CalendarItem.DayTitleTemplateProperty.GetDefaultValue(typeof(CalendarItem)) == value.DayTitleTemplate)
+         if (CalendarItem.DayTitleTemplateProperty.GetDefaultValue(typeof(CalendarItem)) != value.DayTitleTemplate)
          {
              writer.WriteMember(value, value.DayTitleTemplate, "DayTitleTemplate");
          }

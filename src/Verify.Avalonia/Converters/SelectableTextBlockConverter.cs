@@ -13,23 +13,23 @@ class SelectableTextBlockConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectableTextBlock value)
     {
-         if (SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(typeof(SelectableTextBlock)) == value.SelectionBrush)
+         if (SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionBrush)
          {
              writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
          }
-         if (SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)) == value.SelectionStart)
+         if (SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionStart)
          {
              writer.WriteMember(value, value.SelectionStart, "SelectionStart");
          }
-         if (SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)) == value.SelectionEnd)
+         if (SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionEnd)
          {
              writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
          }
-         if (SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)) == value.SelectedText)
+         if (SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.SelectedText)
          {
              writer.WriteMember(value, value.SelectedText, "SelectedText");
          }
-         if (SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)) == value.CanCopy)
+         if (SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.CanCopy)
          {
              writer.WriteMember(value, value.CanCopy, "CanCopy");
          }

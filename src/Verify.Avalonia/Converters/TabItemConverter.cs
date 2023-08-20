@@ -13,11 +13,11 @@ class TabItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabItem value)
     {
-         if (TabItem.TabStripPlacementProperty.GetUnsetValue(typeof(TabItem)) == value.TabStripPlacement)
+         if (TabItem.TabStripPlacementProperty.GetUnsetValue(typeof(TabItem)) != value.TabStripPlacement)
          {
              writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
          }
-         if (TabItem.IsSelectedProperty.GetDefaultValue(typeof(TabItem)) == value.IsSelected)
+         if (TabItem.IsSelectedProperty.GetDefaultValue(typeof(TabItem)) != value.IsSelected)
          {
              writer.WriteMember(value, value.IsSelected, "IsSelected");
          }

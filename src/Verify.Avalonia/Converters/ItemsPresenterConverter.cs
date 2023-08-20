@@ -13,7 +13,7 @@ class ItemsPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsPresenter value)
     {
-         if (ItemsPresenter.ItemsPanelProperty.GetDefaultValue(typeof(ItemsPresenter)) == value.ItemsPanel)
+         if (ItemsPresenter.ItemsPanelProperty.GetDefaultValue(typeof(ItemsPresenter)) != value.ItemsPanel)
          {
              writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
          }

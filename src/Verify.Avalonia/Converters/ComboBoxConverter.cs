@@ -13,31 +13,31 @@ class ComboBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ComboBox value)
     {
-         if (ComboBox.IsDropDownOpenProperty.GetDefaultValue(typeof(ComboBox)) == value.IsDropDownOpen)
+         if (ComboBox.IsDropDownOpenProperty.GetDefaultValue(typeof(ComboBox)) != value.IsDropDownOpen)
          {
              writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
          }
-         if (ComboBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(ComboBox)) == value.MaxDropDownHeight)
+         if (ComboBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(ComboBox)) != value.MaxDropDownHeight)
          {
              writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
          }
-         if (ComboBox.SelectionBoxItemProperty.GetUnsetValue(typeof(ComboBox)) == value.SelectionBoxItem)
+         if (ComboBox.SelectionBoxItemProperty.GetUnsetValue(typeof(ComboBox)) != value.SelectionBoxItem)
          {
              writer.WriteMember(value, value.SelectionBoxItem, "SelectionBoxItem");
          }
-         if (ComboBox.PlaceholderTextProperty.GetDefaultValue(typeof(ComboBox)) == value.PlaceholderText)
+         if (ComboBox.PlaceholderTextProperty.GetDefaultValue(typeof(ComboBox)) != value.PlaceholderText)
          {
              writer.WriteMember(value, value.PlaceholderText, "PlaceholderText");
          }
-         if (ComboBox.PlaceholderForegroundProperty.GetDefaultValue(typeof(ComboBox)) == value.PlaceholderForeground)
+         if (ComboBox.PlaceholderForegroundProperty.GetDefaultValue(typeof(ComboBox)) != value.PlaceholderForeground)
          {
              writer.WriteMember(value, value.PlaceholderForeground, "PlaceholderForeground");
          }
-         if (ComboBox.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) == value.HorizontalContentAlignment)
+         if (ComboBox.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) != value.HorizontalContentAlignment)
          {
              writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
          }
-         if (ComboBox.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) == value.VerticalContentAlignment)
+         if (ComboBox.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) != value.VerticalContentAlignment)
          {
              writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
          }

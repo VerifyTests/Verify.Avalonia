@@ -13,32 +13,32 @@ class ScrollViewerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollViewer value)
     {
-         if (ScrollViewer.ExtentProperty.GetUnsetValue(typeof(ScrollViewer)) == value.Extent)
+         if (ScrollViewer.ExtentProperty.GetUnsetValue(typeof(ScrollViewer)) != value.Extent)
          {
              writer.WriteMember(value, value.Extent, "Extent");
          }
-         if (ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)) == value.Offset)
+         if (ScrollViewer.OffsetProperty.GetDefaultValue(typeof(ScrollViewer)) != value.Offset)
          {
              writer.WriteMember(value, value.Offset, "Offset");
          }
-         if (ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)) == value.Viewport)
+         if (ScrollViewer.ViewportProperty.GetUnsetValue(typeof(ScrollViewer)) != value.Viewport)
          {
              writer.WriteMember(value, value.Viewport, "Viewport");
          }
-         if (ScrollViewer.LargeChangeProperty.GetUnsetValue(typeof(ScrollViewer)) == value.LargeChange)
+         if (ScrollViewer.LargeChangeProperty.GetUnsetValue(typeof(ScrollViewer)) != value.LargeChange)
          {
              writer.WriteMember(value, value.LargeChange, "LargeChange");
          }
-         if (ScrollViewer.SmallChangeProperty.GetUnsetValue(typeof(ScrollViewer)) == value.SmallChange)
+         if (ScrollViewer.SmallChangeProperty.GetUnsetValue(typeof(ScrollViewer)) != value.SmallChange)
          {
              writer.WriteMember(value, value.SmallChange, "SmallChange");
          }
          writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
-         if (ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)) == value.ScrollBarMaximum)
+         if (ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)) != value.ScrollBarMaximum)
          {
              writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
          }
-         if (ScrollViewer.IsExpandedProperty.GetUnsetValue(typeof(ScrollViewer)) == value.IsExpanded)
+         if (ScrollViewer.IsExpandedProperty.GetUnsetValue(typeof(ScrollViewer)) != value.IsExpanded)
          {
              writer.WriteMember(value, value.IsExpanded, "IsExpanded");
          }

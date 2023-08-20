@@ -13,11 +13,11 @@ class LayoutTransformControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, LayoutTransformControl value)
     {
-         if (LayoutTransformControl.LayoutTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)) == value.LayoutTransform)
+         if (LayoutTransformControl.LayoutTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)) != value.LayoutTransform)
          {
              writer.WriteMember(value, value.LayoutTransform, "LayoutTransform");
          }
-         if (LayoutTransformControl.UseRenderTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)) == value.UseRenderTransform)
+         if (LayoutTransformControl.UseRenderTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)) != value.UseRenderTransform)
          {
              writer.WriteMember(value, value.UseRenderTransform, "UseRenderTransform");
          }

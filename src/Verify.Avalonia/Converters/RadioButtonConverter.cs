@@ -13,7 +13,7 @@ class RadioButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RadioButton value)
     {
-         if (RadioButton.GroupNameProperty.GetDefaultValue(typeof(RadioButton)) == value.GroupName)
+         if (RadioButton.GroupNameProperty.GetDefaultValue(typeof(RadioButton)) != value.GroupName)
          {
              writer.WriteMember(value, value.GroupName, "GroupName");
          }

@@ -13,7 +13,7 @@ class PathIconConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, PathIcon value)
     {
-         if (PathIcon.DataProperty.GetDefaultValue(typeof(PathIcon)) == value.Data)
+         if (PathIcon.DataProperty.GetDefaultValue(typeof(PathIcon)) != value.Data)
          {
              writer.WriteMember(value, value.Data, "Data");
          }

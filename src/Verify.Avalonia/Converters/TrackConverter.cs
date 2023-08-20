@@ -13,43 +13,43 @@ class TrackConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Track value)
     {
-         if (Track.MinimumProperty.GetDefaultValue(typeof(Track)) == value.Minimum)
+         if (Track.MinimumProperty.GetDefaultValue(typeof(Track)) != value.Minimum)
          {
              writer.WriteMember(value, value.Minimum, "Minimum");
          }
-         if (Track.MaximumProperty.GetDefaultValue(typeof(Track)) == value.Maximum)
+         if (Track.MaximumProperty.GetDefaultValue(typeof(Track)) != value.Maximum)
          {
              writer.WriteMember(value, value.Maximum, "Maximum");
          }
-         if (Track.ValueProperty.GetDefaultValue(typeof(Track)) == value.Value)
+         if (Track.ValueProperty.GetDefaultValue(typeof(Track)) != value.Value)
          {
              writer.WriteMember(value, value.Value, "Value");
          }
-         if (Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)) == value.ViewportSize)
+         if (Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)) != value.ViewportSize)
          {
              writer.WriteMember(value, value.ViewportSize, "ViewportSize");
          }
-         if (Track.OrientationProperty.GetDefaultValue(typeof(Track)) == value.Orientation)
+         if (Track.OrientationProperty.GetDefaultValue(typeof(Track)) != value.Orientation)
          {
              writer.WriteMember(value, value.Orientation, "Orientation");
          }
-         if (Track.ThumbProperty.GetDefaultValue(typeof(Track)) == value.Thumb)
+         if (Track.ThumbProperty.GetDefaultValue(typeof(Track)) != value.Thumb)
          {
              writer.WriteMember(value, value.Thumb, "Thumb");
          }
-         if (Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)) == value.IncreaseButton)
+         if (Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.IncreaseButton)
          {
              writer.WriteMember(value, value.IncreaseButton, "IncreaseButton");
          }
-         if (Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)) == value.DecreaseButton)
+         if (Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)) != value.DecreaseButton)
          {
              writer.WriteMember(value, value.DecreaseButton, "DecreaseButton");
          }
-         if (Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)) == value.IsDirectionReversed)
+         if (Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)) != value.IsDirectionReversed)
          {
              writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
          }
-         if (Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)) == value.IgnoreThumbDrag)
+         if (Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)) != value.IgnoreThumbDrag)
          {
              writer.WriteMember(value, value.IgnoreThumbDrag, "IgnoreThumbDrag");
          }
