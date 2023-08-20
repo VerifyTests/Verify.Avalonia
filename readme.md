@@ -63,13 +63,14 @@ public static class TestAppBuilder
     public static AppBuilder BuildAvaloniaApp() =>
         AppBuilder.Configure<App>()
             .UseSkia()
-            .UseHeadless(new()
-            {
-                UseHeadlessDrawing = false
-            });
+            .UseHeadless(
+                new()
+                {
+                    UseHeadlessDrawing = false
+                });
 }
 ```
-<sup><a href='/src/XUnitTests/TestAppBuilder.cs#L1-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/XUnitTests/TestAppBuilder.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/TestAppBuilder.cs#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/XUnitTests/TestAppBuilder.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
