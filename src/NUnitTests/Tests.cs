@@ -67,7 +67,7 @@ public class Tests
         while (type != typeof(object))
         {
             level++;
-            type = type!.BaseType!;
+            type = type.BaseType!;
         }
 
         return level;
