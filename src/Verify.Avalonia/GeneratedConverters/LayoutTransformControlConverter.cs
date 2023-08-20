@@ -17,7 +17,7 @@ class LayoutTransformControlConverter :
          {
              writer.WriteMember(value, value.LayoutTransform, "LayoutTransform");
          }
-         if (LayoutTransformControl.UseRenderTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)) != value.UseRenderTransform)
+         if (!LayoutTransformControl.UseRenderTransformProperty.GetDefaultValue(typeof(LayoutTransformControl)).Equals(value.UseRenderTransform))
          {
              writer.WriteMember(value, value.UseRenderTransform, "UseRenderTransform");
          }

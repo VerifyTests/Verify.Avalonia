@@ -13,23 +13,23 @@ class RangeBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RangeBase value)
     {
-         if (RangeBase.MinimumProperty.GetDefaultValue(typeof(RangeBase)) != value.Minimum)
+         if (!RangeBase.MinimumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Minimum))
          {
              writer.WriteMember(value, value.Minimum, "Minimum");
          }
-         if (RangeBase.MaximumProperty.GetDefaultValue(typeof(RangeBase)) != value.Maximum)
+         if (!RangeBase.MaximumProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Maximum))
          {
              writer.WriteMember(value, value.Maximum, "Maximum");
          }
-         if (RangeBase.ValueProperty.GetDefaultValue(typeof(RangeBase)) != value.Value)
+         if (!RangeBase.ValueProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.Value))
          {
              writer.WriteMember(value, value.Value, "Value");
          }
-         if (RangeBase.SmallChangeProperty.GetDefaultValue(typeof(RangeBase)) != value.SmallChange)
+         if (!RangeBase.SmallChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.SmallChange))
          {
              writer.WriteMember(value, value.SmallChange, "SmallChange");
          }
-         if (RangeBase.LargeChangeProperty.GetDefaultValue(typeof(RangeBase)) != value.LargeChange)
+         if (!RangeBase.LargeChangeProperty.GetDefaultValue(typeof(RangeBase)).Equals(value.LargeChange))
          {
              writer.WriteMember(value, value.LargeChange, "LargeChange");
          }

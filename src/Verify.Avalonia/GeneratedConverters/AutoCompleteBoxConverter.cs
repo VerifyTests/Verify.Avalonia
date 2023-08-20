@@ -13,11 +13,11 @@ class AutoCompleteBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, AutoCompleteBox value)
     {
-         if (AutoCompleteBox.MinimumPrefixLengthProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.MinimumPrefixLength)
+         if (!AutoCompleteBox.MinimumPrefixLengthProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.MinimumPrefixLength))
          {
              writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");
          }
-         if (AutoCompleteBox.IsTextCompletionEnabledProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.IsTextCompletionEnabled)
+         if (!AutoCompleteBox.IsTextCompletionEnabledProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.IsTextCompletionEnabled))
          {
              writer.WriteMember(value, value.IsTextCompletionEnabled, "IsTextCompletionEnabled");
          }
@@ -25,15 +25,15 @@ class AutoCompleteBoxConverter :
          {
              writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
          }
-         if (AutoCompleteBox.MinimumPopulateDelayProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.MinimumPopulateDelay)
+         if (!AutoCompleteBox.MinimumPopulateDelayProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.MinimumPopulateDelay))
          {
              writer.WriteMember(value, value.MinimumPopulateDelay, "MinimumPopulateDelay");
          }
-         if (AutoCompleteBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.MaxDropDownHeight)
+         if (!AutoCompleteBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.MaxDropDownHeight))
          {
              writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
          }
-         if (AutoCompleteBox.IsDropDownOpenProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.IsDropDownOpen)
+         if (!AutoCompleteBox.IsDropDownOpenProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.IsDropDownOpen))
          {
              writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
          }
@@ -50,7 +50,7 @@ class AutoCompleteBoxConverter :
          {
              writer.WriteMember(value, value.SearchText, "SearchText");
          }
-         if (AutoCompleteBox.FilterModeProperty.GetDefaultValue(typeof(AutoCompleteBox)) != value.FilterMode)
+         if (!AutoCompleteBox.FilterModeProperty.GetDefaultValue(typeof(AutoCompleteBox)).Equals(value.FilterMode))
          {
              writer.WriteMember(value, value.FilterMode, "FilterMode");
          }

@@ -17,15 +17,15 @@ class DatePickerConverter :
          {
              writer.WriteMember(value, value.DayFormat, "DayFormat");
          }
-         if (DatePicker.DayVisibleProperty.GetDefaultValue(typeof(DatePicker)) != value.DayVisible)
+         if (!DatePicker.DayVisibleProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.DayVisible))
          {
              writer.WriteMember(value, value.DayVisible, "DayVisible");
          }
-         if (DatePicker.MaxYearProperty.GetDefaultValue(typeof(DatePicker)) != value.MaxYear)
+         if (!DatePicker.MaxYearProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.MaxYear))
          {
              writer.WriteMember(value, value.MaxYear, "MaxYear");
          }
-         if (DatePicker.MinYearProperty.GetDefaultValue(typeof(DatePicker)) != value.MinYear)
+         if (!DatePicker.MinYearProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.MinYear))
          {
              writer.WriteMember(value, value.MinYear, "MinYear");
          }
@@ -33,7 +33,7 @@ class DatePickerConverter :
          {
              writer.WriteMember(value, value.MonthFormat, "MonthFormat");
          }
-         if (DatePicker.MonthVisibleProperty.GetDefaultValue(typeof(DatePicker)) != value.MonthVisible)
+         if (!DatePicker.MonthVisibleProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.MonthVisible))
          {
              writer.WriteMember(value, value.MonthVisible, "MonthVisible");
          }
@@ -41,11 +41,11 @@ class DatePickerConverter :
          {
              writer.WriteMember(value, value.YearFormat, "YearFormat");
          }
-         if (DatePicker.YearVisibleProperty.GetDefaultValue(typeof(DatePicker)) != value.YearVisible)
+         if (!DatePicker.YearVisibleProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.YearVisible))
          {
              writer.WriteMember(value, value.YearVisible, "YearVisible");
          }
-         if (DatePicker.SelectedDateProperty.GetDefaultValue(typeof(DatePicker)) != value.SelectedDate)
+         if (!DatePicker.SelectedDateProperty.GetDefaultValue(typeof(DatePicker)).Equals(value.SelectedDate))
          {
              writer.WriteMember(value, value.SelectedDate, "SelectedDate");
          }

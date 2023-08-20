@@ -13,49 +13,49 @@ class LayoutableConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Layoutable value)
     {
-         if (Layoutable.WidthProperty.GetDefaultValue(typeof(Layoutable)) != value.Width)
+         if (!Layoutable.WidthProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.Width))
          {
              writer.WriteMember(value, value.Width, "Width");
          }
-         if (Layoutable.HeightProperty.GetDefaultValue(typeof(Layoutable)) != value.Height)
+         if (!Layoutable.HeightProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.Height))
          {
              writer.WriteMember(value, value.Height, "Height");
          }
-         if (Layoutable.MinWidthProperty.GetDefaultValue(typeof(Layoutable)) != value.MinWidth)
+         if (!Layoutable.MinWidthProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.MinWidth))
          {
              writer.WriteMember(value, value.MinWidth, "MinWidth");
          }
-         if (Layoutable.MaxWidthProperty.GetDefaultValue(typeof(Layoutable)) != value.MaxWidth)
+         if (!Layoutable.MaxWidthProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.MaxWidth))
          {
              writer.WriteMember(value, value.MaxWidth, "MaxWidth");
          }
-         if (Layoutable.MinHeightProperty.GetDefaultValue(typeof(Layoutable)) != value.MinHeight)
+         if (!Layoutable.MinHeightProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.MinHeight))
          {
              writer.WriteMember(value, value.MinHeight, "MinHeight");
          }
-         if (Layoutable.MaxHeightProperty.GetDefaultValue(typeof(Layoutable)) != value.MaxHeight)
+         if (!Layoutable.MaxHeightProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.MaxHeight))
          {
              writer.WriteMember(value, value.MaxHeight, "MaxHeight");
          }
-         if (Layoutable.MarginProperty.GetDefaultValue(typeof(Layoutable)) != value.Margin)
+         if (!Layoutable.MarginProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.Margin))
          {
              writer.WriteMember(value, value.Margin, "Margin");
          }
-         if (Layoutable.HorizontalAlignmentProperty.GetDefaultValue(typeof(Layoutable)) != value.HorizontalAlignment)
+         if (!Layoutable.HorizontalAlignmentProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.HorizontalAlignment))
          {
              writer.WriteMember(value, value.HorizontalAlignment, "HorizontalAlignment");
          }
-         if (Layoutable.VerticalAlignmentProperty.GetDefaultValue(typeof(Layoutable)) != value.VerticalAlignment)
+         if (!Layoutable.VerticalAlignmentProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.VerticalAlignment))
          {
              writer.WriteMember(value, value.VerticalAlignment, "VerticalAlignment");
          }
-         if (Layoutable.DesiredSizeProperty.GetUnsetValue(typeof(Layoutable)) != value.DesiredSize)
+         if (!Layoutable.DesiredSizeProperty.GetUnsetValue(typeof(Layoutable)).Equals(value.DesiredSize))
          {
              writer.WriteMember(value, value.DesiredSize, "DesiredSize");
          }
          writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
          writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
-         if (Layoutable.UseLayoutRoundingProperty.GetDefaultValue(typeof(Layoutable)) != value.UseLayoutRounding)
+         if (!Layoutable.UseLayoutRoundingProperty.GetDefaultValue(typeof(Layoutable)).Equals(value.UseLayoutRounding))
          {
              writer.WriteMember(value, value.UseLayoutRounding, "UseLayoutRounding");
          }

@@ -14,7 +14,7 @@ class TextBlockConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TextBlock value)
     {
          writer.WriteMember(value, value.TextLayout, "TextLayout");
-         if (TextBlock.PaddingProperty.GetDefaultValue(typeof(TextBlock)) != value.Padding)
+         if (!TextBlock.PaddingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.Padding))
          {
              writer.WriteMember(value, value.Padding, "Padding");
          }
@@ -30,19 +30,19 @@ class TextBlockConverter :
          {
              writer.WriteMember(value, value.FontFamily, "FontFamily");
          }
-         if (TextBlock.FontSizeProperty.GetDefaultValue(typeof(TextBlock)) != value.FontSize)
+         if (!TextBlock.FontSizeProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontSize))
          {
              writer.WriteMember(value, value.FontSize, "FontSize");
          }
-         if (TextBlock.FontStyleProperty.GetDefaultValue(typeof(TextBlock)) != value.FontStyle)
+         if (!TextBlock.FontStyleProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontStyle))
          {
              writer.WriteMember(value, value.FontStyle, "FontStyle");
          }
-         if (TextBlock.FontWeightProperty.GetDefaultValue(typeof(TextBlock)) != value.FontWeight)
+         if (!TextBlock.FontWeightProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontWeight))
          {
              writer.WriteMember(value, value.FontWeight, "FontWeight");
          }
-         if (TextBlock.FontStretchProperty.GetDefaultValue(typeof(TextBlock)) != value.FontStretch)
+         if (!TextBlock.FontStretchProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontStretch))
          {
              writer.WriteMember(value, value.FontStretch, "FontStretch");
          }

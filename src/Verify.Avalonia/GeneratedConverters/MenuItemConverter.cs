@@ -34,11 +34,11 @@ class MenuItemConverter :
              writer.WriteMember(value, value.InputGesture, "InputGesture");
          }
          writer.WriteMember(value, value.IsSelected, "IsSelected");
-         if (MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)) != value.IsSubMenuOpen)
+         if (!MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)).Equals(value.IsSubMenuOpen))
          {
              writer.WriteMember(value, value.IsSubMenuOpen, "IsSubMenuOpen");
          }
-         if (MenuItem.StaysOpenOnClickProperty.GetDefaultValue(typeof(MenuItem)) != value.StaysOpenOnClick)
+         if (!MenuItem.StaysOpenOnClickProperty.GetDefaultValue(typeof(MenuItem)).Equals(value.StaysOpenOnClick))
          {
              writer.WriteMember(value, value.StaysOpenOnClick, "StaysOpenOnClick");
          }

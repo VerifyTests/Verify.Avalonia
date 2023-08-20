@@ -22,11 +22,11 @@ class ContentControlConverter :
              writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
          }
          writer.WriteMember(value, value.Presenter, "Presenter");
-         if (ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)) != value.HorizontalContentAlignment)
+         if (!ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)).Equals(value.HorizontalContentAlignment))
          {
              writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
          }
-         if (ContentControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)) != value.VerticalContentAlignment)
+         if (!ContentControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)).Equals(value.VerticalContentAlignment))
          {
              writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
          }

@@ -17,11 +17,11 @@ class SelectableTextBlockConverter :
          {
              writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
          }
-         if (SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionStart)
+         if (!SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionStart))
          {
              writer.WriteMember(value, value.SelectionStart, "SelectionStart");
          }
-         if (SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)) != value.SelectionEnd)
+         if (!SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)).Equals(value.SelectionEnd))
          {
              writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
          }
@@ -29,7 +29,7 @@ class SelectableTextBlockConverter :
          {
              writer.WriteMember(value, value.SelectedText, "SelectedText");
          }
-         if (SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)) != value.CanCopy)
+         if (!SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)).Equals(value.CanCopy))
          {
              writer.WriteMember(value, value.CanCopy, "CanCopy");
          }

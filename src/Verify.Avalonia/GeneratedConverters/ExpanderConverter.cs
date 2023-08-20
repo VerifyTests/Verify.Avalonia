@@ -17,11 +17,11 @@ class ExpanderConverter :
          {
              writer.WriteMember(value, value.ContentTransition, "ContentTransition");
          }
-         if (Expander.ExpandDirectionProperty.GetDefaultValue(typeof(Expander)) != value.ExpandDirection)
+         if (!Expander.ExpandDirectionProperty.GetDefaultValue(typeof(Expander)).Equals(value.ExpandDirection))
          {
              writer.WriteMember(value, value.ExpandDirection, "ExpandDirection");
          }
-         if (Expander.IsExpandedProperty.GetDefaultValue(typeof(Expander)) != value.IsExpanded)
+         if (!Expander.IsExpandedProperty.GetDefaultValue(typeof(Expander)).Equals(value.IsExpanded))
          {
              writer.WriteMember(value, value.IsExpanded, "IsExpanded");
          }

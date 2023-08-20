@@ -13,43 +13,43 @@ class ScrollContentPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollContentPresenter value)
     {
-         if (ScrollContentPresenter.CanHorizontallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.CanHorizontallyScroll)
+         if (!ScrollContentPresenter.CanHorizontallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.CanHorizontallyScroll))
          {
              writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
          }
-         if (ScrollContentPresenter.CanVerticallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.CanVerticallyScroll)
+         if (!ScrollContentPresenter.CanVerticallyScrollProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.CanVerticallyScroll))
          {
              writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
          }
-         if (ScrollContentPresenter.ExtentProperty.GetUnsetValue(typeof(ScrollContentPresenter)) != value.Extent)
+         if (!ScrollContentPresenter.ExtentProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Extent))
          {
              writer.WriteMember(value, value.Extent, "Extent");
          }
-         if (ScrollContentPresenter.OffsetProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.Offset)
+         if (!ScrollContentPresenter.OffsetProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.Offset))
          {
              writer.WriteMember(value, value.Offset, "Offset");
          }
-         if (ScrollContentPresenter.ViewportProperty.GetUnsetValue(typeof(ScrollContentPresenter)) != value.Viewport)
+         if (!ScrollContentPresenter.ViewportProperty.GetUnsetValue(typeof(ScrollContentPresenter)).Equals(value.Viewport))
          {
              writer.WriteMember(value, value.Viewport, "Viewport");
          }
-         if (ScrollContentPresenter.HorizontalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.HorizontalSnapPointsType)
+         if (!ScrollContentPresenter.HorizontalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.HorizontalSnapPointsType))
          {
              writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");
          }
-         if (ScrollContentPresenter.VerticalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.VerticalSnapPointsType)
+         if (!ScrollContentPresenter.VerticalSnapPointsTypeProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.VerticalSnapPointsType))
          {
              writer.WriteMember(value, value.VerticalSnapPointsType, "VerticalSnapPointsType");
          }
-         if (ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.HorizontalSnapPointsAlignment)
+         if (!ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.HorizontalSnapPointsAlignment))
          {
              writer.WriteMember(value, value.HorizontalSnapPointsAlignment, "HorizontalSnapPointsAlignment");
          }
-         if (ScrollContentPresenter.VerticalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.VerticalSnapPointsAlignment)
+         if (!ScrollContentPresenter.VerticalSnapPointsAlignmentProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.VerticalSnapPointsAlignment))
          {
              writer.WriteMember(value, value.VerticalSnapPointsAlignment, "VerticalSnapPointsAlignment");
          }
-         if (ScrollContentPresenter.IsScrollChainingEnabledProperty.GetDefaultValue(typeof(ScrollContentPresenter)) != value.IsScrollChainingEnabled)
+         if (!ScrollContentPresenter.IsScrollChainingEnabledProperty.GetDefaultValue(typeof(ScrollContentPresenter)).Equals(value.IsScrollChainingEnabled))
          {
              writer.WriteMember(value, value.IsScrollChainingEnabled, "IsScrollChainingEnabled");
          }

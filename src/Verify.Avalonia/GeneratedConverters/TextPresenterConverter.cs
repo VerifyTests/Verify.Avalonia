@@ -31,32 +31,32 @@ class TextPresenterConverter :
          writer.WriteMember(value, value.FontWeight, "FontWeight");
          writer.WriteMember(value, value.FontStretch, "FontStretch");
          writer.WriteMember(value, value.Foreground, "Foreground");
-         if (TextPresenter.TextWrappingProperty.GetDefaultValue(typeof(TextPresenter)) != value.TextWrapping)
+         if (!TextPresenter.TextWrappingProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.TextWrapping))
          {
              writer.WriteMember(value, value.TextWrapping, "TextWrapping");
          }
-         if (TextPresenter.LineHeightProperty.GetDefaultValue(typeof(TextPresenter)) != value.LineHeight)
+         if (!TextPresenter.LineHeightProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.LineHeight))
          {
              writer.WriteMember(value, value.LineHeight, "LineHeight");
          }
-         if (TextPresenter.LetterSpacingProperty.GetDefaultValue(typeof(TextPresenter)) != value.LetterSpacing)
+         if (!TextPresenter.LetterSpacingProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.LetterSpacing))
          {
              writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
          }
-         if (TextPresenter.TextAlignmentProperty.GetDefaultValue(typeof(TextPresenter)) != value.TextAlignment)
+         if (!TextPresenter.TextAlignmentProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.TextAlignment))
          {
              writer.WriteMember(value, value.TextAlignment, "TextAlignment");
          }
          writer.WriteMember(value, value.TextLayout, "TextLayout");
-         if (TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)) != value.CaretIndex)
+         if (!TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.CaretIndex))
          {
              writer.WriteMember(value, value.CaretIndex, "CaretIndex");
          }
-         if (TextPresenter.PasswordCharProperty.GetDefaultValue(typeof(TextPresenter)) != value.PasswordChar)
+         if (!TextPresenter.PasswordCharProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.PasswordChar))
          {
              writer.WriteMember(value, value.PasswordChar, "PasswordChar");
          }
-         if (TextPresenter.RevealPasswordProperty.GetDefaultValue(typeof(TextPresenter)) != value.RevealPassword)
+         if (!TextPresenter.RevealPasswordProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.RevealPassword))
          {
              writer.WriteMember(value, value.RevealPassword, "RevealPassword");
          }
@@ -72,11 +72,11 @@ class TextPresenterConverter :
          {
              writer.WriteMember(value, value.CaretBrush, "CaretBrush");
          }
-         if (TextPresenter.SelectionStartProperty.GetDefaultValue(typeof(TextPresenter)) != value.SelectionStart)
+         if (!TextPresenter.SelectionStartProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.SelectionStart))
          {
              writer.WriteMember(value, value.SelectionStart, "SelectionStart");
          }
-         if (TextPresenter.SelectionEndProperty.GetDefaultValue(typeof(TextPresenter)) != value.SelectionEnd)
+         if (!TextPresenter.SelectionEndProperty.GetDefaultValue(typeof(TextPresenter)).Equals(value.SelectionEnd))
          {
              writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
          }

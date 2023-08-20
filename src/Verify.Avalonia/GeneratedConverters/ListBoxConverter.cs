@@ -25,7 +25,7 @@ class ListBoxConverter :
          {
              writer.WriteMember(value, value.Selection, "Selection");
          }
-         if (ListBox.SelectionModeProperty.GetDefaultValue(typeof(ListBox)) != value.SelectionMode)
+         if (!ListBox.SelectionModeProperty.GetDefaultValue(typeof(ListBox)).Equals(value.SelectionMode))
          {
              writer.WriteMember(value, value.SelectionMode, "SelectionMode");
          }

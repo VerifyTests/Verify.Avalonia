@@ -13,11 +13,11 @@ class ComboBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ComboBox value)
     {
-         if (ComboBox.IsDropDownOpenProperty.GetDefaultValue(typeof(ComboBox)) != value.IsDropDownOpen)
+         if (!ComboBox.IsDropDownOpenProperty.GetDefaultValue(typeof(ComboBox)).Equals(value.IsDropDownOpen))
          {
              writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
          }
-         if (ComboBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(ComboBox)) != value.MaxDropDownHeight)
+         if (!ComboBox.MaxDropDownHeightProperty.GetDefaultValue(typeof(ComboBox)).Equals(value.MaxDropDownHeight))
          {
              writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
          }
@@ -33,11 +33,11 @@ class ComboBoxConverter :
          {
              writer.WriteMember(value, value.PlaceholderForeground, "PlaceholderForeground");
          }
-         if (ComboBox.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) != value.HorizontalContentAlignment)
+         if (!ComboBox.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)).Equals(value.HorizontalContentAlignment))
          {
              writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
          }
-         if (ComboBox.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)) != value.VerticalContentAlignment)
+         if (!ComboBox.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ComboBox)).Equals(value.VerticalContentAlignment))
          {
              writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
          }

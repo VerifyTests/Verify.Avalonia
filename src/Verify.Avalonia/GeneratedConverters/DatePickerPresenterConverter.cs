@@ -13,7 +13,7 @@ class DatePickerPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DatePickerPresenter value)
     {
-         if (DatePickerPresenter.DateProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.Date)
+         if (!DatePickerPresenter.DateProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.Date))
          {
              writer.WriteMember(value, value.Date, "Date");
          }
@@ -21,15 +21,15 @@ class DatePickerPresenterConverter :
          {
              writer.WriteMember(value, value.DayFormat, "DayFormat");
          }
-         if (DatePickerPresenter.DayVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.DayVisible)
+         if (!DatePickerPresenter.DayVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.DayVisible))
          {
              writer.WriteMember(value, value.DayVisible, "DayVisible");
          }
-         if (DatePickerPresenter.MaxYearProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.MaxYear)
+         if (!DatePickerPresenter.MaxYearProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MaxYear))
          {
              writer.WriteMember(value, value.MaxYear, "MaxYear");
          }
-         if (DatePickerPresenter.MinYearProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.MinYear)
+         if (!DatePickerPresenter.MinYearProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MinYear))
          {
              writer.WriteMember(value, value.MinYear, "MinYear");
          }
@@ -37,7 +37,7 @@ class DatePickerPresenterConverter :
          {
              writer.WriteMember(value, value.MonthFormat, "MonthFormat");
          }
-         if (DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.MonthVisible)
+         if (!DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MonthVisible))
          {
              writer.WriteMember(value, value.MonthVisible, "MonthVisible");
          }
@@ -45,7 +45,7 @@ class DatePickerPresenterConverter :
          {
              writer.WriteMember(value, value.YearFormat, "YearFormat");
          }
-         if (DatePickerPresenter.YearVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.YearVisible)
+         if (!DatePickerPresenter.YearVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.YearVisible))
          {
              writer.WriteMember(value, value.YearVisible, "YearVisible");
          }

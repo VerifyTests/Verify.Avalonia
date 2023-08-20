@@ -17,7 +17,7 @@ class RefreshContainerConverter :
          {
              writer.WriteMember(value, value.Visualizer, "Visualizer");
          }
-         if (RefreshContainer.PullDirectionProperty.GetDefaultValue(typeof(RefreshContainer)) != value.PullDirection)
+         if (!RefreshContainer.PullDirectionProperty.GetDefaultValue(typeof(RefreshContainer)).Equals(value.PullDirection))
          {
              writer.WriteMember(value, value.PullDirection, "PullDirection");
          }

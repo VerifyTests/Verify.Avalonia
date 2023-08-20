@@ -17,11 +17,11 @@ class ImageConverter :
          {
              writer.WriteMember(value, value.Source, "Source");
          }
-         if (Image.StretchProperty.GetDefaultValue(typeof(Image)) != value.Stretch)
+         if (!Image.StretchProperty.GetDefaultValue(typeof(Image)).Equals(value.Stretch))
          {
              writer.WriteMember(value, value.Stretch, "Stretch");
          }
-         if (Image.StretchDirectionProperty.GetDefaultValue(typeof(Image)) != value.StretchDirection)
+         if (!Image.StretchDirectionProperty.GetDefaultValue(typeof(Image)).Equals(value.StretchDirection))
          {
              writer.WriteMember(value, value.StretchDirection, "StretchDirection");
          }

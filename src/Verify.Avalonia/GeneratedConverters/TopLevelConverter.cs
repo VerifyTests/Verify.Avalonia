@@ -13,11 +13,11 @@ class TopLevelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
-         if (TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)) != value.ClientSize)
+         if (!TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ClientSize))
          {
              writer.WriteMember(value, value.ClientSize, "ClientSize");
          }
-         if (TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)) != value.FrameSize)
+         if (!TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.FrameSize))
          {
              writer.WriteMember(value, value.FrameSize, "FrameSize");
          }
@@ -25,7 +25,7 @@ class TopLevelConverter :
          {
              writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
          }
-         if (TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)) != value.ActualTransparencyLevel)
+         if (!TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)).Equals(value.ActualTransparencyLevel))
          {
              writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
          }

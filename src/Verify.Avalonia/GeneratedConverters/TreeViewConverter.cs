@@ -14,11 +14,11 @@ class TreeViewConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TreeView value)
     {
          writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
-         if (TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)) != value.AutoScrollToSelectedItem)
+         if (!TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)).Equals(value.AutoScrollToSelectedItem))
          {
              writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
          }
-         if (TreeView.SelectionModeProperty.GetDefaultValue(typeof(TreeView)) != value.SelectionMode)
+         if (!TreeView.SelectionModeProperty.GetDefaultValue(typeof(TreeView)).Equals(value.SelectionMode))
          {
              writer.WriteMember(value, value.SelectionMode, "SelectionMode");
          }

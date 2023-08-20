@@ -13,15 +13,15 @@ class TabControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabControl value)
     {
-         if (TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)) != value.HorizontalContentAlignment)
+         if (!TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)).Equals(value.HorizontalContentAlignment))
          {
              writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
          }
-         if (TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)) != value.VerticalContentAlignment)
+         if (!TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)).Equals(value.VerticalContentAlignment))
          {
              writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
          }
-         if (TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)) != value.TabStripPlacement)
+         if (!TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)).Equals(value.TabStripPlacement))
          {
              writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
          }

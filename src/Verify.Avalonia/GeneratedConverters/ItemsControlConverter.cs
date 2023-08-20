@@ -23,7 +23,7 @@ class ItemsControlConverter :
          {
              writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
          }
-         if (ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)) != value.ItemCount)
+         if (!ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)).Equals(value.ItemCount))
          {
              writer.WriteMember(value, value.ItemCount, "ItemCount");
          }

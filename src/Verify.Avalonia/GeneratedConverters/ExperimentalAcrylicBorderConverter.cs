@@ -13,7 +13,7 @@ class ExperimentalAcrylicBorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ExperimentalAcrylicBorder value)
     {
-         if (ExperimentalAcrylicBorder.CornerRadiusProperty.GetDefaultValue(typeof(ExperimentalAcrylicBorder)) != value.CornerRadius)
+         if (!ExperimentalAcrylicBorder.CornerRadiusProperty.GetDefaultValue(typeof(ExperimentalAcrylicBorder)).Equals(value.CornerRadius))
          {
              writer.WriteMember(value, value.CornerRadius, "CornerRadius");
          }

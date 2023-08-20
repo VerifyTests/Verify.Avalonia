@@ -17,7 +17,7 @@ class DecoratorConverter :
          {
              writer.WriteMember(value, value.Child, "Child");
          }
-         if (Decorator.PaddingProperty.GetDefaultValue(typeof(Decorator)) != value.Padding)
+         if (!Decorator.PaddingProperty.GetDefaultValue(typeof(Decorator)).Equals(value.Padding))
          {
              writer.WriteMember(value, value.Padding, "Padding");
          }

@@ -23,6 +23,8 @@ public static partial class VerifyAvalonia
             _ =>
             {
                 _.Converters.Add(new ThicknessConverter());
+                _.Converters.Add(new CornerRadiusConverter());
+                _.Converters.Add(new FontFamilyConverter());
             });
     }
 

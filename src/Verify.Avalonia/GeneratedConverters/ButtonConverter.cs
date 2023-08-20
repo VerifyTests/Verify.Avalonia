@@ -13,7 +13,7 @@ class ButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Button value)
     {
-         if (Button.ClickModeProperty.GetDefaultValue(typeof(Button)) != value.ClickMode)
+         if (!Button.ClickModeProperty.GetDefaultValue(typeof(Button)).Equals(value.ClickMode))
          {
              writer.WriteMember(value, value.ClickMode, "ClickMode");
          }
@@ -29,15 +29,15 @@ class ButtonConverter :
          {
              writer.WriteMember(value, value.CommandParameter, "CommandParameter");
          }
-         if (Button.IsDefaultProperty.GetDefaultValue(typeof(Button)) != value.IsDefault)
+         if (!Button.IsDefaultProperty.GetDefaultValue(typeof(Button)).Equals(value.IsDefault))
          {
              writer.WriteMember(value, value.IsDefault, "IsDefault");
          }
-         if (Button.IsCancelProperty.GetDefaultValue(typeof(Button)) != value.IsCancel)
+         if (!Button.IsCancelProperty.GetDefaultValue(typeof(Button)).Equals(value.IsCancel))
          {
              writer.WriteMember(value, value.IsCancel, "IsCancel");
          }
-         if (Button.IsPressedProperty.GetUnsetValue(typeof(Button)) != value.IsPressed)
+         if (!Button.IsPressedProperty.GetUnsetValue(typeof(Button)).Equals(value.IsPressed))
          {
              writer.WriteMember(value, value.IsPressed, "IsPressed");
          }

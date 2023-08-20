@@ -135,7 +135,8 @@ public class Tests
             return;
         }
 
-        if (ignoredTypes.Any(_ => _.IsAssignableFrom(property.PropertyType)))
+        var propertyType = property.PropertyType;
+        if (ignoredTypes.Any(_ => _.IsAssignableFrom(propertyType)))
         {
             return;
         }
@@ -160,25 +161,52 @@ public class Tests
 
         if (genericType == typeof(StyledProperty<>))
         {
-            builder.AppendLine(
-                $$"""
-                           if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) != value.{{name}})
-                           {
-                               writer.WriteMember(value, value.{{name}}, "{{name}}");
-                           }
-                  """);
+            if (!propertyType.IsValueType)
+            {
+                builder.AppendLine(
+                    $$"""
+                               if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) != value.{{name}})
+                               {
+                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
+                               }
+                      """);
+            }
+            else
+            {
+                builder.AppendLine(
+                    $$"""
+                               if (!{{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})).Equals(value.{{name}}))
+                               {
+                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
+                               }
+                      """);
+            }
+
             return;
         }
 
         if (genericType == typeof(DirectProperty<,>))
         {
-            builder.AppendLine(
-                $$"""
-                           if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
-                           {
-                               writer.WriteMember(value, value.{{name}}, "{{name}}");
-                           }
-                  """);
+            if (!propertyType.IsValueType)
+            {
+                builder.AppendLine(
+                    $$"""
+                               if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
+                               {
+                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
+                               }
+                      """);
+            }
+            else
+            {
+                builder.AppendLine(
+                    $$"""
+                               if (!{{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})).Equals(value.{{name}}))
+                               {
+                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
+                               }
+                      """);
+            }
         }
     }
 }

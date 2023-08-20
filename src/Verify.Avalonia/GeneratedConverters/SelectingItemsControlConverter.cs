@@ -13,11 +13,11 @@ class SelectingItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectingItemsControl value)
     {
-         if (SelectingItemsControl.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.AutoScrollToSelectedItem)
+         if (!SelectingItemsControl.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.AutoScrollToSelectedItem))
          {
              writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
          }
-         if (SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)) != value.SelectedIndex)
+         if (!SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)).Equals(value.SelectedIndex))
          {
              writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
          }
@@ -33,11 +33,11 @@ class SelectingItemsControlConverter :
          {
              writer.WriteMember(value, value.SelectedValue, "SelectedValue");
          }
-         if (SelectingItemsControl.IsTextSearchEnabledProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.IsTextSearchEnabled)
+         if (!SelectingItemsControl.IsTextSearchEnabledProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.IsTextSearchEnabled))
          {
              writer.WriteMember(value, value.IsTextSearchEnabled, "IsTextSearchEnabled");
          }
-         if (SelectingItemsControl.WrapSelectionProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.WrapSelection)
+         if (!SelectingItemsControl.WrapSelectionProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.WrapSelection))
          {
              writer.WriteMember(value, value.WrapSelection, "WrapSelection");
          }

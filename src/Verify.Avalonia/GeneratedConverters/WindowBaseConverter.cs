@@ -13,7 +13,7 @@ class WindowBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WindowBase value)
     {
-         if (WindowBase.IsActiveProperty.GetUnsetValue(typeof(WindowBase)) != value.IsActive)
+         if (!WindowBase.IsActiveProperty.GetUnsetValue(typeof(WindowBase)).Equals(value.IsActive))
          {
              writer.WriteMember(value, value.IsActive, "IsActive");
          }
@@ -22,7 +22,7 @@ class WindowBaseConverter :
          {
              writer.WriteMember(value, value.Owner, "Owner");
          }
-         if (WindowBase.TopmostProperty.GetDefaultValue(typeof(WindowBase)) != value.Topmost)
+         if (!WindowBase.TopmostProperty.GetDefaultValue(typeof(WindowBase)).Equals(value.Topmost))
          {
              writer.WriteMember(value, value.Topmost, "Topmost");
          }
