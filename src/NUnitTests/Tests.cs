@@ -13,7 +13,8 @@ public class Tests
         }
         var visual = typeof(Visual);
         WriteType(visual, convertersPath);
-        foreach (var type in typeof(Window).Assembly.GetTypes().Where(_ => _.IsAssignableTo(visual)))
+        var types = typeof(Window).Assembly.GetTypes().Concat(typeof(InputElement).Assembly.GetTypes());
+        foreach (var type in types.Where(_ => _.IsAssignableTo(visual)))
         {
             if (type.IsPublic)
             {
