@@ -1,0 +1,16 @@
+class LabelConverter :
+    WriteOnlyJsonConverter<Label>
+{
+    public override void Write(VerifyJsonWriter writer, Label value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Label value)
+    {
+         writer.WriteMember(value, value.Target, "Target");
+    }
+}

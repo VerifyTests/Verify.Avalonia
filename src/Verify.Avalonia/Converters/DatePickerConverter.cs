@@ -1,0 +1,24 @@
+class DatePickerConverter :
+    WriteOnlyJsonConverter<DatePicker>
+{
+    public override void Write(VerifyJsonWriter writer, DatePicker value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, DatePicker value)
+    {
+         writer.WriteMember(value, value.DayFormat, "DayFormat");
+         writer.WriteMember(value, value.DayVisible, "DayVisible");
+         writer.WriteMember(value, value.MaxYear, "MaxYear");
+         writer.WriteMember(value, value.MinYear, "MinYear");
+         writer.WriteMember(value, value.MonthFormat, "MonthFormat");
+         writer.WriteMember(value, value.MonthVisible, "MonthVisible");
+         writer.WriteMember(value, value.YearFormat, "YearFormat");
+         writer.WriteMember(value, value.YearVisible, "YearVisible");
+         writer.WriteMember(value, value.SelectedDate, "SelectedDate");
+    }
+}

@@ -1,0 +1,17 @@
+class SectorConverter :
+    WriteOnlyJsonConverter<Sector>
+{
+    public override void Write(VerifyJsonWriter writer, Sector value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ShapeConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Sector value)
+    {
+         writer.WriteMember(value, value.StartAngle, "StartAngle");
+         writer.WriteMember(value, value.SweepAngle, "SweepAngle");
+    }
+}

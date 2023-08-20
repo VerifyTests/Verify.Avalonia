@@ -1,0 +1,38 @@
+class ContentPresenterConverter :
+    WriteOnlyJsonConverter<ContentPresenter>
+{
+    public override void Write(VerifyJsonWriter writer, ContentPresenter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ContentPresenter value)
+    {
+         writer.WriteMember(value, value.Background, "Background");
+         writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+         writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+         writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+         writer.WriteMember(value, value.BoxShadow, "BoxShadow");
+         writer.WriteMember(value, value.Foreground, "Foreground");
+         writer.WriteMember(value, value.FontFamily, "FontFamily");
+         writer.WriteMember(value, value.FontSize, "FontSize");
+         writer.WriteMember(value, value.FontStyle, "FontStyle");
+         writer.WriteMember(value, value.FontWeight, "FontWeight");
+         writer.WriteMember(value, value.FontStretch, "FontStretch");
+         writer.WriteMember(value, value.TextAlignment, "TextAlignment");
+         writer.WriteMember(value, value.TextWrapping, "TextWrapping");
+         writer.WriteMember(value, value.TextTrimming, "TextTrimming");
+         writer.WriteMember(value, value.LineHeight, "LineHeight");
+         writer.WriteMember(value, value.MaxLines, "MaxLines");
+         writer.WriteMember(value, value.Child, "Child");
+         writer.WriteMember(value, value.Content, "Content");
+         writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
+         writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
+         writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
+         writer.WriteMember(value, value.Padding, "Padding");
+         writer.WriteMember(value, value.RecognizesAccessKey, "RecognizesAccessKey");
+    }
+}

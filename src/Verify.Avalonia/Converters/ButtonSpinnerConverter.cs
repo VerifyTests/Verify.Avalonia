@@ -1,0 +1,18 @@
+class ButtonSpinnerConverter :
+    WriteOnlyJsonConverter<ButtonSpinner>
+{
+    public override void Write(VerifyJsonWriter writer, ButtonSpinner value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        SpinnerConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ButtonSpinner value)
+    {
+         writer.WriteMember(value, value.AllowSpin, "AllowSpin");
+         writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
+         writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
+    }
+}

@@ -1,0 +1,15 @@
+class ComboBoxItemConverter :
+    WriteOnlyJsonConverter<ComboBoxItem>
+{
+    public override void Write(VerifyJsonWriter writer, ComboBoxItem value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ListBoxItemConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ComboBoxItem value)
+    {
+    }
+}

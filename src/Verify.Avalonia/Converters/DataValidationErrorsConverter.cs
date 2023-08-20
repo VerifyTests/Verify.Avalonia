@@ -1,0 +1,17 @@
+class DataValidationErrorsConverter :
+    WriteOnlyJsonConverter<DataValidationErrors>
+{
+    public override void Write(VerifyJsonWriter writer, DataValidationErrors value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, DataValidationErrors value)
+    {
+         writer.WriteMember(value, value.Owner, "Owner");
+         writer.WriteMember(value, value.ErrorTemplate, "ErrorTemplate");
+    }
+}

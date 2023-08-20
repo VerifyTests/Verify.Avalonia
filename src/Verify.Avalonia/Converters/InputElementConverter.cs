@@ -1,0 +1,27 @@
+class InputElementConverter :
+    WriteOnlyJsonConverter<InputElement>
+{
+    public override void Write(VerifyJsonWriter writer, InputElement value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        InteractiveConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, InputElement value)
+    {
+         writer.WriteMember(value, value.Focusable, "Focusable");
+         writer.WriteMember(value, value.IsEnabled, "IsEnabled");
+         writer.WriteMember(value, value.Cursor, "Cursor");
+         writer.WriteMember(value, value.IsKeyboardFocusWithin, "IsKeyboardFocusWithin");
+         writer.WriteMember(value, value.IsFocused, "IsFocused");
+         writer.WriteMember(value, value.IsHitTestVisible, "IsHitTestVisible");
+         writer.WriteMember(value, value.IsPointerOver, "IsPointerOver");
+         writer.WriteMember(value, value.IsTabStop, "IsTabStop");
+         writer.WriteMember(value, value.IsEffectivelyEnabled, "IsEffectivelyEnabled");
+         writer.WriteMember(value, value.TabIndex, "TabIndex");
+         writer.WriteMember(value, value.KeyBindings, "KeyBindings");
+         writer.WriteMember(value, value.GestureRecognizers, "GestureRecognizers");
+    }
+}

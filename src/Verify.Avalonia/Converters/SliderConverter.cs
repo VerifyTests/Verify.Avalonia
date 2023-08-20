@@ -1,0 +1,21 @@
+class SliderConverter :
+    WriteOnlyJsonConverter<Slider>
+{
+    public override void Write(VerifyJsonWriter writer, Slider value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        RangeBaseConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Slider value)
+    {
+         writer.WriteMember(value, value.Ticks, "Ticks");
+         writer.WriteMember(value, value.Orientation, "Orientation");
+         writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
+         writer.WriteMember(value, value.IsSnapToTickEnabled, "IsSnapToTickEnabled");
+         writer.WriteMember(value, value.TickFrequency, "TickFrequency");
+         writer.WriteMember(value, value.TickPlacement, "TickPlacement");
+    }
+}

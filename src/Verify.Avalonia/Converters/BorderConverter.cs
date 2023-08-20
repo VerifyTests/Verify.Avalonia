@@ -1,0 +1,21 @@
+class BorderConverter :
+    WriteOnlyJsonConverter<Border>
+{
+    public override void Write(VerifyJsonWriter writer, Border value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        DecoratorConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Border value)
+    {
+         writer.WriteMember(value, value.Background, "Background");
+         writer.WriteMember(value, value.BorderBrush, "BorderBrush");
+         writer.WriteMember(value, value.BorderThickness, "BorderThickness");
+         writer.WriteMember(value, value.CornerRadius, "CornerRadius");
+         writer.WriteMember(value, value.BoxShadow, "BoxShadow");
+         writer.WriteMember(value, value.ClipToBoundsRadius, "ClipToBoundsRadius");
+    }
+}

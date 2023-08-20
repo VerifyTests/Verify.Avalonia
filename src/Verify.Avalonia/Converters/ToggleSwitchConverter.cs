@@ -1,0 +1,22 @@
+class ToggleSwitchConverter :
+    WriteOnlyJsonConverter<ToggleSwitch>
+{
+    public override void Write(VerifyJsonWriter writer, ToggleSwitch value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ToggleButtonConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ToggleSwitch value)
+    {
+         writer.WriteMember(value, value.OnContent, "OnContent");
+         writer.WriteMember(value, value.OffContent, "OffContent");
+         writer.WriteMember(value, value.OffContentPresenter, "OffContentPresenter");
+         writer.WriteMember(value, value.OnContentPresenter, "OnContentPresenter");
+         writer.WriteMember(value, value.OffContentTemplate, "OffContentTemplate");
+         writer.WriteMember(value, value.OnContentTemplate, "OnContentTemplate");
+         writer.WriteMember(value, value.KnobTransitions, "KnobTransitions");
+    }
+}

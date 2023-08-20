@@ -1,0 +1,15 @@
+class ToolTipConverter :
+    WriteOnlyJsonConverter<ToolTip>
+{
+    public override void Write(VerifyJsonWriter writer, ToolTip value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ToolTip value)
+    {
+    }
+}

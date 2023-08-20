@@ -1,0 +1,17 @@
+class WindowNotificationManagerConverter :
+    WriteOnlyJsonConverter<WindowNotificationManager>
+{
+    public override void Write(VerifyJsonWriter writer, WindowNotificationManager value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, WindowNotificationManager value)
+    {
+         writer.WriteMember(value, value.Position, "Position");
+         writer.WriteMember(value, value.MaxItems, "MaxItems");
+    }
+}

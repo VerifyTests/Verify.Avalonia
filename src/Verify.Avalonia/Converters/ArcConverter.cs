@@ -1,0 +1,17 @@
+class ArcConverter :
+    WriteOnlyJsonConverter<Arc>
+{
+    public override void Write(VerifyJsonWriter writer, Arc value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ShapeConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Arc value)
+    {
+         writer.WriteMember(value, value.StartAngle, "StartAngle");
+         writer.WriteMember(value, value.SweepAngle, "SweepAngle");
+    }
+}

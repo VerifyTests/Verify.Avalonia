@@ -1,0 +1,37 @@
+class TextPresenterConverter :
+    WriteOnlyJsonConverter<TextPresenter>
+{
+    public override void Write(VerifyJsonWriter writer, TextPresenter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TextPresenter value)
+    {
+         writer.WriteMember(value, value.Background, "Background");
+         writer.WriteMember(value, value.Text, "Text");
+         writer.WriteMember(value, value.PreeditText, "PreeditText");
+         writer.WriteMember(value, value.FontFamily, "FontFamily");
+         writer.WriteMember(value, value.FontSize, "FontSize");
+         writer.WriteMember(value, value.FontStyle, "FontStyle");
+         writer.WriteMember(value, value.FontWeight, "FontWeight");
+         writer.WriteMember(value, value.FontStretch, "FontStretch");
+         writer.WriteMember(value, value.Foreground, "Foreground");
+         writer.WriteMember(value, value.TextWrapping, "TextWrapping");
+         writer.WriteMember(value, value.LineHeight, "LineHeight");
+         writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
+         writer.WriteMember(value, value.TextAlignment, "TextAlignment");
+         writer.WriteMember(value, value.TextLayout, "TextLayout");
+         writer.WriteMember(value, value.CaretIndex, "CaretIndex");
+         writer.WriteMember(value, value.PasswordChar, "PasswordChar");
+         writer.WriteMember(value, value.RevealPassword, "RevealPassword");
+         writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
+         writer.WriteMember(value, value.SelectionForegroundBrush, "SelectionForegroundBrush");
+         writer.WriteMember(value, value.CaretBrush, "CaretBrush");
+         writer.WriteMember(value, value.SelectionStart, "SelectionStart");
+         writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
+    }
+}

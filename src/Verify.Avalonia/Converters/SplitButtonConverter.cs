@@ -1,0 +1,18 @@
+class SplitButtonConverter :
+    WriteOnlyJsonConverter<SplitButton>
+{
+    public override void Write(VerifyJsonWriter writer, SplitButton value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, SplitButton value)
+    {
+         writer.WriteMember(value, value.Command, "Command");
+         writer.WriteMember(value, value.CommandParameter, "CommandParameter");
+         writer.WriteMember(value, value.Flyout, "Flyout");
+    }
+}

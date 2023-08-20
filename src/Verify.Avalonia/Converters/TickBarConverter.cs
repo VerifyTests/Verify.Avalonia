@@ -1,0 +1,24 @@
+class TickBarConverter :
+    WriteOnlyJsonConverter<TickBar>
+{
+    public override void Write(VerifyJsonWriter writer, TickBar value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TickBar value)
+    {
+         writer.WriteMember(value, value.Fill, "Fill");
+         writer.WriteMember(value, value.Minimum, "Minimum");
+         writer.WriteMember(value, value.Maximum, "Maximum");
+         writer.WriteMember(value, value.TickFrequency, "TickFrequency");
+         writer.WriteMember(value, value.Orientation, "Orientation");
+         writer.WriteMember(value, value.Ticks, "Ticks");
+         writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
+         writer.WriteMember(value, value.Placement, "Placement");
+         writer.WriteMember(value, value.ReservedSpace, "ReservedSpace");
+    }
+}

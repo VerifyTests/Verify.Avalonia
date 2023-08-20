@@ -1,0 +1,23 @@
+class ButtonConverter :
+    WriteOnlyJsonConverter<Button>
+{
+    public override void Write(VerifyJsonWriter writer, Button value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Button value)
+    {
+         writer.WriteMember(value, value.ClickMode, "ClickMode");
+         writer.WriteMember(value, value.Command, "Command");
+         writer.WriteMember(value, value.HotKey, "HotKey");
+         writer.WriteMember(value, value.CommandParameter, "CommandParameter");
+         writer.WriteMember(value, value.IsDefault, "IsDefault");
+         writer.WriteMember(value, value.IsCancel, "IsCancel");
+         writer.WriteMember(value, value.IsPressed, "IsPressed");
+         writer.WriteMember(value, value.Flyout, "Flyout");
+    }
+}

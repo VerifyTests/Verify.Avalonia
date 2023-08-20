@@ -1,0 +1,25 @@
+class MaskedTextBoxConverter :
+    WriteOnlyJsonConverter<MaskedTextBox>
+{
+    public override void Write(VerifyJsonWriter writer, MaskedTextBox value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TextBoxConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, MaskedTextBox value)
+    {
+         writer.WriteMember(value, value.AsciiOnly, "AsciiOnly");
+         writer.WriteMember(value, value.Culture, "Culture");
+         writer.WriteMember(value, value.HidePromptOnLeave, "HidePromptOnLeave");
+         writer.WriteMember(value, value.Mask, "Mask");
+         writer.WriteMember(value, value.MaskCompleted, "MaskCompleted");
+         writer.WriteMember(value, value.MaskFull, "MaskFull");
+         writer.WriteMember(value, value.MaskProvider, "MaskProvider");
+         writer.WriteMember(value, value.PromptChar, "PromptChar");
+         writer.WriteMember(value, value.ResetOnPrompt, "ResetOnPrompt");
+         writer.WriteMember(value, value.ResetOnSpace, "ResetOnSpace");
+    }
+}

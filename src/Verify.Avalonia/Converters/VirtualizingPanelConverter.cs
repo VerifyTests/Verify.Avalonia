@@ -1,0 +1,16 @@
+class VirtualizingPanelConverter :
+    WriteOnlyJsonConverter<VirtualizingPanel>
+{
+    public override void Write(VerifyJsonWriter writer, VirtualizingPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, VirtualizingPanel value)
+    {
+         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
+    }
+}

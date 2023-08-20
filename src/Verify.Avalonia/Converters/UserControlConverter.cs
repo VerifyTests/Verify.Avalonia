@@ -1,0 +1,15 @@
+class UserControlConverter :
+    WriteOnlyJsonConverter<UserControl>
+{
+    public override void Write(VerifyJsonWriter writer, UserControl value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, UserControl value)
+    {
+    }
+}

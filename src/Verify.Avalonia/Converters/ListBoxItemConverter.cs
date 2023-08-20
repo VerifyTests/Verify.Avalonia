@@ -1,0 +1,16 @@
+class ListBoxItemConverter :
+    WriteOnlyJsonConverter<ListBoxItem>
+{
+    public override void Write(VerifyJsonWriter writer, ListBoxItem value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ListBoxItem value)
+    {
+         writer.WriteMember(value, value.IsSelected, "IsSelected");
+    }
+}

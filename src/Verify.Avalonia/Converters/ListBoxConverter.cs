@@ -1,0 +1,19 @@
+class ListBoxConverter :
+    WriteOnlyJsonConverter<ListBox>
+{
+    public override void Write(VerifyJsonWriter writer, ListBox value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        SelectingItemsControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ListBox value)
+    {
+         writer.WriteMember(value, value.Scroll, "Scroll");
+         writer.WriteMember(value, value.SelectedItems, "SelectedItems");
+         writer.WriteMember(value, value.Selection, "Selection");
+         writer.WriteMember(value, value.SelectionMode, "SelectionMode");
+    }
+}

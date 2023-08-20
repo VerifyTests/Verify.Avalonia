@@ -1,0 +1,16 @@
+class DockPanelConverter :
+    WriteOnlyJsonConverter<DockPanel>
+{
+    public override void Write(VerifyJsonWriter writer, DockPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, DockPanel value)
+    {
+         writer.WriteMember(value, value.LastChildFill, "LastChildFill");
+    }
+}

@@ -1,0 +1,31 @@
+class DateTimePickerPanelConverter :
+    WriteOnlyJsonConverter<DateTimePickerPanel>
+{
+    public override void Write(VerifyJsonWriter writer, DateTimePickerPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, DateTimePickerPanel value)
+    {
+         writer.WriteMember(value, value.PanelType, "PanelType");
+         writer.WriteMember(value, value.ItemHeight, "ItemHeight");
+         writer.WriteMember(value, value.ItemFormat, "ItemFormat");
+         writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
+         writer.WriteMember(value, value.MinimumValue, "MinimumValue");
+         writer.WriteMember(value, value.MaximumValue, "MaximumValue");
+         writer.WriteMember(value, value.SelectedValue, "SelectedValue");
+         writer.WriteMember(value, value.Increment, "Increment");
+         writer.WriteMember(value, value.Offset, "Offset");
+         writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
+         writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
+         writer.WriteMember(value, value.IsLogicalScrollEnabled, "IsLogicalScrollEnabled");
+         writer.WriteMember(value, value.ScrollSize, "ScrollSize");
+         writer.WriteMember(value, value.PageScrollSize, "PageScrollSize");
+         writer.WriteMember(value, value.Extent, "Extent");
+         writer.WriteMember(value, value.Viewport, "Viewport");
+    }
+}

@@ -1,0 +1,17 @@
+class AccessTextConverter :
+    WriteOnlyJsonConverter<AccessText>
+{
+    public override void Write(VerifyJsonWriter writer, AccessText value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TextBlockConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, AccessText value)
+    {
+         writer.WriteMember(value, value.AccessKey, "AccessKey");
+         writer.WriteMember(value, value.ShowAccessKey, "ShowAccessKey");
+    }
+}

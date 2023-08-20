@@ -1,0 +1,15 @@
+class DropDownButtonConverter :
+    WriteOnlyJsonConverter<DropDownButton>
+{
+    public override void Write(VerifyJsonWriter writer, DropDownButton value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ButtonConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, DropDownButton value)
+    {
+    }
+}

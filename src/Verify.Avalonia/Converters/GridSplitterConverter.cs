@@ -1,0 +1,21 @@
+class GridSplitterConverter :
+    WriteOnlyJsonConverter<GridSplitter>
+{
+    public override void Write(VerifyJsonWriter writer, GridSplitter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ThumbConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
+    {
+         writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
+         writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
+         writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
+         writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
+         writer.WriteMember(value, value.DragIncrement, "DragIncrement");
+         writer.WriteMember(value, value.PreviewContent, "PreviewContent");
+    }
+}

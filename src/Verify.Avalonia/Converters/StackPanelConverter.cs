@@ -1,0 +1,19 @@
+class StackPanelConverter :
+    WriteOnlyJsonConverter<StackPanel>
+{
+    public override void Write(VerifyJsonWriter writer, StackPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, StackPanel value)
+    {
+         writer.WriteMember(value, value.Spacing, "Spacing");
+         writer.WriteMember(value, value.Orientation, "Orientation");
+         writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
+         writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
+    }
+}

@@ -1,0 +1,15 @@
+class EllipseConverter :
+    WriteOnlyJsonConverter<Ellipse>
+{
+    public override void Write(VerifyJsonWriter writer, Ellipse value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ShapeConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Ellipse value)
+    {
+    }
+}

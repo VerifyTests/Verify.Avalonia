@@ -1,0 +1,16 @@
+class PathIconConverter :
+    WriteOnlyJsonConverter<PathIcon>
+{
+    public override void Write(VerifyJsonWriter writer, PathIcon value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        IconElementConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, PathIcon value)
+    {
+         writer.WriteMember(value, value.Data, "Data");
+    }
+}

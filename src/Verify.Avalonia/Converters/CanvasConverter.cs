@@ -1,0 +1,15 @@
+class CanvasConverter :
+    WriteOnlyJsonConverter<Canvas>
+{
+    public override void Write(VerifyJsonWriter writer, Canvas value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Canvas value)
+    {
+    }
+}

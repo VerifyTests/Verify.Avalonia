@@ -1,0 +1,15 @@
+class MenuFlyoutPresenterConverter :
+    WriteOnlyJsonConverter<MenuFlyoutPresenter>
+{
+    public override void Write(VerifyJsonWriter writer, MenuFlyoutPresenter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        MenuBaseConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, MenuFlyoutPresenter value)
+    {
+    }
+}

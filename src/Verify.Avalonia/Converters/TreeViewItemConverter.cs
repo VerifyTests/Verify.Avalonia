@@ -1,0 +1,18 @@
+class TreeViewItemConverter :
+    WriteOnlyJsonConverter<TreeViewItem>
+{
+    public override void Write(VerifyJsonWriter writer, TreeViewItem value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        HeaderedItemsControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TreeViewItem value)
+    {
+         writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+         writer.WriteMember(value, value.IsSelected, "IsSelected");
+         writer.WriteMember(value, value.Level, "Level");
+    }
+}

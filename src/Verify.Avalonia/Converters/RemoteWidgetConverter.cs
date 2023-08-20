@@ -1,0 +1,16 @@
+class RemoteWidgetConverter :
+    WriteOnlyJsonConverter<RemoteWidget>
+{
+    public override void Write(VerifyJsonWriter writer, RemoteWidget value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, RemoteWidget value)
+    {
+         writer.WriteMember(value, value.Mode, "Mode");
+    }
+}

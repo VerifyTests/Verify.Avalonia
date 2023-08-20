@@ -1,0 +1,18 @@
+class ViewboxConverter :
+    WriteOnlyJsonConverter<Viewbox>
+{
+    public override void Write(VerifyJsonWriter writer, Viewbox value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Viewbox value)
+    {
+         writer.WriteMember(value, value.Stretch, "Stretch");
+         writer.WriteMember(value, value.StretchDirection, "StretchDirection");
+         writer.WriteMember(value, value.Child, "Child");
+    }
+}

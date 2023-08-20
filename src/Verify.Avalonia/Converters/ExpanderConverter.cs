@@ -1,0 +1,18 @@
+class ExpanderConverter :
+    WriteOnlyJsonConverter<Expander>
+{
+    public override void Write(VerifyJsonWriter writer, Expander value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        HeaderedContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Expander value)
+    {
+         writer.WriteMember(value, value.ContentTransition, "ContentTransition");
+         writer.WriteMember(value, value.ExpandDirection, "ExpandDirection");
+         writer.WriteMember(value, value.IsExpanded, "IsExpanded");
+    }
+}

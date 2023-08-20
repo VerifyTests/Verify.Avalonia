@@ -1,0 +1,16 @@
+class TransitioningContentControlConverter :
+    WriteOnlyJsonConverter<TransitioningContentControl>
+{
+    public override void Write(VerifyJsonWriter writer, TransitioningContentControl value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TransitioningContentControl value)
+    {
+         writer.WriteMember(value, value.PageTransition, "PageTransition");
+    }
+}

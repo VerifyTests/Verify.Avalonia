@@ -1,0 +1,16 @@
+class MenuBaseConverter :
+    WriteOnlyJsonConverter<MenuBase>
+{
+    public override void Write(VerifyJsonWriter writer, MenuBase value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        SelectingItemsControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, MenuBase value)
+    {
+         writer.WriteMember(value, value.IsOpen, "IsOpen");
+    }
+}

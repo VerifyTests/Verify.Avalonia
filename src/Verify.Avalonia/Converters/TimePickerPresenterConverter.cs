@@ -1,0 +1,18 @@
+class TimePickerPresenterConverter :
+    WriteOnlyJsonConverter<TimePickerPresenter>
+{
+    public override void Write(VerifyJsonWriter writer, TimePickerPresenter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PickerPresenterBaseConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TimePickerPresenter value)
+    {
+         writer.WriteMember(value, value.MinuteIncrement, "MinuteIncrement");
+         writer.WriteMember(value, value.ClockIdentifier, "ClockIdentifier");
+         writer.WriteMember(value, value.Time, "Time");
+    }
+}

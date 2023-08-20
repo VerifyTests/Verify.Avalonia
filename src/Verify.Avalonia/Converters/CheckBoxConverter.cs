@@ -1,0 +1,15 @@
+class CheckBoxConverter :
+    WriteOnlyJsonConverter<CheckBox>
+{
+    public override void Write(VerifyJsonWriter writer, CheckBox value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ToggleButtonConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, CheckBox value)
+    {
+    }
+}

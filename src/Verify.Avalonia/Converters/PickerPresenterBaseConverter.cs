@@ -1,0 +1,15 @@
+class PickerPresenterBaseConverter :
+    WriteOnlyJsonConverter<PickerPresenterBase>
+{
+    public override void Write(VerifyJsonWriter writer, PickerPresenterBase value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, PickerPresenterBase value)
+    {
+    }
+}

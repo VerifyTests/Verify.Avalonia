@@ -1,0 +1,15 @@
+class CaptionButtonsConverter :
+    WriteOnlyJsonConverter<CaptionButtons>
+{
+    public override void Write(VerifyJsonWriter writer, CaptionButtons value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, CaptionButtons value)
+    {
+    }
+}

@@ -1,0 +1,17 @@
+class TabItemConverter :
+    WriteOnlyJsonConverter<TabItem>
+{
+    public override void Write(VerifyJsonWriter writer, TabItem value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        HeaderedContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TabItem value)
+    {
+         writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
+         writer.WriteMember(value, value.IsSelected, "IsSelected");
+    }
+}

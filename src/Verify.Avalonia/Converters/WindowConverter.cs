@@ -1,0 +1,33 @@
+class WindowConverter :
+    WriteOnlyJsonConverter<Window>
+{
+    public override void Write(VerifyJsonWriter writer, Window value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        WindowBaseConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, Window value)
+    {
+         writer.WriteMember(value, value.PlatformImpl, "PlatformImpl");
+         writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
+         writer.WriteMember(value, value.SizeToContent, "SizeToContent");
+         writer.WriteMember(value, value.Title, "Title");
+         writer.WriteMember(value, value.ExtendClientAreaToDecorationsHint, "ExtendClientAreaToDecorationsHint");
+         writer.WriteMember(value, value.ExtendClientAreaChromeHints, "ExtendClientAreaChromeHints");
+         writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
+         writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
+         writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
+         writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
+         writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");
+         writer.WriteMember(value, value.ShowActivated, "ShowActivated");
+         writer.WriteMember(value, value.ShowInTaskbar, "ShowInTaskbar");
+         writer.WriteMember(value, value.WindowState, "WindowState");
+         writer.WriteMember(value, value.CanResize, "CanResize");
+         writer.WriteMember(value, value.Icon, "Icon");
+         writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");
+         writer.WriteMember(value, value.Position, "Position");
+    }
+}

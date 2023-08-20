@@ -1,0 +1,17 @@
+class NotificationCardConverter :
+    WriteOnlyJsonConverter<NotificationCard>
+{
+    public override void Write(VerifyJsonWriter writer, NotificationCard value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, NotificationCard value)
+    {
+         writer.WriteMember(value, value.IsClosing, "IsClosing");
+         writer.WriteMember(value, value.IsClosed, "IsClosed");
+    }
+}

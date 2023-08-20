@@ -1,0 +1,33 @@
+class AutoCompleteBoxConverter :
+    WriteOnlyJsonConverter<AutoCompleteBox>
+{
+    public override void Write(VerifyJsonWriter writer, AutoCompleteBox value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, AutoCompleteBox value)
+    {
+         writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");
+         writer.WriteMember(value, value.IsTextCompletionEnabled, "IsTextCompletionEnabled");
+         writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
+         writer.WriteMember(value, value.MinimumPopulateDelay, "MinimumPopulateDelay");
+         writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
+         writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
+         writer.WriteMember(value, value.ValueMemberBinding, "ValueMemberBinding");
+         writer.WriteMember(value, value.SelectedItem, "SelectedItem");
+         writer.WriteMember(value, value.Text, "Text");
+         writer.WriteMember(value, value.SearchText, "SearchText");
+         writer.WriteMember(value, value.FilterMode, "FilterMode");
+         writer.WriteMember(value, value.Watermark, "Watermark");
+         writer.WriteMember(value, value.ItemFilter, "ItemFilter");
+         writer.WriteMember(value, value.TextFilter, "TextFilter");
+         writer.WriteMember(value, value.ItemSelector, "ItemSelector");
+         writer.WriteMember(value, value.TextSelector, "TextSelector");
+         writer.WriteMember(value, value.AsyncPopulator, "AsyncPopulator");
+         writer.WriteMember(value, value.ItemsSource, "ItemsSource");
+    }
+}

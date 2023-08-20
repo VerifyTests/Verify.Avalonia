@@ -1,0 +1,24 @@
+class ContextMenuConverter :
+    WriteOnlyJsonConverter<ContextMenu>
+{
+    public override void Write(VerifyJsonWriter writer, ContextMenu value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        MenuBaseConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ContextMenu value)
+    {
+         writer.WriteMember(value, value.HorizontalOffset, "HorizontalOffset");
+         writer.WriteMember(value, value.VerticalOffset, "VerticalOffset");
+         writer.WriteMember(value, value.PlacementAnchor, "PlacementAnchor");
+         writer.WriteMember(value, value.PlacementConstraintAdjustment, "PlacementConstraintAdjustment");
+         writer.WriteMember(value, value.PlacementGravity, "PlacementGravity");
+         writer.WriteMember(value, value.Placement, "Placement");
+         writer.WriteMember(value, value.WindowManagerAddShadowHint, "WindowManagerAddShadowHint");
+         writer.WriteMember(value, value.PlacementRect, "PlacementRect");
+         writer.WriteMember(value, value.PlacementTarget, "PlacementTarget");
+    }
+}

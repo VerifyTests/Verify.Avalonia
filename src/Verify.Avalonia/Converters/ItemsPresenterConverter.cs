@@ -1,0 +1,17 @@
+class ItemsPresenterConverter :
+    WriteOnlyJsonConverter<ItemsPresenter>
+{
+    public override void Write(VerifyJsonWriter writer, ItemsPresenter value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ItemsPresenter value)
+    {
+         writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
+         writer.WriteMember(value, value.Panel, "Panel");
+    }
+}

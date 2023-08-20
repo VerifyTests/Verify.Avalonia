@@ -1,0 +1,16 @@
+class LightDismissOverlayLayerConverter :
+    WriteOnlyJsonConverter<LightDismissOverlayLayer>
+{
+    public override void Write(VerifyJsonWriter writer, LightDismissOverlayLayer value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        BorderConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, LightDismissOverlayLayer value)
+    {
+         writer.WriteMember(value, value.InputPassThroughElement, "InputPassThroughElement");
+    }
+}

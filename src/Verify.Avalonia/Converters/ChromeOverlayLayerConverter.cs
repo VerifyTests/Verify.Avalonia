@@ -1,0 +1,15 @@
+class ChromeOverlayLayerConverter :
+    WriteOnlyJsonConverter<ChromeOverlayLayer>
+{
+    public override void Write(VerifyJsonWriter writer, ChromeOverlayLayer value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        PanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ChromeOverlayLayer value)
+    {
+    }
+}

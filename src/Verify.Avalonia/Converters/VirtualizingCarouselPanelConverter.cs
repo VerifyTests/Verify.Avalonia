@@ -1,0 +1,15 @@
+class VirtualizingCarouselPanelConverter :
+    WriteOnlyJsonConverter<VirtualizingCarouselPanel>
+{
+    public override void Write(VerifyJsonWriter writer, VirtualizingCarouselPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        VirtualizingPanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, VirtualizingCarouselPanel value)
+    {
+    }
+}

@@ -1,0 +1,18 @@
+class LayoutTransformControlConverter :
+    WriteOnlyJsonConverter<LayoutTransformControl>
+{
+    public override void Write(VerifyJsonWriter writer, LayoutTransformControl value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        DecoratorConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, LayoutTransformControl value)
+    {
+         writer.WriteMember(value, value.LayoutTransform, "LayoutTransform");
+         writer.WriteMember(value, value.UseRenderTransform, "UseRenderTransform");
+         writer.WriteMember(value, value.TransformRoot, "TransformRoot");
+    }
+}

@@ -1,0 +1,17 @@
+class RefreshContainerConverter :
+    WriteOnlyJsonConverter<RefreshContainer>
+{
+    public override void Write(VerifyJsonWriter writer, RefreshContainer value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ContentControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, RefreshContainer value)
+    {
+         writer.WriteMember(value, value.Visualizer, "Visualizer");
+         writer.WriteMember(value, value.PullDirection, "PullDirection");
+    }
+}

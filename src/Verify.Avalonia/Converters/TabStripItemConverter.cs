@@ -1,0 +1,15 @@
+class TabStripItemConverter :
+    WriteOnlyJsonConverter<TabStripItem>
+{
+    public override void Write(VerifyJsonWriter writer, TabStripItem value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ListBoxItemConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, TabStripItem value)
+    {
+    }
+}

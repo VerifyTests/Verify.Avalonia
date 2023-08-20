@@ -1,0 +1,16 @@
+class ReversibleStackPanelConverter :
+    WriteOnlyJsonConverter<ReversibleStackPanel>
+{
+    public override void Write(VerifyJsonWriter writer, ReversibleStackPanel value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        StackPanelConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, ReversibleStackPanel value)
+    {
+         writer.WriteMember(value, value.ReverseOrder, "ReverseOrder");
+    }
+}

@@ -1,0 +1,16 @@
+class RadioButtonConverter :
+    WriteOnlyJsonConverter<RadioButton>
+{
+    public override void Write(VerifyJsonWriter writer, RadioButton value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        ToggleButtonConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, RadioButton value)
+    {
+         writer.WriteMember(value, value.GroupName, "GroupName");
+    }
+}

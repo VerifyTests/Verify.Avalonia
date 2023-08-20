@@ -1,0 +1,20 @@
+class RangeBaseConverter :
+    WriteOnlyJsonConverter<RangeBase>
+{
+    public override void Write(VerifyJsonWriter writer, RangeBase value)
+    {
+        writer.WriteStartObject();
+        WriteMembers(writer, value);
+        TemplatedControlConverter.WriteMembers(writer, value);
+        writer.WriteEndObject();
+    }
+
+    public static void WriteMembers(VerifyJsonWriter writer, RangeBase value)
+    {
+         writer.WriteMember(value, value.Minimum, "Minimum");
+         writer.WriteMember(value, value.Maximum, "Maximum");
+         writer.WriteMember(value, value.Value, "Value");
+         writer.WriteMember(value, value.SmallChange, "SmallChange");
+         writer.WriteMember(value, value.LargeChange, "LargeChange");
+    }
+}
