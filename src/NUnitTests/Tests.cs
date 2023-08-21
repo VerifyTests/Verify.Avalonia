@@ -159,9 +159,7 @@ public class Tests
         if (attachedProperty == null)
         {
             builder.AppendLine(
-                $"""
-                          writer.WriteMember(value, value.{name}, "{name}");
-                 """);
+                $"         writer.WriteMember(value, value.{name}, \"{name}\");");
             return;
         }
 
