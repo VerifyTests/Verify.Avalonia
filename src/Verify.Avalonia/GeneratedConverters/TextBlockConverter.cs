@@ -50,6 +50,30 @@ class TextBlockConverter :
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
+        if (!TextBlock.LineHeightProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.LineHeight))
+        {
+            writer.WriteMember(value, value.LineHeight, "LineHeight");
+        }
+        if (!TextBlock.LetterSpacingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.LetterSpacing))
+        {
+            writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
+        }
+        if (!TextBlock.MaxLinesProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.MaxLines))
+        {
+            writer.WriteMember(value, value.MaxLines, "MaxLines");
+        }
+        if (!TextBlock.TextWrappingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.TextWrapping))
+        {
+            writer.WriteMember(value, value.TextWrapping, "TextWrapping");
+        }
+        if (TextBlock.TextTrimmingProperty.GetDefaultValue(typeof(TextBlock)) != value.TextTrimming)
+        {
+            writer.WriteMember(value, value.TextTrimming, "TextTrimming");
+        }
+        if (!TextBlock.TextAlignmentProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.TextAlignment))
+        {
+            writer.WriteMember(value, value.TextAlignment, "TextAlignment");
+        }
         if (TextBlock.TextDecorationsProperty.GetDefaultValue(typeof(TextBlock)) != value.TextDecorations)
         {
             writer.WriteMember(value, value.TextDecorations, "TextDecorations");
@@ -57,6 +81,10 @@ class TextBlockConverter :
         if (TextBlock.InlinesProperty.GetUnsetValue(typeof(TextBlock)) != value.Inlines)
         {
             writer.WriteMember(value, value.Inlines, "Inlines");
+        }
+        if (!TextBlock.BaselineOffsetProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.BaselineOffset))
+        {
+            writer.WriteMember(value, value.BaselineOffset, "BaselineOffset");
         }
     }
 }

@@ -53,6 +53,10 @@ class VisualConverter :
         {
             writer.WriteMember(value, value.RenderTransformOrigin, "RenderTransformOrigin");
         }
+        if (!Visual.FlowDirectionProperty.GetDefaultValue(typeof(Visual)).Equals(value.FlowDirection))
+        {
+            writer.WriteMember(value, value.FlowDirection, "FlowDirection");
+        }
         if (!Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)).Equals(value.ZIndex))
         {
             writer.WriteMember(value, value.ZIndex, "ZIndex");

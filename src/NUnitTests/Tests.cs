@@ -181,7 +181,8 @@ public class Tests
                           }
                   """);
 
-        if (genericType.IsAssignableTo(typeof(StyledProperty<>)))
+        if (genericType == typeof(StyledProperty<>) ||
+            genericType == typeof(AttachedProperty<>))
         {
             if (propertyType.IsValueType)
             {
