@@ -211,5 +211,7 @@ public class Tests
             WriteWrite();
             return;
         }
+
+        throw new(attachedProperty.FieldType.FullName);
     }
 }
