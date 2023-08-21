@@ -36,6 +36,7 @@ public static partial class VerifyAvalonia
                 _.Converters.Add(new TabStripConverter());
                 _.Converters.Add(new TabStripItemConverter());
                 _.Converters.Add(new ToggleButtonConverter());
+                _.Converters.Add(new ColorSliderConverter());
                 _.Converters.Add(new ButtonConverter());
                 _.Converters.Add(new DataValidationErrorsConverter());
                 _.Converters.Add(new DatePickerPresenterConverter());
@@ -71,6 +72,11 @@ public static partial class VerifyAvalonia
                 _.Converters.Add(new OverlayPopupHostConverter());
                 _.Converters.Add(new ScrollBarConverter());
                 _.Converters.Add(new SelectingItemsControlConverter());
+                _.Converters.Add(new ColorPickerConverter());
+                _.Converters.Add(new DataGridCellConverter());
+                _.Converters.Add(new DataGridColumnHeaderConverter());
+                _.Converters.Add(new DataGridRowHeaderConverter());
+                _.Converters.Add(new DataGridFrozenGridConverter());
                 _.Converters.Add(new AutoCompleteBoxConverter());
                 _.Converters.Add(new BorderConverter());
                 _.Converters.Add(new CalendarDatePickerConverter());
@@ -116,6 +122,16 @@ public static partial class VerifyAvalonia
                 _.Converters.Add(new ThumbConverter());
                 _.Converters.Add(new UniformGridConverter());
                 _.Converters.Add(new VisualLayerManagerConverter());
+                _.Converters.Add(new ColorViewConverter());
+                _.Converters.Add(new ColorPreviewerConverter());
+                _.Converters.Add(new ColorSpectrumConverter());
+                _.Converters.Add(new DataGridConverter());
+                _.Converters.Add(new DataGridRowConverter());
+                _.Converters.Add(new DataGridRowGroupHeaderConverter());
+                _.Converters.Add(new DataGridCellsPresenterConverter());
+                _.Converters.Add(new DataGridColumnHeadersPresenterConverter());
+                _.Converters.Add(new DataGridDetailsPresenterConverter());
+                _.Converters.Add(new DataGridRowsPresenterConverter());
                 _.Converters.Add(new DecoratorConverter());
                 _.Converters.Add(new ImageConverter());
                 _.Converters.Add(new NativeControlHostConverter());

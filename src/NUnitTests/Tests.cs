@@ -26,9 +26,19 @@ public class Tests
         }
 
         var visual = typeof(Visual);
-        var types = typeof(Window).Assembly.GetTypes()
+        var types =
+            //Avalonia.Controls
+            typeof(Window).Assembly.GetTypes()
             .Concat(
+                //Avalonia.Base
                 typeof(InputElement).Assembly.GetTypes())
+            .Concat(
+                //Avalonia.Controls.ColorPicker
+                typeof(ColorPicker).Assembly.GetTypes())
+            .Concat(
+                //Avalonia.Controls.DataGrid
+                typeof(DataGrid).Assembly.GetTypes())
+
             .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
             .OrderByDescending(GetDepth)
             .ToList();
