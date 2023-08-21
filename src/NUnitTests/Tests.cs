@@ -169,15 +169,17 @@ public class Tests
             return;
         }
 
+        var propertyDefinition =$"{type.Name}.{name}Property";
+
         var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
 
-        if (genericType == typeof(StyledProperty<>))
+        if (genericType.IsAssignableTo(typeof(StyledProperty<>)))
         {
             if (!propertyType.IsValueType)
             {
                 builder.AppendLine(
                     $$"""
-                              if ({{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})) != value.{{name}})
+                              if ({{propertyDefinition}}.GetDefaultValue(typeof({{type.Name}})) != value.{{name}})
                               {
                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
                               }
@@ -187,7 +189,7 @@ public class Tests
             {
                 builder.AppendLine(
                     $$"""
-                              if (!{{type.Name}}.{{name}}Property.GetDefaultValue(typeof({{type.Name}})).Equals(value.{{name}}))
+                              if (!{{propertyDefinition}}.GetDefaultValue(typeof({{type.Name}})).Equals(value.{{name}}))
                               {
                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
                               }
@@ -203,7 +205,7 @@ public class Tests
             {
                 builder.AppendLine(
                     $$"""
-                              if ({{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
+                              if ({{propertyDefinition}}.GetUnsetValue(typeof({{type.Name}})) != value.{{name}})
                               {
                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
                               }
@@ -213,7 +215,7 @@ public class Tests
             {
                 builder.AppendLine(
                     $$"""
-                              if (!{{type.Name}}.{{name}}Property.GetUnsetValue(typeof({{type.Name}})).Equals(value.{{name}}))
+                              if (!{{propertyDefinition}}.GetUnsetValue(typeof({{type.Name}})).Equals(value.{{name}}))
                               {
                                   writer.WriteMember(value, value.{{name}}, "{{name}}");
                               }
