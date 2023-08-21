@@ -29,19 +29,19 @@ public class Tests
         var types =
             //Avalonia.Controls
             typeof(Window).Assembly.GetTypes()
-            .Concat(
-                //Avalonia.Base
-                typeof(InputElement).Assembly.GetTypes())
-            .Concat(
-                //Avalonia.Controls.ColorPicker
-                typeof(ColorPicker).Assembly.GetTypes())
-            .Concat(
-                //Avalonia.Controls.DataGrid
-                typeof(DataGrid).Assembly.GetTypes())
+                .Concat(
+                    //Avalonia.Base
+                    typeof(InputElement).Assembly.GetTypes())
+                .Concat(
+                    //Avalonia.Controls.ColorPicker
+                    typeof(ColorPicker).Assembly.GetTypes())
+                .Concat(
+                    //Avalonia.Controls.DataGrid
+                    typeof(DataGrid).Assembly.GetTypes())
 
-            .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
-            .OrderByDescending(GetDepth)
-            .ToList();
+                .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
+                .OrderByDescending(GetDepth)
+                .ToList();
         foreach (var type in types)
         {
             WriteType(type, convertersPath);
@@ -169,7 +169,7 @@ public class Tests
             return;
         }
 
-        var propertyDefinition =$"{type.Name}.{name}Property";
+        var propertyDefinition = $"{type.Name}.{name}Property";
 
         var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
 
@@ -206,6 +206,7 @@ public class Tests
             {
                 builder.AppendLine($"        if (!{propertyDefinition}.GetUnsetValue(typeof({type.Name})).Equals(value.{name}))");
             }
+
             WriteWrite();
             return;
         }
