@@ -5,10 +5,6 @@ using Avalonia.Platform;
 [TestFixture]
 public class Tests
 {
-    // static Dictionary<Type, List<string>> ignoredMembers = new()
-    // {
-    // };
-
     static List<Type> ignoredTypes = new()
     {
         typeof(IWindowBaseImpl),
