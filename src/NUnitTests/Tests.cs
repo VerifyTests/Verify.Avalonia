@@ -183,13 +183,13 @@ public class Tests
 
         if (genericType.IsAssignableTo(typeof(StyledProperty<>)))
         {
-            if (!propertyType.IsValueType)
+            if (propertyType.IsValueType)
             {
-                builder.AppendLine($"        if ({propertyDefinition}.GetDefaultValue(typeof({type.Name})) != value.{name})");
+                builder.AppendLine($"        if (!{propertyDefinition}.GetDefaultValue(typeof({type.Name})).Equals(value.{name}))");
             }
             else
             {
-                builder.AppendLine($"        if (!{propertyDefinition}.GetDefaultValue(typeof({type.Name})).Equals(value.{name}))");
+                builder.AppendLine($"        if ({propertyDefinition}.GetDefaultValue(typeof({type.Name})) != value.{name})");
             }
 
             WriteWrite();
@@ -198,13 +198,13 @@ public class Tests
 
         if (genericType == typeof(DirectProperty<,>))
         {
-            if (!propertyType.IsValueType)
+            if (propertyType.IsValueType)
             {
-                builder.AppendLine($"        if ({propertyDefinition}.GetUnsetValue(typeof({type.Name})) != value.{name})");
+                builder.AppendLine($"        if (!{propertyDefinition}.GetUnsetValue(typeof({type.Name})).Equals(value.{name}))");
             }
             else
             {
-                builder.AppendLine($"        if (!{propertyDefinition}.GetUnsetValue(typeof({type.Name})).Equals(value.{name}))");
+                builder.AppendLine($"        if ({propertyDefinition}.GetUnsetValue(typeof({type.Name})) != value.{name})");
             }
 
             WriteWrite();
