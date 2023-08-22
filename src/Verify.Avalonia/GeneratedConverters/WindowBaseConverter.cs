@@ -19,7 +19,7 @@ class WindowBaseConverter :
         {
             writer.WriteMember(value, value.IsActive, "IsActive");
         }
-         writer.WriteMember(value, value.Screens, "Screens");
+        writer.WriteMember(value, value.Screens, "Screens");
         if (!object.Equals(WindowBase.OwnerProperty.GetUnsetValue(typeof(WindowBase)), value.Owner))
         {
             writer.WriteMember(value, value.Owner, "Owner");
@@ -28,7 +28,7 @@ class WindowBaseConverter :
         {
             writer.WriteMember(value, value.Topmost, "Topmost");
         }
-         writer.WriteMember(value, value.DesktopScaling, "DesktopScaling");
+        writer.WriteMember(value, value.DesktopScaling, "DesktopScaling");
     }
 
     public static bool MemberHasValue(WindowBase target, string member, object? value)

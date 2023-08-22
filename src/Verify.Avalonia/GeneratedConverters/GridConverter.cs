@@ -19,8 +19,8 @@ class GridConverter :
         {
             writer.WriteMember(value, value.ShowGridLines, "ShowGridLines");
         }
-         writer.WriteMember(value, value.ColumnDefinitions, "ColumnDefinitions");
-         writer.WriteMember(value, value.RowDefinitions, "RowDefinitions");
+        writer.WriteMember(value, value.ColumnDefinitions, "ColumnDefinitions");
+        writer.WriteMember(value, value.RowDefinitions, "RowDefinitions");
     }
 
     public static bool MemberHasValue(Grid target, string member, object? value)

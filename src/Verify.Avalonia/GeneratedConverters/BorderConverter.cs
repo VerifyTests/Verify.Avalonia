@@ -35,7 +35,7 @@ class BorderConverter :
         {
             writer.WriteMember(value, value.BoxShadow, "BoxShadow");
         }
-         writer.WriteMember(value, value.ClipToBoundsRadius, "ClipToBoundsRadius");
+        writer.WriteMember(value, value.ClipToBoundsRadius, "ClipToBoundsRadius");
     }
 
     public static bool MemberHasValue(Border target, string member, object? value)

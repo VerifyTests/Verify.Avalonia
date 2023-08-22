@@ -15,7 +15,7 @@ class WindowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Window value)
     {
-         writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
+        writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
         if (!object.Equals(Window.SizeToContentProperty.GetDefaultValue(typeof(Window)), value.SizeToContent))
         {
             writer.WriteMember(value, value.SizeToContent, "SizeToContent");
@@ -76,7 +76,7 @@ class WindowConverter :
         {
             writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");
         }
-         writer.WriteMember(value, value.Position, "Position");
+        writer.WriteMember(value, value.Position, "Position");
     }
 
     public static bool MemberHasValue(Window target, string member, object? value)

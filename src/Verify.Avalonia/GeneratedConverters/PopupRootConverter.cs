@@ -19,7 +19,7 @@ class PopupRootConverter :
         {
             writer.WriteMember(value, value.Transform, "Transform");
         }
-         writer.WriteMember(value, value.ParentTopLevel, "ParentTopLevel");
+        writer.WriteMember(value, value.ParentTopLevel, "ParentTopLevel");
     }
 
     public static bool MemberHasValue(PopupRoot target, string member, object? value)

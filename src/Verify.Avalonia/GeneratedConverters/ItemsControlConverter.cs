@@ -19,8 +19,8 @@ class ItemsControlConverter :
         {
             writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");
         }
-         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
-         writer.WriteMember(value, value.Items, "Items");
+        writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
+        writer.WriteMember(value, value.Items, "Items");
         if (!object.Equals(ItemsControl.ItemContainerThemeProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemContainerTheme))
         {
             writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
@@ -41,9 +41,9 @@ class ItemsControlConverter :
         {
             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
         }
-         writer.WriteMember(value, value.Presenter, "Presenter");
-         writer.WriteMember(value, value.ItemsPanelRoot, "ItemsPanelRoot");
-         writer.WriteMember(value, value.ItemsView, "ItemsView");
+        writer.WriteMember(value, value.Presenter, "Presenter");
+        writer.WriteMember(value, value.ItemsPanelRoot, "ItemsPanelRoot");
+        writer.WriteMember(value, value.ItemsView, "ItemsView");
     }
 
     public static bool MemberHasValue(ItemsControl target, string member, object? value)

@@ -39,7 +39,7 @@ class AutoCompleteBoxConverter :
         {
             writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
         }
-         writer.WriteMember(value, value.ValueMemberBinding, "ValueMemberBinding");
+        writer.WriteMember(value, value.ValueMemberBinding, "ValueMemberBinding");
         if (!object.Equals(AutoCompleteBox.SelectedItemProperty.GetDefaultValue(typeof(AutoCompleteBox)), value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");

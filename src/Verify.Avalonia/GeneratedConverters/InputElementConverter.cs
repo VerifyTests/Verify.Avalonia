@@ -55,8 +55,8 @@ class InputElementConverter :
         {
             writer.WriteMember(value, value.TabIndex, "TabIndex");
         }
-         writer.WriteMember(value, value.KeyBindings, "KeyBindings");
-         writer.WriteMember(value, value.GestureRecognizers, "GestureRecognizers");
+        writer.WriteMember(value, value.KeyBindings, "KeyBindings");
+        writer.WriteMember(value, value.GestureRecognizers, "GestureRecognizers");
     }
 
     public static bool MemberHasValue(InputElement target, string member, object? value)

@@ -23,7 +23,7 @@ class HeaderedItemsControlConverter :
         {
             writer.WriteMember(value, value.HeaderTemplate, "HeaderTemplate");
         }
-         writer.WriteMember(value, value.HeaderPresenter, "HeaderPresenter");
+        writer.WriteMember(value, value.HeaderPresenter, "HeaderPresenter");
     }
 
     public static bool MemberHasValue(HeaderedItemsControl target, string member, object? value)

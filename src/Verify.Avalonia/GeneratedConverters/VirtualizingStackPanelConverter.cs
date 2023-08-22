@@ -27,8 +27,8 @@ class VirtualizingStackPanelConverter :
         {
             writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
         }
-         writer.WriteMember(value, value.FirstRealizedIndex, "FirstRealizedIndex");
-         writer.WriteMember(value, value.LastRealizedIndex, "LastRealizedIndex");
+        writer.WriteMember(value, value.FirstRealizedIndex, "FirstRealizedIndex");
+        writer.WriteMember(value, value.LastRealizedIndex, "LastRealizedIndex");
     }
 
     public static bool MemberHasValue(VirtualizingStackPanel target, string member, object? value)

@@ -39,7 +39,7 @@ class CalendarConverter :
         {
             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
         }
-         writer.WriteMember(value, value.SelectedDates, "SelectedDates");
+        writer.WriteMember(value, value.SelectedDates, "SelectedDates");
         if (!object.Equals(Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDate))
         {
             writer.WriteMember(value, value.DisplayDate, "DisplayDate");
@@ -48,7 +48,7 @@ class CalendarConverter :
         {
             writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
         }
-         writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
+        writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
         if (!object.Equals(Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDateEnd))
         {
             writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");

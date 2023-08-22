@@ -35,7 +35,7 @@ class MenuItemConverter :
         {
             writer.WriteMember(value, value.InputGesture, "InputGesture");
         }
-         writer.WriteMember(value, value.IsSelected, "IsSelected");
+        writer.WriteMember(value, value.IsSelected, "IsSelected");
         if (!object.Equals(MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)), value.IsSubMenuOpen))
         {
             writer.WriteMember(value, value.IsSubMenuOpen, "IsSubMenuOpen");
@@ -44,8 +44,8 @@ class MenuItemConverter :
         {
             writer.WriteMember(value, value.StaysOpenOnClick, "StaysOpenOnClick");
         }
-         writer.WriteMember(value, value.HasSubMenu, "HasSubMenu");
-         writer.WriteMember(value, value.IsTopLevel, "IsTopLevel");
+        writer.WriteMember(value, value.HasSubMenu, "HasSubMenu");
+        writer.WriteMember(value, value.IsTopLevel, "IsTopLevel");
     }
 
     public static bool MemberHasValue(MenuItem target, string member, object? value)

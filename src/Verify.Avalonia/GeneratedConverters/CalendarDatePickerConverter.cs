@@ -15,7 +15,7 @@ class CalendarDatePickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CalendarDatePicker value)
     {
-         writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
+        writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
         if (!object.Equals(CalendarDatePicker.DisplayDateProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.DisplayDate))
         {
             writer.WriteMember(value, value.DisplayDate, "DisplayDate");

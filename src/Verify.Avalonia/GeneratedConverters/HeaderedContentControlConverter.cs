@@ -19,7 +19,7 @@ class HeaderedContentControlConverter :
         {
             writer.WriteMember(value, value.Header, "Header");
         }
-         writer.WriteMember(value, value.HeaderPresenter, "HeaderPresenter");
+        writer.WriteMember(value, value.HeaderPresenter, "HeaderPresenter");
         if (!object.Equals(HeaderedContentControl.HeaderTemplateProperty.GetDefaultValue(typeof(HeaderedContentControl)), value.HeaderTemplate))
         {
             writer.WriteMember(value, value.HeaderTemplate, "HeaderTemplate");

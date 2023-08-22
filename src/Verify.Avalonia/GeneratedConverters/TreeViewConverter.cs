@@ -15,7 +15,7 @@ class TreeViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TreeView value)
     {
-         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
+        writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
         if (!object.Equals(TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)), value.AutoScrollToSelectedItem))
         {
             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");

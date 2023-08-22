@@ -47,7 +47,7 @@ class ScrollViewerConverter :
         {
             writer.WriteMember(value, value.VerticalScrollBarVisibility, "VerticalScrollBarVisibility");
         }
-         writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
+        writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
         if (!object.Equals(ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(typeof(ScrollViewer)), value.ScrollBarMaximum))
         {
             writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");

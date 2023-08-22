@@ -19,7 +19,7 @@ class ControlConverter :
         {
             writer.WriteMember(value, value.FocusAdorner, "FocusAdorner");
         }
-         writer.WriteMember(value, value.DataTemplates, "DataTemplates");
+        writer.WriteMember(value, value.DataTemplates, "DataTemplates");
         if (!object.Equals(Control.ContextMenuProperty.GetDefaultValue(typeof(Control)), value.ContextMenu))
         {
             writer.WriteMember(value, value.ContextMenu, "ContextMenu");
@@ -28,7 +28,7 @@ class ControlConverter :
         {
             writer.WriteMember(value, value.ContextFlyout, "ContextFlyout");
         }
-         writer.WriteMember(value, value.IsLoaded, "IsLoaded");
+        writer.WriteMember(value, value.IsLoaded, "IsLoaded");
         if (!object.Equals(Control.TagProperty.GetDefaultValue(typeof(Control)), value.Tag))
         {
             writer.WriteMember(value, value.Tag, "Tag");

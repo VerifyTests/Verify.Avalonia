@@ -31,18 +31,18 @@ class DateTimePickerPanelConverter :
         {
             writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
         }
-         writer.WriteMember(value, value.MinimumValue, "MinimumValue");
-         writer.WriteMember(value, value.MaximumValue, "MaximumValue");
-         writer.WriteMember(value, value.SelectedValue, "SelectedValue");
-         writer.WriteMember(value, value.Increment, "Increment");
-         writer.WriteMember(value, value.Offset, "Offset");
-         writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
-         writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
-         writer.WriteMember(value, value.IsLogicalScrollEnabled, "IsLogicalScrollEnabled");
-         writer.WriteMember(value, value.ScrollSize, "ScrollSize");
-         writer.WriteMember(value, value.PageScrollSize, "PageScrollSize");
-         writer.WriteMember(value, value.Extent, "Extent");
-         writer.WriteMember(value, value.Viewport, "Viewport");
+        writer.WriteMember(value, value.MinimumValue, "MinimumValue");
+        writer.WriteMember(value, value.MaximumValue, "MaximumValue");
+        writer.WriteMember(value, value.SelectedValue, "SelectedValue");
+        writer.WriteMember(value, value.Increment, "Increment");
+        writer.WriteMember(value, value.Offset, "Offset");
+        writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");
+        writer.WriteMember(value, value.CanVerticallyScroll, "CanVerticallyScroll");
+        writer.WriteMember(value, value.IsLogicalScrollEnabled, "IsLogicalScrollEnabled");
+        writer.WriteMember(value, value.ScrollSize, "ScrollSize");
+        writer.WriteMember(value, value.PageScrollSize, "PageScrollSize");
+        writer.WriteMember(value, value.Extent, "Extent");
+        writer.WriteMember(value, value.Viewport, "Viewport");
     }
 
     public static bool MemberHasValue(DateTimePickerPanel target, string member, object? value)

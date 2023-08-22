@@ -151,9 +151,9 @@ class DataGridConverter :
         {
             writer.WriteMember(value, value.RowDetailsVisibilityMode, "RowDetailsVisibilityMode");
         }
-         writer.WriteMember(value, value.Columns, "Columns");
-         writer.WriteMember(value, value.CurrentColumn, "CurrentColumn");
-         writer.WriteMember(value, value.SelectedItems, "SelectedItems");
+        writer.WriteMember(value, value.Columns, "Columns");
+        writer.WriteMember(value, value.CurrentColumn, "CurrentColumn");
+        writer.WriteMember(value, value.SelectedItems, "SelectedItems");
     }
 
     public static bool MemberHasValue(DataGrid target, string member, object? value)

@@ -55,8 +55,8 @@ class LayoutableConverter :
         {
             writer.WriteMember(value, value.DesiredSize, "DesiredSize");
         }
-         writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
-         writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
+        writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
+        writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
         if (!object.Equals(Layoutable.UseLayoutRoundingProperty.GetDefaultValue(typeof(Layoutable)), value.UseLayoutRounding))
         {
             writer.WriteMember(value, value.UseLayoutRounding, "UseLayoutRounding");

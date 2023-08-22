@@ -15,14 +15,14 @@ class VisualLayerManagerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VisualLayerManager value)
     {
-         writer.WriteMember(value, value.IsPopup, "IsPopup");
-         writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
+        writer.WriteMember(value, value.IsPopup, "IsPopup");
+        writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
         if (!object.Equals(VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(typeof(VisualLayerManager)), value.ChromeOverlayLayer))
         {
             writer.WriteMember(value, value.ChromeOverlayLayer, "ChromeOverlayLayer");
         }
-         writer.WriteMember(value, value.OverlayLayer, "OverlayLayer");
-         writer.WriteMember(value, value.LightDismissOverlayLayer, "LightDismissOverlayLayer");
+        writer.WriteMember(value, value.OverlayLayer, "OverlayLayer");
+        writer.WriteMember(value, value.LightDismissOverlayLayer, "LightDismissOverlayLayer");
     }
 
     public static bool MemberHasValue(VisualLayerManager target, string member, object? value)

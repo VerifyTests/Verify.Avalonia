@@ -23,7 +23,7 @@ class ContentControlConverter :
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
-         writer.WriteMember(value, value.Presenter, "Presenter");
+        writer.WriteMember(value, value.Presenter, "Presenter");
         if (!object.Equals(ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");

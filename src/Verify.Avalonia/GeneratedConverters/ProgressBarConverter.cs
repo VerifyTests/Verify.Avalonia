@@ -19,7 +19,7 @@ class ProgressBarConverter :
         {
             writer.WriteMember(value, value.Percentage, "Percentage");
         }
-         writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
+        writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
         if (!object.Equals(ProgressBar.IsIndeterminateProperty.GetDefaultValue(typeof(ProgressBar)), value.IsIndeterminate))
         {
             writer.WriteMember(value, value.IsIndeterminate, "IsIndeterminate");

@@ -75,7 +75,7 @@ class TextBoxConverter :
         {
             writer.WriteMember(value, value.Text, "Text");
         }
-         writer.WriteMember(value, value.SelectedText, "SelectedText");
+        writer.WriteMember(value, value.SelectedText, "SelectedText");
         if (!object.Equals(TextBox.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TextBox)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");

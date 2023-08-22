@@ -39,14 +39,14 @@ class TopLevelConverter :
         {
             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
         }
-         writer.WriteMember(value, value.PlatformImpl, "PlatformImpl");
-         writer.WriteMember(value, value.RendererDiagnostics, "RendererDiagnostics");
-         writer.WriteMember(value, value.RenderScaling, "RenderScaling");
-         writer.WriteMember(value, value.StorageProvider, "StorageProvider");
-         writer.WriteMember(value, value.InsetsManager, "InsetsManager");
-         writer.WriteMember(value, value.Clipboard, "Clipboard");
-         writer.WriteMember(value, value.FocusManager, "FocusManager");
-         writer.WriteMember(value, value.PlatformSettings, "PlatformSettings");
+        writer.WriteMember(value, value.PlatformImpl, "PlatformImpl");
+        writer.WriteMember(value, value.RendererDiagnostics, "RendererDiagnostics");
+        writer.WriteMember(value, value.RenderScaling, "RenderScaling");
+        writer.WriteMember(value, value.StorageProvider, "StorageProvider");
+        writer.WriteMember(value, value.InsetsManager, "InsetsManager");
+        writer.WriteMember(value, value.Clipboard, "Clipboard");
+        writer.WriteMember(value, value.FocusManager, "FocusManager");
+        writer.WriteMember(value, value.PlatformSettings, "PlatformSettings");
     }
 
     public static bool MemberHasValue(TopLevel target, string member, object? value)

@@ -19,7 +19,7 @@ class ItemsPresenterConverter :
         {
             writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
         }
-         writer.WriteMember(value, value.Panel, "Panel");
+        writer.WriteMember(value, value.Panel, "Panel");
     }
 
     public static bool MemberHasValue(ItemsPresenter target, string member, object? value)

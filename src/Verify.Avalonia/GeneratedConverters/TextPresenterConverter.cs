@@ -27,12 +27,12 @@ class TextPresenterConverter :
         {
             writer.WriteMember(value, value.PreeditText, "PreeditText");
         }
-         writer.WriteMember(value, value.FontFamily, "FontFamily");
-         writer.WriteMember(value, value.FontSize, "FontSize");
-         writer.WriteMember(value, value.FontStyle, "FontStyle");
-         writer.WriteMember(value, value.FontWeight, "FontWeight");
-         writer.WriteMember(value, value.FontStretch, "FontStretch");
-         writer.WriteMember(value, value.Foreground, "Foreground");
+        writer.WriteMember(value, value.FontFamily, "FontFamily");
+        writer.WriteMember(value, value.FontSize, "FontSize");
+        writer.WriteMember(value, value.FontStyle, "FontStyle");
+        writer.WriteMember(value, value.FontWeight, "FontWeight");
+        writer.WriteMember(value, value.FontStretch, "FontStretch");
+        writer.WriteMember(value, value.Foreground, "Foreground");
         if (!object.Equals(TextPresenter.TextWrappingProperty.GetDefaultValue(typeof(TextPresenter)), value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
@@ -49,7 +49,7 @@ class TextPresenterConverter :
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
-         writer.WriteMember(value, value.TextLayout, "TextLayout");
+        writer.WriteMember(value, value.TextLayout, "TextLayout");
         if (!object.Equals(TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)), value.CaretIndex))
         {
             writer.WriteMember(value, value.CaretIndex, "CaretIndex");

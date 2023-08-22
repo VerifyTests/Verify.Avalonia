@@ -26,7 +26,7 @@ class VisualConverter :
         {
             writer.WriteMember(value, value.Clip, "Clip");
         }
-         writer.WriteMember(value, value.IsEffectivelyVisible, "IsEffectivelyVisible");
+        writer.WriteMember(value, value.IsEffectivelyVisible, "IsEffectivelyVisible");
         if (!object.Equals(Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)), value.IsVisible))
         {
             writer.WriteMember(value, value.IsVisible, "IsVisible");

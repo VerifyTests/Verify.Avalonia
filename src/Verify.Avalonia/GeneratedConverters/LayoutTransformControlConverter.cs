@@ -23,7 +23,7 @@ class LayoutTransformControlConverter :
         {
             writer.WriteMember(value, value.UseRenderTransform, "UseRenderTransform");
         }
-         writer.WriteMember(value, value.TransformRoot, "TransformRoot");
+        writer.WriteMember(value, value.TransformRoot, "TransformRoot");
     }
 
     public static bool MemberHasValue(LayoutTransformControl target, string member, object? value)

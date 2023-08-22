@@ -39,7 +39,7 @@ class MaskedTextBoxConverter :
         {
             writer.WriteMember(value, value.MaskFull, "MaskFull");
         }
-         writer.WriteMember(value, value.MaskProvider, "MaskProvider");
+        writer.WriteMember(value, value.MaskProvider, "MaskProvider");
         if (!object.Equals(MaskedTextBox.PromptCharProperty.GetDefaultValue(typeof(MaskedTextBox)), value.PromptChar))
         {
             writer.WriteMember(value, value.PromptChar, "PromptChar");

@@ -15,7 +15,7 @@ class RemoteWidgetConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RemoteWidget value)
     {
-         writer.WriteMember(value, value.Mode, "Mode");
+        writer.WriteMember(value, value.Mode, "Mode");
     }
 
     public static bool MemberHasValue(RemoteWidget target, string member, object? value)

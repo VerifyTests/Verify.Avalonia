@@ -15,7 +15,7 @@ class OverlayLayerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, OverlayLayer value)
     {
-         writer.WriteMember(value, value.AvailableSize, "AvailableSize");
+        writer.WriteMember(value, value.AvailableSize, "AvailableSize");
     }
 
     public static bool MemberHasValue(OverlayLayer target, string member, object? value)

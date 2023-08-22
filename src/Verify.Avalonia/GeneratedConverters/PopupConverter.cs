@@ -15,7 +15,7 @@ class PopupConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Popup value)
     {
-         writer.WriteMember(value, value.Host, "Host");
+        writer.WriteMember(value, value.Host, "Host");
         if (!object.Equals(Popup.WindowManagerAddShadowHintProperty.GetDefaultValue(typeof(Popup)), value.WindowManagerAddShadowHint))
         {
             writer.WriteMember(value, value.WindowManagerAddShadowHint, "WindowManagerAddShadowHint");
@@ -24,7 +24,7 @@ class PopupConverter :
         {
             writer.WriteMember(value, value.Child, "Child");
         }
-         writer.WriteMember(value, value.DependencyResolver, "DependencyResolver");
+        writer.WriteMember(value, value.DependencyResolver, "DependencyResolver");
         if (!object.Equals(Popup.InheritsTransformProperty.GetDefaultValue(typeof(Popup)), value.InheritsTransform))
         {
             writer.WriteMember(value, value.InheritsTransform, "InheritsTransform");
@@ -81,7 +81,7 @@ class PopupConverter :
         {
             writer.WriteMember(value, value.Topmost, "Topmost");
         }
-         writer.WriteMember(value, value.IsPointerOverPopup, "IsPointerOverPopup");
+        writer.WriteMember(value, value.IsPointerOverPopup, "IsPointerOverPopup");
     }
 
     public static bool MemberHasValue(Popup target, string member, object? value)

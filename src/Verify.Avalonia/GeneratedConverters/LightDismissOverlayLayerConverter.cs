@@ -15,7 +15,7 @@ class LightDismissOverlayLayerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, LightDismissOverlayLayer value)
     {
-         writer.WriteMember(value, value.InputPassThroughElement, "InputPassThroughElement");
+        writer.WriteMember(value, value.InputPassThroughElement, "InputPassThroughElement");
     }
 
     public static bool MemberHasValue(LightDismissOverlayLayer target, string member, object? value)
