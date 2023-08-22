@@ -1,11 +1,18 @@
-﻿using Avalonia.Controls;
+﻿using Avalonia.Data;
+using Avalonia.Diagnostics;
 using Avalonia.Headless;
 
 namespace VerifyTests;
 
-public static class VerifyAvalonia
+public static partial class VerifyAvalonia
 {
     public static bool Initialized { get; private set; }
+
+    public static bool ShouldIncludeProperty(this AvaloniaObject target, AvaloniaProperty property)
+    {
+        var diagnostic = target.GetDiagnostic(property);
+        return diagnostic.Priority == BindingPriority.LocalValue;
+    }
 
     public static void Initialize()
     {
@@ -18,6 +25,15 @@ public static class VerifyAvalonia
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<TopLevel>(TopLevelToImage);
+        AddConverters();
+
+        VerifierSettings.AddExtraSettings(
+            _ =>
+            {
+                _.Converters.Add(new ThicknessConverter());
+                _.Converters.Add(new CornerRadiusConverter());
+                _.Converters.Add(new FontFamilyConverter());
+            });
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)
@@ -31,10 +47,26 @@ public static class VerifyAvalonia
 
         bitmap.Save(stream);
         return new(
-            null,
+            topLevel,
             new List<Target>
             {
                 new("png", stream)
             });
+    }
+
+    internal static void WriteGeneratedMembers(VerifyJsonWriter writer, object value)
+    {
+        var type = value.GetType();
+        foreach (var field in type.GetFields(
+                     BindingFlags.Instance | BindingFlags.GetField | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
+        {
+            if (!field.IsAssembly)
+            {
+                continue;
+            }
+
+            var fieldValue = field.GetValue(value);
+            writer.WriteMember(value, fieldValue, field.Name);
+        }
     }
 }

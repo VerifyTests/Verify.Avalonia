@@ -1,0 +1,43 @@
+﻿{
+  FirstOperandInput: {
+    Text: 10,
+    SelectedText: ,
+    Watermark: Operand 1,
+    CanPaste: true,
+    CanUndo: true
+  },
+  SecondOperandInput: {
+    Text: 20,
+    SelectedText: ,
+    Watermark: Operand 2,
+    CanPaste: true,
+    CanUndo: true
+  },
+  AddButton: {
+    Command: {},
+    Content: +
+  },
+  SubtractButton: {
+    Command: {},
+    Content: -
+  },
+  MultiplyButton: {
+    Command: {},
+    Content: *
+  },
+  DivideButton: {
+    Command: {},
+    Content: /
+  },
+  ResultBox: {
+    Text: 30,
+    IsLoaded: true
+  },
+  SizeToContent: WidthAndHeight,
+  Title: Simple Calculator,
+  CanResize: false,
+  Icon: {},
+  Position: {},
+  IsActive: true,
+  DesktopScaling: 1.0
+}
