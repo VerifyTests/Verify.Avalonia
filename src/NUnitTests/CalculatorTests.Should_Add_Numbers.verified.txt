@@ -1,17 +1,33 @@
 ﻿{
+  SizeToContent: WidthAndHeight,
+  Title: Simple Calculator,
+  Icon: {},
+  CanResize: false,
+  Content: {
+    Spacing: 10.0,
+    Margin: 10,10,10,10,
+    HorizontalAlignment: Left
+  },
+  Background: LightGray,
+  Width: 300.0,
+  Height: 185.0,
+  IsVisible: true,
+  DataContext: {
+    FirstOperand: 10.0,
+    SecondOperand: 20.0,
+    Result: 30,
+    AddCommand: {},
+    SubtractCommand: {},
+    MultiplyCommand: {},
+    DivideCommand: {}
+  },
   FirstOperandInput: {
     Text: 10,
-    SelectedText: ,
-    Watermark: Operand 1,
-    CanPaste: true,
-    CanUndo: true
+    Watermark: Operand 1
   },
   SecondOperandInput: {
     Text: 20,
-    SelectedText: ,
-    Watermark: Operand 2,
-    CanPaste: true,
-    CanUndo: true
+    Watermark: Operand 2
   },
   AddButton: {
     Command: {},
@@ -30,14 +46,6 @@
     Content: /
   },
   ResultBox: {
-    Text: 30,
-    IsLoaded: true
-  },
-  SizeToContent: WidthAndHeight,
-  Title: Simple Calculator,
-  CanResize: false,
-  Icon: {},
-  Position: {},
-  IsActive: true,
-  DesktopScaling: 1.0
+    Text: 30
+  }
 }
