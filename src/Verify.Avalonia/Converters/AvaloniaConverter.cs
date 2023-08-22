@@ -1,3 +1,4 @@
+using Argon;
 using Avalonia.Data;
 using Avalonia.Diagnostics;
 
@@ -16,7 +17,12 @@ public class AvaloniaConverter<T> :
     public override void Write(VerifyJsonWriter writer, T value)
     {
         writer.WriteStartObject();
-        writer.WriteMember(value, value.GetType(), "Type");
+        var typeHandling = writer.Serializer.TypeNameHandling;
+        if (typeHandling != TypeNameHandling.All &&
+            typeHandling != TypeNameHandling.Objects)
+        {
+            writer.WriteMember(value, value.GetType(), "Type");
+        }
         foreach (var property in properties)
         {
             var diagnostic = value.GetDiagnostic(property);
