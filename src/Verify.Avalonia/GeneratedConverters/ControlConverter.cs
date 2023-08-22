@@ -13,21 +13,21 @@ class ControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Control value)
     {
-        if (Control.FocusAdornerProperty.GetDefaultValue(typeof(Control)) != value.FocusAdorner)
+        if (!object.Equals(Control.FocusAdornerProperty.GetDefaultValue(typeof(Control)), value.FocusAdorner))
         {
             writer.WriteMember(value, value.FocusAdorner, "FocusAdorner");
         }
          writer.WriteMember(value, value.DataTemplates, "DataTemplates");
-        if (Control.ContextMenuProperty.GetDefaultValue(typeof(Control)) != value.ContextMenu)
+        if (!object.Equals(Control.ContextMenuProperty.GetDefaultValue(typeof(Control)), value.ContextMenu))
         {
             writer.WriteMember(value, value.ContextMenu, "ContextMenu");
         }
-        if (Control.ContextFlyoutProperty.GetDefaultValue(typeof(Control)) != value.ContextFlyout)
+        if (!object.Equals(Control.ContextFlyoutProperty.GetDefaultValue(typeof(Control)), value.ContextFlyout))
         {
             writer.WriteMember(value, value.ContextFlyout, "ContextFlyout");
         }
          writer.WriteMember(value, value.IsLoaded, "IsLoaded");
-        if (Control.TagProperty.GetDefaultValue(typeof(Control)) != value.Tag)
+        if (!object.Equals(Control.TagProperty.GetDefaultValue(typeof(Control)), value.Tag))
         {
             writer.WriteMember(value, value.Tag, "Tag");
         }

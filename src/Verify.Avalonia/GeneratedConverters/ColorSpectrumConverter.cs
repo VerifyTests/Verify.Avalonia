@@ -13,47 +13,47 @@ class ColorSpectrumConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorSpectrum value)
     {
-        if (!ColorSpectrum.ColorProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.Color))
+        if (!object.Equals(ColorSpectrum.ColorProperty.GetDefaultValue(typeof(ColorSpectrum)), value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");
         }
-        if (!ColorSpectrum.ComponentsProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.Components))
+        if (!object.Equals(ColorSpectrum.ComponentsProperty.GetDefaultValue(typeof(ColorSpectrum)), value.Components))
         {
             writer.WriteMember(value, value.Components, "Components");
         }
-        if (!ColorSpectrum.HsvColorProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.HsvColor))
+        if (!object.Equals(ColorSpectrum.HsvColorProperty.GetDefaultValue(typeof(ColorSpectrum)), value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
-        if (!ColorSpectrum.MaxHueProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MaxHue))
+        if (!object.Equals(ColorSpectrum.MaxHueProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MaxHue))
         {
             writer.WriteMember(value, value.MaxHue, "MaxHue");
         }
-        if (!ColorSpectrum.MaxSaturationProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MaxSaturation))
+        if (!object.Equals(ColorSpectrum.MaxSaturationProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MaxSaturation))
         {
             writer.WriteMember(value, value.MaxSaturation, "MaxSaturation");
         }
-        if (!ColorSpectrum.MaxValueProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MaxValue))
+        if (!object.Equals(ColorSpectrum.MaxValueProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MaxValue))
         {
             writer.WriteMember(value, value.MaxValue, "MaxValue");
         }
-        if (!ColorSpectrum.MinHueProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MinHue))
+        if (!object.Equals(ColorSpectrum.MinHueProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MinHue))
         {
             writer.WriteMember(value, value.MinHue, "MinHue");
         }
-        if (!ColorSpectrum.MinSaturationProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MinSaturation))
+        if (!object.Equals(ColorSpectrum.MinSaturationProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MinSaturation))
         {
             writer.WriteMember(value, value.MinSaturation, "MinSaturation");
         }
-        if (!ColorSpectrum.MinValueProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.MinValue))
+        if (!object.Equals(ColorSpectrum.MinValueProperty.GetDefaultValue(typeof(ColorSpectrum)), value.MinValue))
         {
             writer.WriteMember(value, value.MinValue, "MinValue");
         }
-        if (!ColorSpectrum.ShapeProperty.GetDefaultValue(typeof(ColorSpectrum)).Equals(value.Shape))
+        if (!object.Equals(ColorSpectrum.ShapeProperty.GetDefaultValue(typeof(ColorSpectrum)), value.Shape))
         {
             writer.WriteMember(value, value.Shape, "Shape");
         }
-        if (!ColorSpectrum.ThirdComponentProperty.GetUnsetValue(typeof(ColorSpectrum)).Equals(value.ThirdComponent))
+        if (!object.Equals(ColorSpectrum.ThirdComponentProperty.GetUnsetValue(typeof(ColorSpectrum)), value.ThirdComponent))
         {
             writer.WriteMember(value, value.ThirdComponent, "ThirdComponent");
         }

@@ -13,15 +13,15 @@ class ViewboxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Viewbox value)
     {
-        if (!Viewbox.StretchProperty.GetDefaultValue(typeof(Viewbox)).Equals(value.Stretch))
+        if (!object.Equals(Viewbox.StretchProperty.GetDefaultValue(typeof(Viewbox)), value.Stretch))
         {
             writer.WriteMember(value, value.Stretch, "Stretch");
         }
-        if (!Viewbox.StretchDirectionProperty.GetDefaultValue(typeof(Viewbox)).Equals(value.StretchDirection))
+        if (!object.Equals(Viewbox.StretchDirectionProperty.GetDefaultValue(typeof(Viewbox)), value.StretchDirection))
         {
             writer.WriteMember(value, value.StretchDirection, "StretchDirection");
         }
-        if (Viewbox.ChildProperty.GetDefaultValue(typeof(Viewbox)) != value.Child)
+        if (!object.Equals(Viewbox.ChildProperty.GetDefaultValue(typeof(Viewbox)), value.Child))
         {
             writer.WriteMember(value, value.Child, "Child");
         }

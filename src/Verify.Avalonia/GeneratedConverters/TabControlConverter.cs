@@ -13,27 +13,27 @@ class TabControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabControl value)
     {
-        if (!TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)).Equals(value.HorizontalContentAlignment))
+        if (!object.Equals(TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
-        if (!TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)).Equals(value.VerticalContentAlignment))
+        if (!object.Equals(TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }
-        if (!TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)).Equals(value.TabStripPlacement))
+        if (!object.Equals(TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)), value.TabStripPlacement))
         {
             writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
         }
-        if (TabControl.ContentTemplateProperty.GetDefaultValue(typeof(TabControl)) != value.ContentTemplate)
+        if (!object.Equals(TabControl.ContentTemplateProperty.GetDefaultValue(typeof(TabControl)), value.ContentTemplate))
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
-        if (TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContent)
+        if (!object.Equals(TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)), value.SelectedContent))
         {
             writer.WriteMember(value, value.SelectedContent, "SelectedContent");
         }
-        if (TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)) != value.SelectedContentTemplate)
+        if (!object.Equals(TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)), value.SelectedContentTemplate))
         {
             writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
         }

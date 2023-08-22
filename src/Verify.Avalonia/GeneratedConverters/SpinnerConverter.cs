@@ -13,7 +13,7 @@ class SpinnerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Spinner value)
     {
-        if (!Spinner.ValidSpinDirectionProperty.GetDefaultValue(typeof(Spinner)).Equals(value.ValidSpinDirection))
+        if (!object.Equals(Spinner.ValidSpinDirectionProperty.GetDefaultValue(typeof(Spinner)), value.ValidSpinDirection))
         {
             writer.WriteMember(value, value.ValidSpinDirection, "ValidSpinDirection");
         }

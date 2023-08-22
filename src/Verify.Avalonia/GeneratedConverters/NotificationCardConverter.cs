@@ -13,11 +13,11 @@ class NotificationCardConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NotificationCard value)
     {
-        if (!NotificationCard.IsClosingProperty.GetUnsetValue(typeof(NotificationCard)).Equals(value.IsClosing))
+        if (!object.Equals(NotificationCard.IsClosingProperty.GetUnsetValue(typeof(NotificationCard)), value.IsClosing))
         {
             writer.WriteMember(value, value.IsClosing, "IsClosing");
         }
-        if (!NotificationCard.IsClosedProperty.GetDefaultValue(typeof(NotificationCard)).Equals(value.IsClosed))
+        if (!object.Equals(NotificationCard.IsClosedProperty.GetDefaultValue(typeof(NotificationCard)), value.IsClosed))
         {
             writer.WriteMember(value, value.IsClosed, "IsClosed");
         }

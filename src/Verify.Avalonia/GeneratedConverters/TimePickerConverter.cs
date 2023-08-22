@@ -13,15 +13,15 @@ class TimePickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TimePicker value)
     {
-        if (!TimePicker.MinuteIncrementProperty.GetDefaultValue(typeof(TimePicker)).Equals(value.MinuteIncrement))
+        if (!object.Equals(TimePicker.MinuteIncrementProperty.GetDefaultValue(typeof(TimePicker)), value.MinuteIncrement))
         {
             writer.WriteMember(value, value.MinuteIncrement, "MinuteIncrement");
         }
-        if (TimePicker.ClockIdentifierProperty.GetDefaultValue(typeof(TimePicker)) != value.ClockIdentifier)
+        if (!object.Equals(TimePicker.ClockIdentifierProperty.GetDefaultValue(typeof(TimePicker)), value.ClockIdentifier))
         {
             writer.WriteMember(value, value.ClockIdentifier, "ClockIdentifier");
         }
-        if (!TimePicker.SelectedTimeProperty.GetDefaultValue(typeof(TimePicker)).Equals(value.SelectedTime))
+        if (!object.Equals(TimePicker.SelectedTimeProperty.GetDefaultValue(typeof(TimePicker)), value.SelectedTime))
         {
             writer.WriteMember(value, value.SelectedTime, "SelectedTime");
         }

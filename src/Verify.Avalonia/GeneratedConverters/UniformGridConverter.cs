@@ -13,15 +13,15 @@ class UniformGridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, UniformGrid value)
     {
-        if (!UniformGrid.RowsProperty.GetDefaultValue(typeof(UniformGrid)).Equals(value.Rows))
+        if (!object.Equals(UniformGrid.RowsProperty.GetDefaultValue(typeof(UniformGrid)), value.Rows))
         {
             writer.WriteMember(value, value.Rows, "Rows");
         }
-        if (!UniformGrid.ColumnsProperty.GetDefaultValue(typeof(UniformGrid)).Equals(value.Columns))
+        if (!object.Equals(UniformGrid.ColumnsProperty.GetDefaultValue(typeof(UniformGrid)), value.Columns))
         {
             writer.WriteMember(value, value.Columns, "Columns");
         }
-        if (!UniformGrid.FirstColumnProperty.GetDefaultValue(typeof(UniformGrid)).Equals(value.FirstColumn))
+        if (!object.Equals(UniformGrid.FirstColumnProperty.GetDefaultValue(typeof(UniformGrid)), value.FirstColumn))
         {
             writer.WriteMember(value, value.FirstColumn, "FirstColumn");
         }

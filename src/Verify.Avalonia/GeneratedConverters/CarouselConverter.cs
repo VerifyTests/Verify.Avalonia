@@ -13,7 +13,7 @@ class CarouselConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Carousel value)
     {
-        if (Carousel.PageTransitionProperty.GetDefaultValue(typeof(Carousel)) != value.PageTransition)
+        if (!object.Equals(Carousel.PageTransitionProperty.GetDefaultValue(typeof(Carousel)), value.PageTransition))
         {
             writer.WriteMember(value, value.PageTransition, "PageTransition");
         }

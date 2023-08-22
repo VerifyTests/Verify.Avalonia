@@ -12,52 +12,52 @@ class VisualConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Visual value)
     {
-        if (!Visual.BoundsProperty.GetUnsetValue(typeof(Visual)).Equals(value.Bounds))
+        if (!object.Equals(Visual.BoundsProperty.GetUnsetValue(typeof(Visual)), value.Bounds))
         {
             writer.WriteMember(value, value.Bounds, "Bounds");
         }
-        if (!Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)).Equals(value.ClipToBounds))
+        if (!object.Equals(Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)), value.ClipToBounds))
         {
             writer.WriteMember(value, value.ClipToBounds, "ClipToBounds");
         }
-        if (Visual.ClipProperty.GetDefaultValue(typeof(Visual)) != value.Clip)
+        if (!object.Equals(Visual.ClipProperty.GetDefaultValue(typeof(Visual)), value.Clip))
         {
             writer.WriteMember(value, value.Clip, "Clip");
         }
          writer.WriteMember(value, value.IsEffectivelyVisible, "IsEffectivelyVisible");
-        if (!Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)).Equals(value.IsVisible))
+        if (!object.Equals(Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)), value.IsVisible))
         {
             writer.WriteMember(value, value.IsVisible, "IsVisible");
         }
-        if (!Visual.OpacityProperty.GetDefaultValue(typeof(Visual)).Equals(value.Opacity))
+        if (!object.Equals(Visual.OpacityProperty.GetDefaultValue(typeof(Visual)), value.Opacity))
         {
             writer.WriteMember(value, value.Opacity, "Opacity");
         }
-        if (Visual.OpacityMaskProperty.GetDefaultValue(typeof(Visual)) != value.OpacityMask)
+        if (!object.Equals(Visual.OpacityMaskProperty.GetDefaultValue(typeof(Visual)), value.OpacityMask))
         {
             writer.WriteMember(value, value.OpacityMask, "OpacityMask");
         }
-        if (Visual.EffectProperty.GetDefaultValue(typeof(Visual)) != value.Effect)
+        if (!object.Equals(Visual.EffectProperty.GetDefaultValue(typeof(Visual)), value.Effect))
         {
             writer.WriteMember(value, value.Effect, "Effect");
         }
-        if (!Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)).Equals(value.HasMirrorTransform))
+        if (!object.Equals(Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)), value.HasMirrorTransform))
         {
             writer.WriteMember(value, value.HasMirrorTransform, "HasMirrorTransform");
         }
-        if (Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)) != value.RenderTransform)
+        if (!object.Equals(Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)), value.RenderTransform))
         {
             writer.WriteMember(value, value.RenderTransform, "RenderTransform");
         }
-        if (!Visual.RenderTransformOriginProperty.GetDefaultValue(typeof(Visual)).Equals(value.RenderTransformOrigin))
+        if (!object.Equals(Visual.RenderTransformOriginProperty.GetDefaultValue(typeof(Visual)), value.RenderTransformOrigin))
         {
             writer.WriteMember(value, value.RenderTransformOrigin, "RenderTransformOrigin");
         }
-        if (!Visual.FlowDirectionProperty.GetDefaultValue(typeof(Visual)).Equals(value.FlowDirection))
+        if (!object.Equals(Visual.FlowDirectionProperty.GetDefaultValue(typeof(Visual)), value.FlowDirection))
         {
             writer.WriteMember(value, value.FlowDirection, "FlowDirection");
         }
-        if (!Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)).Equals(value.ZIndex))
+        if (!object.Equals(Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)), value.ZIndex))
         {
             writer.WriteMember(value, value.ZIndex, "ZIndex");
         }

@@ -13,29 +13,29 @@ class ItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsControl value)
     {
-        if (ItemsControl.DisplayMemberBindingProperty.GetDefaultValue(typeof(ItemsControl)) != value.DisplayMemberBinding)
+        if (!object.Equals(ItemsControl.DisplayMemberBindingProperty.GetDefaultValue(typeof(ItemsControl)), value.DisplayMemberBinding))
         {
             writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");
         }
          writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
          writer.WriteMember(value, value.Items, "Items");
-        if (ItemsControl.ItemContainerThemeProperty.GetDefaultValue(typeof(ItemsControl)) != value.ItemContainerTheme)
+        if (!object.Equals(ItemsControl.ItemContainerThemeProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemContainerTheme))
         {
             writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
         }
-        if (!ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)).Equals(value.ItemCount))
+        if (!object.Equals(ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)), value.ItemCount))
         {
             writer.WriteMember(value, value.ItemCount, "ItemCount");
         }
-        if (ItemsControl.ItemsPanelProperty.GetDefaultValue(typeof(ItemsControl)) != value.ItemsPanel)
+        if (!object.Equals(ItemsControl.ItemsPanelProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemsPanel))
         {
             writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
         }
-        if (ItemsControl.ItemsSourceProperty.GetDefaultValue(typeof(ItemsControl)) != value.ItemsSource)
+        if (!object.Equals(ItemsControl.ItemsSourceProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemsSource))
         {
             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
         }
-        if (ItemsControl.ItemTemplateProperty.GetDefaultValue(typeof(ItemsControl)) != value.ItemTemplate)
+        if (!object.Equals(ItemsControl.ItemTemplateProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemTemplate))
         {
             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
         }

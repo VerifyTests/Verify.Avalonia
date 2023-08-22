@@ -14,75 +14,75 @@ class TextBlockConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TextBlock value)
     {
          writer.WriteMember(value, value.TextLayout, "TextLayout");
-        if (!TextBlock.PaddingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.Padding))
+        if (!object.Equals(TextBlock.PaddingProperty.GetDefaultValue(typeof(TextBlock)), value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }
-        if (TextBlock.BackgroundProperty.GetDefaultValue(typeof(TextBlock)) != value.Background)
+        if (!object.Equals(TextBlock.BackgroundProperty.GetDefaultValue(typeof(TextBlock)), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
-        if (TextBlock.TextProperty.GetDefaultValue(typeof(TextBlock)) != value.Text)
+        if (!object.Equals(TextBlock.TextProperty.GetDefaultValue(typeof(TextBlock)), value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
-        if (TextBlock.FontFamilyProperty.GetDefaultValue(typeof(TextBlock)) != value.FontFamily)
+        if (!object.Equals(TextBlock.FontFamilyProperty.GetDefaultValue(typeof(TextBlock)), value.FontFamily))
         {
             writer.WriteMember(value, value.FontFamily, "FontFamily");
         }
-        if (!TextBlock.FontSizeProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontSize))
+        if (!object.Equals(TextBlock.FontSizeProperty.GetDefaultValue(typeof(TextBlock)), value.FontSize))
         {
             writer.WriteMember(value, value.FontSize, "FontSize");
         }
-        if (!TextBlock.FontStyleProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontStyle))
+        if (!object.Equals(TextBlock.FontStyleProperty.GetDefaultValue(typeof(TextBlock)), value.FontStyle))
         {
             writer.WriteMember(value, value.FontStyle, "FontStyle");
         }
-        if (!TextBlock.FontWeightProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontWeight))
+        if (!object.Equals(TextBlock.FontWeightProperty.GetDefaultValue(typeof(TextBlock)), value.FontWeight))
         {
             writer.WriteMember(value, value.FontWeight, "FontWeight");
         }
-        if (!TextBlock.FontStretchProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.FontStretch))
+        if (!object.Equals(TextBlock.FontStretchProperty.GetDefaultValue(typeof(TextBlock)), value.FontStretch))
         {
             writer.WriteMember(value, value.FontStretch, "FontStretch");
         }
-        if (TextBlock.ForegroundProperty.GetDefaultValue(typeof(TextBlock)) != value.Foreground)
+        if (!object.Equals(TextBlock.ForegroundProperty.GetDefaultValue(typeof(TextBlock)), value.Foreground))
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
-        if (!TextBlock.LineHeightProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.LineHeight))
+        if (!object.Equals(TextBlock.LineHeightProperty.GetDefaultValue(typeof(TextBlock)), value.LineHeight))
         {
             writer.WriteMember(value, value.LineHeight, "LineHeight");
         }
-        if (!TextBlock.LetterSpacingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.LetterSpacing))
+        if (!object.Equals(TextBlock.LetterSpacingProperty.GetDefaultValue(typeof(TextBlock)), value.LetterSpacing))
         {
             writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
         }
-        if (!TextBlock.MaxLinesProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.MaxLines))
+        if (!object.Equals(TextBlock.MaxLinesProperty.GetDefaultValue(typeof(TextBlock)), value.MaxLines))
         {
             writer.WriteMember(value, value.MaxLines, "MaxLines");
         }
-        if (!TextBlock.TextWrappingProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.TextWrapping))
+        if (!object.Equals(TextBlock.TextWrappingProperty.GetDefaultValue(typeof(TextBlock)), value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
         }
-        if (TextBlock.TextTrimmingProperty.GetDefaultValue(typeof(TextBlock)) != value.TextTrimming)
+        if (!object.Equals(TextBlock.TextTrimmingProperty.GetDefaultValue(typeof(TextBlock)), value.TextTrimming))
         {
             writer.WriteMember(value, value.TextTrimming, "TextTrimming");
         }
-        if (!TextBlock.TextAlignmentProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.TextAlignment))
+        if (!object.Equals(TextBlock.TextAlignmentProperty.GetDefaultValue(typeof(TextBlock)), value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
-        if (TextBlock.TextDecorationsProperty.GetDefaultValue(typeof(TextBlock)) != value.TextDecorations)
+        if (!object.Equals(TextBlock.TextDecorationsProperty.GetDefaultValue(typeof(TextBlock)), value.TextDecorations))
         {
             writer.WriteMember(value, value.TextDecorations, "TextDecorations");
         }
-        if (TextBlock.InlinesProperty.GetUnsetValue(typeof(TextBlock)) != value.Inlines)
+        if (!object.Equals(TextBlock.InlinesProperty.GetUnsetValue(typeof(TextBlock)), value.Inlines))
         {
             writer.WriteMember(value, value.Inlines, "Inlines");
         }
-        if (!TextBlock.BaselineOffsetProperty.GetDefaultValue(typeof(TextBlock)).Equals(value.BaselineOffset))
+        if (!object.Equals(TextBlock.BaselineOffsetProperty.GetDefaultValue(typeof(TextBlock)), value.BaselineOffset))
         {
             writer.WriteMember(value, value.BaselineOffset, "BaselineOffset");
         }

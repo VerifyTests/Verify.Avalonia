@@ -13,39 +13,39 @@ class DatePickerPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DatePickerPresenter value)
     {
-        if (!DatePickerPresenter.DateProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.Date))
+        if (!object.Equals(DatePickerPresenter.DateProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.Date))
         {
             writer.WriteMember(value, value.Date, "Date");
         }
-        if (DatePickerPresenter.DayFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.DayFormat)
+        if (!object.Equals(DatePickerPresenter.DayFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.DayFormat))
         {
             writer.WriteMember(value, value.DayFormat, "DayFormat");
         }
-        if (!DatePickerPresenter.DayVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.DayVisible))
+        if (!object.Equals(DatePickerPresenter.DayVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.DayVisible))
         {
             writer.WriteMember(value, value.DayVisible, "DayVisible");
         }
-        if (!DatePickerPresenter.MaxYearProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MaxYear))
+        if (!object.Equals(DatePickerPresenter.MaxYearProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MaxYear))
         {
             writer.WriteMember(value, value.MaxYear, "MaxYear");
         }
-        if (!DatePickerPresenter.MinYearProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MinYear))
+        if (!object.Equals(DatePickerPresenter.MinYearProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MinYear))
         {
             writer.WriteMember(value, value.MinYear, "MinYear");
         }
-        if (DatePickerPresenter.MonthFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.MonthFormat)
+        if (!object.Equals(DatePickerPresenter.MonthFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MonthFormat))
         {
             writer.WriteMember(value, value.MonthFormat, "MonthFormat");
         }
-        if (!DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.MonthVisible))
+        if (!object.Equals(DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MonthVisible))
         {
             writer.WriteMember(value, value.MonthVisible, "MonthVisible");
         }
-        if (DatePickerPresenter.YearFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)) != value.YearFormat)
+        if (!object.Equals(DatePickerPresenter.YearFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.YearFormat))
         {
             writer.WriteMember(value, value.YearFormat, "YearFormat");
         }
-        if (!DatePickerPresenter.YearVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)).Equals(value.YearVisible))
+        if (!object.Equals(DatePickerPresenter.YearVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.YearVisible))
         {
             writer.WriteMember(value, value.YearVisible, "YearVisible");
         }

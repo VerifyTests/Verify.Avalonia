@@ -13,31 +13,31 @@ class ColorSliderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorSlider value)
     {
-        if (!ColorSlider.ColorProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.Color))
+        if (!object.Equals(ColorSlider.ColorProperty.GetDefaultValue(typeof(ColorSlider)), value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");
         }
-        if (!ColorSlider.ColorComponentProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.ColorComponent))
+        if (!object.Equals(ColorSlider.ColorComponentProperty.GetDefaultValue(typeof(ColorSlider)), value.ColorComponent))
         {
             writer.WriteMember(value, value.ColorComponent, "ColorComponent");
         }
-        if (!ColorSlider.ColorModelProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.ColorModel))
+        if (!object.Equals(ColorSlider.ColorModelProperty.GetDefaultValue(typeof(ColorSlider)), value.ColorModel))
         {
             writer.WriteMember(value, value.ColorModel, "ColorModel");
         }
-        if (!ColorSlider.HsvColorProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.HsvColor))
+        if (!object.Equals(ColorSlider.HsvColorProperty.GetDefaultValue(typeof(ColorSlider)), value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
-        if (!ColorSlider.IsAlphaVisibleProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.IsAlphaVisible))
+        if (!object.Equals(ColorSlider.IsAlphaVisibleProperty.GetDefaultValue(typeof(ColorSlider)), value.IsAlphaVisible))
         {
             writer.WriteMember(value, value.IsAlphaVisible, "IsAlphaVisible");
         }
-        if (!ColorSlider.IsPerceptiveProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.IsPerceptive))
+        if (!object.Equals(ColorSlider.IsPerceptiveProperty.GetDefaultValue(typeof(ColorSlider)), value.IsPerceptive))
         {
             writer.WriteMember(value, value.IsPerceptive, "IsPerceptive");
         }
-        if (!ColorSlider.IsRoundingEnabledProperty.GetDefaultValue(typeof(ColorSlider)).Equals(value.IsRoundingEnabled))
+        if (!object.Equals(ColorSlider.IsRoundingEnabledProperty.GetDefaultValue(typeof(ColorSlider)), value.IsRoundingEnabled))
         {
             writer.WriteMember(value, value.IsRoundingEnabled, "IsRoundingEnabled");
         }

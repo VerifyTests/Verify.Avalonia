@@ -13,43 +13,43 @@ class InputElementConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, InputElement value)
     {
-        if (!InputElement.FocusableProperty.GetDefaultValue(typeof(InputElement)).Equals(value.Focusable))
+        if (!object.Equals(InputElement.FocusableProperty.GetDefaultValue(typeof(InputElement)), value.Focusable))
         {
             writer.WriteMember(value, value.Focusable, "Focusable");
         }
-        if (!InputElement.IsEnabledProperty.GetDefaultValue(typeof(InputElement)).Equals(value.IsEnabled))
+        if (!object.Equals(InputElement.IsEnabledProperty.GetDefaultValue(typeof(InputElement)), value.IsEnabled))
         {
             writer.WriteMember(value, value.IsEnabled, "IsEnabled");
         }
-        if (InputElement.CursorProperty.GetDefaultValue(typeof(InputElement)) != value.Cursor)
+        if (!object.Equals(InputElement.CursorProperty.GetDefaultValue(typeof(InputElement)), value.Cursor))
         {
             writer.WriteMember(value, value.Cursor, "Cursor");
         }
-        if (!InputElement.IsKeyboardFocusWithinProperty.GetUnsetValue(typeof(InputElement)).Equals(value.IsKeyboardFocusWithin))
+        if (!object.Equals(InputElement.IsKeyboardFocusWithinProperty.GetUnsetValue(typeof(InputElement)), value.IsKeyboardFocusWithin))
         {
             writer.WriteMember(value, value.IsKeyboardFocusWithin, "IsKeyboardFocusWithin");
         }
-        if (!InputElement.IsFocusedProperty.GetUnsetValue(typeof(InputElement)).Equals(value.IsFocused))
+        if (!object.Equals(InputElement.IsFocusedProperty.GetUnsetValue(typeof(InputElement)), value.IsFocused))
         {
             writer.WriteMember(value, value.IsFocused, "IsFocused");
         }
-        if (!InputElement.IsHitTestVisibleProperty.GetDefaultValue(typeof(InputElement)).Equals(value.IsHitTestVisible))
+        if (!object.Equals(InputElement.IsHitTestVisibleProperty.GetDefaultValue(typeof(InputElement)), value.IsHitTestVisible))
         {
             writer.WriteMember(value, value.IsHitTestVisible, "IsHitTestVisible");
         }
-        if (!InputElement.IsPointerOverProperty.GetUnsetValue(typeof(InputElement)).Equals(value.IsPointerOver))
+        if (!object.Equals(InputElement.IsPointerOverProperty.GetUnsetValue(typeof(InputElement)), value.IsPointerOver))
         {
             writer.WriteMember(value, value.IsPointerOver, "IsPointerOver");
         }
-        if (!InputElement.IsTabStopProperty.GetDefaultValue(typeof(InputElement)).Equals(value.IsTabStop))
+        if (!object.Equals(InputElement.IsTabStopProperty.GetDefaultValue(typeof(InputElement)), value.IsTabStop))
         {
             writer.WriteMember(value, value.IsTabStop, "IsTabStop");
         }
-        if (!InputElement.IsEffectivelyEnabledProperty.GetUnsetValue(typeof(InputElement)).Equals(value.IsEffectivelyEnabled))
+        if (!object.Equals(InputElement.IsEffectivelyEnabledProperty.GetUnsetValue(typeof(InputElement)), value.IsEffectivelyEnabled))
         {
             writer.WriteMember(value, value.IsEffectivelyEnabled, "IsEffectivelyEnabled");
         }
-        if (!InputElement.TabIndexProperty.GetDefaultValue(typeof(InputElement)).Equals(value.TabIndex))
+        if (!object.Equals(InputElement.TabIndexProperty.GetDefaultValue(typeof(InputElement)), value.TabIndex))
         {
             writer.WriteMember(value, value.TabIndex, "TabIndex");
         }

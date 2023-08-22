@@ -13,75 +13,75 @@ class NumericUpDownConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NumericUpDown value)
     {
-        if (!NumericUpDown.AllowSpinProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.AllowSpin))
+        if (!object.Equals(NumericUpDown.AllowSpinProperty.GetDefaultValue(typeof(NumericUpDown)), value.AllowSpin))
         {
             writer.WriteMember(value, value.AllowSpin, "AllowSpin");
         }
-        if (!NumericUpDown.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.ButtonSpinnerLocation))
+        if (!object.Equals(NumericUpDown.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(NumericUpDown)), value.ButtonSpinnerLocation))
         {
             writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
         }
-        if (!NumericUpDown.ShowButtonSpinnerProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.ShowButtonSpinner))
+        if (!object.Equals(NumericUpDown.ShowButtonSpinnerProperty.GetDefaultValue(typeof(NumericUpDown)), value.ShowButtonSpinner))
         {
             writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
         }
-        if (!NumericUpDown.ClipValueToMinMaxProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.ClipValueToMinMax))
+        if (!object.Equals(NumericUpDown.ClipValueToMinMaxProperty.GetDefaultValue(typeof(NumericUpDown)), value.ClipValueToMinMax))
         {
             writer.WriteMember(value, value.ClipValueToMinMax, "ClipValueToMinMax");
         }
-        if (NumericUpDown.NumberFormatProperty.GetDefaultValue(typeof(NumericUpDown)) != value.NumberFormat)
+        if (!object.Equals(NumericUpDown.NumberFormatProperty.GetDefaultValue(typeof(NumericUpDown)), value.NumberFormat))
         {
             writer.WriteMember(value, value.NumberFormat, "NumberFormat");
         }
-        if (NumericUpDown.FormatStringProperty.GetDefaultValue(typeof(NumericUpDown)) != value.FormatString)
+        if (!object.Equals(NumericUpDown.FormatStringProperty.GetDefaultValue(typeof(NumericUpDown)), value.FormatString))
         {
             writer.WriteMember(value, value.FormatString, "FormatString");
         }
-        if (!NumericUpDown.IncrementProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.Increment))
+        if (!object.Equals(NumericUpDown.IncrementProperty.GetDefaultValue(typeof(NumericUpDown)), value.Increment))
         {
             writer.WriteMember(value, value.Increment, "Increment");
         }
-        if (!NumericUpDown.IsReadOnlyProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.IsReadOnly))
+        if (!object.Equals(NumericUpDown.IsReadOnlyProperty.GetDefaultValue(typeof(NumericUpDown)), value.IsReadOnly))
         {
             writer.WriteMember(value, value.IsReadOnly, "IsReadOnly");
         }
-        if (!NumericUpDown.MaximumProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.Maximum))
+        if (!object.Equals(NumericUpDown.MaximumProperty.GetDefaultValue(typeof(NumericUpDown)), value.Maximum))
         {
             writer.WriteMember(value, value.Maximum, "Maximum");
         }
-        if (!NumericUpDown.MinimumProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.Minimum))
+        if (!object.Equals(NumericUpDown.MinimumProperty.GetDefaultValue(typeof(NumericUpDown)), value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");
         }
-        if (!NumericUpDown.ParsingNumberStyleProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.ParsingNumberStyle))
+        if (!object.Equals(NumericUpDown.ParsingNumberStyleProperty.GetDefaultValue(typeof(NumericUpDown)), value.ParsingNumberStyle))
         {
             writer.WriteMember(value, value.ParsingNumberStyle, "ParsingNumberStyle");
         }
-        if (NumericUpDown.TextProperty.GetDefaultValue(typeof(NumericUpDown)) != value.Text)
+        if (!object.Equals(NumericUpDown.TextProperty.GetDefaultValue(typeof(NumericUpDown)), value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
-        if (NumericUpDown.TextConverterProperty.GetDefaultValue(typeof(NumericUpDown)) != value.TextConverter)
+        if (!object.Equals(NumericUpDown.TextConverterProperty.GetDefaultValue(typeof(NumericUpDown)), value.TextConverter))
         {
             writer.WriteMember(value, value.TextConverter, "TextConverter");
         }
-        if (!NumericUpDown.ValueProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.Value))
+        if (!object.Equals(NumericUpDown.ValueProperty.GetDefaultValue(typeof(NumericUpDown)), value.Value))
         {
             writer.WriteMember(value, value.Value, "Value");
         }
-        if (NumericUpDown.WatermarkProperty.GetDefaultValue(typeof(NumericUpDown)) != value.Watermark)
+        if (!object.Equals(NumericUpDown.WatermarkProperty.GetDefaultValue(typeof(NumericUpDown)), value.Watermark))
         {
             writer.WriteMember(value, value.Watermark, "Watermark");
         }
-        if (!NumericUpDown.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.HorizontalContentAlignment))
+        if (!object.Equals(NumericUpDown.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
-        if (!NumericUpDown.VerticalContentAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.VerticalContentAlignment))
+        if (!object.Equals(NumericUpDown.VerticalContentAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }
-        if (!NumericUpDown.TextAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)).Equals(value.TextAlignment))
+        if (!object.Equals(NumericUpDown.TextAlignmentProperty.GetDefaultValue(typeof(NumericUpDown)), value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }

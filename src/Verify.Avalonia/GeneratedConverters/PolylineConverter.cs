@@ -13,7 +13,7 @@ class PolylineConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Polyline value)
     {
-        if (Polyline.PointsProperty.GetDefaultValue(typeof(Polyline)) != value.Points)
+        if (!object.Equals(Polyline.PointsProperty.GetDefaultValue(typeof(Polyline)), value.Points))
         {
             writer.WriteMember(value, value.Points, "Points");
         }

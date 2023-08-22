@@ -13,47 +13,47 @@ class TemplatedControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TemplatedControl value)
     {
-        if (TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Background)
+        if (!object.Equals(TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
-        if (TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)) != value.BorderBrush)
+        if (!object.Equals(TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)), value.BorderBrush))
         {
             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
         }
-        if (!TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.BorderThickness))
+        if (!object.Equals(TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)), value.BorderThickness))
         {
             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
         }
-        if (!TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.CornerRadius))
+        if (!object.Equals(TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)), value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
-        if (TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)) != value.FontFamily)
+        if (!object.Equals(TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontFamily))
         {
             writer.WriteMember(value, value.FontFamily, "FontFamily");
         }
-        if (!TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontSize))
+        if (!object.Equals(TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontSize))
         {
             writer.WriteMember(value, value.FontSize, "FontSize");
         }
-        if (!TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStyle))
+        if (!object.Equals(TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontStyle))
         {
             writer.WriteMember(value, value.FontStyle, "FontStyle");
         }
-        if (!TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontWeight))
+        if (!object.Equals(TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontWeight))
         {
             writer.WriteMember(value, value.FontWeight, "FontWeight");
         }
-        if (!TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.FontStretch))
+        if (!object.Equals(TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontStretch))
         {
             writer.WriteMember(value, value.FontStretch, "FontStretch");
         }
-        if (TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)) != value.Foreground)
+        if (!object.Equals(TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)), value.Foreground))
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
-        if (!TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)).Equals(value.Padding))
+        if (!object.Equals(TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)), value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }

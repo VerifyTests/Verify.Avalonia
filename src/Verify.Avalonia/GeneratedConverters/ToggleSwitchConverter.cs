@@ -13,25 +13,25 @@ class ToggleSwitchConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ToggleSwitch value)
     {
-        if (ToggleSwitch.OnContentProperty.GetDefaultValue(typeof(ToggleSwitch)) != value.OnContent)
+        if (!object.Equals(ToggleSwitch.OnContentProperty.GetDefaultValue(typeof(ToggleSwitch)), value.OnContent))
         {
             writer.WriteMember(value, value.OnContent, "OnContent");
         }
-        if (ToggleSwitch.OffContentProperty.GetDefaultValue(typeof(ToggleSwitch)) != value.OffContent)
+        if (!object.Equals(ToggleSwitch.OffContentProperty.GetDefaultValue(typeof(ToggleSwitch)), value.OffContent))
         {
             writer.WriteMember(value, value.OffContent, "OffContent");
         }
          writer.WriteMember(value, value.OffContentPresenter, "OffContentPresenter");
          writer.WriteMember(value, value.OnContentPresenter, "OnContentPresenter");
-        if (ToggleSwitch.OffContentTemplateProperty.GetDefaultValue(typeof(ToggleSwitch)) != value.OffContentTemplate)
+        if (!object.Equals(ToggleSwitch.OffContentTemplateProperty.GetDefaultValue(typeof(ToggleSwitch)), value.OffContentTemplate))
         {
             writer.WriteMember(value, value.OffContentTemplate, "OffContentTemplate");
         }
-        if (ToggleSwitch.OnContentTemplateProperty.GetDefaultValue(typeof(ToggleSwitch)) != value.OnContentTemplate)
+        if (!object.Equals(ToggleSwitch.OnContentTemplateProperty.GetDefaultValue(typeof(ToggleSwitch)), value.OnContentTemplate))
         {
             writer.WriteMember(value, value.OnContentTemplate, "OnContentTemplate");
         }
-        if (ToggleSwitch.KnobTransitionsProperty.GetDefaultValue(typeof(ToggleSwitch)) != value.KnobTransitions)
+        if (!object.Equals(ToggleSwitch.KnobTransitionsProperty.GetDefaultValue(typeof(ToggleSwitch)), value.KnobTransitions))
         {
             writer.WriteMember(value, value.KnobTransitions, "KnobTransitions");
         }

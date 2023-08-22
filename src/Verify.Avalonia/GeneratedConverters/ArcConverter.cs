@@ -13,11 +13,11 @@ class ArcConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Arc value)
     {
-        if (!Arc.StartAngleProperty.GetDefaultValue(typeof(Arc)).Equals(value.StartAngle))
+        if (!object.Equals(Arc.StartAngleProperty.GetDefaultValue(typeof(Arc)), value.StartAngle))
         {
             writer.WriteMember(value, value.StartAngle, "StartAngle");
         }
-        if (!Arc.SweepAngleProperty.GetDefaultValue(typeof(Arc)).Equals(value.SweepAngle))
+        if (!object.Equals(Arc.SweepAngleProperty.GetDefaultValue(typeof(Arc)), value.SweepAngle))
         {
             writer.WriteMember(value, value.SweepAngle, "SweepAngle");
         }

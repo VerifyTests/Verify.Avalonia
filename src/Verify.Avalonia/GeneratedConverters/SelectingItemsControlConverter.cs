@@ -13,31 +13,31 @@ class SelectingItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectingItemsControl value)
     {
-        if (!SelectingItemsControl.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.AutoScrollToSelectedItem))
+        if (!object.Equals(SelectingItemsControl.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(SelectingItemsControl)), value.AutoScrollToSelectedItem))
         {
             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
         }
-        if (!SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)).Equals(value.SelectedIndex))
+        if (!object.Equals(SelectingItemsControl.SelectedIndexProperty.GetUnsetValue(typeof(SelectingItemsControl)), value.SelectedIndex))
         {
             writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
         }
-        if (SelectingItemsControl.SelectedItemProperty.GetUnsetValue(typeof(SelectingItemsControl)) != value.SelectedItem)
+        if (!object.Equals(SelectingItemsControl.SelectedItemProperty.GetUnsetValue(typeof(SelectingItemsControl)), value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
         }
-        if (SelectingItemsControl.SelectedValueBindingProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.SelectedValueBinding)
+        if (!object.Equals(SelectingItemsControl.SelectedValueBindingProperty.GetDefaultValue(typeof(SelectingItemsControl)), value.SelectedValueBinding))
         {
             writer.WriteMember(value, value.SelectedValueBinding, "SelectedValueBinding");
         }
-        if (SelectingItemsControl.SelectedValueProperty.GetDefaultValue(typeof(SelectingItemsControl)) != value.SelectedValue)
+        if (!object.Equals(SelectingItemsControl.SelectedValueProperty.GetDefaultValue(typeof(SelectingItemsControl)), value.SelectedValue))
         {
             writer.WriteMember(value, value.SelectedValue, "SelectedValue");
         }
-        if (!SelectingItemsControl.IsTextSearchEnabledProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.IsTextSearchEnabled))
+        if (!object.Equals(SelectingItemsControl.IsTextSearchEnabledProperty.GetDefaultValue(typeof(SelectingItemsControl)), value.IsTextSearchEnabled))
         {
             writer.WriteMember(value, value.IsTextSearchEnabled, "IsTextSearchEnabled");
         }
-        if (!SelectingItemsControl.WrapSelectionProperty.GetDefaultValue(typeof(SelectingItemsControl)).Equals(value.WrapSelection))
+        if (!object.Equals(SelectingItemsControl.WrapSelectionProperty.GetDefaultValue(typeof(SelectingItemsControl)), value.WrapSelection))
         {
             writer.WriteMember(value, value.WrapSelection, "WrapSelection");
         }

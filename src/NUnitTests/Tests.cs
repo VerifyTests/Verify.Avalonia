@@ -163,47 +163,30 @@ public class Tests
             return;
         }
 
-        var propertyDefinition = $"{type.Name}.{name}Property";
-
         var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
 
-        void WriteWrite() =>
-            builder.AppendLine(
-                $$"""
-                          {
-                              writer.WriteMember(value, value.{{name}}, "{{name}}");
-                          }
-                  """);
+        var getDefault = GetDefaultMethod(genericType, attachedProperty);
 
+        builder.AppendLine(
+            $$"""
+                      if (!object.Equals({{type.Name}}.{{name}}Property.{{getDefault}}(typeof({{type.Name}})), value.{{name}}))
+                      {
+                          writer.WriteMember(value, value.{{name}}, "{{name}}");
+                      }
+              """);
+    }
+
+    static string GetDefaultMethod(Type genericType, FieldInfo attachedProperty)
+    {
         if (genericType == typeof(StyledProperty<>) ||
             genericType == typeof(AttachedProperty<>))
         {
-            if (propertyType.IsValueType)
-            {
-                builder.AppendLine($"        if (!{propertyDefinition}.GetDefaultValue(typeof({type.Name})).Equals(value.{name}))");
-            }
-            else
-            {
-                builder.AppendLine($"        if ({propertyDefinition}.GetDefaultValue(typeof({type.Name})) != value.{name})");
-            }
-
-            WriteWrite();
-            return;
+            return "GetDefaultValue";
         }
 
         if (genericType == typeof(DirectProperty<,>))
         {
-            if (propertyType.IsValueType)
-            {
-                builder.AppendLine($"        if (!{propertyDefinition}.GetUnsetValue(typeof({type.Name})).Equals(value.{name}))");
-            }
-            else
-            {
-                builder.AppendLine($"        if ({propertyDefinition}.GetUnsetValue(typeof({type.Name})) != value.{name})");
-            }
-
-            WriteWrite();
-            return;
+            return "GetUnsetValue";
         }
 
         throw new(attachedProperty.FieldType.FullName);

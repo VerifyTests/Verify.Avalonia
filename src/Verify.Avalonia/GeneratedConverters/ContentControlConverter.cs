@@ -13,20 +13,20 @@ class ContentControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContentControl value)
     {
-        if (ContentControl.ContentProperty.GetDefaultValue(typeof(ContentControl)) != value.Content)
+        if (!object.Equals(ContentControl.ContentProperty.GetDefaultValue(typeof(ContentControl)), value.Content))
         {
             writer.WriteMember(value, value.Content, "Content");
         }
-        if (ContentControl.ContentTemplateProperty.GetDefaultValue(typeof(ContentControl)) != value.ContentTemplate)
+        if (!object.Equals(ContentControl.ContentTemplateProperty.GetDefaultValue(typeof(ContentControl)), value.ContentTemplate))
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
          writer.WriteMember(value, value.Presenter, "Presenter");
-        if (!ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)).Equals(value.HorizontalContentAlignment))
+        if (!object.Equals(ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
-        if (!ContentControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)).Equals(value.VerticalContentAlignment))
+        if (!object.Equals(ContentControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }

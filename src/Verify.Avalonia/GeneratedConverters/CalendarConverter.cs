@@ -13,41 +13,41 @@ class CalendarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Calendar value)
     {
-        if (!Calendar.FirstDayOfWeekProperty.GetDefaultValue(typeof(Calendar)).Equals(value.FirstDayOfWeek))
+        if (!object.Equals(Calendar.FirstDayOfWeekProperty.GetDefaultValue(typeof(Calendar)), value.FirstDayOfWeek))
         {
             writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
         }
-        if (!Calendar.IsTodayHighlightedProperty.GetDefaultValue(typeof(Calendar)).Equals(value.IsTodayHighlighted))
+        if (!object.Equals(Calendar.IsTodayHighlightedProperty.GetDefaultValue(typeof(Calendar)), value.IsTodayHighlighted))
         {
             writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
         }
-        if (Calendar.HeaderBackgroundProperty.GetDefaultValue(typeof(Calendar)) != value.HeaderBackground)
+        if (!object.Equals(Calendar.HeaderBackgroundProperty.GetDefaultValue(typeof(Calendar)), value.HeaderBackground))
         {
             writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");
         }
-        if (!Calendar.DisplayModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayMode))
+        if (!object.Equals(Calendar.DisplayModeProperty.GetDefaultValue(typeof(Calendar)), value.DisplayMode))
         {
             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
         }
-        if (!Calendar.SelectionModeProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectionMode))
+        if (!object.Equals(Calendar.SelectionModeProperty.GetDefaultValue(typeof(Calendar)), value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }
-        if (!Calendar.SelectedDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.SelectedDate))
+        if (!object.Equals(Calendar.SelectedDateProperty.GetDefaultValue(typeof(Calendar)), value.SelectedDate))
         {
             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
         }
          writer.WriteMember(value, value.SelectedDates, "SelectedDates");
-        if (!Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDate))
+        if (!object.Equals(Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDate))
         {
             writer.WriteMember(value, value.DisplayDate, "DisplayDate");
         }
-        if (!Calendar.DisplayDateStartProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateStart))
+        if (!object.Equals(Calendar.DisplayDateStartProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDateStart))
         {
             writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
         }
          writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
-        if (!Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)).Equals(value.DisplayDateEnd))
+        if (!object.Equals(Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDateEnd))
         {
             writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");
         }

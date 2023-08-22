@@ -13,19 +13,19 @@ class DataGridRowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRow value)
     {
-        if (DataGridRow.HeaderProperty.GetDefaultValue(typeof(DataGridRow)) != value.Header)
+        if (!object.Equals(DataGridRow.HeaderProperty.GetDefaultValue(typeof(DataGridRow)), value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");
         }
-        if (!DataGridRow.IsValidProperty.GetUnsetValue(typeof(DataGridRow)).Equals(value.IsValid))
+        if (!object.Equals(DataGridRow.IsValidProperty.GetUnsetValue(typeof(DataGridRow)), value.IsValid))
         {
             writer.WriteMember(value, value.IsValid, "IsValid");
         }
-        if (DataGridRow.DetailsTemplateProperty.GetDefaultValue(typeof(DataGridRow)) != value.DetailsTemplate)
+        if (!object.Equals(DataGridRow.DetailsTemplateProperty.GetDefaultValue(typeof(DataGridRow)), value.DetailsTemplate))
         {
             writer.WriteMember(value, value.DetailsTemplate, "DetailsTemplate");
         }
-        if (!DataGridRow.AreDetailsVisibleProperty.GetDefaultValue(typeof(DataGridRow)).Equals(value.AreDetailsVisible))
+        if (!object.Equals(DataGridRow.AreDetailsVisibleProperty.GetDefaultValue(typeof(DataGridRow)), value.AreDetailsVisible))
         {
             writer.WriteMember(value, value.AreDetailsVisible, "AreDetailsVisible");
         }

@@ -13,43 +13,43 @@ class SplitViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SplitView value)
     {
-        if (!SplitView.CompactPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.CompactPaneLength))
+        if (!object.Equals(SplitView.CompactPaneLengthProperty.GetDefaultValue(typeof(SplitView)), value.CompactPaneLength))
         {
             writer.WriteMember(value, value.CompactPaneLength, "CompactPaneLength");
         }
-        if (!SplitView.DisplayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.DisplayMode))
+        if (!object.Equals(SplitView.DisplayModeProperty.GetDefaultValue(typeof(SplitView)), value.DisplayMode))
         {
             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
         }
-        if (!SplitView.IsPaneOpenProperty.GetDefaultValue(typeof(SplitView)).Equals(value.IsPaneOpen))
+        if (!object.Equals(SplitView.IsPaneOpenProperty.GetDefaultValue(typeof(SplitView)), value.IsPaneOpen))
         {
             writer.WriteMember(value, value.IsPaneOpen, "IsPaneOpen");
         }
-        if (!SplitView.OpenPaneLengthProperty.GetDefaultValue(typeof(SplitView)).Equals(value.OpenPaneLength))
+        if (!object.Equals(SplitView.OpenPaneLengthProperty.GetDefaultValue(typeof(SplitView)), value.OpenPaneLength))
         {
             writer.WriteMember(value, value.OpenPaneLength, "OpenPaneLength");
         }
-        if (SplitView.PaneBackgroundProperty.GetDefaultValue(typeof(SplitView)) != value.PaneBackground)
+        if (!object.Equals(SplitView.PaneBackgroundProperty.GetDefaultValue(typeof(SplitView)), value.PaneBackground))
         {
             writer.WriteMember(value, value.PaneBackground, "PaneBackground");
         }
-        if (!SplitView.PanePlacementProperty.GetDefaultValue(typeof(SplitView)).Equals(value.PanePlacement))
+        if (!object.Equals(SplitView.PanePlacementProperty.GetDefaultValue(typeof(SplitView)), value.PanePlacement))
         {
             writer.WriteMember(value, value.PanePlacement, "PanePlacement");
         }
-        if (SplitView.PaneProperty.GetDefaultValue(typeof(SplitView)) != value.Pane)
+        if (!object.Equals(SplitView.PaneProperty.GetDefaultValue(typeof(SplitView)), value.Pane))
         {
             writer.WriteMember(value, value.Pane, "Pane");
         }
-        if (SplitView.PaneTemplateProperty.GetDefaultValue(typeof(SplitView)) != value.PaneTemplate)
+        if (!object.Equals(SplitView.PaneTemplateProperty.GetDefaultValue(typeof(SplitView)), value.PaneTemplate))
         {
             writer.WriteMember(value, value.PaneTemplate, "PaneTemplate");
         }
-        if (!SplitView.UseLightDismissOverlayModeProperty.GetDefaultValue(typeof(SplitView)).Equals(value.UseLightDismissOverlayMode))
+        if (!object.Equals(SplitView.UseLightDismissOverlayModeProperty.GetDefaultValue(typeof(SplitView)), value.UseLightDismissOverlayMode))
         {
             writer.WriteMember(value, value.UseLightDismissOverlayMode, "UseLightDismissOverlayMode");
         }
-        if (SplitView.TemplateSettingsProperty.GetUnsetValue(typeof(SplitView)) != value.TemplateSettings)
+        if (!object.Equals(SplitView.TemplateSettingsProperty.GetUnsetValue(typeof(SplitView)), value.TemplateSettings))
         {
             writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
         }

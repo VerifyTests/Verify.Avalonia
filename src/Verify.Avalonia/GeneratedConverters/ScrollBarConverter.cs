@@ -13,31 +13,31 @@ class ScrollBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
-        if (!ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ViewportSize))
+        if (!object.Equals(ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)), value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
         }
-        if (!ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Visibility))
+        if (!object.Equals(ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)), value.Visibility))
         {
             writer.WriteMember(value, value.Visibility, "Visibility");
         }
-        if (!ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.Orientation))
+        if (!object.Equals(ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
-        if (!ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)).Equals(value.IsExpanded))
+        if (!object.Equals(ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)), value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
-        if (!ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.AllowAutoHide))
+        if (!object.Equals(ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)), value.AllowAutoHide))
         {
             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
         }
-        if (!ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.HideDelay))
+        if (!object.Equals(ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)), value.HideDelay))
         {
             writer.WriteMember(value, value.HideDelay, "HideDelay");
         }
-        if (!ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)).Equals(value.ShowDelay))
+        if (!object.Equals(ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)), value.ShowDelay))
         {
             writer.WriteMember(value, value.ShowDelay, "ShowDelay");
         }
