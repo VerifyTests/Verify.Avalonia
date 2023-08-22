@@ -15,13 +15,11 @@ class ColorPreviewerConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ColorPreviewer value)
     {
         var type = typeof(ColorPreviewer);
-        if (value.ShouldIncludeProperty(ColorPreviewer.HsvColorProperty))
-        if (!object.Equals(ColorPreviewer.HsvColorProperty.GetDefaultValue(type), value.HsvColor))
+        if (ColorPreviewer.HsvColorProperty.ShouldIncludeProperty(value, value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
-        if (value.ShouldIncludeProperty(ColorPreviewer.IsAccentColorsVisibleProperty))
-        if (!object.Equals(ColorPreviewer.IsAccentColorsVisibleProperty.GetDefaultValue(type), value.IsAccentColorsVisible))
+        if (ColorPreviewer.IsAccentColorsVisibleProperty.ShouldIncludeProperty(value, value.IsAccentColorsVisible))
         {
             writer.WriteMember(value, value.IsAccentColorsVisible, "IsAccentColorsVisible");
         }

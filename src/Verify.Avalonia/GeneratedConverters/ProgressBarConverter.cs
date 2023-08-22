@@ -15,29 +15,24 @@ class ProgressBarConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ProgressBar value)
     {
         var type = typeof(ProgressBar);
-        if (value.ShouldIncludeProperty(ProgressBar.PercentageProperty))
-        if (!object.Equals(ProgressBar.PercentageProperty.GetUnsetValue(type), value.Percentage))
+        if (ProgressBar.PercentageProperty.ShouldIncludeProperty(value, value.Percentage))
         {
             writer.WriteMember(value, value.Percentage, "Percentage");
         }
         writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
-        if (value.ShouldIncludeProperty(ProgressBar.IsIndeterminateProperty))
-        if (!object.Equals(ProgressBar.IsIndeterminateProperty.GetDefaultValue(type), value.IsIndeterminate))
+        if (ProgressBar.IsIndeterminateProperty.ShouldIncludeProperty(value, value.IsIndeterminate))
         {
             writer.WriteMember(value, value.IsIndeterminate, "IsIndeterminate");
         }
-        if (value.ShouldIncludeProperty(ProgressBar.ShowProgressTextProperty))
-        if (!object.Equals(ProgressBar.ShowProgressTextProperty.GetDefaultValue(type), value.ShowProgressText))
+        if (ProgressBar.ShowProgressTextProperty.ShouldIncludeProperty(value, value.ShowProgressText))
         {
             writer.WriteMember(value, value.ShowProgressText, "ShowProgressText");
         }
-        if (value.ShouldIncludeProperty(ProgressBar.ProgressTextFormatProperty))
-        if (!object.Equals(ProgressBar.ProgressTextFormatProperty.GetDefaultValue(type), value.ProgressTextFormat))
+        if (ProgressBar.ProgressTextFormatProperty.ShouldIncludeProperty(value, value.ProgressTextFormat))
         {
             writer.WriteMember(value, value.ProgressTextFormat, "ProgressTextFormat");
         }
-        if (value.ShouldIncludeProperty(ProgressBar.OrientationProperty))
-        if (!object.Equals(ProgressBar.OrientationProperty.GetDefaultValue(type), value.Orientation))
+        if (ProgressBar.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }

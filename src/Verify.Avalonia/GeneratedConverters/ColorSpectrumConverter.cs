@@ -15,58 +15,47 @@ class ColorSpectrumConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ColorSpectrum value)
     {
         var type = typeof(ColorSpectrum);
-        if (value.ShouldIncludeProperty(ColorSpectrum.ColorProperty))
-        if (!object.Equals(ColorSpectrum.ColorProperty.GetDefaultValue(type), value.Color))
+        if (ColorSpectrum.ColorProperty.ShouldIncludeProperty(value, value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.ComponentsProperty))
-        if (!object.Equals(ColorSpectrum.ComponentsProperty.GetDefaultValue(type), value.Components))
+        if (ColorSpectrum.ComponentsProperty.ShouldIncludeProperty(value, value.Components))
         {
             writer.WriteMember(value, value.Components, "Components");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.HsvColorProperty))
-        if (!object.Equals(ColorSpectrum.HsvColorProperty.GetDefaultValue(type), value.HsvColor))
+        if (ColorSpectrum.HsvColorProperty.ShouldIncludeProperty(value, value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MaxHueProperty))
-        if (!object.Equals(ColorSpectrum.MaxHueProperty.GetDefaultValue(type), value.MaxHue))
+        if (ColorSpectrum.MaxHueProperty.ShouldIncludeProperty(value, value.MaxHue))
         {
             writer.WriteMember(value, value.MaxHue, "MaxHue");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MaxSaturationProperty))
-        if (!object.Equals(ColorSpectrum.MaxSaturationProperty.GetDefaultValue(type), value.MaxSaturation))
+        if (ColorSpectrum.MaxSaturationProperty.ShouldIncludeProperty(value, value.MaxSaturation))
         {
             writer.WriteMember(value, value.MaxSaturation, "MaxSaturation");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MaxValueProperty))
-        if (!object.Equals(ColorSpectrum.MaxValueProperty.GetDefaultValue(type), value.MaxValue))
+        if (ColorSpectrum.MaxValueProperty.ShouldIncludeProperty(value, value.MaxValue))
         {
             writer.WriteMember(value, value.MaxValue, "MaxValue");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MinHueProperty))
-        if (!object.Equals(ColorSpectrum.MinHueProperty.GetDefaultValue(type), value.MinHue))
+        if (ColorSpectrum.MinHueProperty.ShouldIncludeProperty(value, value.MinHue))
         {
             writer.WriteMember(value, value.MinHue, "MinHue");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MinSaturationProperty))
-        if (!object.Equals(ColorSpectrum.MinSaturationProperty.GetDefaultValue(type), value.MinSaturation))
+        if (ColorSpectrum.MinSaturationProperty.ShouldIncludeProperty(value, value.MinSaturation))
         {
             writer.WriteMember(value, value.MinSaturation, "MinSaturation");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.MinValueProperty))
-        if (!object.Equals(ColorSpectrum.MinValueProperty.GetDefaultValue(type), value.MinValue))
+        if (ColorSpectrum.MinValueProperty.ShouldIncludeProperty(value, value.MinValue))
         {
             writer.WriteMember(value, value.MinValue, "MinValue");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.ShapeProperty))
-        if (!object.Equals(ColorSpectrum.ShapeProperty.GetDefaultValue(type), value.Shape))
+        if (ColorSpectrum.ShapeProperty.ShouldIncludeProperty(value, value.Shape))
         {
             writer.WriteMember(value, value.Shape, "Shape");
         }
-        if (value.ShouldIncludeProperty(ColorSpectrum.ThirdComponentProperty))
-        if (!object.Equals(ColorSpectrum.ThirdComponentProperty.GetUnsetValue(type), value.ThirdComponent))
+        if (ColorSpectrum.ThirdComponentProperty.ShouldIncludeProperty(value, value.ThirdComponent))
         {
             writer.WriteMember(value, value.ThirdComponent, "ThirdComponent");
         }

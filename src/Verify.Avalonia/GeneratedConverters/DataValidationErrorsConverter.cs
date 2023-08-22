@@ -15,13 +15,11 @@ class DataValidationErrorsConverter :
     public static void WriteMembers(VerifyJsonWriter writer, DataValidationErrors value)
     {
         var type = typeof(DataValidationErrors);
-        if (value.ShouldIncludeProperty(DataValidationErrors.OwnerProperty))
-        if (!object.Equals(DataValidationErrors.OwnerProperty.GetUnsetValue(type), value.Owner))
+        if (DataValidationErrors.OwnerProperty.ShouldIncludeProperty(value, value.Owner))
         {
             writer.WriteMember(value, value.Owner, "Owner");
         }
-        if (value.ShouldIncludeProperty(DataValidationErrors.ErrorTemplateProperty))
-        if (!object.Equals(DataValidationErrors.ErrorTemplateProperty.GetDefaultValue(type), value.ErrorTemplate))
+        if (DataValidationErrors.ErrorTemplateProperty.ShouldIncludeProperty(value, value.ErrorTemplate))
         {
             writer.WriteMember(value, value.ErrorTemplate, "ErrorTemplate");
         }

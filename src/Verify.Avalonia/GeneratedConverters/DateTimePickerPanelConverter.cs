@@ -15,23 +15,19 @@ class DateTimePickerPanelConverter :
     public static void WriteMembers(VerifyJsonWriter writer, DateTimePickerPanel value)
     {
         var type = typeof(DateTimePickerPanel);
-        if (value.ShouldIncludeProperty(DateTimePickerPanel.PanelTypeProperty))
-        if (!object.Equals(DateTimePickerPanel.PanelTypeProperty.GetDefaultValue(type), value.PanelType))
+        if (DateTimePickerPanel.PanelTypeProperty.ShouldIncludeProperty(value, value.PanelType))
         {
             writer.WriteMember(value, value.PanelType, "PanelType");
         }
-        if (value.ShouldIncludeProperty(DateTimePickerPanel.ItemHeightProperty))
-        if (!object.Equals(DateTimePickerPanel.ItemHeightProperty.GetDefaultValue(type), value.ItemHeight))
+        if (DateTimePickerPanel.ItemHeightProperty.ShouldIncludeProperty(value, value.ItemHeight))
         {
             writer.WriteMember(value, value.ItemHeight, "ItemHeight");
         }
-        if (value.ShouldIncludeProperty(DateTimePickerPanel.ItemFormatProperty))
-        if (!object.Equals(DateTimePickerPanel.ItemFormatProperty.GetDefaultValue(type), value.ItemFormat))
+        if (DateTimePickerPanel.ItemFormatProperty.ShouldIncludeProperty(value, value.ItemFormat))
         {
             writer.WriteMember(value, value.ItemFormat, "ItemFormat");
         }
-        if (value.ShouldIncludeProperty(DateTimePickerPanel.ShouldLoopProperty))
-        if (!object.Equals(DateTimePickerPanel.ShouldLoopProperty.GetDefaultValue(type), value.ShouldLoop))
+        if (DateTimePickerPanel.ShouldLoopProperty.ShouldIncludeProperty(value, value.ShouldLoop))
         {
             writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
         }

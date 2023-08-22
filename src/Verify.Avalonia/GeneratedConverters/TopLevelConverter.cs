@@ -15,33 +15,27 @@ class TopLevelConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
         var type = typeof(TopLevel);
-        if (value.ShouldIncludeProperty(TopLevel.ClientSizeProperty))
-        if (!object.Equals(TopLevel.ClientSizeProperty.GetUnsetValue(type), value.ClientSize))
+        if (TopLevel.ClientSizeProperty.ShouldIncludeProperty(value, value.ClientSize))
         {
             writer.WriteMember(value, value.ClientSize, "ClientSize");
         }
-        if (value.ShouldIncludeProperty(TopLevel.FrameSizeProperty))
-        if (!object.Equals(TopLevel.FrameSizeProperty.GetUnsetValue(type), value.FrameSize))
+        if (TopLevel.FrameSizeProperty.ShouldIncludeProperty(value, value.FrameSize))
         {
             writer.WriteMember(value, value.FrameSize, "FrameSize");
         }
-        if (value.ShouldIncludeProperty(TopLevel.TransparencyLevelHintProperty))
-        if (!object.Equals(TopLevel.TransparencyLevelHintProperty.GetDefaultValue(type), value.TransparencyLevelHint))
+        if (TopLevel.TransparencyLevelHintProperty.ShouldIncludeProperty(value, value.TransparencyLevelHint))
         {
             writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
         }
-        if (value.ShouldIncludeProperty(TopLevel.ActualTransparencyLevelProperty))
-        if (!object.Equals(TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(type), value.ActualTransparencyLevel))
+        if (TopLevel.ActualTransparencyLevelProperty.ShouldIncludeProperty(value, value.ActualTransparencyLevel))
         {
             writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
         }
-        if (value.ShouldIncludeProperty(TopLevel.TransparencyBackgroundFallbackProperty))
-        if (!object.Equals(TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(type), value.TransparencyBackgroundFallback))
+        if (TopLevel.TransparencyBackgroundFallbackProperty.ShouldIncludeProperty(value, value.TransparencyBackgroundFallback))
         {
             writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
         }
-        if (value.ShouldIncludeProperty(TopLevel.RequestedThemeVariantProperty))
-        if (!object.Equals(TopLevel.RequestedThemeVariantProperty.GetDefaultValue(type), value.RequestedThemeVariant))
+        if (TopLevel.RequestedThemeVariantProperty.ShouldIncludeProperty(value, value.RequestedThemeVariant))
         {
             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
         }

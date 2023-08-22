@@ -15,93 +15,75 @@ class TextBlockConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TextBlock value)
     {
         var type = typeof(TextBlock);
-        if (value.ShouldIncludeProperty(TextBlock.PaddingProperty))
-        if (!object.Equals(TextBlock.PaddingProperty.GetDefaultValue(type), value.Padding))
+        if (TextBlock.PaddingProperty.ShouldIncludeProperty(value, value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }
-        if (value.ShouldIncludeProperty(TextBlock.BackgroundProperty))
-        if (!object.Equals(TextBlock.BackgroundProperty.GetDefaultValue(type), value.Background))
+        if (TextBlock.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
-        if (value.ShouldIncludeProperty(TextBlock.TextProperty))
-        if (!object.Equals(TextBlock.TextProperty.GetDefaultValue(type), value.Text))
+        if (TextBlock.TextProperty.ShouldIncludeProperty(value, value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
-        if (value.ShouldIncludeProperty(TextBlock.FontFamilyProperty))
-        if (!object.Equals(TextBlock.FontFamilyProperty.GetDefaultValue(type), value.FontFamily))
+        if (TextBlock.FontFamilyProperty.ShouldIncludeProperty(value, value.FontFamily))
         {
             writer.WriteMember(value, value.FontFamily, "FontFamily");
         }
-        if (value.ShouldIncludeProperty(TextBlock.FontSizeProperty))
-        if (!object.Equals(TextBlock.FontSizeProperty.GetDefaultValue(type), value.FontSize))
+        if (TextBlock.FontSizeProperty.ShouldIncludeProperty(value, value.FontSize))
         {
             writer.WriteMember(value, value.FontSize, "FontSize");
         }
-        if (value.ShouldIncludeProperty(TextBlock.FontStyleProperty))
-        if (!object.Equals(TextBlock.FontStyleProperty.GetDefaultValue(type), value.FontStyle))
+        if (TextBlock.FontStyleProperty.ShouldIncludeProperty(value, value.FontStyle))
         {
             writer.WriteMember(value, value.FontStyle, "FontStyle");
         }
-        if (value.ShouldIncludeProperty(TextBlock.FontWeightProperty))
-        if (!object.Equals(TextBlock.FontWeightProperty.GetDefaultValue(type), value.FontWeight))
+        if (TextBlock.FontWeightProperty.ShouldIncludeProperty(value, value.FontWeight))
         {
             writer.WriteMember(value, value.FontWeight, "FontWeight");
         }
-        if (value.ShouldIncludeProperty(TextBlock.FontStretchProperty))
-        if (!object.Equals(TextBlock.FontStretchProperty.GetDefaultValue(type), value.FontStretch))
+        if (TextBlock.FontStretchProperty.ShouldIncludeProperty(value, value.FontStretch))
         {
             writer.WriteMember(value, value.FontStretch, "FontStretch");
         }
-        if (value.ShouldIncludeProperty(TextBlock.ForegroundProperty))
-        if (!object.Equals(TextBlock.ForegroundProperty.GetDefaultValue(type), value.Foreground))
+        if (TextBlock.ForegroundProperty.ShouldIncludeProperty(value, value.Foreground))
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
-        if (value.ShouldIncludeProperty(TextBlock.LineHeightProperty))
-        if (!object.Equals(TextBlock.LineHeightProperty.GetDefaultValue(type), value.LineHeight))
+        if (TextBlock.LineHeightProperty.ShouldIncludeProperty(value, value.LineHeight))
         {
             writer.WriteMember(value, value.LineHeight, "LineHeight");
         }
-        if (value.ShouldIncludeProperty(TextBlock.LetterSpacingProperty))
-        if (!object.Equals(TextBlock.LetterSpacingProperty.GetDefaultValue(type), value.LetterSpacing))
+        if (TextBlock.LetterSpacingProperty.ShouldIncludeProperty(value, value.LetterSpacing))
         {
             writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
         }
-        if (value.ShouldIncludeProperty(TextBlock.MaxLinesProperty))
-        if (!object.Equals(TextBlock.MaxLinesProperty.GetDefaultValue(type), value.MaxLines))
+        if (TextBlock.MaxLinesProperty.ShouldIncludeProperty(value, value.MaxLines))
         {
             writer.WriteMember(value, value.MaxLines, "MaxLines");
         }
-        if (value.ShouldIncludeProperty(TextBlock.TextWrappingProperty))
-        if (!object.Equals(TextBlock.TextWrappingProperty.GetDefaultValue(type), value.TextWrapping))
+        if (TextBlock.TextWrappingProperty.ShouldIncludeProperty(value, value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
         }
-        if (value.ShouldIncludeProperty(TextBlock.TextTrimmingProperty))
-        if (!object.Equals(TextBlock.TextTrimmingProperty.GetDefaultValue(type), value.TextTrimming))
+        if (TextBlock.TextTrimmingProperty.ShouldIncludeProperty(value, value.TextTrimming))
         {
             writer.WriteMember(value, value.TextTrimming, "TextTrimming");
         }
-        if (value.ShouldIncludeProperty(TextBlock.TextAlignmentProperty))
-        if (!object.Equals(TextBlock.TextAlignmentProperty.GetDefaultValue(type), value.TextAlignment))
+        if (TextBlock.TextAlignmentProperty.ShouldIncludeProperty(value, value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
-        if (value.ShouldIncludeProperty(TextBlock.TextDecorationsProperty))
-        if (!object.Equals(TextBlock.TextDecorationsProperty.GetDefaultValue(type), value.TextDecorations))
+        if (TextBlock.TextDecorationsProperty.ShouldIncludeProperty(value, value.TextDecorations))
         {
             writer.WriteMember(value, value.TextDecorations, "TextDecorations");
         }
-        if (value.ShouldIncludeProperty(TextBlock.InlinesProperty))
-        if (!object.Equals(TextBlock.InlinesProperty.GetUnsetValue(type), value.Inlines))
+        if (TextBlock.InlinesProperty.ShouldIncludeProperty(value, value.Inlines))
         {
             writer.WriteMember(value, value.Inlines, "Inlines");
         }
-        if (value.ShouldIncludeProperty(TextBlock.BaselineOffsetProperty))
-        if (!object.Equals(TextBlock.BaselineOffsetProperty.GetDefaultValue(type), value.BaselineOffset))
+        if (TextBlock.BaselineOffsetProperty.ShouldIncludeProperty(value, value.BaselineOffset))
         {
             writer.WriteMember(value, value.BaselineOffset, "BaselineOffset");
         }

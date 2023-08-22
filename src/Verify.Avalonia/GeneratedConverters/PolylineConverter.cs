@@ -15,8 +15,7 @@ class PolylineConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Polyline value)
     {
         var type = typeof(Polyline);
-        if (value.ShouldIncludeProperty(Polyline.PointsProperty))
-        if (!object.Equals(Polyline.PointsProperty.GetDefaultValue(type), value.Points))
+        if (Polyline.PointsProperty.ShouldIncludeProperty(value, value.Points))
         {
             writer.WriteMember(value, value.Points, "Points");
         }

@@ -160,33 +160,12 @@ public class Tests
             return;
         }
 
-        var genericType = attachedProperty.FieldType.GetGenericTypeDefinition();
-
-        var getDefault = GetDefaultMethod(genericType, attachedProperty);
-
         builder.AppendLine(
             $$"""
-                      if (value.ShouldIncludeProperty({{type.Name}}.{{name}}Property))
-                      if (!object.Equals({{type.Name}}.{{name}}Property.{{getDefault}}(type), value.{{name}}))
+                      if ({{type.Name}}.{{name}}Property.ShouldIncludeProperty(value, value.{{name}}))
                       {
                           writer.WriteMember(value, value.{{name}}, "{{name}}");
                       }
               """);
-    }
-
-    static string GetDefaultMethod(Type genericType, FieldInfo attachedProperty)
-    {
-        if (genericType == typeof(StyledProperty<>) ||
-            genericType == typeof(AttachedProperty<>))
-        {
-            return "GetDefaultValue";
-        }
-
-        if (genericType == typeof(DirectProperty<,>))
-        {
-            return "GetUnsetValue";
-        }
-
-        throw new(attachedProperty.FieldType.FullName);
     }
 }

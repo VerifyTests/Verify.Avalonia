@@ -15,60 +15,49 @@ class LayoutableConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Layoutable value)
     {
         var type = typeof(Layoutable);
-        if (value.ShouldIncludeProperty(Layoutable.WidthProperty))
-        if (!object.Equals(Layoutable.WidthProperty.GetDefaultValue(type), value.Width))
+        if (Layoutable.WidthProperty.ShouldIncludeProperty(value, value.Width))
         {
             writer.WriteMember(value, value.Width, "Width");
         }
-        if (value.ShouldIncludeProperty(Layoutable.HeightProperty))
-        if (!object.Equals(Layoutable.HeightProperty.GetDefaultValue(type), value.Height))
+        if (Layoutable.HeightProperty.ShouldIncludeProperty(value, value.Height))
         {
             writer.WriteMember(value, value.Height, "Height");
         }
-        if (value.ShouldIncludeProperty(Layoutable.MinWidthProperty))
-        if (!object.Equals(Layoutable.MinWidthProperty.GetDefaultValue(type), value.MinWidth))
+        if (Layoutable.MinWidthProperty.ShouldIncludeProperty(value, value.MinWidth))
         {
             writer.WriteMember(value, value.MinWidth, "MinWidth");
         }
-        if (value.ShouldIncludeProperty(Layoutable.MaxWidthProperty))
-        if (!object.Equals(Layoutable.MaxWidthProperty.GetDefaultValue(type), value.MaxWidth))
+        if (Layoutable.MaxWidthProperty.ShouldIncludeProperty(value, value.MaxWidth))
         {
             writer.WriteMember(value, value.MaxWidth, "MaxWidth");
         }
-        if (value.ShouldIncludeProperty(Layoutable.MinHeightProperty))
-        if (!object.Equals(Layoutable.MinHeightProperty.GetDefaultValue(type), value.MinHeight))
+        if (Layoutable.MinHeightProperty.ShouldIncludeProperty(value, value.MinHeight))
         {
             writer.WriteMember(value, value.MinHeight, "MinHeight");
         }
-        if (value.ShouldIncludeProperty(Layoutable.MaxHeightProperty))
-        if (!object.Equals(Layoutable.MaxHeightProperty.GetDefaultValue(type), value.MaxHeight))
+        if (Layoutable.MaxHeightProperty.ShouldIncludeProperty(value, value.MaxHeight))
         {
             writer.WriteMember(value, value.MaxHeight, "MaxHeight");
         }
-        if (value.ShouldIncludeProperty(Layoutable.MarginProperty))
-        if (!object.Equals(Layoutable.MarginProperty.GetDefaultValue(type), value.Margin))
+        if (Layoutable.MarginProperty.ShouldIncludeProperty(value, value.Margin))
         {
             writer.WriteMember(value, value.Margin, "Margin");
         }
-        if (value.ShouldIncludeProperty(Layoutable.HorizontalAlignmentProperty))
-        if (!object.Equals(Layoutable.HorizontalAlignmentProperty.GetDefaultValue(type), value.HorizontalAlignment))
+        if (Layoutable.HorizontalAlignmentProperty.ShouldIncludeProperty(value, value.HorizontalAlignment))
         {
             writer.WriteMember(value, value.HorizontalAlignment, "HorizontalAlignment");
         }
-        if (value.ShouldIncludeProperty(Layoutable.VerticalAlignmentProperty))
-        if (!object.Equals(Layoutable.VerticalAlignmentProperty.GetDefaultValue(type), value.VerticalAlignment))
+        if (Layoutable.VerticalAlignmentProperty.ShouldIncludeProperty(value, value.VerticalAlignment))
         {
             writer.WriteMember(value, value.VerticalAlignment, "VerticalAlignment");
         }
-        if (value.ShouldIncludeProperty(Layoutable.DesiredSizeProperty))
-        if (!object.Equals(Layoutable.DesiredSizeProperty.GetUnsetValue(type), value.DesiredSize))
+        if (Layoutable.DesiredSizeProperty.ShouldIncludeProperty(value, value.DesiredSize))
         {
             writer.WriteMember(value, value.DesiredSize, "DesiredSize");
         }
         writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
         writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
-        if (value.ShouldIncludeProperty(Layoutable.UseLayoutRoundingProperty))
-        if (!object.Equals(Layoutable.UseLayoutRoundingProperty.GetDefaultValue(type), value.UseLayoutRounding))
+        if (Layoutable.UseLayoutRoundingProperty.ShouldIncludeProperty(value, value.UseLayoutRounding))
         {
             writer.WriteMember(value, value.UseLayoutRounding, "UseLayoutRounding");
         }

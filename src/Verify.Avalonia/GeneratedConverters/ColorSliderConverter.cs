@@ -15,38 +15,31 @@ class ColorSliderConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ColorSlider value)
     {
         var type = typeof(ColorSlider);
-        if (value.ShouldIncludeProperty(ColorSlider.ColorProperty))
-        if (!object.Equals(ColorSlider.ColorProperty.GetDefaultValue(type), value.Color))
+        if (ColorSlider.ColorProperty.ShouldIncludeProperty(value, value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.ColorComponentProperty))
-        if (!object.Equals(ColorSlider.ColorComponentProperty.GetDefaultValue(type), value.ColorComponent))
+        if (ColorSlider.ColorComponentProperty.ShouldIncludeProperty(value, value.ColorComponent))
         {
             writer.WriteMember(value, value.ColorComponent, "ColorComponent");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.ColorModelProperty))
-        if (!object.Equals(ColorSlider.ColorModelProperty.GetDefaultValue(type), value.ColorModel))
+        if (ColorSlider.ColorModelProperty.ShouldIncludeProperty(value, value.ColorModel))
         {
             writer.WriteMember(value, value.ColorModel, "ColorModel");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.HsvColorProperty))
-        if (!object.Equals(ColorSlider.HsvColorProperty.GetDefaultValue(type), value.HsvColor))
+        if (ColorSlider.HsvColorProperty.ShouldIncludeProperty(value, value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.IsAlphaVisibleProperty))
-        if (!object.Equals(ColorSlider.IsAlphaVisibleProperty.GetDefaultValue(type), value.IsAlphaVisible))
+        if (ColorSlider.IsAlphaVisibleProperty.ShouldIncludeProperty(value, value.IsAlphaVisible))
         {
             writer.WriteMember(value, value.IsAlphaVisible, "IsAlphaVisible");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.IsPerceptiveProperty))
-        if (!object.Equals(ColorSlider.IsPerceptiveProperty.GetDefaultValue(type), value.IsPerceptive))
+        if (ColorSlider.IsPerceptiveProperty.ShouldIncludeProperty(value, value.IsPerceptive))
         {
             writer.WriteMember(value, value.IsPerceptive, "IsPerceptive");
         }
-        if (value.ShouldIncludeProperty(ColorSlider.IsRoundingEnabledProperty))
-        if (!object.Equals(ColorSlider.IsRoundingEnabledProperty.GetDefaultValue(type), value.IsRoundingEnabled))
+        if (ColorSlider.IsRoundingEnabledProperty.ShouldIncludeProperty(value, value.IsRoundingEnabled))
         {
             writer.WriteMember(value, value.IsRoundingEnabled, "IsRoundingEnabled");
         }

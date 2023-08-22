@@ -15,164 +15,132 @@ class TextBoxConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TextBox value)
     {
         var type = typeof(TextBox);
-        if (value.ShouldIncludeProperty(TextBox.AcceptsReturnProperty))
-        if (!object.Equals(TextBox.AcceptsReturnProperty.GetDefaultValue(type), value.AcceptsReturn))
+        if (TextBox.AcceptsReturnProperty.ShouldIncludeProperty(value, value.AcceptsReturn))
         {
             writer.WriteMember(value, value.AcceptsReturn, "AcceptsReturn");
         }
-        if (value.ShouldIncludeProperty(TextBox.AcceptsTabProperty))
-        if (!object.Equals(TextBox.AcceptsTabProperty.GetDefaultValue(type), value.AcceptsTab))
+        if (TextBox.AcceptsTabProperty.ShouldIncludeProperty(value, value.AcceptsTab))
         {
             writer.WriteMember(value, value.AcceptsTab, "AcceptsTab");
         }
-        if (value.ShouldIncludeProperty(TextBox.CaretIndexProperty))
-        if (!object.Equals(TextBox.CaretIndexProperty.GetDefaultValue(type), value.CaretIndex))
+        if (TextBox.CaretIndexProperty.ShouldIncludeProperty(value, value.CaretIndex))
         {
             writer.WriteMember(value, value.CaretIndex, "CaretIndex");
         }
-        if (value.ShouldIncludeProperty(TextBox.IsReadOnlyProperty))
-        if (!object.Equals(TextBox.IsReadOnlyProperty.GetDefaultValue(type), value.IsReadOnly))
+        if (TextBox.IsReadOnlyProperty.ShouldIncludeProperty(value, value.IsReadOnly))
         {
             writer.WriteMember(value, value.IsReadOnly, "IsReadOnly");
         }
-        if (value.ShouldIncludeProperty(TextBox.PasswordCharProperty))
-        if (!object.Equals(TextBox.PasswordCharProperty.GetDefaultValue(type), value.PasswordChar))
+        if (TextBox.PasswordCharProperty.ShouldIncludeProperty(value, value.PasswordChar))
         {
             writer.WriteMember(value, value.PasswordChar, "PasswordChar");
         }
-        if (value.ShouldIncludeProperty(TextBox.SelectionBrushProperty))
-        if (!object.Equals(TextBox.SelectionBrushProperty.GetDefaultValue(type), value.SelectionBrush))
+        if (TextBox.SelectionBrushProperty.ShouldIncludeProperty(value, value.SelectionBrush))
         {
             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
         }
-        if (value.ShouldIncludeProperty(TextBox.SelectionForegroundBrushProperty))
-        if (!object.Equals(TextBox.SelectionForegroundBrushProperty.GetDefaultValue(type), value.SelectionForegroundBrush))
+        if (TextBox.SelectionForegroundBrushProperty.ShouldIncludeProperty(value, value.SelectionForegroundBrush))
         {
             writer.WriteMember(value, value.SelectionForegroundBrush, "SelectionForegroundBrush");
         }
-        if (value.ShouldIncludeProperty(TextBox.CaretBrushProperty))
-        if (!object.Equals(TextBox.CaretBrushProperty.GetDefaultValue(type), value.CaretBrush))
+        if (TextBox.CaretBrushProperty.ShouldIncludeProperty(value, value.CaretBrush))
         {
             writer.WriteMember(value, value.CaretBrush, "CaretBrush");
         }
-        if (value.ShouldIncludeProperty(TextBox.SelectionStartProperty))
-        if (!object.Equals(TextBox.SelectionStartProperty.GetDefaultValue(type), value.SelectionStart))
+        if (TextBox.SelectionStartProperty.ShouldIncludeProperty(value, value.SelectionStart))
         {
             writer.WriteMember(value, value.SelectionStart, "SelectionStart");
         }
-        if (value.ShouldIncludeProperty(TextBox.SelectionEndProperty))
-        if (!object.Equals(TextBox.SelectionEndProperty.GetDefaultValue(type), value.SelectionEnd))
+        if (TextBox.SelectionEndProperty.ShouldIncludeProperty(value, value.SelectionEnd))
         {
             writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
         }
-        if (value.ShouldIncludeProperty(TextBox.MaxLengthProperty))
-        if (!object.Equals(TextBox.MaxLengthProperty.GetDefaultValue(type), value.MaxLength))
+        if (TextBox.MaxLengthProperty.ShouldIncludeProperty(value, value.MaxLength))
         {
             writer.WriteMember(value, value.MaxLength, "MaxLength");
         }
-        if (value.ShouldIncludeProperty(TextBox.MaxLinesProperty))
-        if (!object.Equals(TextBox.MaxLinesProperty.GetDefaultValue(type), value.MaxLines))
+        if (TextBox.MaxLinesProperty.ShouldIncludeProperty(value, value.MaxLines))
         {
             writer.WriteMember(value, value.MaxLines, "MaxLines");
         }
-        if (value.ShouldIncludeProperty(TextBox.LetterSpacingProperty))
-        if (!object.Equals(TextBox.LetterSpacingProperty.GetDefaultValue(type), value.LetterSpacing))
+        if (TextBox.LetterSpacingProperty.ShouldIncludeProperty(value, value.LetterSpacing))
         {
             writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
         }
-        if (value.ShouldIncludeProperty(TextBox.LineHeightProperty))
-        if (!object.Equals(TextBox.LineHeightProperty.GetDefaultValue(type), value.LineHeight))
+        if (TextBox.LineHeightProperty.ShouldIncludeProperty(value, value.LineHeight))
         {
             writer.WriteMember(value, value.LineHeight, "LineHeight");
         }
-        if (value.ShouldIncludeProperty(TextBox.TextProperty))
-        if (!object.Equals(TextBox.TextProperty.GetDefaultValue(type), value.Text))
+        if (TextBox.TextProperty.ShouldIncludeProperty(value, value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
         writer.WriteMember(value, value.SelectedText, "SelectedText");
-        if (value.ShouldIncludeProperty(TextBox.HorizontalContentAlignmentProperty))
-        if (!object.Equals(TextBox.HorizontalContentAlignmentProperty.GetDefaultValue(type), value.HorizontalContentAlignment))
+        if (TextBox.HorizontalContentAlignmentProperty.ShouldIncludeProperty(value, value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
-        if (value.ShouldIncludeProperty(TextBox.VerticalContentAlignmentProperty))
-        if (!object.Equals(TextBox.VerticalContentAlignmentProperty.GetDefaultValue(type), value.VerticalContentAlignment))
+        if (TextBox.VerticalContentAlignmentProperty.ShouldIncludeProperty(value, value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }
-        if (value.ShouldIncludeProperty(TextBox.TextAlignmentProperty))
-        if (!object.Equals(TextBox.TextAlignmentProperty.GetDefaultValue(type), value.TextAlignment))
+        if (TextBox.TextAlignmentProperty.ShouldIncludeProperty(value, value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
-        if (value.ShouldIncludeProperty(TextBox.WatermarkProperty))
-        if (!object.Equals(TextBox.WatermarkProperty.GetDefaultValue(type), value.Watermark))
+        if (TextBox.WatermarkProperty.ShouldIncludeProperty(value, value.Watermark))
         {
             writer.WriteMember(value, value.Watermark, "Watermark");
         }
-        if (value.ShouldIncludeProperty(TextBox.UseFloatingWatermarkProperty))
-        if (!object.Equals(TextBox.UseFloatingWatermarkProperty.GetDefaultValue(type), value.UseFloatingWatermark))
+        if (TextBox.UseFloatingWatermarkProperty.ShouldIncludeProperty(value, value.UseFloatingWatermark))
         {
             writer.WriteMember(value, value.UseFloatingWatermark, "UseFloatingWatermark");
         }
-        if (value.ShouldIncludeProperty(TextBox.InnerLeftContentProperty))
-        if (!object.Equals(TextBox.InnerLeftContentProperty.GetDefaultValue(type), value.InnerLeftContent))
+        if (TextBox.InnerLeftContentProperty.ShouldIncludeProperty(value, value.InnerLeftContent))
         {
             writer.WriteMember(value, value.InnerLeftContent, "InnerLeftContent");
         }
-        if (value.ShouldIncludeProperty(TextBox.InnerRightContentProperty))
-        if (!object.Equals(TextBox.InnerRightContentProperty.GetDefaultValue(type), value.InnerRightContent))
+        if (TextBox.InnerRightContentProperty.ShouldIncludeProperty(value, value.InnerRightContent))
         {
             writer.WriteMember(value, value.InnerRightContent, "InnerRightContent");
         }
-        if (value.ShouldIncludeProperty(TextBox.RevealPasswordProperty))
-        if (!object.Equals(TextBox.RevealPasswordProperty.GetDefaultValue(type), value.RevealPassword))
+        if (TextBox.RevealPasswordProperty.ShouldIncludeProperty(value, value.RevealPassword))
         {
             writer.WriteMember(value, value.RevealPassword, "RevealPassword");
         }
-        if (value.ShouldIncludeProperty(TextBox.TextWrappingProperty))
-        if (!object.Equals(TextBox.TextWrappingProperty.GetDefaultValue(type), value.TextWrapping))
+        if (TextBox.TextWrappingProperty.ShouldIncludeProperty(value, value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
         }
-        if (value.ShouldIncludeProperty(TextBox.NewLineProperty))
-        if (!object.Equals(TextBox.NewLineProperty.GetDefaultValue(type), value.NewLine))
+        if (TextBox.NewLineProperty.ShouldIncludeProperty(value, value.NewLine))
         {
             writer.WriteMember(value, value.NewLine, "NewLine");
         }
-        if (value.ShouldIncludeProperty(TextBox.CanCutProperty))
-        if (!object.Equals(TextBox.CanCutProperty.GetUnsetValue(type), value.CanCut))
+        if (TextBox.CanCutProperty.ShouldIncludeProperty(value, value.CanCut))
         {
             writer.WriteMember(value, value.CanCut, "CanCut");
         }
-        if (value.ShouldIncludeProperty(TextBox.CanCopyProperty))
-        if (!object.Equals(TextBox.CanCopyProperty.GetUnsetValue(type), value.CanCopy))
+        if (TextBox.CanCopyProperty.ShouldIncludeProperty(value, value.CanCopy))
         {
             writer.WriteMember(value, value.CanCopy, "CanCopy");
         }
-        if (value.ShouldIncludeProperty(TextBox.CanPasteProperty))
-        if (!object.Equals(TextBox.CanPasteProperty.GetUnsetValue(type), value.CanPaste))
+        if (TextBox.CanPasteProperty.ShouldIncludeProperty(value, value.CanPaste))
         {
             writer.WriteMember(value, value.CanPaste, "CanPaste");
         }
-        if (value.ShouldIncludeProperty(TextBox.IsUndoEnabledProperty))
-        if (!object.Equals(TextBox.IsUndoEnabledProperty.GetDefaultValue(type), value.IsUndoEnabled))
+        if (TextBox.IsUndoEnabledProperty.ShouldIncludeProperty(value, value.IsUndoEnabled))
         {
             writer.WriteMember(value, value.IsUndoEnabled, "IsUndoEnabled");
         }
-        if (value.ShouldIncludeProperty(TextBox.UndoLimitProperty))
-        if (!object.Equals(TextBox.UndoLimitProperty.GetDefaultValue(type), value.UndoLimit))
+        if (TextBox.UndoLimitProperty.ShouldIncludeProperty(value, value.UndoLimit))
         {
             writer.WriteMember(value, value.UndoLimit, "UndoLimit");
         }
-        if (value.ShouldIncludeProperty(TextBox.CanUndoProperty))
-        if (!object.Equals(TextBox.CanUndoProperty.GetUnsetValue(type), value.CanUndo))
+        if (TextBox.CanUndoProperty.ShouldIncludeProperty(value, value.CanUndo))
         {
             writer.WriteMember(value, value.CanUndo, "CanUndo");
         }
-        if (value.ShouldIncludeProperty(TextBox.CanRedoProperty))
-        if (!object.Equals(TextBox.CanRedoProperty.GetUnsetValue(type), value.CanRedo))
+        if (TextBox.CanRedoProperty.ShouldIncludeProperty(value, value.CanRedo))
         {
             writer.WriteMember(value, value.CanRedo, "CanRedo");
         }

@@ -15,28 +15,23 @@ class ToggleSwitchConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ToggleSwitch value)
     {
         var type = typeof(ToggleSwitch);
-        if (value.ShouldIncludeProperty(ToggleSwitch.OnContentProperty))
-        if (!object.Equals(ToggleSwitch.OnContentProperty.GetDefaultValue(type), value.OnContent))
+        if (ToggleSwitch.OnContentProperty.ShouldIncludeProperty(value, value.OnContent))
         {
             writer.WriteMember(value, value.OnContent, "OnContent");
         }
-        if (value.ShouldIncludeProperty(ToggleSwitch.OffContentProperty))
-        if (!object.Equals(ToggleSwitch.OffContentProperty.GetDefaultValue(type), value.OffContent))
+        if (ToggleSwitch.OffContentProperty.ShouldIncludeProperty(value, value.OffContent))
         {
             writer.WriteMember(value, value.OffContent, "OffContent");
         }
-        if (value.ShouldIncludeProperty(ToggleSwitch.OffContentTemplateProperty))
-        if (!object.Equals(ToggleSwitch.OffContentTemplateProperty.GetDefaultValue(type), value.OffContentTemplate))
+        if (ToggleSwitch.OffContentTemplateProperty.ShouldIncludeProperty(value, value.OffContentTemplate))
         {
             writer.WriteMember(value, value.OffContentTemplate, "OffContentTemplate");
         }
-        if (value.ShouldIncludeProperty(ToggleSwitch.OnContentTemplateProperty))
-        if (!object.Equals(ToggleSwitch.OnContentTemplateProperty.GetDefaultValue(type), value.OnContentTemplate))
+        if (ToggleSwitch.OnContentTemplateProperty.ShouldIncludeProperty(value, value.OnContentTemplate))
         {
             writer.WriteMember(value, value.OnContentTemplate, "OnContentTemplate");
         }
-        if (value.ShouldIncludeProperty(ToggleSwitch.KnobTransitionsProperty))
-        if (!object.Equals(ToggleSwitch.KnobTransitionsProperty.GetDefaultValue(type), value.KnobTransitions))
+        if (ToggleSwitch.KnobTransitionsProperty.ShouldIncludeProperty(value, value.KnobTransitions))
         {
             writer.WriteMember(value, value.KnobTransitions, "KnobTransitions");
         }

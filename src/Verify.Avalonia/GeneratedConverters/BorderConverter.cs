@@ -15,28 +15,23 @@ class BorderConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Border value)
     {
         var type = typeof(Border);
-        if (value.ShouldIncludeProperty(Border.BackgroundProperty))
-        if (!object.Equals(Border.BackgroundProperty.GetDefaultValue(type), value.Background))
+        if (Border.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
-        if (value.ShouldIncludeProperty(Border.BorderBrushProperty))
-        if (!object.Equals(Border.BorderBrushProperty.GetDefaultValue(type), value.BorderBrush))
+        if (Border.BorderBrushProperty.ShouldIncludeProperty(value, value.BorderBrush))
         {
             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
         }
-        if (value.ShouldIncludeProperty(Border.BorderThicknessProperty))
-        if (!object.Equals(Border.BorderThicknessProperty.GetDefaultValue(type), value.BorderThickness))
+        if (Border.BorderThicknessProperty.ShouldIncludeProperty(value, value.BorderThickness))
         {
             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
         }
-        if (value.ShouldIncludeProperty(Border.CornerRadiusProperty))
-        if (!object.Equals(Border.CornerRadiusProperty.GetDefaultValue(type), value.CornerRadius))
+        if (Border.CornerRadiusProperty.ShouldIncludeProperty(value, value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
-        if (value.ShouldIncludeProperty(Border.BoxShadowProperty))
-        if (!object.Equals(Border.BoxShadowProperty.GetDefaultValue(type), value.BoxShadow))
+        if (Border.BoxShadowProperty.ShouldIncludeProperty(value, value.BoxShadow))
         {
             writer.WriteMember(value, value.BoxShadow, "BoxShadow");
         }

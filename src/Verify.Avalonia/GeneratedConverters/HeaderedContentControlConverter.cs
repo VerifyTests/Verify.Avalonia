@@ -15,13 +15,11 @@ class HeaderedContentControlConverter :
     public static void WriteMembers(VerifyJsonWriter writer, HeaderedContentControl value)
     {
         var type = typeof(HeaderedContentControl);
-        if (value.ShouldIncludeProperty(HeaderedContentControl.HeaderProperty))
-        if (!object.Equals(HeaderedContentControl.HeaderProperty.GetDefaultValue(type), value.Header))
+        if (HeaderedContentControl.HeaderProperty.ShouldIncludeProperty(value, value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");
         }
-        if (value.ShouldIncludeProperty(HeaderedContentControl.HeaderTemplateProperty))
-        if (!object.Equals(HeaderedContentControl.HeaderTemplateProperty.GetDefaultValue(type), value.HeaderTemplate))
+        if (HeaderedContentControl.HeaderTemplateProperty.ShouldIncludeProperty(value, value.HeaderTemplate))
         {
             writer.WriteMember(value, value.HeaderTemplate, "HeaderTemplate");
         }

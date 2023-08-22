@@ -15,33 +15,27 @@ class GridSplitterConverter :
     public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
     {
         var type = typeof(GridSplitter);
-        if (value.ShouldIncludeProperty(GridSplitter.ResizeDirectionProperty))
-        if (!object.Equals(GridSplitter.ResizeDirectionProperty.GetDefaultValue(type), value.ResizeDirection))
+        if (GridSplitter.ResizeDirectionProperty.ShouldIncludeProperty(value, value.ResizeDirection))
         {
             writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
         }
-        if (value.ShouldIncludeProperty(GridSplitter.ResizeBehaviorProperty))
-        if (!object.Equals(GridSplitter.ResizeBehaviorProperty.GetDefaultValue(type), value.ResizeBehavior))
+        if (GridSplitter.ResizeBehaviorProperty.ShouldIncludeProperty(value, value.ResizeBehavior))
         {
             writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
         }
-        if (value.ShouldIncludeProperty(GridSplitter.ShowsPreviewProperty))
-        if (!object.Equals(GridSplitter.ShowsPreviewProperty.GetDefaultValue(type), value.ShowsPreview))
+        if (GridSplitter.ShowsPreviewProperty.ShouldIncludeProperty(value, value.ShowsPreview))
         {
             writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
         }
-        if (value.ShouldIncludeProperty(GridSplitter.KeyboardIncrementProperty))
-        if (!object.Equals(GridSplitter.KeyboardIncrementProperty.GetDefaultValue(type), value.KeyboardIncrement))
+        if (GridSplitter.KeyboardIncrementProperty.ShouldIncludeProperty(value, value.KeyboardIncrement))
         {
             writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
         }
-        if (value.ShouldIncludeProperty(GridSplitter.DragIncrementProperty))
-        if (!object.Equals(GridSplitter.DragIncrementProperty.GetDefaultValue(type), value.DragIncrement))
+        if (GridSplitter.DragIncrementProperty.ShouldIncludeProperty(value, value.DragIncrement))
         {
             writer.WriteMember(value, value.DragIncrement, "DragIncrement");
         }
-        if (value.ShouldIncludeProperty(GridSplitter.PreviewContentProperty))
-        if (!object.Equals(GridSplitter.PreviewContentProperty.GetDefaultValue(type), value.PreviewContent))
+        if (GridSplitter.PreviewContentProperty.ShouldIncludeProperty(value, value.PreviewContent))
         {
             writer.WriteMember(value, value.PreviewContent, "PreviewContent");
         }

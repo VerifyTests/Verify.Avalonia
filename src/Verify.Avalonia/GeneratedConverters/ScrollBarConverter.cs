@@ -15,38 +15,31 @@ class ScrollBarConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
         var type = typeof(ScrollBar);
-        if (value.ShouldIncludeProperty(ScrollBar.ViewportSizeProperty))
-        if (!object.Equals(ScrollBar.ViewportSizeProperty.GetDefaultValue(type), value.ViewportSize))
+        if (ScrollBar.ViewportSizeProperty.ShouldIncludeProperty(value, value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.VisibilityProperty))
-        if (!object.Equals(ScrollBar.VisibilityProperty.GetDefaultValue(type), value.Visibility))
+        if (ScrollBar.VisibilityProperty.ShouldIncludeProperty(value, value.Visibility))
         {
             writer.WriteMember(value, value.Visibility, "Visibility");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.OrientationProperty))
-        if (!object.Equals(ScrollBar.OrientationProperty.GetDefaultValue(type), value.Orientation))
+        if (ScrollBar.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.IsExpandedProperty))
-        if (!object.Equals(ScrollBar.IsExpandedProperty.GetUnsetValue(type), value.IsExpanded))
+        if (ScrollBar.IsExpandedProperty.ShouldIncludeProperty(value, value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.AllowAutoHideProperty))
-        if (!object.Equals(ScrollBar.AllowAutoHideProperty.GetDefaultValue(type), value.AllowAutoHide))
+        if (ScrollBar.AllowAutoHideProperty.ShouldIncludeProperty(value, value.AllowAutoHide))
         {
             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.HideDelayProperty))
-        if (!object.Equals(ScrollBar.HideDelayProperty.GetDefaultValue(type), value.HideDelay))
+        if (ScrollBar.HideDelayProperty.ShouldIncludeProperty(value, value.HideDelay))
         {
             writer.WriteMember(value, value.HideDelay, "HideDelay");
         }
-        if (value.ShouldIncludeProperty(ScrollBar.ShowDelayProperty))
-        if (!object.Equals(ScrollBar.ShowDelayProperty.GetDefaultValue(type), value.ShowDelay))
+        if (ScrollBar.ShowDelayProperty.ShouldIncludeProperty(value, value.ShowDelay))
         {
             writer.WriteMember(value, value.ShowDelay, "ShowDelay");
         }

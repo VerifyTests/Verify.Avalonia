@@ -15,13 +15,11 @@ class DecoratorConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Decorator value)
     {
         var type = typeof(Decorator);
-        if (value.ShouldIncludeProperty(Decorator.ChildProperty))
-        if (!object.Equals(Decorator.ChildProperty.GetDefaultValue(type), value.Child))
+        if (Decorator.ChildProperty.ShouldIncludeProperty(value, value.Child))
         {
             writer.WriteMember(value, value.Child, "Child");
         }
-        if (value.ShouldIncludeProperty(Decorator.PaddingProperty))
-        if (!object.Equals(Decorator.PaddingProperty.GetDefaultValue(type), value.Padding))
+        if (Decorator.PaddingProperty.ShouldIncludeProperty(value, value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }

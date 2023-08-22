@@ -15,53 +15,43 @@ class InputElementConverter :
     public static void WriteMembers(VerifyJsonWriter writer, InputElement value)
     {
         var type = typeof(InputElement);
-        if (value.ShouldIncludeProperty(InputElement.FocusableProperty))
-        if (!object.Equals(InputElement.FocusableProperty.GetDefaultValue(type), value.Focusable))
+        if (InputElement.FocusableProperty.ShouldIncludeProperty(value, value.Focusable))
         {
             writer.WriteMember(value, value.Focusable, "Focusable");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsEnabledProperty))
-        if (!object.Equals(InputElement.IsEnabledProperty.GetDefaultValue(type), value.IsEnabled))
+        if (InputElement.IsEnabledProperty.ShouldIncludeProperty(value, value.IsEnabled))
         {
             writer.WriteMember(value, value.IsEnabled, "IsEnabled");
         }
-        if (value.ShouldIncludeProperty(InputElement.CursorProperty))
-        if (!object.Equals(InputElement.CursorProperty.GetDefaultValue(type), value.Cursor))
+        if (InputElement.CursorProperty.ShouldIncludeProperty(value, value.Cursor))
         {
             writer.WriteMember(value, value.Cursor, "Cursor");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsKeyboardFocusWithinProperty))
-        if (!object.Equals(InputElement.IsKeyboardFocusWithinProperty.GetUnsetValue(type), value.IsKeyboardFocusWithin))
+        if (InputElement.IsKeyboardFocusWithinProperty.ShouldIncludeProperty(value, value.IsKeyboardFocusWithin))
         {
             writer.WriteMember(value, value.IsKeyboardFocusWithin, "IsKeyboardFocusWithin");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsFocusedProperty))
-        if (!object.Equals(InputElement.IsFocusedProperty.GetUnsetValue(type), value.IsFocused))
+        if (InputElement.IsFocusedProperty.ShouldIncludeProperty(value, value.IsFocused))
         {
             writer.WriteMember(value, value.IsFocused, "IsFocused");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsHitTestVisibleProperty))
-        if (!object.Equals(InputElement.IsHitTestVisibleProperty.GetDefaultValue(type), value.IsHitTestVisible))
+        if (InputElement.IsHitTestVisibleProperty.ShouldIncludeProperty(value, value.IsHitTestVisible))
         {
             writer.WriteMember(value, value.IsHitTestVisible, "IsHitTestVisible");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsPointerOverProperty))
-        if (!object.Equals(InputElement.IsPointerOverProperty.GetUnsetValue(type), value.IsPointerOver))
+        if (InputElement.IsPointerOverProperty.ShouldIncludeProperty(value, value.IsPointerOver))
         {
             writer.WriteMember(value, value.IsPointerOver, "IsPointerOver");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsTabStopProperty))
-        if (!object.Equals(InputElement.IsTabStopProperty.GetDefaultValue(type), value.IsTabStop))
+        if (InputElement.IsTabStopProperty.ShouldIncludeProperty(value, value.IsTabStop))
         {
             writer.WriteMember(value, value.IsTabStop, "IsTabStop");
         }
-        if (value.ShouldIncludeProperty(InputElement.IsEffectivelyEnabledProperty))
-        if (!object.Equals(InputElement.IsEffectivelyEnabledProperty.GetUnsetValue(type), value.IsEffectivelyEnabled))
+        if (InputElement.IsEffectivelyEnabledProperty.ShouldIncludeProperty(value, value.IsEffectivelyEnabled))
         {
             writer.WriteMember(value, value.IsEffectivelyEnabled, "IsEffectivelyEnabled");
         }
-        if (value.ShouldIncludeProperty(InputElement.TabIndexProperty))
-        if (!object.Equals(InputElement.TabIndexProperty.GetDefaultValue(type), value.TabIndex))
+        if (InputElement.TabIndexProperty.ShouldIncludeProperty(value, value.TabIndex))
         {
             writer.WriteMember(value, value.TabIndex, "TabIndex");
         }

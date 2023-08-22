@@ -16,8 +16,7 @@ class OverlayPopupHostConverter :
     {
         var type = typeof(OverlayPopupHost);
         writer.WriteMember(value, value.HostedVisualTreeRoot, "HostedVisualTreeRoot");
-        if (value.ShouldIncludeProperty(OverlayPopupHost.TransformProperty))
-        if (!object.Equals(OverlayPopupHost.TransformProperty.GetDefaultValue(type), value.Transform))
+        if (OverlayPopupHost.TransformProperty.ShouldIncludeProperty(value, value.Transform))
         {
             writer.WriteMember(value, value.Transform, "Transform");
         }

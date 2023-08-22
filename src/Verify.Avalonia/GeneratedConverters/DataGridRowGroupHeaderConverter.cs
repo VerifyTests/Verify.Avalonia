@@ -15,23 +15,19 @@ class DataGridRowGroupHeaderConverter :
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRowGroupHeader value)
     {
         var type = typeof(DataGridRowGroupHeader);
-        if (value.ShouldIncludeProperty(DataGridRowGroupHeader.IsItemCountVisibleProperty))
-        if (!object.Equals(DataGridRowGroupHeader.IsItemCountVisibleProperty.GetDefaultValue(type), value.IsItemCountVisible))
+        if (DataGridRowGroupHeader.IsItemCountVisibleProperty.ShouldIncludeProperty(value, value.IsItemCountVisible))
         {
             writer.WriteMember(value, value.IsItemCountVisible, "IsItemCountVisible");
         }
-        if (value.ShouldIncludeProperty(DataGridRowGroupHeader.PropertyNameProperty))
-        if (!object.Equals(DataGridRowGroupHeader.PropertyNameProperty.GetDefaultValue(type), value.PropertyName))
+        if (DataGridRowGroupHeader.PropertyNameProperty.ShouldIncludeProperty(value, value.PropertyName))
         {
             writer.WriteMember(value, value.PropertyName, "PropertyName");
         }
-        if (value.ShouldIncludeProperty(DataGridRowGroupHeader.IsPropertyNameVisibleProperty))
-        if (!object.Equals(DataGridRowGroupHeader.IsPropertyNameVisibleProperty.GetDefaultValue(type), value.IsPropertyNameVisible))
+        if (DataGridRowGroupHeader.IsPropertyNameVisibleProperty.ShouldIncludeProperty(value, value.IsPropertyNameVisible))
         {
             writer.WriteMember(value, value.IsPropertyNameVisible, "IsPropertyNameVisible");
         }
-        if (value.ShouldIncludeProperty(DataGridRowGroupHeader.SublevelIndentProperty))
-        if (!object.Equals(DataGridRowGroupHeader.SublevelIndentProperty.GetDefaultValue(type), value.SublevelIndent))
+        if (DataGridRowGroupHeader.SublevelIndentProperty.ShouldIncludeProperty(value, value.SublevelIndent))
         {
             writer.WriteMember(value, value.SublevelIndent, "SublevelIndent");
         }

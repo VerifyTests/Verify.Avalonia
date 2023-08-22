@@ -15,18 +15,15 @@ class SplitButtonConverter :
     public static void WriteMembers(VerifyJsonWriter writer, SplitButton value)
     {
         var type = typeof(SplitButton);
-        if (value.ShouldIncludeProperty(SplitButton.CommandProperty))
-        if (!object.Equals(SplitButton.CommandProperty.GetDefaultValue(type), value.Command))
+        if (SplitButton.CommandProperty.ShouldIncludeProperty(value, value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");
         }
-        if (value.ShouldIncludeProperty(SplitButton.CommandParameterProperty))
-        if (!object.Equals(SplitButton.CommandParameterProperty.GetDefaultValue(type), value.CommandParameter))
+        if (SplitButton.CommandParameterProperty.ShouldIncludeProperty(value, value.CommandParameter))
         {
             writer.WriteMember(value, value.CommandParameter, "CommandParameter");
         }
-        if (value.ShouldIncludeProperty(SplitButton.FlyoutProperty))
-        if (!object.Equals(SplitButton.FlyoutProperty.GetDefaultValue(type), value.Flyout))
+        if (SplitButton.FlyoutProperty.ShouldIncludeProperty(value, value.Flyout))
         {
             writer.WriteMember(value, value.Flyout, "Flyout");
         }

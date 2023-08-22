@@ -15,39 +15,32 @@ class MenuItemConverter :
     public static void WriteMembers(VerifyJsonWriter writer, MenuItem value)
     {
         var type = typeof(MenuItem);
-        if (value.ShouldIncludeProperty(MenuItem.CommandProperty))
-        if (!object.Equals(MenuItem.CommandProperty.GetDefaultValue(type), value.Command))
+        if (MenuItem.CommandProperty.ShouldIncludeProperty(value, value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");
         }
-        if (value.ShouldIncludeProperty(MenuItem.HotKeyProperty))
-        if (!object.Equals(MenuItem.HotKeyProperty.GetDefaultValue(type), value.HotKey))
+        if (MenuItem.HotKeyProperty.ShouldIncludeProperty(value, value.HotKey))
         {
             writer.WriteMember(value, value.HotKey, "HotKey");
         }
-        if (value.ShouldIncludeProperty(MenuItem.CommandParameterProperty))
-        if (!object.Equals(MenuItem.CommandParameterProperty.GetDefaultValue(type), value.CommandParameter))
+        if (MenuItem.CommandParameterProperty.ShouldIncludeProperty(value, value.CommandParameter))
         {
             writer.WriteMember(value, value.CommandParameter, "CommandParameter");
         }
-        if (value.ShouldIncludeProperty(MenuItem.IconProperty))
-        if (!object.Equals(MenuItem.IconProperty.GetDefaultValue(type), value.Icon))
+        if (MenuItem.IconProperty.ShouldIncludeProperty(value, value.Icon))
         {
             writer.WriteMember(value, value.Icon, "Icon");
         }
-        if (value.ShouldIncludeProperty(MenuItem.InputGestureProperty))
-        if (!object.Equals(MenuItem.InputGestureProperty.GetDefaultValue(type), value.InputGesture))
+        if (MenuItem.InputGestureProperty.ShouldIncludeProperty(value, value.InputGesture))
         {
             writer.WriteMember(value, value.InputGesture, "InputGesture");
         }
         writer.WriteMember(value, value.IsSelected, "IsSelected");
-        if (value.ShouldIncludeProperty(MenuItem.IsSubMenuOpenProperty))
-        if (!object.Equals(MenuItem.IsSubMenuOpenProperty.GetDefaultValue(type), value.IsSubMenuOpen))
+        if (MenuItem.IsSubMenuOpenProperty.ShouldIncludeProperty(value, value.IsSubMenuOpen))
         {
             writer.WriteMember(value, value.IsSubMenuOpen, "IsSubMenuOpen");
         }
-        if (value.ShouldIncludeProperty(MenuItem.StaysOpenOnClickProperty))
-        if (!object.Equals(MenuItem.StaysOpenOnClickProperty.GetDefaultValue(type), value.StaysOpenOnClick))
+        if (MenuItem.StaysOpenOnClickProperty.ShouldIncludeProperty(value, value.StaysOpenOnClick))
         {
             writer.WriteMember(value, value.StaysOpenOnClick, "StaysOpenOnClick");
         }

@@ -15,8 +15,7 @@ class PathIconConverter :
     public static void WriteMembers(VerifyJsonWriter writer, PathIcon value)
     {
         var type = typeof(PathIcon);
-        if (value.ShouldIncludeProperty(PathIcon.DataProperty))
-        if (!object.Equals(PathIcon.DataProperty.GetDefaultValue(type), value.Data))
+        if (PathIcon.DataProperty.ShouldIncludeProperty(value, value.Data))
         {
             writer.WriteMember(value, value.Data, "Data");
         }

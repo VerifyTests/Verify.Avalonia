@@ -15,89 +15,72 @@ class AutoCompleteBoxConverter :
     public static void WriteMembers(VerifyJsonWriter writer, AutoCompleteBox value)
     {
         var type = typeof(AutoCompleteBox);
-        if (value.ShouldIncludeProperty(AutoCompleteBox.MinimumPrefixLengthProperty))
-        if (!object.Equals(AutoCompleteBox.MinimumPrefixLengthProperty.GetDefaultValue(type), value.MinimumPrefixLength))
+        if (AutoCompleteBox.MinimumPrefixLengthProperty.ShouldIncludeProperty(value, value.MinimumPrefixLength))
         {
             writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.IsTextCompletionEnabledProperty))
-        if (!object.Equals(AutoCompleteBox.IsTextCompletionEnabledProperty.GetDefaultValue(type), value.IsTextCompletionEnabled))
+        if (AutoCompleteBox.IsTextCompletionEnabledProperty.ShouldIncludeProperty(value, value.IsTextCompletionEnabled))
         {
             writer.WriteMember(value, value.IsTextCompletionEnabled, "IsTextCompletionEnabled");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.ItemTemplateProperty))
-        if (!object.Equals(AutoCompleteBox.ItemTemplateProperty.GetDefaultValue(type), value.ItemTemplate))
+        if (AutoCompleteBox.ItemTemplateProperty.ShouldIncludeProperty(value, value.ItemTemplate))
         {
             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.MinimumPopulateDelayProperty))
-        if (!object.Equals(AutoCompleteBox.MinimumPopulateDelayProperty.GetDefaultValue(type), value.MinimumPopulateDelay))
+        if (AutoCompleteBox.MinimumPopulateDelayProperty.ShouldIncludeProperty(value, value.MinimumPopulateDelay))
         {
             writer.WriteMember(value, value.MinimumPopulateDelay, "MinimumPopulateDelay");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.MaxDropDownHeightProperty))
-        if (!object.Equals(AutoCompleteBox.MaxDropDownHeightProperty.GetDefaultValue(type), value.MaxDropDownHeight))
+        if (AutoCompleteBox.MaxDropDownHeightProperty.ShouldIncludeProperty(value, value.MaxDropDownHeight))
         {
             writer.WriteMember(value, value.MaxDropDownHeight, "MaxDropDownHeight");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.IsDropDownOpenProperty))
-        if (!object.Equals(AutoCompleteBox.IsDropDownOpenProperty.GetDefaultValue(type), value.IsDropDownOpen))
+        if (AutoCompleteBox.IsDropDownOpenProperty.ShouldIncludeProperty(value, value.IsDropDownOpen))
         {
             writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
         }
         writer.WriteMember(value, value.ValueMemberBinding, "ValueMemberBinding");
-        if (value.ShouldIncludeProperty(AutoCompleteBox.SelectedItemProperty))
-        if (!object.Equals(AutoCompleteBox.SelectedItemProperty.GetDefaultValue(type), value.SelectedItem))
+        if (AutoCompleteBox.SelectedItemProperty.ShouldIncludeProperty(value, value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.TextProperty))
-        if (!object.Equals(AutoCompleteBox.TextProperty.GetDefaultValue(type), value.Text))
+        if (AutoCompleteBox.TextProperty.ShouldIncludeProperty(value, value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.SearchTextProperty))
-        if (!object.Equals(AutoCompleteBox.SearchTextProperty.GetUnsetValue(type), value.SearchText))
+        if (AutoCompleteBox.SearchTextProperty.ShouldIncludeProperty(value, value.SearchText))
         {
             writer.WriteMember(value, value.SearchText, "SearchText");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.FilterModeProperty))
-        if (!object.Equals(AutoCompleteBox.FilterModeProperty.GetDefaultValue(type), value.FilterMode))
+        if (AutoCompleteBox.FilterModeProperty.ShouldIncludeProperty(value, value.FilterMode))
         {
             writer.WriteMember(value, value.FilterMode, "FilterMode");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.WatermarkProperty))
-        if (!object.Equals(AutoCompleteBox.WatermarkProperty.GetDefaultValue(type), value.Watermark))
+        if (AutoCompleteBox.WatermarkProperty.ShouldIncludeProperty(value, value.Watermark))
         {
             writer.WriteMember(value, value.Watermark, "Watermark");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.ItemFilterProperty))
-        if (!object.Equals(AutoCompleteBox.ItemFilterProperty.GetDefaultValue(type), value.ItemFilter))
+        if (AutoCompleteBox.ItemFilterProperty.ShouldIncludeProperty(value, value.ItemFilter))
         {
             writer.WriteMember(value, value.ItemFilter, "ItemFilter");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.TextFilterProperty))
-        if (!object.Equals(AutoCompleteBox.TextFilterProperty.GetDefaultValue(type), value.TextFilter))
+        if (AutoCompleteBox.TextFilterProperty.ShouldIncludeProperty(value, value.TextFilter))
         {
             writer.WriteMember(value, value.TextFilter, "TextFilter");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.ItemSelectorProperty))
-        if (!object.Equals(AutoCompleteBox.ItemSelectorProperty.GetDefaultValue(type), value.ItemSelector))
+        if (AutoCompleteBox.ItemSelectorProperty.ShouldIncludeProperty(value, value.ItemSelector))
         {
             writer.WriteMember(value, value.ItemSelector, "ItemSelector");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.TextSelectorProperty))
-        if (!object.Equals(AutoCompleteBox.TextSelectorProperty.GetDefaultValue(type), value.TextSelector))
+        if (AutoCompleteBox.TextSelectorProperty.ShouldIncludeProperty(value, value.TextSelector))
         {
             writer.WriteMember(value, value.TextSelector, "TextSelector");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.AsyncPopulatorProperty))
-        if (!object.Equals(AutoCompleteBox.AsyncPopulatorProperty.GetDefaultValue(type), value.AsyncPopulator))
+        if (AutoCompleteBox.AsyncPopulatorProperty.ShouldIncludeProperty(value, value.AsyncPopulator))
         {
             writer.WriteMember(value, value.AsyncPopulator, "AsyncPopulator");
         }
-        if (value.ShouldIncludeProperty(AutoCompleteBox.ItemsSourceProperty))
-        if (!object.Equals(AutoCompleteBox.ItemsSourceProperty.GetDefaultValue(type), value.ItemsSource))
+        if (AutoCompleteBox.ItemsSourceProperty.ShouldIncludeProperty(value, value.ItemsSource))
         {
             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
         }

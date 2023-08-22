@@ -16,78 +16,63 @@ class WindowConverter :
     {
         var type = typeof(Window);
         writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
-        if (value.ShouldIncludeProperty(Window.SizeToContentProperty))
-        if (!object.Equals(Window.SizeToContentProperty.GetDefaultValue(type), value.SizeToContent))
+        if (Window.SizeToContentProperty.ShouldIncludeProperty(value, value.SizeToContent))
         {
             writer.WriteMember(value, value.SizeToContent, "SizeToContent");
         }
-        if (value.ShouldIncludeProperty(Window.TitleProperty))
-        if (!object.Equals(Window.TitleProperty.GetDefaultValue(type), value.Title))
+        if (Window.TitleProperty.ShouldIncludeProperty(value, value.Title))
         {
             writer.WriteMember(value, value.Title, "Title");
         }
-        if (value.ShouldIncludeProperty(Window.ExtendClientAreaToDecorationsHintProperty))
-        if (!object.Equals(Window.ExtendClientAreaToDecorationsHintProperty.GetDefaultValue(type), value.ExtendClientAreaToDecorationsHint))
+        if (Window.ExtendClientAreaToDecorationsHintProperty.ShouldIncludeProperty(value, value.ExtendClientAreaToDecorationsHint))
         {
             writer.WriteMember(value, value.ExtendClientAreaToDecorationsHint, "ExtendClientAreaToDecorationsHint");
         }
-        if (value.ShouldIncludeProperty(Window.ExtendClientAreaChromeHintsProperty))
-        if (!object.Equals(Window.ExtendClientAreaChromeHintsProperty.GetDefaultValue(type), value.ExtendClientAreaChromeHints))
+        if (Window.ExtendClientAreaChromeHintsProperty.ShouldIncludeProperty(value, value.ExtendClientAreaChromeHints))
         {
             writer.WriteMember(value, value.ExtendClientAreaChromeHints, "ExtendClientAreaChromeHints");
         }
-        if (value.ShouldIncludeProperty(Window.ExtendClientAreaTitleBarHeightHintProperty))
-        if (!object.Equals(Window.ExtendClientAreaTitleBarHeightHintProperty.GetDefaultValue(type), value.ExtendClientAreaTitleBarHeightHint))
+        if (Window.ExtendClientAreaTitleBarHeightHintProperty.ShouldIncludeProperty(value, value.ExtendClientAreaTitleBarHeightHint))
         {
             writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
         }
-        if (value.ShouldIncludeProperty(Window.IsExtendedIntoWindowDecorationsProperty))
-        if (!object.Equals(Window.IsExtendedIntoWindowDecorationsProperty.GetUnsetValue(type), value.IsExtendedIntoWindowDecorations))
+        if (Window.IsExtendedIntoWindowDecorationsProperty.ShouldIncludeProperty(value, value.IsExtendedIntoWindowDecorations))
         {
             writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
         }
-        if (value.ShouldIncludeProperty(Window.WindowDecorationMarginProperty))
-        if (!object.Equals(Window.WindowDecorationMarginProperty.GetUnsetValue(type), value.WindowDecorationMargin))
+        if (Window.WindowDecorationMarginProperty.ShouldIncludeProperty(value, value.WindowDecorationMargin))
         {
             writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
         }
-        if (value.ShouldIncludeProperty(Window.OffScreenMarginProperty))
-        if (!object.Equals(Window.OffScreenMarginProperty.GetUnsetValue(type), value.OffScreenMargin))
+        if (Window.OffScreenMarginProperty.ShouldIncludeProperty(value, value.OffScreenMargin))
         {
             writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
         }
-        if (value.ShouldIncludeProperty(Window.SystemDecorationsProperty))
-        if (!object.Equals(Window.SystemDecorationsProperty.GetDefaultValue(type), value.SystemDecorations))
+        if (Window.SystemDecorationsProperty.ShouldIncludeProperty(value, value.SystemDecorations))
         {
             writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");
         }
-        if (value.ShouldIncludeProperty(Window.ShowActivatedProperty))
-        if (!object.Equals(Window.ShowActivatedProperty.GetDefaultValue(type), value.ShowActivated))
+        if (Window.ShowActivatedProperty.ShouldIncludeProperty(value, value.ShowActivated))
         {
             writer.WriteMember(value, value.ShowActivated, "ShowActivated");
         }
-        if (value.ShouldIncludeProperty(Window.ShowInTaskbarProperty))
-        if (!object.Equals(Window.ShowInTaskbarProperty.GetDefaultValue(type), value.ShowInTaskbar))
+        if (Window.ShowInTaskbarProperty.ShouldIncludeProperty(value, value.ShowInTaskbar))
         {
             writer.WriteMember(value, value.ShowInTaskbar, "ShowInTaskbar");
         }
-        if (value.ShouldIncludeProperty(Window.WindowStateProperty))
-        if (!object.Equals(Window.WindowStateProperty.GetDefaultValue(type), value.WindowState))
+        if (Window.WindowStateProperty.ShouldIncludeProperty(value, value.WindowState))
         {
             writer.WriteMember(value, value.WindowState, "WindowState");
         }
-        if (value.ShouldIncludeProperty(Window.CanResizeProperty))
-        if (!object.Equals(Window.CanResizeProperty.GetDefaultValue(type), value.CanResize))
+        if (Window.CanResizeProperty.ShouldIncludeProperty(value, value.CanResize))
         {
             writer.WriteMember(value, value.CanResize, "CanResize");
         }
-        if (value.ShouldIncludeProperty(Window.IconProperty))
-        if (!object.Equals(Window.IconProperty.GetDefaultValue(type), value.Icon))
+        if (Window.IconProperty.ShouldIncludeProperty(value, value.Icon))
         {
             writer.WriteMember(value, value.Icon, "Icon");
         }
-        if (value.ShouldIncludeProperty(Window.WindowStartupLocationProperty))
-        if (!object.Equals(Window.WindowStartupLocationProperty.GetDefaultValue(type), value.WindowStartupLocation))
+        if (Window.WindowStartupLocationProperty.ShouldIncludeProperty(value, value.WindowStartupLocation))
         {
             writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");
         }

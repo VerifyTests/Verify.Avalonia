@@ -16,8 +16,7 @@ class PanelConverter :
     {
         var type = typeof(Panel);
         writer.WriteMember(value, value.Children, "Children");
-        if (value.ShouldIncludeProperty(Panel.BackgroundProperty))
-        if (!object.Equals(Panel.BackgroundProperty.GetDefaultValue(type), value.Background))
+        if (Panel.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }

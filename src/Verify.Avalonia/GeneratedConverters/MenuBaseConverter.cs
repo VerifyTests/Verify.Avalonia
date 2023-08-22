@@ -15,8 +15,7 @@ class MenuBaseConverter :
     public static void WriteMembers(VerifyJsonWriter writer, MenuBase value)
     {
         var type = typeof(MenuBase);
-        if (value.ShouldIncludeProperty(MenuBase.IsOpenProperty))
-        if (!object.Equals(MenuBase.IsOpenProperty.GetUnsetValue(type), value.IsOpen))
+        if (MenuBase.IsOpenProperty.ShouldIncludeProperty(value, value.IsOpen))
         {
             writer.WriteMember(value, value.IsOpen, "IsOpen");
         }

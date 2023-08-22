@@ -16,23 +16,19 @@ class TreeViewConverter :
     {
         var type = typeof(TreeView);
         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
-        if (value.ShouldIncludeProperty(TreeView.AutoScrollToSelectedItemProperty))
-        if (!object.Equals(TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(type), value.AutoScrollToSelectedItem))
+        if (TreeView.AutoScrollToSelectedItemProperty.ShouldIncludeProperty(value, value.AutoScrollToSelectedItem))
         {
             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
         }
-        if (value.ShouldIncludeProperty(TreeView.SelectionModeProperty))
-        if (!object.Equals(TreeView.SelectionModeProperty.GetDefaultValue(type), value.SelectionMode))
+        if (TreeView.SelectionModeProperty.ShouldIncludeProperty(value, value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }
-        if (value.ShouldIncludeProperty(TreeView.SelectedItemProperty))
-        if (!object.Equals(TreeView.SelectedItemProperty.GetUnsetValue(type), value.SelectedItem))
+        if (TreeView.SelectedItemProperty.ShouldIncludeProperty(value, value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
         }
-        if (value.ShouldIncludeProperty(TreeView.SelectedItemsProperty))
-        if (!object.Equals(TreeView.SelectedItemsProperty.GetUnsetValue(type), value.SelectedItems))
+        if (TreeView.SelectedItemsProperty.ShouldIncludeProperty(value, value.SelectedItems))
         {
             writer.WriteMember(value, value.SelectedItems, "SelectedItems");
         }

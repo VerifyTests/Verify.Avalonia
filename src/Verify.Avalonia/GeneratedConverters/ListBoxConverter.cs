@@ -15,23 +15,19 @@ class ListBoxConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ListBox value)
     {
         var type = typeof(ListBox);
-        if (value.ShouldIncludeProperty(ListBox.ScrollProperty))
-        if (!object.Equals(ListBox.ScrollProperty.GetUnsetValue(type), value.Scroll))
+        if (ListBox.ScrollProperty.ShouldIncludeProperty(value, value.Scroll))
         {
             writer.WriteMember(value, value.Scroll, "Scroll");
         }
-        if (value.ShouldIncludeProperty(ListBox.SelectedItemsProperty))
-        if (!object.Equals(ListBox.SelectedItemsProperty.GetUnsetValue(type), value.SelectedItems))
+        if (ListBox.SelectedItemsProperty.ShouldIncludeProperty(value, value.SelectedItems))
         {
             writer.WriteMember(value, value.SelectedItems, "SelectedItems");
         }
-        if (value.ShouldIncludeProperty(ListBox.SelectionProperty))
-        if (!object.Equals(ListBox.SelectionProperty.GetUnsetValue(type), value.Selection))
+        if (ListBox.SelectionProperty.ShouldIncludeProperty(value, value.Selection))
         {
             writer.WriteMember(value, value.Selection, "Selection");
         }
-        if (value.ShouldIncludeProperty(ListBox.SelectionModeProperty))
-        if (!object.Equals(ListBox.SelectionModeProperty.GetDefaultValue(type), value.SelectionMode))
+        if (ListBox.SelectionModeProperty.ShouldIncludeProperty(value, value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }

@@ -15,13 +15,11 @@ class ToggleButtonConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ToggleButton value)
     {
         var type = typeof(ToggleButton);
-        if (value.ShouldIncludeProperty(ToggleButton.IsCheckedProperty))
-        if (!object.Equals(ToggleButton.IsCheckedProperty.GetDefaultValue(type), value.IsChecked))
+        if (ToggleButton.IsCheckedProperty.ShouldIncludeProperty(value, value.IsChecked))
         {
             writer.WriteMember(value, value.IsChecked, "IsChecked");
         }
-        if (value.ShouldIncludeProperty(ToggleButton.IsThreeStateProperty))
-        if (!object.Equals(ToggleButton.IsThreeStateProperty.GetDefaultValue(type), value.IsThreeState))
+        if (ToggleButton.IsThreeStateProperty.ShouldIncludeProperty(value, value.IsThreeState))
         {
             writer.WriteMember(value, value.IsThreeState, "IsThreeState");
         }

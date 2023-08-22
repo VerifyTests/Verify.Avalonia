@@ -15,25 +15,21 @@ class ControlConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Control value)
     {
         var type = typeof(Control);
-        if (value.ShouldIncludeProperty(Control.FocusAdornerProperty))
-        if (!object.Equals(Control.FocusAdornerProperty.GetDefaultValue(type), value.FocusAdorner))
+        if (Control.FocusAdornerProperty.ShouldIncludeProperty(value, value.FocusAdorner))
         {
             writer.WriteMember(value, value.FocusAdorner, "FocusAdorner");
         }
         writer.WriteMember(value, value.DataTemplates, "DataTemplates");
-        if (value.ShouldIncludeProperty(Control.ContextMenuProperty))
-        if (!object.Equals(Control.ContextMenuProperty.GetDefaultValue(type), value.ContextMenu))
+        if (Control.ContextMenuProperty.ShouldIncludeProperty(value, value.ContextMenu))
         {
             writer.WriteMember(value, value.ContextMenu, "ContextMenu");
         }
-        if (value.ShouldIncludeProperty(Control.ContextFlyoutProperty))
-        if (!object.Equals(Control.ContextFlyoutProperty.GetDefaultValue(type), value.ContextFlyout))
+        if (Control.ContextFlyoutProperty.ShouldIncludeProperty(value, value.ContextFlyout))
         {
             writer.WriteMember(value, value.ContextFlyout, "ContextFlyout");
         }
         writer.WriteMember(value, value.IsLoaded, "IsLoaded");
-        if (value.ShouldIncludeProperty(Control.TagProperty))
-        if (!object.Equals(Control.TagProperty.GetDefaultValue(type), value.Tag))
+        if (Control.TagProperty.ShouldIncludeProperty(value, value.Tag))
         {
             writer.WriteMember(value, value.Tag, "Tag");
         }

@@ -15,13 +15,11 @@ class RectangleConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Rectangle value)
     {
         var type = typeof(Rectangle);
-        if (value.ShouldIncludeProperty(Rectangle.RadiusXProperty))
-        if (!object.Equals(Rectangle.RadiusXProperty.GetDefaultValue(type), value.RadiusX))
+        if (Rectangle.RadiusXProperty.ShouldIncludeProperty(value, value.RadiusX))
         {
             writer.WriteMember(value, value.RadiusX, "RadiusX");
         }
-        if (value.ShouldIncludeProperty(Rectangle.RadiusYProperty))
-        if (!object.Equals(Rectangle.RadiusYProperty.GetDefaultValue(type), value.RadiusY))
+        if (Rectangle.RadiusYProperty.ShouldIncludeProperty(value, value.RadiusY))
         {
             writer.WriteMember(value, value.RadiusY, "RadiusY");
         }

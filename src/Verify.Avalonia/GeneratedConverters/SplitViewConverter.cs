@@ -15,53 +15,43 @@ class SplitViewConverter :
     public static void WriteMembers(VerifyJsonWriter writer, SplitView value)
     {
         var type = typeof(SplitView);
-        if (value.ShouldIncludeProperty(SplitView.CompactPaneLengthProperty))
-        if (!object.Equals(SplitView.CompactPaneLengthProperty.GetDefaultValue(type), value.CompactPaneLength))
+        if (SplitView.CompactPaneLengthProperty.ShouldIncludeProperty(value, value.CompactPaneLength))
         {
             writer.WriteMember(value, value.CompactPaneLength, "CompactPaneLength");
         }
-        if (value.ShouldIncludeProperty(SplitView.DisplayModeProperty))
-        if (!object.Equals(SplitView.DisplayModeProperty.GetDefaultValue(type), value.DisplayMode))
+        if (SplitView.DisplayModeProperty.ShouldIncludeProperty(value, value.DisplayMode))
         {
             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
         }
-        if (value.ShouldIncludeProperty(SplitView.IsPaneOpenProperty))
-        if (!object.Equals(SplitView.IsPaneOpenProperty.GetDefaultValue(type), value.IsPaneOpen))
+        if (SplitView.IsPaneOpenProperty.ShouldIncludeProperty(value, value.IsPaneOpen))
         {
             writer.WriteMember(value, value.IsPaneOpen, "IsPaneOpen");
         }
-        if (value.ShouldIncludeProperty(SplitView.OpenPaneLengthProperty))
-        if (!object.Equals(SplitView.OpenPaneLengthProperty.GetDefaultValue(type), value.OpenPaneLength))
+        if (SplitView.OpenPaneLengthProperty.ShouldIncludeProperty(value, value.OpenPaneLength))
         {
             writer.WriteMember(value, value.OpenPaneLength, "OpenPaneLength");
         }
-        if (value.ShouldIncludeProperty(SplitView.PaneBackgroundProperty))
-        if (!object.Equals(SplitView.PaneBackgroundProperty.GetDefaultValue(type), value.PaneBackground))
+        if (SplitView.PaneBackgroundProperty.ShouldIncludeProperty(value, value.PaneBackground))
         {
             writer.WriteMember(value, value.PaneBackground, "PaneBackground");
         }
-        if (value.ShouldIncludeProperty(SplitView.PanePlacementProperty))
-        if (!object.Equals(SplitView.PanePlacementProperty.GetDefaultValue(type), value.PanePlacement))
+        if (SplitView.PanePlacementProperty.ShouldIncludeProperty(value, value.PanePlacement))
         {
             writer.WriteMember(value, value.PanePlacement, "PanePlacement");
         }
-        if (value.ShouldIncludeProperty(SplitView.PaneProperty))
-        if (!object.Equals(SplitView.PaneProperty.GetDefaultValue(type), value.Pane))
+        if (SplitView.PaneProperty.ShouldIncludeProperty(value, value.Pane))
         {
             writer.WriteMember(value, value.Pane, "Pane");
         }
-        if (value.ShouldIncludeProperty(SplitView.PaneTemplateProperty))
-        if (!object.Equals(SplitView.PaneTemplateProperty.GetDefaultValue(type), value.PaneTemplate))
+        if (SplitView.PaneTemplateProperty.ShouldIncludeProperty(value, value.PaneTemplate))
         {
             writer.WriteMember(value, value.PaneTemplate, "PaneTemplate");
         }
-        if (value.ShouldIncludeProperty(SplitView.UseLightDismissOverlayModeProperty))
-        if (!object.Equals(SplitView.UseLightDismissOverlayModeProperty.GetDefaultValue(type), value.UseLightDismissOverlayMode))
+        if (SplitView.UseLightDismissOverlayModeProperty.ShouldIncludeProperty(value, value.UseLightDismissOverlayMode))
         {
             writer.WriteMember(value, value.UseLightDismissOverlayMode, "UseLightDismissOverlayMode");
         }
-        if (value.ShouldIncludeProperty(SplitView.TemplateSettingsProperty))
-        if (!object.Equals(SplitView.TemplateSettingsProperty.GetUnsetValue(type), value.TemplateSettings))
+        if (SplitView.TemplateSettingsProperty.ShouldIncludeProperty(value, value.TemplateSettings))
         {
             writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
         }

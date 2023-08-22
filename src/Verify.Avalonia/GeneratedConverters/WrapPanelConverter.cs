@@ -15,18 +15,15 @@ class WrapPanelConverter :
     public static void WriteMembers(VerifyJsonWriter writer, WrapPanel value)
     {
         var type = typeof(WrapPanel);
-        if (value.ShouldIncludeProperty(WrapPanel.OrientationProperty))
-        if (!object.Equals(WrapPanel.OrientationProperty.GetDefaultValue(type), value.Orientation))
+        if (WrapPanel.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
-        if (value.ShouldIncludeProperty(WrapPanel.ItemWidthProperty))
-        if (!object.Equals(WrapPanel.ItemWidthProperty.GetDefaultValue(type), value.ItemWidth))
+        if (WrapPanel.ItemWidthProperty.ShouldIncludeProperty(value, value.ItemWidth))
         {
             writer.WriteMember(value, value.ItemWidth, "ItemWidth");
         }
-        if (value.ShouldIncludeProperty(WrapPanel.ItemHeightProperty))
-        if (!object.Equals(WrapPanel.ItemHeightProperty.GetDefaultValue(type), value.ItemHeight))
+        if (WrapPanel.ItemHeightProperty.ShouldIncludeProperty(value, value.ItemHeight))
         {
             writer.WriteMember(value, value.ItemHeight, "ItemHeight");
         }

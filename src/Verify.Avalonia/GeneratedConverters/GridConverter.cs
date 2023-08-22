@@ -15,8 +15,7 @@ class GridConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Grid value)
     {
         var type = typeof(Grid);
-        if (value.ShouldIncludeProperty(Grid.ShowGridLinesProperty))
-        if (!object.Equals(Grid.ShowGridLinesProperty.GetDefaultValue(type), value.ShowGridLines))
+        if (Grid.ShowGridLinesProperty.ShouldIncludeProperty(value, value.ShowGridLines))
         {
             writer.WriteMember(value, value.ShowGridLines, "ShowGridLines");
         }

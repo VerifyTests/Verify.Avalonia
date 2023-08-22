@@ -15,89 +15,72 @@ class ScrollViewerConverter :
     public static void WriteMembers(VerifyJsonWriter writer, ScrollViewer value)
     {
         var type = typeof(ScrollViewer);
-        if (value.ShouldIncludeProperty(ScrollViewer.BringIntoViewOnFocusChangeProperty))
-        if (!object.Equals(ScrollViewer.BringIntoViewOnFocusChangeProperty.GetDefaultValue(type), value.BringIntoViewOnFocusChange))
+        if (ScrollViewer.BringIntoViewOnFocusChangeProperty.ShouldIncludeProperty(value, value.BringIntoViewOnFocusChange))
         {
             writer.WriteMember(value, value.BringIntoViewOnFocusChange, "BringIntoViewOnFocusChange");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.ExtentProperty))
-        if (!object.Equals(ScrollViewer.ExtentProperty.GetUnsetValue(type), value.Extent))
+        if (ScrollViewer.ExtentProperty.ShouldIncludeProperty(value, value.Extent))
         {
             writer.WriteMember(value, value.Extent, "Extent");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.OffsetProperty))
-        if (!object.Equals(ScrollViewer.OffsetProperty.GetDefaultValue(type), value.Offset))
+        if (ScrollViewer.OffsetProperty.ShouldIncludeProperty(value, value.Offset))
         {
             writer.WriteMember(value, value.Offset, "Offset");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.ViewportProperty))
-        if (!object.Equals(ScrollViewer.ViewportProperty.GetUnsetValue(type), value.Viewport))
+        if (ScrollViewer.ViewportProperty.ShouldIncludeProperty(value, value.Viewport))
         {
             writer.WriteMember(value, value.Viewport, "Viewport");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.LargeChangeProperty))
-        if (!object.Equals(ScrollViewer.LargeChangeProperty.GetUnsetValue(type), value.LargeChange))
+        if (ScrollViewer.LargeChangeProperty.ShouldIncludeProperty(value, value.LargeChange))
         {
             writer.WriteMember(value, value.LargeChange, "LargeChange");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.SmallChangeProperty))
-        if (!object.Equals(ScrollViewer.SmallChangeProperty.GetUnsetValue(type), value.SmallChange))
+        if (ScrollViewer.SmallChangeProperty.ShouldIncludeProperty(value, value.SmallChange))
         {
             writer.WriteMember(value, value.SmallChange, "SmallChange");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.HorizontalScrollBarVisibilityProperty))
-        if (!object.Equals(ScrollViewer.HorizontalScrollBarVisibilityProperty.GetDefaultValue(type), value.HorizontalScrollBarVisibility))
+        if (ScrollViewer.HorizontalScrollBarVisibilityProperty.ShouldIncludeProperty(value, value.HorizontalScrollBarVisibility))
         {
             writer.WriteMember(value, value.HorizontalScrollBarVisibility, "HorizontalScrollBarVisibility");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.VerticalScrollBarVisibilityProperty))
-        if (!object.Equals(ScrollViewer.VerticalScrollBarVisibilityProperty.GetDefaultValue(type), value.VerticalScrollBarVisibility))
+        if (ScrollViewer.VerticalScrollBarVisibilityProperty.ShouldIncludeProperty(value, value.VerticalScrollBarVisibility))
         {
             writer.WriteMember(value, value.VerticalScrollBarVisibility, "VerticalScrollBarVisibility");
         }
         writer.WriteMember(value, value.CurrentAnchor, "CurrentAnchor");
-        if (value.ShouldIncludeProperty(ScrollViewer.ScrollBarMaximumProperty))
-        if (!object.Equals(ScrollViewer.ScrollBarMaximumProperty.GetUnsetValue(type), value.ScrollBarMaximum))
+        if (ScrollViewer.ScrollBarMaximumProperty.ShouldIncludeProperty(value, value.ScrollBarMaximum))
         {
             writer.WriteMember(value, value.ScrollBarMaximum, "ScrollBarMaximum");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.IsExpandedProperty))
-        if (!object.Equals(ScrollViewer.IsExpandedProperty.GetUnsetValue(type), value.IsExpanded))
+        if (ScrollViewer.IsExpandedProperty.ShouldIncludeProperty(value, value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.HorizontalSnapPointsTypeProperty))
-        if (!object.Equals(ScrollViewer.HorizontalSnapPointsTypeProperty.GetDefaultValue(type), value.HorizontalSnapPointsType))
+        if (ScrollViewer.HorizontalSnapPointsTypeProperty.ShouldIncludeProperty(value, value.HorizontalSnapPointsType))
         {
             writer.WriteMember(value, value.HorizontalSnapPointsType, "HorizontalSnapPointsType");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.VerticalSnapPointsTypeProperty))
-        if (!object.Equals(ScrollViewer.VerticalSnapPointsTypeProperty.GetDefaultValue(type), value.VerticalSnapPointsType))
+        if (ScrollViewer.VerticalSnapPointsTypeProperty.ShouldIncludeProperty(value, value.VerticalSnapPointsType))
         {
             writer.WriteMember(value, value.VerticalSnapPointsType, "VerticalSnapPointsType");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.HorizontalSnapPointsAlignmentProperty))
-        if (!object.Equals(ScrollViewer.HorizontalSnapPointsAlignmentProperty.GetDefaultValue(type), value.HorizontalSnapPointsAlignment))
+        if (ScrollViewer.HorizontalSnapPointsAlignmentProperty.ShouldIncludeProperty(value, value.HorizontalSnapPointsAlignment))
         {
             writer.WriteMember(value, value.HorizontalSnapPointsAlignment, "HorizontalSnapPointsAlignment");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.VerticalSnapPointsAlignmentProperty))
-        if (!object.Equals(ScrollViewer.VerticalSnapPointsAlignmentProperty.GetDefaultValue(type), value.VerticalSnapPointsAlignment))
+        if (ScrollViewer.VerticalSnapPointsAlignmentProperty.ShouldIncludeProperty(value, value.VerticalSnapPointsAlignment))
         {
             writer.WriteMember(value, value.VerticalSnapPointsAlignment, "VerticalSnapPointsAlignment");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.AllowAutoHideProperty))
-        if (!object.Equals(ScrollViewer.AllowAutoHideProperty.GetDefaultValue(type), value.AllowAutoHide))
+        if (ScrollViewer.AllowAutoHideProperty.ShouldIncludeProperty(value, value.AllowAutoHide))
         {
             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.IsScrollChainingEnabledProperty))
-        if (!object.Equals(ScrollViewer.IsScrollChainingEnabledProperty.GetDefaultValue(type), value.IsScrollChainingEnabled))
+        if (ScrollViewer.IsScrollChainingEnabledProperty.ShouldIncludeProperty(value, value.IsScrollChainingEnabled))
         {
             writer.WriteMember(value, value.IsScrollChainingEnabled, "IsScrollChainingEnabled");
         }
-        if (value.ShouldIncludeProperty(ScrollViewer.IsScrollInertiaEnabledProperty))
-        if (!object.Equals(ScrollViewer.IsScrollInertiaEnabledProperty.GetDefaultValue(type), value.IsScrollInertiaEnabled))
+        if (ScrollViewer.IsScrollInertiaEnabledProperty.ShouldIncludeProperty(value, value.IsScrollInertiaEnabled))
         {
             writer.WriteMember(value, value.IsScrollInertiaEnabled, "IsScrollInertiaEnabled");
         }

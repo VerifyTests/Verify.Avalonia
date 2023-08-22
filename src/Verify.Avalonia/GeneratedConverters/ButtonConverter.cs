@@ -15,43 +15,35 @@ class ButtonConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Button value)
     {
         var type = typeof(Button);
-        if (value.ShouldIncludeProperty(Button.ClickModeProperty))
-        if (!object.Equals(Button.ClickModeProperty.GetDefaultValue(type), value.ClickMode))
+        if (Button.ClickModeProperty.ShouldIncludeProperty(value, value.ClickMode))
         {
             writer.WriteMember(value, value.ClickMode, "ClickMode");
         }
-        if (value.ShouldIncludeProperty(Button.CommandProperty))
-        if (!object.Equals(Button.CommandProperty.GetDefaultValue(type), value.Command))
+        if (Button.CommandProperty.ShouldIncludeProperty(value, value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");
         }
-        if (value.ShouldIncludeProperty(Button.HotKeyProperty))
-        if (!object.Equals(Button.HotKeyProperty.GetDefaultValue(type), value.HotKey))
+        if (Button.HotKeyProperty.ShouldIncludeProperty(value, value.HotKey))
         {
             writer.WriteMember(value, value.HotKey, "HotKey");
         }
-        if (value.ShouldIncludeProperty(Button.CommandParameterProperty))
-        if (!object.Equals(Button.CommandParameterProperty.GetDefaultValue(type), value.CommandParameter))
+        if (Button.CommandParameterProperty.ShouldIncludeProperty(value, value.CommandParameter))
         {
             writer.WriteMember(value, value.CommandParameter, "CommandParameter");
         }
-        if (value.ShouldIncludeProperty(Button.IsDefaultProperty))
-        if (!object.Equals(Button.IsDefaultProperty.GetDefaultValue(type), value.IsDefault))
+        if (Button.IsDefaultProperty.ShouldIncludeProperty(value, value.IsDefault))
         {
             writer.WriteMember(value, value.IsDefault, "IsDefault");
         }
-        if (value.ShouldIncludeProperty(Button.IsCancelProperty))
-        if (!object.Equals(Button.IsCancelProperty.GetDefaultValue(type), value.IsCancel))
+        if (Button.IsCancelProperty.ShouldIncludeProperty(value, value.IsCancel))
         {
             writer.WriteMember(value, value.IsCancel, "IsCancel");
         }
-        if (value.ShouldIncludeProperty(Button.IsPressedProperty))
-        if (!object.Equals(Button.IsPressedProperty.GetUnsetValue(type), value.IsPressed))
+        if (Button.IsPressedProperty.ShouldIncludeProperty(value, value.IsPressed))
         {
             writer.WriteMember(value, value.IsPressed, "IsPressed");
         }
-        if (value.ShouldIncludeProperty(Button.FlyoutProperty))
-        if (!object.Equals(Button.FlyoutProperty.GetDefaultValue(type), value.Flyout))
+        if (Button.FlyoutProperty.ShouldIncludeProperty(value, value.Flyout))
         {
             writer.WriteMember(value, value.Flyout, "Flyout");
         }

@@ -15,8 +15,7 @@ class PopupRootConverter :
     public static void WriteMembers(VerifyJsonWriter writer, PopupRoot value)
     {
         var type = typeof(PopupRoot);
-        if (value.ShouldIncludeProperty(PopupRoot.TransformProperty))
-        if (!object.Equals(PopupRoot.TransformProperty.GetDefaultValue(type), value.Transform))
+        if (PopupRoot.TransformProperty.ShouldIncludeProperty(value, value.Transform))
         {
             writer.WriteMember(value, value.Transform, "Transform");
         }

@@ -16,8 +16,7 @@ class AccessTextConverter :
     {
         var type = typeof(AccessText);
         writer.WriteMember(value, value.AccessKey, "AccessKey");
-        if (value.ShouldIncludeProperty(AccessText.ShowAccessKeyProperty))
-        if (!object.Equals(AccessText.ShowAccessKeyProperty.GetDefaultValue(type), value.ShowAccessKey))
+        if (AccessText.ShowAccessKeyProperty.ShouldIncludeProperty(value, value.ShowAccessKey))
         {
             writer.WriteMember(value, value.ShowAccessKey, "ShowAccessKey");
         }

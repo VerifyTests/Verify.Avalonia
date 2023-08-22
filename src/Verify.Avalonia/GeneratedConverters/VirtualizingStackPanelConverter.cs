@@ -15,18 +15,15 @@ class VirtualizingStackPanelConverter :
     public static void WriteMembers(VerifyJsonWriter writer, VirtualizingStackPanel value)
     {
         var type = typeof(VirtualizingStackPanel);
-        if (value.ShouldIncludeProperty(VirtualizingStackPanel.OrientationProperty))
-        if (!object.Equals(VirtualizingStackPanel.OrientationProperty.GetDefaultValue(type), value.Orientation))
+        if (VirtualizingStackPanel.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
-        if (value.ShouldIncludeProperty(VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty))
-        if (!object.Equals(VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(type), value.AreHorizontalSnapPointsRegular))
+        if (VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty.ShouldIncludeProperty(value, value.AreHorizontalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
         }
-        if (value.ShouldIncludeProperty(VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty))
-        if (!object.Equals(VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(type), value.AreVerticalSnapPointsRegular))
+        if (VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty.ShouldIncludeProperty(value, value.AreVerticalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
         }

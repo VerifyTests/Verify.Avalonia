@@ -15,13 +15,11 @@ class HeaderedSelectingItemsControlConverter :
     public static void WriteMembers(VerifyJsonWriter writer, HeaderedSelectingItemsControl value)
     {
         var type = typeof(HeaderedSelectingItemsControl);
-        if (value.ShouldIncludeProperty(HeaderedSelectingItemsControl.HeaderProperty))
-        if (!object.Equals(HeaderedSelectingItemsControl.HeaderProperty.GetDefaultValue(type), value.Header))
+        if (HeaderedSelectingItemsControl.HeaderProperty.ShouldIncludeProperty(value, value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");
         }
-        if (value.ShouldIncludeProperty(HeaderedSelectingItemsControl.HeaderTemplateProperty))
-        if (!object.Equals(HeaderedSelectingItemsControl.HeaderTemplateProperty.GetDefaultValue(type), value.HeaderTemplate))
+        if (HeaderedSelectingItemsControl.HeaderTemplateProperty.ShouldIncludeProperty(value, value.HeaderTemplate))
         {
             writer.WriteMember(value, value.HeaderTemplate, "HeaderTemplate");
         }

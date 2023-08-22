@@ -15,13 +15,11 @@ class DataGridRowHeaderConverter :
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRowHeader value)
     {
         var type = typeof(DataGridRowHeader);
-        if (value.ShouldIncludeProperty(DataGridRowHeader.SeparatorBrushProperty))
-        if (!object.Equals(DataGridRowHeader.SeparatorBrushProperty.GetDefaultValue(type), value.SeparatorBrush))
+        if (DataGridRowHeader.SeparatorBrushProperty.ShouldIncludeProperty(value, value.SeparatorBrush))
         {
             writer.WriteMember(value, value.SeparatorBrush, "SeparatorBrush");
         }
-        if (value.ShouldIncludeProperty(DataGridRowHeader.AreSeparatorsVisibleProperty))
-        if (!object.Equals(DataGridRowHeader.AreSeparatorsVisibleProperty.GetDefaultValue(type), value.AreSeparatorsVisible))
+        if (DataGridRowHeader.AreSeparatorsVisibleProperty.ShouldIncludeProperty(value, value.AreSeparatorsVisible))
         {
             writer.WriteMember(value, value.AreSeparatorsVisible, "AreSeparatorsVisible");
         }
