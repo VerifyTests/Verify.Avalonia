@@ -28,25 +28,41 @@
         Children: [
           {
             Type: Button,
-            Command: {},
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Add()
+            },
             Content: +,
             Name: AddButton
           },
           {
             Type: Button,
-            Command: {},
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Subtract()
+            },
             Content: -,
             Name: SubtractButton
           },
           {
             Type: Button,
-            Command: {},
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Multiply()
+            },
             Content: *,
             Name: MultiplyButton
           },
           {
             Type: Button,
-            Command: {},
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Divide()
+            },
             Content: /,
             Name: DivideButton
           }
@@ -78,9 +94,25 @@
     FirstOperand: 10.0,
     SecondOperand: 20.0,
     Result: 30,
-    AddCommand: {},
-    SubtractCommand: {},
-    MultiplyCommand: {},
-    DivideCommand: {}
+    AddCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Add()
+    },
+    SubtractCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Subtract()
+    },
+    MultiplyCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Multiply()
+    },
+    DivideCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Divide()
+    }
   }
 }

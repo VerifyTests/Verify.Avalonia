@@ -23,13 +23,22 @@ public class AvaloniaConverter<T> :
         {
             writer.WriteMember(value, value.GetType(), "Type");
         }
+
         foreach (var property in properties)
         {
             var diagnostic = value.GetDiagnostic(property);
-            if (diagnostic.Priority == BindingPriority.LocalValue)
+            if (diagnostic.Priority != BindingPriority.LocalValue)
             {
-                writer.WriteMember(value, diagnostic.Value, property.Name);
+                continue;
             }
+
+            if (property.Name == "Command")
+            {
+                
+                writer.WriteMember(value, diagnostic.Value, property.Name);
+                continue;
+            }
+            writer.WriteMember(value, diagnostic.Value, property.Name);
         }
 
         if (value is Panel panel)
