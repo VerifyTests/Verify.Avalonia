@@ -103,30 +103,9 @@ public class CalculatorTests
         Assert.Equal("30", window.ResultBox.Text);
         return Verify(window);
     }
-
-    [AvaloniaFact]
-    public Task Cannot_Divide_By_Zero()
-    {
-        var window = new MainWindow
-        {
-            DataContext = new MainWindowViewModel()
-        };
-
-        window.Show();
-
-        // Set values to the input boxes
-        window.SecondOperandInput.Text = "0";
-
-        // Raise click event on the button:
-        window.DivideButton.Focus();
-        window.KeyPress(Key.Enter, RawInputModifiers.None);
-
-        Assert.Equal("Cannot divide by zero!", window.ResultBox.Text);
-        return Verify(window);
-    }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L46' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -136,6 +115,127 @@ public class CalculatorTests
 
 <img src="/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png" width="250px">
 
-[Cannot_Divide_By_Zero.verified.verified.png](/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png):
-
-<img src="/src/XUnitTests/CalculatorTests.Cannot_Divide_By_Zero.verified.png" width="250px">
+<!-- snippet: XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt -->
+<a id='snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt'></a>
+```txt
+{
+  Type: MainWindow,
+  SizeToContent: WidthAndHeight,
+  Title: Simple Calculator,
+  Icon: {},
+  CanResize: false,
+  Content: {
+    Type: StackPanel,
+    Spacing: 10.0,
+    Margin: 10,
+    HorizontalAlignment: Left,
+    Children: [
+      {
+        Type: TextBox,
+        Text: 10,
+        Watermark: Operand 1,
+        Name: FirstOperandInput
+      },
+      {
+        Type: TextBox,
+        Text: 20,
+        Watermark: Operand 2,
+        Name: SecondOperandInput
+      },
+      {
+        Type: UniformGrid,
+        Columns: 4,
+        Children: [
+          {
+            Type: Button,
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Add()
+            },
+            Content: +,
+            Name: AddButton
+          },
+          {
+            Type: Button,
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Subtract()
+            },
+            Content: -,
+            Name: SubtractButton
+          },
+          {
+            Type: Button,
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Multiply()
+            },
+            Content: *,
+            Name: MultiplyButton
+          },
+          {
+            Type: Button,
+            Command: {
+              Type: Action,
+              Target: MainWindowViewModel,
+              Method: Void Divide()
+            },
+            Content: /,
+            Name: DivideButton
+          }
+        ]
+      },
+      {
+        Type: StackPanel,
+        Spacing: 10.0,
+        Orientation: Horizontal,
+        Children: [
+          {
+            Type: TextBlock,
+            Text: Result:
+          },
+          {
+            Type: TextBlock,
+            Text: 30,
+            Name: ResultBox
+          }
+        ]
+      }
+    ]
+  },
+  Background: LightGray,
+  Width: 300.0,
+  Height: 185.0,
+  IsVisible: true,
+  DataContext: {
+    FirstOperand: 10.0,
+    SecondOperand: 20.0,
+    Result: 30,
+    AddCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Add()
+    },
+    SubtractCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Subtract()
+    },
+    MultiplyCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Multiply()
+    },
+    DivideCommand: {
+      Type: Action,
+      Target: MainWindowViewModel,
+      Method: Void Divide()
+    }
+  }
+}
+```
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
