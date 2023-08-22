@@ -1,0 +1,1848 @@
+﻿{
+  FirstOperandInput: {
+    SelectionBrush: #ff0078d7,
+    CaretBrush: Black,
+    Text: 10,
+    SelectedText: ,
+    Watermark: Operand 1,
+    CanPaste: true,
+    CanUndo: true,
+    Background: #66ffffff,
+    BorderBrush: #99000000,
+    BorderThickness: 1,1,1,1,
+    CornerRadius: 3,3,3,3,
+    FontFamily: Inter,
+    FontSize: 14.0,
+    Foreground: Black,
+    Padding: 10,6,6,5
+  },
+  SecondOperandInput: {
+    SelectionBrush: #ff0078d7,
+    CaretBrush: Black,
+    Text: 20,
+    SelectedText: ,
+    Watermark: Operand 2,
+    CanPaste: true,
+    CanUndo: true,
+    Background: #66ffffff,
+    BorderBrush: #99000000,
+    BorderThickness: 1,1,1,1,
+    CornerRadius: 3,3,3,3,
+    FontFamily: Inter,
+    FontSize: 14.0,
+    Foreground: Black,
+    Padding: 10,6,6,5
+  },
+  AddButton: {
+    Command: {},
+    Content: +,
+    Presenter: {
+      Background: #ff0078d7,
+      BorderBrush: Transparent,
+      BorderThickness: 1,1,1,1,
+      CornerRadius: 3,3,3,3,
+      Foreground: White,
+      FontFamily: Inter,
+      FontSize: 14.0,
+      Child: {
+        AccessKey: "\u0000",
+        TextLayout: {
+          LineHeight: "NaN",
+          MaxWidth: 11.0,
+          MaxHeight: 19.0,
+          TextLines: [
+            {
+              TextRuns: [
+                {
+                  IsReversed: false,
+                  ShapedBuffer: [
+                    {
+                      GlyphIndex: 14,
+                      GlyphAdvance: 9.5771484375
+                    }
+                  ],
+                  Text: {
+                    Length: 1,
+                    IsEmpty: false
+                  },
+                  Properties: {
+                    Typeface: {
+                      FontFamily: Inter,
+                      Weight: Normal,
+                      Stretch: Normal,
+                      GlyphTypeface: {
+                        Face: {
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          IsImmutable: true,
+                          Handle: {}
+                        },
+                        Font: {
+                          OpenTypeMetrics: {},
+                          SupportedShapers: [
+                            ot,
+                            fallback
+                          ],
+                          Handle: {}
+                        },
+                        SKFont: {
+                          ForceAutoHinting: false,
+                          EmbeddedBitmaps: false,
+                          Subpixel: true,
+                          LinearMetrics: true,
+                          Embolden: false,
+                          BaselineSnap: true,
+                          Edging: SubpixelAntialias,
+                          Hinting: Full,
+                          Typeface: {
+                            FamilyName: Segoe UI,
+                            FontStyle: {
+                              Weight: 400,
+                              Width: 5,
+                              Handle: {}
+                            },
+                            FontWeight: 400,
+                            FontWidth: 5,
+                            IsBold: false,
+                            IsItalic: false,
+                            IsFixedPitch: false,
+                            UnitsPerEm: 2048,
+                            GlyphCount: 5390,
+                            TableCount: 24,
+                            Handle: {}
+                          },
+                          Size: 14.0,
+                          ScaleX: 1.0,
+                          Spacing: 18.621094,
+                          Metrics: {
+                            Top: -18.176758,
+                            Ascent: -15.107422,
+                            Descent: 3.5136719,
+                            Bottom: 5.7558594,
+                            MaxCharacterWidth: 36.004883,
+                            XMin: -8.018555,
+                            XMax: 27.986328,
+                            XHeight: 7.0,
+                            CapHeight: 9.802734,
+                            UnderlineThickness: 0.81347656,
+                            UnderlinePosition: 1.2167969,
+                            StrikeoutThickness: 0.6972656,
+                            StrikeoutPosition: -3.6230469
+                          },
+                          Handle: {}
+                        },
+                        Metrics: {
+                          DesignEmHeight: 2048,
+                          IsFixedPitch: false,
+                          Ascent: -2210,
+                          Descent: 514,
+                          LineSpacing: 2724,
+                          UnderlinePosition: 178,
+                          UnderlineThickness: 119,
+                          StrikethroughPosition: -530,
+                          StrikethroughThickness: 102
+                        },
+                        GlyphCount: 5390,
+                        FamilyName: Segoe UI,
+                        Weight: Normal,
+                        Stretch: Normal
+                      }
+                    },
+                    FontRenderingEmSize: 14.0,
+                    ForegroundBrush: White,
+                    BaselineAlignment: Baseline
+                  },
+                  Length: 1,
+                  TextMetrics: {
+                    FontRenderingEmSize: 14.0,
+                    Ascent: -15.107421875,
+                    Descent: 3.513671875,
+                    LineHeight: 18.62109375,
+                    UnderlineThickness: 0.8134765625,
+                    UnderlinePosition: 1.216796875,
+                    StrikethroughThickness: 0.697265625,
+                    StrikethroughPosition: -3.623046875
+                  },
+                  Baseline: 15.107421875,
+                  Size: {
+                    AspectRatio: 0.51431718061674,
+                    Width: 9.5771484375,
+                    Height: 18.62109375
+                  },
+                  GlyphRun: {
+                    GlyphTypeface: {
+                      Face: {
+                        UnitsPerEm: 2048,
+                        GlyphCount: 5390,
+                        IsImmutable: true,
+                        Handle: {}
+                      },
+                      Font: {
+                        OpenTypeMetrics: {},
+                        SupportedShapers: [
+                          ot,
+                          fallback
+                        ],
+                        Handle: {}
+                      },
+                      SKFont: {
+                        ForceAutoHinting: false,
+                        EmbeddedBitmaps: false,
+                        Subpixel: true,
+                        LinearMetrics: true,
+                        Embolden: false,
+                        BaselineSnap: true,
+                        Edging: SubpixelAntialias,
+                        Hinting: Full,
+                        Typeface: {
+                          FamilyName: Segoe UI,
+                          FontStyle: {
+                            Weight: 400,
+                            Width: 5,
+                            Handle: {}
+                          },
+                          FontWeight: 400,
+                          FontWidth: 5,
+                          IsBold: false,
+                          IsItalic: false,
+                          IsFixedPitch: false,
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          TableCount: 24,
+                          Handle: {}
+                        },
+                        Size: 14.0,
+                        ScaleX: 1.0,
+                        Spacing: 18.621094,
+                        Metrics: {
+                          Top: -18.176758,
+                          Ascent: -15.107422,
+                          Descent: 3.5136719,
+                          Bottom: 5.7558594,
+                          MaxCharacterWidth: 36.004883,
+                          XMin: -8.018555,
+                          XMax: 27.986328,
+                          XHeight: 7.0,
+                          CapHeight: 9.802734,
+                          UnderlineThickness: 0.81347656,
+                          UnderlinePosition: 1.2167969,
+                          StrikeoutThickness: 0.6972656,
+                          StrikeoutPosition: -3.6230469
+                        },
+                        Handle: {}
+                      },
+                      Metrics: {
+                        DesignEmHeight: 2048,
+                        IsFixedPitch: false,
+                        Ascent: -2210,
+                        Descent: 514,
+                        LineSpacing: 2724,
+                        UnderlinePosition: 178,
+                        UnderlineThickness: 119,
+                        StrikethroughPosition: -530,
+                        StrikethroughThickness: 102
+                      },
+                      GlyphCount: 5390,
+                      FamilyName: Segoe UI,
+                      Weight: Normal,
+                      Stretch: Normal
+                    },
+                    FontRenderingEmSize: 14.0,
+                    Bounds: {
+                      Width: 9.5771484375,
+                      Height: 18.62109375,
+                      Size: {
+                        AspectRatio: 0.51431718061674,
+                        Width: 9.5771484375,
+                        Height: 18.62109375
+                      },
+                      Right: 9.5771484375,
+                      Bottom: 18.62109375,
+                      TopRight: {
+                        X: 9.5771484375
+                      },
+                      BottomLeft: {
+                        Y: 18.62109375
+                      },
+                      BottomRight: {
+                        X: 9.5771484375,
+                        Y: 18.62109375
+                      },
+                      Center: {
+                        X: 4.78857421875,
+                        Y: 9.310546875
+                      }
+                    },
+                    InkBounds: {
+                      X: 1.0,
+                      Y: 7.107421875,
+                      Width: 7.0,
+                      Height: 7.0,
+                      Position: {
+                        X: 1.0,
+                        Y: 7.107421875
+                      },
+                      Size: {
+                        AspectRatio: 1.0,
+                        Width: 7.0,
+                        Height: 7.0
+                      },
+                      Right: 8.0,
+                      Bottom: 14.107421875,
+                      Left: 1.0,
+                      Top: 7.107421875,
+                      TopLeft: {
+                        X: 1.0,
+                        Y: 7.107421875
+                      },
+                      TopRight: {
+                        X: 8.0,
+                        Y: 7.107421875
+                      },
+                      BottomLeft: {
+                        X: 1.0,
+                        Y: 14.107421875
+                      },
+                      BottomRight: {
+                        X: 8.0,
+                        Y: 14.107421875
+                      },
+                      Center: {
+                        X: 4.5,
+                        Y: 10.607421875
+                      }
+                    },
+                    Metrics: {
+                      Baseline: 15.107421875,
+                      Width: 9.5771484375,
+                      WidthIncludingTrailingWhitespace: 9.5771484375,
+                      Height: 18.62109375
+                    },
+                    BaselineOrigin: {
+                      Y: 15.107421875
+                    },
+                    Characters: {
+                      Length: 1,
+                      IsEmpty: false
+                    },
+                    GlyphInfos: [
+                      {
+                        GlyphIndex: 14,
+                        GlyphAdvance: 9.5771484375
+                      }
+                    ],
+                    IsLeftToRight: true
+                  }
+                },
+                {
+                  Length: 1
+                }
+              ],
+              Length: 2,
+              TextLineBreak: {
+                TextEndOfLine: {
+                  Length: 1
+                },
+                IsSplit: false
+              },
+              HasCollapsed: false,
+              HasOverflowed: false,
+              Baseline: 15.107421875,
+              Extent: 7.0,
+              Height: 18.62109375,
+              OverhangLeading: 1.0,
+              Width: 9.5771484375,
+              WidthIncludingTrailingWhitespace: 9.5771484375
+            }
+          ],
+          Height: 18.62109375,
+          Extent: 7.0,
+          Baseline: 15.107421875,
+          OverhangLeading: 1.0,
+          Width: 9.5771484375,
+          WidthIncludingTrailingWhitespace: 9.5771484375
+        },
+        Text: +,
+        FontFamily: Inter,
+        FontSize: 14.0,
+        Foreground: White
+      },
+      Content: +,
+      HorizontalContentAlignment: Center,
+      Padding: 8,5,8,6,
+      RecognizesAccessKey: true,
+      IsLoaded: true
+    },
+    HorizontalContentAlignment: Center
+  },
+  SubtractButton: {
+    Command: {},
+    Content: -,
+    Presenter: {
+      Background: #ff0078d7,
+      BorderBrush: Transparent,
+      BorderThickness: 1,1,1,1,
+      CornerRadius: 3,3,3,3,
+      Foreground: White,
+      FontFamily: Inter,
+      FontSize: 14.0,
+      Child: {
+        AccessKey: "\u0000",
+        TextLayout: {
+          LineHeight: "NaN",
+          MaxWidth: 7.0,
+          MaxHeight: 19.0,
+          TextLines: [
+            {
+              TextRuns: [
+                {
+                  IsReversed: false,
+                  ShapedBuffer: [
+                    {
+                      GlyphIndex: 16,
+                      GlyphAdvance: 5.5986328125
+                    }
+                  ],
+                  Text: {
+                    Length: 1,
+                    IsEmpty: false
+                  },
+                  Properties: {
+                    Typeface: {
+                      FontFamily: Inter,
+                      Weight: Normal,
+                      Stretch: Normal,
+                      GlyphTypeface: {
+                        Face: {
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          IsImmutable: true,
+                          Handle: {}
+                        },
+                        Font: {
+                          OpenTypeMetrics: {},
+                          SupportedShapers: [
+                            ot,
+                            fallback
+                          ],
+                          Handle: {}
+                        },
+                        SKFont: {
+                          ForceAutoHinting: false,
+                          EmbeddedBitmaps: false,
+                          Subpixel: true,
+                          LinearMetrics: true,
+                          Embolden: false,
+                          BaselineSnap: true,
+                          Edging: SubpixelAntialias,
+                          Hinting: Full,
+                          Typeface: {
+                            FamilyName: Segoe UI,
+                            FontStyle: {
+                              Weight: 400,
+                              Width: 5,
+                              Handle: {}
+                            },
+                            FontWeight: 400,
+                            FontWidth: 5,
+                            IsBold: false,
+                            IsItalic: false,
+                            IsFixedPitch: false,
+                            UnitsPerEm: 2048,
+                            GlyphCount: 5390,
+                            TableCount: 24,
+                            Handle: {}
+                          },
+                          Size: 14.0,
+                          ScaleX: 1.0,
+                          Spacing: 18.621094,
+                          Metrics: {
+                            Top: -18.176758,
+                            Ascent: -15.107422,
+                            Descent: 3.5136719,
+                            Bottom: 5.7558594,
+                            MaxCharacterWidth: 36.004883,
+                            XMin: -8.018555,
+                            XMax: 27.986328,
+                            XHeight: 7.0,
+                            CapHeight: 9.802734,
+                            UnderlineThickness: 0.81347656,
+                            UnderlinePosition: 1.2167969,
+                            StrikeoutThickness: 0.6972656,
+                            StrikeoutPosition: -3.6230469
+                          },
+                          Handle: {}
+                        },
+                        Metrics: {
+                          DesignEmHeight: 2048,
+                          IsFixedPitch: false,
+                          Ascent: -2210,
+                          Descent: 514,
+                          LineSpacing: 2724,
+                          UnderlinePosition: 178,
+                          UnderlineThickness: 119,
+                          StrikethroughPosition: -530,
+                          StrikethroughThickness: 102
+                        },
+                        GlyphCount: 5390,
+                        FamilyName: Segoe UI,
+                        Weight: Normal,
+                        Stretch: Normal
+                      }
+                    },
+                    FontRenderingEmSize: 14.0,
+                    ForegroundBrush: White,
+                    BaselineAlignment: Baseline
+                  },
+                  Length: 1,
+                  TextMetrics: {
+                    FontRenderingEmSize: 14.0,
+                    Ascent: -15.107421875,
+                    Descent: 3.513671875,
+                    LineHeight: 18.62109375,
+                    UnderlineThickness: 0.8134765625,
+                    UnderlinePosition: 1.216796875,
+                    StrikethroughThickness: 0.697265625,
+                    StrikethroughPosition: -3.623046875
+                  },
+                  Baseline: 15.107421875,
+                  Size: {
+                    AspectRatio: 0.30066079295154186,
+                    Width: 5.5986328125,
+                    Height: 18.62109375
+                  },
+                  GlyphRun: {
+                    GlyphTypeface: {
+                      Face: {
+                        UnitsPerEm: 2048,
+                        GlyphCount: 5390,
+                        IsImmutable: true,
+                        Handle: {}
+                      },
+                      Font: {
+                        OpenTypeMetrics: {},
+                        SupportedShapers: [
+                          ot,
+                          fallback
+                        ],
+                        Handle: {}
+                      },
+                      SKFont: {
+                        ForceAutoHinting: false,
+                        EmbeddedBitmaps: false,
+                        Subpixel: true,
+                        LinearMetrics: true,
+                        Embolden: false,
+                        BaselineSnap: true,
+                        Edging: SubpixelAntialias,
+                        Hinting: Full,
+                        Typeface: {
+                          FamilyName: Segoe UI,
+                          FontStyle: {
+                            Weight: 400,
+                            Width: 5,
+                            Handle: {}
+                          },
+                          FontWeight: 400,
+                          FontWidth: 5,
+                          IsBold: false,
+                          IsItalic: false,
+                          IsFixedPitch: false,
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          TableCount: 24,
+                          Handle: {}
+                        },
+                        Size: 14.0,
+                        ScaleX: 1.0,
+                        Spacing: 18.621094,
+                        Metrics: {
+                          Top: -18.176758,
+                          Ascent: -15.107422,
+                          Descent: 3.5136719,
+                          Bottom: 5.7558594,
+                          MaxCharacterWidth: 36.004883,
+                          XMin: -8.018555,
+                          XMax: 27.986328,
+                          XHeight: 7.0,
+                          CapHeight: 9.802734,
+                          UnderlineThickness: 0.81347656,
+                          UnderlinePosition: 1.2167969,
+                          StrikeoutThickness: 0.6972656,
+                          StrikeoutPosition: -3.6230469
+                        },
+                        Handle: {}
+                      },
+                      Metrics: {
+                        DesignEmHeight: 2048,
+                        IsFixedPitch: false,
+                        Ascent: -2210,
+                        Descent: 514,
+                        LineSpacing: 2724,
+                        UnderlinePosition: 178,
+                        UnderlineThickness: 119,
+                        StrikethroughPosition: -530,
+                        StrikethroughThickness: 102
+                      },
+                      GlyphCount: 5390,
+                      FamilyName: Segoe UI,
+                      Weight: Normal,
+                      Stretch: Normal
+                    },
+                    FontRenderingEmSize: 14.0,
+                    Bounds: {
+                      Width: 5.5986328125,
+                      Height: 18.62109375,
+                      Size: {
+                        AspectRatio: 0.30066079295154186,
+                        Width: 5.5986328125,
+                        Height: 18.62109375
+                      },
+                      Right: 5.5986328125,
+                      Bottom: 18.62109375,
+                      TopRight: {
+                        X: 5.5986328125
+                      },
+                      BottomLeft: {
+                        Y: 18.62109375
+                      },
+                      BottomRight: {
+                        X: 5.5986328125,
+                        Y: 18.62109375
+                      },
+                      Center: {
+                        X: 2.79931640625,
+                        Y: 9.310546875
+                      }
+                    },
+                    InkBounds: {
+                      X: 1.0,
+                      Y: 11.107421875,
+                      Width: 4.0,
+                      Height: 1.0,
+                      Position: {
+                        X: 1.0,
+                        Y: 11.107421875
+                      },
+                      Size: {
+                        AspectRatio: 4.0,
+                        Width: 4.0,
+                        Height: 1.0
+                      },
+                      Right: 5.0,
+                      Bottom: 12.107421875,
+                      Left: 1.0,
+                      Top: 11.107421875,
+                      TopLeft: {
+                        X: 1.0,
+                        Y: 11.107421875
+                      },
+                      TopRight: {
+                        X: 5.0,
+                        Y: 11.107421875
+                      },
+                      BottomLeft: {
+                        X: 1.0,
+                        Y: 12.107421875
+                      },
+                      BottomRight: {
+                        X: 5.0,
+                        Y: 12.107421875
+                      },
+                      Center: {
+                        X: 3.0,
+                        Y: 11.607421875
+                      }
+                    },
+                    Metrics: {
+                      Baseline: 15.107421875,
+                      Width: 5.5986328125,
+                      WidthIncludingTrailingWhitespace: 5.5986328125,
+                      Height: 18.62109375
+                    },
+                    BaselineOrigin: {
+                      Y: 15.107421875
+                    },
+                    Characters: {
+                      Length: 1,
+                      IsEmpty: false
+                    },
+                    GlyphInfos: [
+                      {
+                        GlyphIndex: 16,
+                        GlyphAdvance: 5.5986328125
+                      }
+                    ],
+                    IsLeftToRight: true
+                  }
+                },
+                {
+                  Length: 1
+                }
+              ],
+              Length: 2,
+              TextLineBreak: {
+                TextEndOfLine: {
+                  Length: 1
+                },
+                IsSplit: false
+              },
+              HasCollapsed: false,
+              HasOverflowed: false,
+              Baseline: 15.107421875,
+              Extent: 1.0,
+              Height: 18.62109375,
+              OverhangLeading: 1.0,
+              Width: 5.5986328125,
+              WidthIncludingTrailingWhitespace: 5.5986328125
+            }
+          ],
+          Height: 18.62109375,
+          Extent: 1.0,
+          Baseline: 15.107421875,
+          OverhangLeading: 1.0,
+          Width: 5.5986328125,
+          WidthIncludingTrailingWhitespace: 5.5986328125
+        },
+        Text: -,
+        FontFamily: Inter,
+        FontSize: 14.0,
+        Foreground: White
+      },
+      Content: -,
+      HorizontalContentAlignment: Center,
+      Padding: 8,5,8,6,
+      RecognizesAccessKey: true,
+      IsLoaded: true
+    },
+    HorizontalContentAlignment: Center
+  },
+  MultiplyButton: {
+    Command: {},
+    Content: *,
+    Presenter: {
+      Background: #ff0078d7,
+      BorderBrush: Transparent,
+      BorderThickness: 1,1,1,1,
+      CornerRadius: 3,3,3,3,
+      Foreground: White,
+      FontFamily: Inter,
+      FontSize: 14.0,
+      Child: {
+        AccessKey: "\u0000",
+        TextLayout: {
+          LineHeight: "NaN",
+          MaxWidth: 6.0,
+          MaxHeight: 19.0,
+          TextLines: [
+            {
+              TextRuns: [
+                {
+                  IsReversed: false,
+                  ShapedBuffer: [
+                    {
+                      GlyphIndex: 13,
+                      GlyphAdvance: 5.837890625
+                    }
+                  ],
+                  Text: {
+                    Length: 1,
+                    IsEmpty: false
+                  },
+                  Properties: {
+                    Typeface: {
+                      FontFamily: Inter,
+                      Weight: Normal,
+                      Stretch: Normal,
+                      GlyphTypeface: {
+                        Face: {
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          IsImmutable: true,
+                          Handle: {}
+                        },
+                        Font: {
+                          OpenTypeMetrics: {},
+                          SupportedShapers: [
+                            ot,
+                            fallback
+                          ],
+                          Handle: {}
+                        },
+                        SKFont: {
+                          ForceAutoHinting: false,
+                          EmbeddedBitmaps: false,
+                          Subpixel: true,
+                          LinearMetrics: true,
+                          Embolden: false,
+                          BaselineSnap: true,
+                          Edging: SubpixelAntialias,
+                          Hinting: Full,
+                          Typeface: {
+                            FamilyName: Segoe UI,
+                            FontStyle: {
+                              Weight: 400,
+                              Width: 5,
+                              Handle: {}
+                            },
+                            FontWeight: 400,
+                            FontWidth: 5,
+                            IsBold: false,
+                            IsItalic: false,
+                            IsFixedPitch: false,
+                            UnitsPerEm: 2048,
+                            GlyphCount: 5390,
+                            TableCount: 24,
+                            Handle: {}
+                          },
+                          Size: 14.0,
+                          ScaleX: 1.0,
+                          Spacing: 18.621094,
+                          Metrics: {
+                            Top: -18.176758,
+                            Ascent: -15.107422,
+                            Descent: 3.5136719,
+                            Bottom: 5.7558594,
+                            MaxCharacterWidth: 36.004883,
+                            XMin: -8.018555,
+                            XMax: 27.986328,
+                            XHeight: 7.0,
+                            CapHeight: 9.802734,
+                            UnderlineThickness: 0.81347656,
+                            UnderlinePosition: 1.2167969,
+                            StrikeoutThickness: 0.6972656,
+                            StrikeoutPosition: -3.6230469
+                          },
+                          Handle: {}
+                        },
+                        Metrics: {
+                          DesignEmHeight: 2048,
+                          IsFixedPitch: false,
+                          Ascent: -2210,
+                          Descent: 514,
+                          LineSpacing: 2724,
+                          UnderlinePosition: 178,
+                          UnderlineThickness: 119,
+                          StrikethroughPosition: -530,
+                          StrikethroughThickness: 102
+                        },
+                        GlyphCount: 5390,
+                        FamilyName: Segoe UI,
+                        Weight: Normal,
+                        Stretch: Normal
+                      }
+                    },
+                    FontRenderingEmSize: 14.0,
+                    ForegroundBrush: White,
+                    BaselineAlignment: Baseline
+                  },
+                  Length: 1,
+                  TextMetrics: {
+                    FontRenderingEmSize: 14.0,
+                    Ascent: -15.107421875,
+                    Descent: 3.513671875,
+                    LineHeight: 18.62109375,
+                    UnderlineThickness: 0.8134765625,
+                    UnderlinePosition: 1.216796875,
+                    StrikethroughThickness: 0.697265625,
+                    StrikethroughPosition: -3.623046875
+                  },
+                  Baseline: 15.107421875,
+                  Size: {
+                    AspectRatio: 0.3135095447870778,
+                    Width: 5.837890625,
+                    Height: 18.62109375
+                  },
+                  GlyphRun: {
+                    GlyphTypeface: {
+                      Face: {
+                        UnitsPerEm: 2048,
+                        GlyphCount: 5390,
+                        IsImmutable: true,
+                        Handle: {}
+                      },
+                      Font: {
+                        OpenTypeMetrics: {},
+                        SupportedShapers: [
+                          ot,
+                          fallback
+                        ],
+                        Handle: {}
+                      },
+                      SKFont: {
+                        ForceAutoHinting: false,
+                        EmbeddedBitmaps: false,
+                        Subpixel: true,
+                        LinearMetrics: true,
+                        Embolden: false,
+                        BaselineSnap: true,
+                        Edging: SubpixelAntialias,
+                        Hinting: Full,
+                        Typeface: {
+                          FamilyName: Segoe UI,
+                          FontStyle: {
+                            Weight: 400,
+                            Width: 5,
+                            Handle: {}
+                          },
+                          FontWeight: 400,
+                          FontWidth: 5,
+                          IsBold: false,
+                          IsItalic: false,
+                          IsFixedPitch: false,
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          TableCount: 24,
+                          Handle: {}
+                        },
+                        Size: 14.0,
+                        ScaleX: 1.0,
+                        Spacing: 18.621094,
+                        Metrics: {
+                          Top: -18.176758,
+                          Ascent: -15.107422,
+                          Descent: 3.5136719,
+                          Bottom: 5.7558594,
+                          MaxCharacterWidth: 36.004883,
+                          XMin: -8.018555,
+                          XMax: 27.986328,
+                          XHeight: 7.0,
+                          CapHeight: 9.802734,
+                          UnderlineThickness: 0.81347656,
+                          UnderlinePosition: 1.2167969,
+                          StrikeoutThickness: 0.6972656,
+                          StrikeoutPosition: -3.6230469
+                        },
+                        Handle: {}
+                      },
+                      Metrics: {
+                        DesignEmHeight: 2048,
+                        IsFixedPitch: false,
+                        Ascent: -2210,
+                        Descent: 514,
+                        LineSpacing: 2724,
+                        UnderlinePosition: 178,
+                        UnderlineThickness: 119,
+                        StrikethroughPosition: -530,
+                        StrikethroughThickness: 102
+                      },
+                      GlyphCount: 5390,
+                      FamilyName: Segoe UI,
+                      Weight: Normal,
+                      Stretch: Normal
+                    },
+                    FontRenderingEmSize: 14.0,
+                    Bounds: {
+                      Width: 5.837890625,
+                      Height: 18.62109375,
+                      Size: {
+                        AspectRatio: 0.3135095447870778,
+                        Width: 5.837890625,
+                        Height: 18.62109375
+                      },
+                      Right: 5.837890625,
+                      Bottom: 18.62109375,
+                      TopRight: {
+                        X: 5.837890625
+                      },
+                      BottomLeft: {
+                        Y: 18.62109375
+                      },
+                      BottomRight: {
+                        X: 5.837890625,
+                        Y: 18.62109375
+                      },
+                      Center: {
+                        X: 2.9189453125,
+                        Y: 9.310546875
+                      }
+                    },
+                    InkBounds: {
+                      Y: 5.107421875,
+                      Width: 6.0,
+                      Height: 5.0,
+                      Position: {
+                        Y: 5.107421875
+                      },
+                      Size: {
+                        AspectRatio: 1.2,
+                        Width: 6.0,
+                        Height: 5.0
+                      },
+                      Right: 6.0,
+                      Bottom: 10.107421875,
+                      Top: 5.107421875,
+                      TopLeft: {
+                        Y: 5.107421875
+                      },
+                      TopRight: {
+                        X: 6.0,
+                        Y: 5.107421875
+                      },
+                      BottomLeft: {
+                        Y: 10.107421875
+                      },
+                      BottomRight: {
+                        X: 6.0,
+                        Y: 10.107421875
+                      },
+                      Center: {
+                        X: 3.0,
+                        Y: 7.607421875
+                      }
+                    },
+                    Metrics: {
+                      Baseline: 15.107421875,
+                      Width: 5.837890625,
+                      WidthIncludingTrailingWhitespace: 5.837890625,
+                      Height: 18.62109375
+                    },
+                    BaselineOrigin: {
+                      Y: 15.107421875
+                    },
+                    Characters: {
+                      Length: 1,
+                      IsEmpty: false
+                    },
+                    GlyphInfos: [
+                      {
+                        GlyphIndex: 13,
+                        GlyphAdvance: 5.837890625
+                      }
+                    ],
+                    IsLeftToRight: true
+                  }
+                },
+                {
+                  Length: 1
+                }
+              ],
+              Length: 2,
+              TextLineBreak: {
+                TextEndOfLine: {
+                  Length: 1
+                },
+                IsSplit: false
+              },
+              HasCollapsed: false,
+              HasOverflowed: false,
+              Baseline: 15.107421875,
+              Extent: 5.0,
+              Height: 18.62109375,
+              OverhangTrailing: 0.162109375,
+              Width: 5.837890625,
+              WidthIncludingTrailingWhitespace: 5.837890625
+            }
+          ],
+          Height: 18.62109375,
+          Extent: 5.0,
+          Baseline: 15.107421875,
+          OverhangTrailing: 0.162109375,
+          Width: 5.837890625,
+          WidthIncludingTrailingWhitespace: 5.837890625
+        },
+        Text: *,
+        FontFamily: Inter,
+        FontSize: 14.0,
+        Foreground: White
+      },
+      Content: *,
+      HorizontalContentAlignment: Center,
+      Padding: 8,5,8,6,
+      RecognizesAccessKey: true,
+      IsLoaded: true
+    },
+    HorizontalContentAlignment: Center
+  },
+  DivideButton: {
+    Command: {},
+    Content: /,
+    Presenter: {
+      Background: #ff0078d7,
+      BorderBrush: Transparent,
+      BorderThickness: 1,1,1,1,
+      CornerRadius: 3,3,3,3,
+      Foreground: White,
+      FontFamily: Inter,
+      FontSize: 14.0,
+      Child: {
+        AccessKey: "\u0000",
+        TextLayout: {
+          LineHeight: "NaN",
+          MaxWidth: 7.0,
+          MaxHeight: 19.0,
+          TextLines: [
+            {
+              TextRuns: [
+                {
+                  IsReversed: false,
+                  ShapedBuffer: [
+                    {
+                      GlyphIndex: 18,
+                      GlyphAdvance: 5.455078125
+                    }
+                  ],
+                  Text: {
+                    Length: 1,
+                    IsEmpty: false
+                  },
+                  Properties: {
+                    Typeface: {
+                      FontFamily: Inter,
+                      Weight: Normal,
+                      Stretch: Normal,
+                      GlyphTypeface: {
+                        Face: {
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          IsImmutable: true,
+                          Handle: {}
+                        },
+                        Font: {
+                          OpenTypeMetrics: {},
+                          SupportedShapers: [
+                            ot,
+                            fallback
+                          ],
+                          Handle: {}
+                        },
+                        SKFont: {
+                          ForceAutoHinting: false,
+                          EmbeddedBitmaps: false,
+                          Subpixel: true,
+                          LinearMetrics: true,
+                          Embolden: false,
+                          BaselineSnap: true,
+                          Edging: SubpixelAntialias,
+                          Hinting: Full,
+                          Typeface: {
+                            FamilyName: Segoe UI,
+                            FontStyle: {
+                              Weight: 400,
+                              Width: 5,
+                              Handle: {}
+                            },
+                            FontWeight: 400,
+                            FontWidth: 5,
+                            IsBold: false,
+                            IsItalic: false,
+                            IsFixedPitch: false,
+                            UnitsPerEm: 2048,
+                            GlyphCount: 5390,
+                            TableCount: 24,
+                            Handle: {}
+                          },
+                          Size: 14.0,
+                          ScaleX: 1.0,
+                          Spacing: 18.621094,
+                          Metrics: {
+                            Top: -18.176758,
+                            Ascent: -15.107422,
+                            Descent: 3.5136719,
+                            Bottom: 5.7558594,
+                            MaxCharacterWidth: 36.004883,
+                            XMin: -8.018555,
+                            XMax: 27.986328,
+                            XHeight: 7.0,
+                            CapHeight: 9.802734,
+                            UnderlineThickness: 0.81347656,
+                            UnderlinePosition: 1.2167969,
+                            StrikeoutThickness: 0.6972656,
+                            StrikeoutPosition: -3.6230469
+                          },
+                          Handle: {}
+                        },
+                        Metrics: {
+                          DesignEmHeight: 2048,
+                          IsFixedPitch: false,
+                          Ascent: -2210,
+                          Descent: 514,
+                          LineSpacing: 2724,
+                          UnderlinePosition: 178,
+                          UnderlineThickness: 119,
+                          StrikethroughPosition: -530,
+                          StrikethroughThickness: 102
+                        },
+                        GlyphCount: 5390,
+                        FamilyName: Segoe UI,
+                        Weight: Normal,
+                        Stretch: Normal
+                      }
+                    },
+                    FontRenderingEmSize: 14.0,
+                    ForegroundBrush: White,
+                    BaselineAlignment: Baseline
+                  },
+                  Length: 1,
+                  TextMetrics: {
+                    FontRenderingEmSize: 14.0,
+                    Ascent: -15.107421875,
+                    Descent: 3.513671875,
+                    LineHeight: 18.62109375,
+                    UnderlineThickness: 0.8134765625,
+                    UnderlinePosition: 1.216796875,
+                    StrikethroughThickness: 0.697265625,
+                    StrikethroughPosition: -3.623046875
+                  },
+                  Baseline: 15.107421875,
+                  Size: {
+                    AspectRatio: 0.29295154185022027,
+                    Width: 5.455078125,
+                    Height: 18.62109375
+                  },
+                  GlyphRun: {
+                    GlyphTypeface: {
+                      Face: {
+                        UnitsPerEm: 2048,
+                        GlyphCount: 5390,
+                        IsImmutable: true,
+                        Handle: {}
+                      },
+                      Font: {
+                        OpenTypeMetrics: {},
+                        SupportedShapers: [
+                          ot,
+                          fallback
+                        ],
+                        Handle: {}
+                      },
+                      SKFont: {
+                        ForceAutoHinting: false,
+                        EmbeddedBitmaps: false,
+                        Subpixel: true,
+                        LinearMetrics: true,
+                        Embolden: false,
+                        BaselineSnap: true,
+                        Edging: SubpixelAntialias,
+                        Hinting: Full,
+                        Typeface: {
+                          FamilyName: Segoe UI,
+                          FontStyle: {
+                            Weight: 400,
+                            Width: 5,
+                            Handle: {}
+                          },
+                          FontWeight: 400,
+                          FontWidth: 5,
+                          IsBold: false,
+                          IsItalic: false,
+                          IsFixedPitch: false,
+                          UnitsPerEm: 2048,
+                          GlyphCount: 5390,
+                          TableCount: 24,
+                          Handle: {}
+                        },
+                        Size: 14.0,
+                        ScaleX: 1.0,
+                        Spacing: 18.621094,
+                        Metrics: {
+                          Top: -18.176758,
+                          Ascent: -15.107422,
+                          Descent: 3.5136719,
+                          Bottom: 5.7558594,
+                          MaxCharacterWidth: 36.004883,
+                          XMin: -8.018555,
+                          XMax: 27.986328,
+                          XHeight: 7.0,
+                          CapHeight: 9.802734,
+                          UnderlineThickness: 0.81347656,
+                          UnderlinePosition: 1.2167969,
+                          StrikeoutThickness: 0.6972656,
+                          StrikeoutPosition: -3.6230469
+                        },
+                        Handle: {}
+                      },
+                      Metrics: {
+                        DesignEmHeight: 2048,
+                        IsFixedPitch: false,
+                        Ascent: -2210,
+                        Descent: 514,
+                        LineSpacing: 2724,
+                        UnderlinePosition: 178,
+                        UnderlineThickness: 119,
+                        StrikethroughPosition: -530,
+                        StrikethroughThickness: 102
+                      },
+                      GlyphCount: 5390,
+                      FamilyName: Segoe UI,
+                      Weight: Normal,
+                      Stretch: Normal
+                    },
+                    FontRenderingEmSize: 14.0,
+                    Bounds: {
+                      Width: 5.455078125,
+                      Height: 18.62109375,
+                      Size: {
+                        AspectRatio: 0.29295154185022027,
+                        Width: 5.455078125,
+                        Height: 18.62109375
+                      },
+                      Right: 5.455078125,
+                      Bottom: 18.62109375,
+                      TopRight: {
+                        X: 5.455078125
+                      },
+                      BottomLeft: {
+                        Y: 18.62109375
+                      },
+                      BottomRight: {
+                        X: 5.455078125,
+                        Y: 18.62109375
+                      },
+                      Center: {
+                        X: 2.7275390625,
+                        Y: 9.310546875
+                      }
+                    },
+                    InkBounds: {
+                      X: -1.0,
+                      Y: 5.107421875,
+                      Width: 7.0,
+                      Height: 12.0,
+                      Position: {
+                        X: -1.0,
+                        Y: 5.107421875
+                      },
+                      Size: {
+                        AspectRatio: 0.5833333333333334,
+                        Width: 7.0,
+                        Height: 12.0
+                      },
+                      Right: 6.0,
+                      Bottom: 17.107421875,
+                      Left: -1.0,
+                      Top: 5.107421875,
+                      TopLeft: {
+                        X: -1.0,
+                        Y: 5.107421875
+                      },
+                      TopRight: {
+                        X: 6.0,
+                        Y: 5.107421875
+                      },
+                      BottomLeft: {
+                        X: -1.0,
+                        Y: 17.107421875
+                      },
+                      BottomRight: {
+                        X: 6.0,
+                        Y: 17.107421875
+                      },
+                      Center: {
+                        X: 2.5,
+                        Y: 11.107421875
+                      }
+                    },
+                    Metrics: {
+                      Baseline: 15.107421875,
+                      Width: 5.455078125,
+                      WidthIncludingTrailingWhitespace: 5.455078125,
+                      Height: 18.62109375
+                    },
+                    BaselineOrigin: {
+                      Y: 15.107421875
+                    },
+                    Characters: {
+                      Length: 1,
+                      IsEmpty: false
+                    },
+                    GlyphInfos: [
+                      {
+                        GlyphIndex: 18,
+                        GlyphAdvance: 5.455078125
+                      }
+                    ],
+                    IsLeftToRight: true
+                  }
+                },
+                {
+                  Length: 1
+                }
+              ],
+              Length: 2,
+              TextLineBreak: {
+                TextEndOfLine: {
+                  Length: 1
+                },
+                IsSplit: false
+              },
+              HasCollapsed: false,
+              HasOverflowed: false,
+              Baseline: 15.107421875,
+              Extent: 12.0,
+              Height: 18.62109375,
+              OverhangTrailing: 1.544921875,
+              Width: 5.455078125,
+              WidthIncludingTrailingWhitespace: 5.455078125
+            }
+          ],
+          Height: 18.62109375,
+          Extent: 12.0,
+          Baseline: 15.107421875,
+          OverhangTrailing: 1.544921875,
+          Width: 5.455078125,
+          WidthIncludingTrailingWhitespace: 5.455078125
+        },
+        Text: /,
+        FontFamily: Inter,
+        FontSize: 14.0,
+        Foreground: White
+      },
+      Content: /,
+      HorizontalContentAlignment: Center,
+      Padding: 8,5,8,6,
+      RecognizesAccessKey: true,
+      IsLoaded: true
+    },
+    HorizontalContentAlignment: Center
+  },
+  ResultBox: {
+    TextLayout: {
+      LineHeight: "NaN",
+      MaxWidth: 16.0,
+      MaxHeight: 19.0,
+      TextLines: [
+        {
+          TextRuns: [
+            {
+              IsReversed: false,
+              ShapedBuffer: [
+                {
+                  GlyphIndex: 22,
+                  GlyphAdvance: 7.546875
+                },
+                {
+                  GlyphIndex: 19,
+                  GlyphCluster: 1,
+                  GlyphAdvance: 7.546875
+                }
+              ],
+              Text: {
+                Length: 2,
+                IsEmpty: false
+              },
+              Properties: {
+                Typeface: {
+                  FontFamily: Inter,
+                  Weight: Normal,
+                  Stretch: Normal,
+                  GlyphTypeface: {
+                    Face: {
+                      UnitsPerEm: 2048,
+                      GlyphCount: 5390,
+                      IsImmutable: true,
+                      Handle: {}
+                    },
+                    Font: {
+                      OpenTypeMetrics: {},
+                      SupportedShapers: [
+                        ot,
+                        fallback
+                      ],
+                      Handle: {}
+                    },
+                    SKFont: {
+                      ForceAutoHinting: false,
+                      EmbeddedBitmaps: false,
+                      Subpixel: true,
+                      LinearMetrics: true,
+                      Embolden: false,
+                      BaselineSnap: true,
+                      Edging: SubpixelAntialias,
+                      Hinting: Full,
+                      Typeface: {
+                        FamilyName: Segoe UI,
+                        FontStyle: {
+                          Weight: 400,
+                          Width: 5,
+                          Handle: {}
+                        },
+                        FontWeight: 400,
+                        FontWidth: 5,
+                        IsBold: false,
+                        IsItalic: false,
+                        IsFixedPitch: false,
+                        UnitsPerEm: 2048,
+                        GlyphCount: 5390,
+                        TableCount: 24,
+                        Handle: {}
+                      },
+                      Size: 14.0,
+                      ScaleX: 1.0,
+                      Spacing: 18.621094,
+                      Metrics: {
+                        Top: -18.176758,
+                        Ascent: -15.107422,
+                        Descent: 3.5136719,
+                        Bottom: 5.7558594,
+                        MaxCharacterWidth: 36.004883,
+                        XMin: -8.018555,
+                        XMax: 27.986328,
+                        XHeight: 7.0,
+                        CapHeight: 9.802734,
+                        UnderlineThickness: 0.81347656,
+                        UnderlinePosition: 1.2167969,
+                        StrikeoutThickness: 0.6972656,
+                        StrikeoutPosition: -3.6230469
+                      },
+                      Handle: {}
+                    },
+                    Metrics: {
+                      DesignEmHeight: 2048,
+                      IsFixedPitch: false,
+                      Ascent: -2210,
+                      Descent: 514,
+                      LineSpacing: 2724,
+                      UnderlinePosition: 178,
+                      UnderlineThickness: 119,
+                      StrikethroughPosition: -530,
+                      StrikethroughThickness: 102
+                    },
+                    GlyphCount: 5390,
+                    FamilyName: Segoe UI,
+                    Weight: Normal,
+                    Stretch: Normal
+                  }
+                },
+                FontRenderingEmSize: 14.0,
+                ForegroundBrush: Black,
+                BaselineAlignment: Baseline
+              },
+              Length: 2,
+              TextMetrics: {
+                FontRenderingEmSize: 14.0,
+                Ascent: -15.107421875,
+                Descent: 3.513671875,
+                LineHeight: 18.62109375,
+                UnderlineThickness: 0.8134765625,
+                UnderlinePosition: 1.216796875,
+                StrikethroughThickness: 0.697265625,
+                StrikethroughPosition: -3.623046875
+              },
+              Baseline: 15.107421875,
+              Size: {
+                AspectRatio: 0.8105726872246696,
+                Width: 15.09375,
+                Height: 18.62109375
+              },
+              GlyphRun: {
+                GlyphTypeface: {
+                  Face: {
+                    UnitsPerEm: 2048,
+                    GlyphCount: 5390,
+                    IsImmutable: true,
+                    Handle: {}
+                  },
+                  Font: {
+                    OpenTypeMetrics: {},
+                    SupportedShapers: [
+                      ot,
+                      fallback
+                    ],
+                    Handle: {}
+                  },
+                  SKFont: {
+                    ForceAutoHinting: false,
+                    EmbeddedBitmaps: false,
+                    Subpixel: true,
+                    LinearMetrics: true,
+                    Embolden: false,
+                    BaselineSnap: true,
+                    Edging: SubpixelAntialias,
+                    Hinting: Full,
+                    Typeface: {
+                      FamilyName: Segoe UI,
+                      FontStyle: {
+                        Weight: 400,
+                        Width: 5,
+                        Handle: {}
+                      },
+                      FontWeight: 400,
+                      FontWidth: 5,
+                      IsBold: false,
+                      IsItalic: false,
+                      IsFixedPitch: false,
+                      UnitsPerEm: 2048,
+                      GlyphCount: 5390,
+                      TableCount: 24,
+                      Handle: {}
+                    },
+                    Size: 14.0,
+                    ScaleX: 1.0,
+                    Spacing: 18.621094,
+                    Metrics: {
+                      Top: -18.176758,
+                      Ascent: -15.107422,
+                      Descent: 3.5136719,
+                      Bottom: 5.7558594,
+                      MaxCharacterWidth: 36.004883,
+                      XMin: -8.018555,
+                      XMax: 27.986328,
+                      XHeight: 7.0,
+                      CapHeight: 9.802734,
+                      UnderlineThickness: 0.81347656,
+                      UnderlinePosition: 1.2167969,
+                      StrikeoutThickness: 0.6972656,
+                      StrikeoutPosition: -3.6230469
+                    },
+                    Handle: {}
+                  },
+                  Metrics: {
+                    DesignEmHeight: 2048,
+                    IsFixedPitch: false,
+                    Ascent: -2210,
+                    Descent: 514,
+                    LineSpacing: 2724,
+                    UnderlinePosition: 178,
+                    UnderlineThickness: 119,
+                    StrikethroughPosition: -530,
+                    StrikethroughThickness: 102
+                  },
+                  GlyphCount: 5390,
+                  FamilyName: Segoe UI,
+                  Weight: Normal,
+                  Stretch: Normal
+                },
+                FontRenderingEmSize: 14.0,
+                Bounds: {
+                  Width: 15.09375,
+                  Height: 18.62109375,
+                  Size: {
+                    AspectRatio: 0.8105726872246696,
+                    Width: 15.09375,
+                    Height: 18.62109375
+                  },
+                  Right: 15.09375,
+                  Bottom: 18.62109375,
+                  TopRight: {
+                    X: 15.09375
+                  },
+                  BottomLeft: {
+                    Y: 18.62109375
+                  },
+                  BottomRight: {
+                    X: 15.09375,
+                    Y: 18.62109375
+                  },
+                  Center: {
+                    X: 7.546875,
+                    Y: 9.310546875
+                  }
+                },
+                InkBounds: {
+                  Y: 5.107421875,
+                  Width: 15.546875,
+                  Height: 10.0,
+                  Position: {
+                    Y: 5.107421875
+                  },
+                  Size: {
+                    AspectRatio: 1.5546875,
+                    Width: 15.546875,
+                    Height: 10.0
+                  },
+                  Right: 15.546875,
+                  Bottom: 15.107421875,
+                  Top: 5.107421875,
+                  TopLeft: {
+                    Y: 5.107421875
+                  },
+                  TopRight: {
+                    X: 15.546875,
+                    Y: 5.107421875
+                  },
+                  BottomLeft: {
+                    Y: 15.107421875
+                  },
+                  BottomRight: {
+                    X: 15.546875,
+                    Y: 15.107421875
+                  },
+                  Center: {
+                    X: 7.7734375,
+                    Y: 10.107421875
+                  }
+                },
+                Metrics: {
+                  Baseline: 15.107421875,
+                  Width: 15.09375,
+                  WidthIncludingTrailingWhitespace: 15.09375,
+                  Height: 18.62109375,
+                  LastCluster: 1
+                },
+                BaselineOrigin: {
+                  Y: 15.107421875
+                },
+                Characters: {
+                  Length: 2,
+                  IsEmpty: false
+                },
+                GlyphInfos: [
+                  {
+                    GlyphIndex: 22,
+                    GlyphAdvance: 7.546875
+                  },
+                  {
+                    GlyphIndex: 19,
+                    GlyphCluster: 1,
+                    GlyphAdvance: 7.546875
+                  }
+                ],
+                IsLeftToRight: true
+              }
+            },
+            {
+              Length: 1
+            }
+          ],
+          Length: 3,
+          TextLineBreak: {
+            TextEndOfLine: {
+              Length: 1
+            },
+            IsSplit: false
+          },
+          HasCollapsed: false,
+          HasOverflowed: false,
+          Baseline: 15.107421875,
+          Extent: 10.0,
+          Height: 18.62109375,
+          OverhangTrailing: 0.453125,
+          Width: 15.09375,
+          WidthIncludingTrailingWhitespace: 15.09375
+        }
+      ],
+      Height: 18.62109375,
+      Extent: 10.0,
+      Baseline: 15.107421875,
+      OverhangTrailing: 0.453125,
+      Width: 15.09375,
+      WidthIncludingTrailingWhitespace: 15.09375
+    },
+    Text: 30,
+    FontFamily: Inter,
+    FontSize: 14.0,
+    Foreground: Black,
+    IsLoaded: true
+  },
+  SizeToContent: WidthAndHeight,
+  Title: Simple Calculator,
+  CanResize: false,
+  Icon: {},
+  Position: {},
+  IsActive: true,
+  Screens: {
+    ScreenCount: 1,
+    All: [
+      {
+        Scaling: 1.0,
+        Bounds: {
+          Width: 1920,
+          Height: 1280,
+          Size: {
+            AspectRatio: 1.5,
+            Width: 1920,
+            Height: 1280
+          },
+          Right: 1920,
+          Bottom: 1280,
+          TopRight: {
+            X: 1920
+          },
+          BottomLeft: {
+            Y: 1280
+          },
+          BottomRight: {
+            X: 1920,
+            Y: 1280
+          },
+          Center: {
+            X: 960,
+            Y: 640
+          }
+        },
+        WorkingArea: {
+          Width: 1920,
+          Height: 1280,
+          Size: {
+            AspectRatio: 1.5,
+            Width: 1920,
+            Height: 1280
+          },
+          Right: 1920,
+          Bottom: 1280,
+          TopRight: {
+            X: 1920
+          },
+          BottomLeft: {
+            Y: 1280
+          },
+          BottomRight: {
+            X: 1920,
+            Y: 1280
+          },
+          Center: {
+            X: 960,
+            Y: 640
+          }
+        },
+        IsPrimary: true
+      }
+    ],
+    Primary: {
+      Scaling: 1.0,
+      Bounds: {
+        Width: 1920,
+        Height: 1280,
+        Size: {
+          AspectRatio: 1.5,
+          Width: 1920,
+          Height: 1280
+        },
+        Right: 1920,
+        Bottom: 1280,
+        TopRight: {
+          X: 1920
+        },
+        BottomLeft: {
+          Y: 1280
+        },
+        BottomRight: {
+          X: 1920,
+          Y: 1280
+        },
+        Center: {
+          X: 960,
+          Y: 640
+        }
+      },
+      WorkingArea: {
+        Width: 1920,
+        Height: 1280,
+        Size: {
+          AspectRatio: 1.5,
+          Width: 1920,
+          Height: 1280
+        },
+        Right: 1920,
+        Bottom: 1280,
+        TopRight: {
+          X: 1920
+        },
+        BottomLeft: {
+          Y: 1280
+        },
+        BottomRight: {
+          X: 1920,
+          Y: 1280
+        },
+        Center: {
+          X: 960,
+          Y: 640
+        }
+      },
+      IsPrimary: true
+    }
+  },
+  DesktopScaling: 1.0
+}
