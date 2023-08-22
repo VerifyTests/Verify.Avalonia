@@ -111,9 +111,15 @@ public class CalculatorTests
 
 ## Result in the following snapshots
 
+
+### Image
+
 [Should_Add_Numbers.verified.verified.png](/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png):
 
 <img src="/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png" width="250px">
+
+
+### Text
 
 <!-- snippet: XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt -->
 <a id='snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt'></a>
