@@ -1,37 +1,17 @@
 ﻿{
   FirstOperandInput: {
-    SelectionBrush: #ff0078d7,
-    CaretBrush: Black,
     Text: 10,
     SelectedText: ,
     Watermark: Operand 1,
     CanPaste: true,
-    CanUndo: true,
-    Background: #66ffffff,
-    BorderBrush: #99000000,
-    BorderThickness: 1,1,1,1,
-    CornerRadius: 3,3,3,3,
-    FontFamily: Inter,
-    FontSize: 14.0,
-    Foreground: Black,
-    Padding: 10,6,6,5
+    CanUndo: true
   },
   SecondOperandInput: {
-    SelectionBrush: #ff0078d7,
-    CaretBrush: Black,
     Text: 20,
     SelectedText: ,
     Watermark: Operand 2,
     CanPaste: true,
-    CanUndo: true,
-    Background: #66ffffff,
-    BorderBrush: #99000000,
-    BorderThickness: 1,1,1,1,
-    CornerRadius: 3,3,3,3,
-    FontFamily: Inter,
-    FontSize: 14.0,
-    Foreground: Black,
-    Padding: 10,6,6,5
+    CanUndo: true
   },
   AddButton: {
     Command: {
@@ -39,13 +19,6 @@
     },
     Content: +,
     Presenter: {
-      Background: #ff0078d7,
-      BorderBrush: Transparent,
-      BorderThickness: 1,1,1,1,
-      CornerRadius: 3,3,3,3,
-      Foreground: White,
-      FontFamily: Inter,
-      FontSize: 14.0,
       Child: {
         AccessKey: "\u0000",
         TextLayout: {
@@ -91,7 +64,7 @@
                             Face: {
                               $type: Face,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               IsImmutable: true,
                               Handle: {
                                 $type: nint
@@ -140,7 +113,7 @@
                                 IsItalic: false,
                                 IsFixedPitch: false,
                                 UnitsPerEm: 2048,
-                                GlyphCount: 5390,
+                                GlyphCount: 5344,
                                 TableCount: 24,
                                 Handle: {
                                   $type: nint
@@ -181,7 +154,7 @@
                               StrikethroughPosition: -530,
                               StrikethroughThickness: 102
                             },
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             FamilyName: Segoe UI,
                             Weight: Normal,
                             Stretch: Normal
@@ -217,7 +190,7 @@
                           Face: {
                             $type: Face,
                             UnitsPerEm: 2048,
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             IsImmutable: true,
                             Handle: {
                               $type: nint
@@ -266,7 +239,7 @@
                               IsItalic: false,
                               IsFixedPitch: false,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               TableCount: 24,
                               Handle: {
                                 $type: nint
@@ -307,7 +280,7 @@
                             StrikethroughPosition: -530,
                             StrikethroughThickness: 102
                           },
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           FamilyName: Segoe UI,
                           Weight: Normal,
                           Stretch: Normal
@@ -453,18 +426,10 @@
           Width: 9.5771484375,
           WidthIncludingTrailingWhitespace: 9.5771484375
         },
-        Text: +,
-        FontFamily: Inter,
-        FontSize: 14.0,
-        Foreground: White
+        Text: +
       },
-      Content: +,
-      HorizontalContentAlignment: Center,
-      Padding: 8,5,8,6,
-      RecognizesAccessKey: true,
       IsLoaded: true
-    },
-    HorizontalContentAlignment: Center
+    }
   },
   SubtractButton: {
     Command: {
@@ -472,13 +437,6 @@
     },
     Content: -,
     Presenter: {
-      Background: #ff0078d7,
-      BorderBrush: Transparent,
-      BorderThickness: 1,1,1,1,
-      CornerRadius: 3,3,3,3,
-      Foreground: White,
-      FontFamily: Inter,
-      FontSize: 14.0,
       Child: {
         AccessKey: "\u0000",
         TextLayout: {
@@ -524,7 +482,7 @@
                             Face: {
                               $type: Face,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               IsImmutable: true,
                               Handle: {
                                 $type: nint
@@ -573,7 +531,7 @@
                                 IsItalic: false,
                                 IsFixedPitch: false,
                                 UnitsPerEm: 2048,
-                                GlyphCount: 5390,
+                                GlyphCount: 5344,
                                 TableCount: 24,
                                 Handle: {
                                   $type: nint
@@ -614,7 +572,7 @@
                               StrikethroughPosition: -530,
                               StrikethroughThickness: 102
                             },
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             FamilyName: Segoe UI,
                             Weight: Normal,
                             Stretch: Normal
@@ -650,7 +608,7 @@
                           Face: {
                             $type: Face,
                             UnitsPerEm: 2048,
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             IsImmutable: true,
                             Handle: {
                               $type: nint
@@ -699,7 +657,7 @@
                               IsItalic: false,
                               IsFixedPitch: false,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               TableCount: 24,
                               Handle: {
                                 $type: nint
@@ -740,7 +698,7 @@
                             StrikethroughPosition: -530,
                             StrikethroughThickness: 102
                           },
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           FamilyName: Segoe UI,
                           Weight: Normal,
                           Stretch: Normal
@@ -886,18 +844,10 @@
           Width: 5.5986328125,
           WidthIncludingTrailingWhitespace: 5.5986328125
         },
-        Text: -,
-        FontFamily: Inter,
-        FontSize: 14.0,
-        Foreground: White
+        Text: -
       },
-      Content: -,
-      HorizontalContentAlignment: Center,
-      Padding: 8,5,8,6,
-      RecognizesAccessKey: true,
       IsLoaded: true
-    },
-    HorizontalContentAlignment: Center
+    }
   },
   MultiplyButton: {
     Command: {
@@ -905,13 +855,6 @@
     },
     Content: *,
     Presenter: {
-      Background: #ff0078d7,
-      BorderBrush: Transparent,
-      BorderThickness: 1,1,1,1,
-      CornerRadius: 3,3,3,3,
-      Foreground: White,
-      FontFamily: Inter,
-      FontSize: 14.0,
       Child: {
         AccessKey: "\u0000",
         TextLayout: {
@@ -957,7 +900,7 @@
                             Face: {
                               $type: Face,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               IsImmutable: true,
                               Handle: {
                                 $type: nint
@@ -1006,7 +949,7 @@
                                 IsItalic: false,
                                 IsFixedPitch: false,
                                 UnitsPerEm: 2048,
-                                GlyphCount: 5390,
+                                GlyphCount: 5344,
                                 TableCount: 24,
                                 Handle: {
                                   $type: nint
@@ -1047,7 +990,7 @@
                               StrikethroughPosition: -530,
                               StrikethroughThickness: 102
                             },
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             FamilyName: Segoe UI,
                             Weight: Normal,
                             Stretch: Normal
@@ -1083,7 +1026,7 @@
                           Face: {
                             $type: Face,
                             UnitsPerEm: 2048,
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             IsImmutable: true,
                             Handle: {
                               $type: nint
@@ -1132,7 +1075,7 @@
                               IsItalic: false,
                               IsFixedPitch: false,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               TableCount: 24,
                               Handle: {
                                 $type: nint
@@ -1173,7 +1116,7 @@
                             StrikethroughPosition: -530,
                             StrikethroughThickness: 102
                           },
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           FamilyName: Segoe UI,
                           Weight: Normal,
                           Stretch: Normal
@@ -1314,18 +1257,10 @@
           Width: 5.837890625,
           WidthIncludingTrailingWhitespace: 5.837890625
         },
-        Text: *,
-        FontFamily: Inter,
-        FontSize: 14.0,
-        Foreground: White
+        Text: *
       },
-      Content: *,
-      HorizontalContentAlignment: Center,
-      Padding: 8,5,8,6,
-      RecognizesAccessKey: true,
       IsLoaded: true
-    },
-    HorizontalContentAlignment: Center
+    }
   },
   DivideButton: {
     Command: {
@@ -1333,13 +1268,6 @@
     },
     Content: /,
     Presenter: {
-      Background: #ff0078d7,
-      BorderBrush: Transparent,
-      BorderThickness: 1,1,1,1,
-      CornerRadius: 3,3,3,3,
-      Foreground: White,
-      FontFamily: Inter,
-      FontSize: 14.0,
       Child: {
         AccessKey: "\u0000",
         TextLayout: {
@@ -1385,7 +1313,7 @@
                             Face: {
                               $type: Face,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               IsImmutable: true,
                               Handle: {
                                 $type: nint
@@ -1434,7 +1362,7 @@
                                 IsItalic: false,
                                 IsFixedPitch: false,
                                 UnitsPerEm: 2048,
-                                GlyphCount: 5390,
+                                GlyphCount: 5344,
                                 TableCount: 24,
                                 Handle: {
                                   $type: nint
@@ -1475,7 +1403,7 @@
                               StrikethroughPosition: -530,
                               StrikethroughThickness: 102
                             },
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             FamilyName: Segoe UI,
                             Weight: Normal,
                             Stretch: Normal
@@ -1511,7 +1439,7 @@
                           Face: {
                             $type: Face,
                             UnitsPerEm: 2048,
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             IsImmutable: true,
                             Handle: {
                               $type: nint
@@ -1560,7 +1488,7 @@
                               IsItalic: false,
                               IsFixedPitch: false,
                               UnitsPerEm: 2048,
-                              GlyphCount: 5390,
+                              GlyphCount: 5344,
                               TableCount: 24,
                               Handle: {
                                 $type: nint
@@ -1601,7 +1529,7 @@
                             StrikethroughPosition: -530,
                             StrikethroughThickness: 102
                           },
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           FamilyName: Segoe UI,
                           Weight: Normal,
                           Stretch: Normal
@@ -1747,18 +1675,10 @@
           Width: 5.455078125,
           WidthIncludingTrailingWhitespace: 5.455078125
         },
-        Text: /,
-        FontFamily: Inter,
-        FontSize: 14.0,
-        Foreground: White
+        Text: /
       },
-      Content: /,
-      HorizontalContentAlignment: Center,
-      Padding: 8,5,8,6,
-      RecognizesAccessKey: true,
       IsLoaded: true
-    },
-    HorizontalContentAlignment: Center
+    }
   },
   ResultBox: {
     TextLayout: {
@@ -1810,7 +1730,7 @@
                         Face: {
                           $type: Face,
                           UnitsPerEm: 2048,
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           IsImmutable: true,
                           Handle: {
                             $type: nint
@@ -1859,7 +1779,7 @@
                             IsItalic: false,
                             IsFixedPitch: false,
                             UnitsPerEm: 2048,
-                            GlyphCount: 5390,
+                            GlyphCount: 5344,
                             TableCount: 24,
                             Handle: {
                               $type: nint
@@ -1900,7 +1820,7 @@
                           StrikethroughPosition: -530,
                           StrikethroughThickness: 102
                         },
-                        GlyphCount: 5390,
+                        GlyphCount: 5344,
                         FamilyName: Segoe UI,
                         Weight: Normal,
                         Stretch: Normal
@@ -1936,7 +1856,7 @@
                       Face: {
                         $type: Face,
                         UnitsPerEm: 2048,
-                        GlyphCount: 5390,
+                        GlyphCount: 5344,
                         IsImmutable: true,
                         Handle: {
                           $type: nint
@@ -1985,7 +1905,7 @@
                           IsItalic: false,
                           IsFixedPitch: false,
                           UnitsPerEm: 2048,
-                          GlyphCount: 5390,
+                          GlyphCount: 5344,
                           TableCount: 24,
                           Handle: {
                             $type: nint
@@ -2026,7 +1946,7 @@
                         StrikethroughPosition: -530,
                         StrikethroughThickness: 102
                       },
-                      GlyphCount: 5390,
+                      GlyphCount: 5344,
                       FamilyName: Segoe UI,
                       Weight: Normal,
                       Stretch: Normal
@@ -2175,9 +2095,6 @@
       WidthIncludingTrailingWhitespace: 15.09375
     },
     Text: 30,
-    FontFamily: Inter,
-    FontSize: 14.0,
-    Foreground: Black,
     IsLoaded: true
   },
   SizeToContent: WidthAndHeight,

@@ -15,22 +15,27 @@ class BorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Border value)
     {
+        if (value.ShouldIncludeProperty(Border.BackgroundProperty))
         if (!object.Equals(Border.BackgroundProperty.GetDefaultValue(typeof(Border)), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
+        if (value.ShouldIncludeProperty(Border.BorderBrushProperty))
         if (!object.Equals(Border.BorderBrushProperty.GetDefaultValue(typeof(Border)), value.BorderBrush))
         {
             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
         }
+        if (value.ShouldIncludeProperty(Border.BorderThicknessProperty))
         if (!object.Equals(Border.BorderThicknessProperty.GetDefaultValue(typeof(Border)), value.BorderThickness))
         {
             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
         }
+        if (value.ShouldIncludeProperty(Border.CornerRadiusProperty))
         if (!object.Equals(Border.CornerRadiusProperty.GetDefaultValue(typeof(Border)), value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
+        if (value.ShouldIncludeProperty(Border.BoxShadowProperty))
         if (!object.Equals(Border.BoxShadowProperty.GetDefaultValue(typeof(Border)), value.BoxShadow))
         {
             writer.WriteMember(value, value.BoxShadow, "BoxShadow");

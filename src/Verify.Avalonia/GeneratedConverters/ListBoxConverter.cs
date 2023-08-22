@@ -15,18 +15,22 @@ class ListBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ListBox value)
     {
+        if (value.ShouldIncludeProperty(ListBox.ScrollProperty))
         if (!object.Equals(ListBox.ScrollProperty.GetUnsetValue(typeof(ListBox)), value.Scroll))
         {
             writer.WriteMember(value, value.Scroll, "Scroll");
         }
+        if (value.ShouldIncludeProperty(ListBox.SelectedItemsProperty))
         if (!object.Equals(ListBox.SelectedItemsProperty.GetUnsetValue(typeof(ListBox)), value.SelectedItems))
         {
             writer.WriteMember(value, value.SelectedItems, "SelectedItems");
         }
+        if (value.ShouldIncludeProperty(ListBox.SelectionProperty))
         if (!object.Equals(ListBox.SelectionProperty.GetUnsetValue(typeof(ListBox)), value.Selection))
         {
             writer.WriteMember(value, value.Selection, "Selection");
         }
+        if (value.ShouldIncludeProperty(ListBox.SelectionModeProperty))
         if (!object.Equals(ListBox.SelectionModeProperty.GetDefaultValue(typeof(ListBox)), value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");

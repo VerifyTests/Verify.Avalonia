@@ -15,6 +15,7 @@ class DataGridDetailsPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridDetailsPresenter value)
     {
+        if (value.ShouldIncludeProperty(DataGridDetailsPresenter.ContentHeightProperty))
         if (!object.Equals(DataGridDetailsPresenter.ContentHeightProperty.GetDefaultValue(typeof(DataGridDetailsPresenter)), value.ContentHeight))
         {
             writer.WriteMember(value, value.ContentHeight, "ContentHeight");

@@ -15,10 +15,12 @@ class RepeatButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RepeatButton value)
     {
+        if (value.ShouldIncludeProperty(RepeatButton.IntervalProperty))
         if (!object.Equals(RepeatButton.IntervalProperty.GetDefaultValue(typeof(RepeatButton)), value.Interval))
         {
             writer.WriteMember(value, value.Interval, "Interval");
         }
+        if (value.ShouldIncludeProperty(RepeatButton.DelayProperty))
         if (!object.Equals(RepeatButton.DelayProperty.GetDefaultValue(typeof(RepeatButton)), value.Delay))
         {
             writer.WriteMember(value, value.Delay, "Delay");

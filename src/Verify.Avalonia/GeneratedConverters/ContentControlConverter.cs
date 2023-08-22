@@ -15,19 +15,23 @@ class ContentControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContentControl value)
     {
+        if (value.ShouldIncludeProperty(ContentControl.ContentProperty))
         if (!object.Equals(ContentControl.ContentProperty.GetDefaultValue(typeof(ContentControl)), value.Content))
         {
             writer.WriteMember(value, value.Content, "Content");
         }
+        if (value.ShouldIncludeProperty(ContentControl.ContentTemplateProperty))
         if (!object.Equals(ContentControl.ContentTemplateProperty.GetDefaultValue(typeof(ContentControl)), value.ContentTemplate))
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
         writer.WriteMember(value, value.Presenter, "Presenter");
+        if (value.ShouldIncludeProperty(ContentControl.HorizontalContentAlignmentProperty))
         if (!object.Equals(ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
+        if (value.ShouldIncludeProperty(ContentControl.VerticalContentAlignmentProperty))
         if (!object.Equals(ContentControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");

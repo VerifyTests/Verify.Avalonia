@@ -15,23 +15,28 @@ class ProgressBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ProgressBar value)
     {
+        if (value.ShouldIncludeProperty(ProgressBar.PercentageProperty))
         if (!object.Equals(ProgressBar.PercentageProperty.GetUnsetValue(typeof(ProgressBar)), value.Percentage))
         {
             writer.WriteMember(value, value.Percentage, "Percentage");
         }
         writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
+        if (value.ShouldIncludeProperty(ProgressBar.IsIndeterminateProperty))
         if (!object.Equals(ProgressBar.IsIndeterminateProperty.GetDefaultValue(typeof(ProgressBar)), value.IsIndeterminate))
         {
             writer.WriteMember(value, value.IsIndeterminate, "IsIndeterminate");
         }
+        if (value.ShouldIncludeProperty(ProgressBar.ShowProgressTextProperty))
         if (!object.Equals(ProgressBar.ShowProgressTextProperty.GetDefaultValue(typeof(ProgressBar)), value.ShowProgressText))
         {
             writer.WriteMember(value, value.ShowProgressText, "ShowProgressText");
         }
+        if (value.ShouldIncludeProperty(ProgressBar.ProgressTextFormatProperty))
         if (!object.Equals(ProgressBar.ProgressTextFormatProperty.GetDefaultValue(typeof(ProgressBar)), value.ProgressTextFormat))
         {
             writer.WriteMember(value, value.ProgressTextFormat, "ProgressTextFormat");
         }
+        if (value.ShouldIncludeProperty(ProgressBar.OrientationProperty))
         if (!object.Equals(ProgressBar.OrientationProperty.GetDefaultValue(typeof(ProgressBar)), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");

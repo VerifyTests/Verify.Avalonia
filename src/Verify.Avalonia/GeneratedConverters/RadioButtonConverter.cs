@@ -15,6 +15,7 @@ class RadioButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RadioButton value)
     {
+        if (value.ShouldIncludeProperty(RadioButton.GroupNameProperty))
         if (!object.Equals(RadioButton.GroupNameProperty.GetDefaultValue(typeof(RadioButton)), value.GroupName))
         {
             writer.WriteMember(value, value.GroupName, "GroupName");

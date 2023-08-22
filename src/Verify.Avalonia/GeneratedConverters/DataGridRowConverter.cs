@@ -15,18 +15,22 @@ class DataGridRowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRow value)
     {
+        if (value.ShouldIncludeProperty(DataGridRow.HeaderProperty))
         if (!object.Equals(DataGridRow.HeaderProperty.GetDefaultValue(typeof(DataGridRow)), value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");
         }
+        if (value.ShouldIncludeProperty(DataGridRow.IsValidProperty))
         if (!object.Equals(DataGridRow.IsValidProperty.GetUnsetValue(typeof(DataGridRow)), value.IsValid))
         {
             writer.WriteMember(value, value.IsValid, "IsValid");
         }
+        if (value.ShouldIncludeProperty(DataGridRow.DetailsTemplateProperty))
         if (!object.Equals(DataGridRow.DetailsTemplateProperty.GetDefaultValue(typeof(DataGridRow)), value.DetailsTemplate))
         {
             writer.WriteMember(value, value.DetailsTemplate, "DetailsTemplate");
         }
+        if (value.ShouldIncludeProperty(DataGridRow.AreDetailsVisibleProperty))
         if (!object.Equals(DataGridRow.AreDetailsVisibleProperty.GetDefaultValue(typeof(DataGridRow)), value.AreDetailsVisible))
         {
             writer.WriteMember(value, value.AreDetailsVisible, "AreDetailsVisible");

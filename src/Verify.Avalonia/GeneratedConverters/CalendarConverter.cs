@@ -15,40 +15,49 @@ class CalendarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Calendar value)
     {
+        if (value.ShouldIncludeProperty(Calendar.FirstDayOfWeekProperty))
         if (!object.Equals(Calendar.FirstDayOfWeekProperty.GetDefaultValue(typeof(Calendar)), value.FirstDayOfWeek))
         {
             writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
         }
+        if (value.ShouldIncludeProperty(Calendar.IsTodayHighlightedProperty))
         if (!object.Equals(Calendar.IsTodayHighlightedProperty.GetDefaultValue(typeof(Calendar)), value.IsTodayHighlighted))
         {
             writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
         }
+        if (value.ShouldIncludeProperty(Calendar.HeaderBackgroundProperty))
         if (!object.Equals(Calendar.HeaderBackgroundProperty.GetDefaultValue(typeof(Calendar)), value.HeaderBackground))
         {
             writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");
         }
+        if (value.ShouldIncludeProperty(Calendar.DisplayModeProperty))
         if (!object.Equals(Calendar.DisplayModeProperty.GetDefaultValue(typeof(Calendar)), value.DisplayMode))
         {
             writer.WriteMember(value, value.DisplayMode, "DisplayMode");
         }
+        if (value.ShouldIncludeProperty(Calendar.SelectionModeProperty))
         if (!object.Equals(Calendar.SelectionModeProperty.GetDefaultValue(typeof(Calendar)), value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }
+        if (value.ShouldIncludeProperty(Calendar.SelectedDateProperty))
         if (!object.Equals(Calendar.SelectedDateProperty.GetDefaultValue(typeof(Calendar)), value.SelectedDate))
         {
             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
         }
         writer.WriteMember(value, value.SelectedDates, "SelectedDates");
+        if (value.ShouldIncludeProperty(Calendar.DisplayDateProperty))
         if (!object.Equals(Calendar.DisplayDateProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDate))
         {
             writer.WriteMember(value, value.DisplayDate, "DisplayDate");
         }
+        if (value.ShouldIncludeProperty(Calendar.DisplayDateStartProperty))
         if (!object.Equals(Calendar.DisplayDateStartProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDateStart))
         {
             writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
         }
         writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
+        if (value.ShouldIncludeProperty(Calendar.DisplayDateEndProperty))
         if (!object.Equals(Calendar.DisplayDateEndProperty.GetDefaultValue(typeof(Calendar)), value.DisplayDateEnd))
         {
             writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");

@@ -15,14 +15,17 @@ class ExpanderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Expander value)
     {
+        if (value.ShouldIncludeProperty(Expander.ContentTransitionProperty))
         if (!object.Equals(Expander.ContentTransitionProperty.GetDefaultValue(typeof(Expander)), value.ContentTransition))
         {
             writer.WriteMember(value, value.ContentTransition, "ContentTransition");
         }
+        if (value.ShouldIncludeProperty(Expander.ExpandDirectionProperty))
         if (!object.Equals(Expander.ExpandDirectionProperty.GetDefaultValue(typeof(Expander)), value.ExpandDirection))
         {
             writer.WriteMember(value, value.ExpandDirection, "ExpandDirection");
         }
+        if (value.ShouldIncludeProperty(Expander.IsExpandedProperty))
         if (!object.Equals(Expander.IsExpandedProperty.GetDefaultValue(typeof(Expander)), value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");

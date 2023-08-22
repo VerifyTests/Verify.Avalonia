@@ -15,18 +15,22 @@ class StackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, StackPanel value)
     {
+        if (value.ShouldIncludeProperty(StackPanel.SpacingProperty))
         if (!object.Equals(StackPanel.SpacingProperty.GetDefaultValue(typeof(StackPanel)), value.Spacing))
         {
             writer.WriteMember(value, value.Spacing, "Spacing");
         }
+        if (value.ShouldIncludeProperty(StackPanel.OrientationProperty))
         if (!object.Equals(StackPanel.OrientationProperty.GetDefaultValue(typeof(StackPanel)), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
+        if (value.ShouldIncludeProperty(StackPanel.AreHorizontalSnapPointsRegularProperty))
         if (!object.Equals(StackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(typeof(StackPanel)), value.AreHorizontalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
         }
+        if (value.ShouldIncludeProperty(StackPanel.AreVerticalSnapPointsRegularProperty))
         if (!object.Equals(StackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(typeof(StackPanel)), value.AreVerticalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");

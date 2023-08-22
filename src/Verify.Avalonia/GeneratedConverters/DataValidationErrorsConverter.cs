@@ -15,10 +15,12 @@ class DataValidationErrorsConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataValidationErrors value)
     {
+        if (value.ShouldIncludeProperty(DataValidationErrors.OwnerProperty))
         if (!object.Equals(DataValidationErrors.OwnerProperty.GetUnsetValue(typeof(DataValidationErrors)), value.Owner))
         {
             writer.WriteMember(value, value.Owner, "Owner");
         }
+        if (value.ShouldIncludeProperty(DataValidationErrors.ErrorTemplateProperty))
         if (!object.Equals(DataValidationErrors.ErrorTemplateProperty.GetDefaultValue(typeof(DataValidationErrors)), value.ErrorTemplate))
         {
             writer.WriteMember(value, value.ErrorTemplate, "ErrorTemplate");

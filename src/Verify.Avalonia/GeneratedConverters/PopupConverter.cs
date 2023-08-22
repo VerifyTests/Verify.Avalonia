@@ -16,67 +16,83 @@ class PopupConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Popup value)
     {
         writer.WriteMember(value, value.Host, "Host");
+        if (value.ShouldIncludeProperty(Popup.WindowManagerAddShadowHintProperty))
         if (!object.Equals(Popup.WindowManagerAddShadowHintProperty.GetDefaultValue(typeof(Popup)), value.WindowManagerAddShadowHint))
         {
             writer.WriteMember(value, value.WindowManagerAddShadowHint, "WindowManagerAddShadowHint");
         }
+        if (value.ShouldIncludeProperty(Popup.ChildProperty))
         if (!object.Equals(Popup.ChildProperty.GetDefaultValue(typeof(Popup)), value.Child))
         {
             writer.WriteMember(value, value.Child, "Child");
         }
         writer.WriteMember(value, value.DependencyResolver, "DependencyResolver");
+        if (value.ShouldIncludeProperty(Popup.InheritsTransformProperty))
         if (!object.Equals(Popup.InheritsTransformProperty.GetDefaultValue(typeof(Popup)), value.InheritsTransform))
         {
             writer.WriteMember(value, value.InheritsTransform, "InheritsTransform");
         }
+        if (value.ShouldIncludeProperty(Popup.IsLightDismissEnabledProperty))
         if (!object.Equals(Popup.IsLightDismissEnabledProperty.GetDefaultValue(typeof(Popup)), value.IsLightDismissEnabled))
         {
             writer.WriteMember(value, value.IsLightDismissEnabled, "IsLightDismissEnabled");
         }
+        if (value.ShouldIncludeProperty(Popup.IsOpenProperty))
         if (!object.Equals(Popup.IsOpenProperty.GetDefaultValue(typeof(Popup)), value.IsOpen))
         {
             writer.WriteMember(value, value.IsOpen, "IsOpen");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementAnchorProperty))
         if (!object.Equals(Popup.PlacementAnchorProperty.GetDefaultValue(typeof(Popup)), value.PlacementAnchor))
         {
             writer.WriteMember(value, value.PlacementAnchor, "PlacementAnchor");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementConstraintAdjustmentProperty))
         if (!object.Equals(Popup.PlacementConstraintAdjustmentProperty.GetDefaultValue(typeof(Popup)), value.PlacementConstraintAdjustment))
         {
             writer.WriteMember(value, value.PlacementConstraintAdjustment, "PlacementConstraintAdjustment");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementGravityProperty))
         if (!object.Equals(Popup.PlacementGravityProperty.GetDefaultValue(typeof(Popup)), value.PlacementGravity))
         {
             writer.WriteMember(value, value.PlacementGravity, "PlacementGravity");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementProperty))
         if (!object.Equals(Popup.PlacementProperty.GetDefaultValue(typeof(Popup)), value.Placement))
         {
             writer.WriteMember(value, value.Placement, "Placement");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementRectProperty))
         if (!object.Equals(Popup.PlacementRectProperty.GetDefaultValue(typeof(Popup)), value.PlacementRect))
         {
             writer.WriteMember(value, value.PlacementRect, "PlacementRect");
         }
+        if (value.ShouldIncludeProperty(Popup.PlacementTargetProperty))
         if (!object.Equals(Popup.PlacementTargetProperty.GetDefaultValue(typeof(Popup)), value.PlacementTarget))
         {
             writer.WriteMember(value, value.PlacementTarget, "PlacementTarget");
         }
+        if (value.ShouldIncludeProperty(Popup.OverlayDismissEventPassThroughProperty))
         if (!object.Equals(Popup.OverlayDismissEventPassThroughProperty.GetDefaultValue(typeof(Popup)), value.OverlayDismissEventPassThrough))
         {
             writer.WriteMember(value, value.OverlayDismissEventPassThrough, "OverlayDismissEventPassThrough");
         }
+        if (value.ShouldIncludeProperty(Popup.OverlayInputPassThroughElementProperty))
         if (!object.Equals(Popup.OverlayInputPassThroughElementProperty.GetDefaultValue(typeof(Popup)), value.OverlayInputPassThroughElement))
         {
             writer.WriteMember(value, value.OverlayInputPassThroughElement, "OverlayInputPassThroughElement");
         }
+        if (value.ShouldIncludeProperty(Popup.HorizontalOffsetProperty))
         if (!object.Equals(Popup.HorizontalOffsetProperty.GetDefaultValue(typeof(Popup)), value.HorizontalOffset))
         {
             writer.WriteMember(value, value.HorizontalOffset, "HorizontalOffset");
         }
+        if (value.ShouldIncludeProperty(Popup.VerticalOffsetProperty))
         if (!object.Equals(Popup.VerticalOffsetProperty.GetDefaultValue(typeof(Popup)), value.VerticalOffset))
         {
             writer.WriteMember(value, value.VerticalOffset, "VerticalOffset");
         }
+        if (value.ShouldIncludeProperty(Popup.TopmostProperty))
         if (!object.Equals(Popup.TopmostProperty.GetDefaultValue(typeof(Popup)), value.Topmost))
         {
             writer.WriteMember(value, value.Topmost, "Topmost");

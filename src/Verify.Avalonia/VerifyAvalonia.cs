@@ -1,4 +1,6 @@
-﻿using Avalonia.Headless;
+﻿using Avalonia.Data;
+using Avalonia.Diagnostics;
+using Avalonia.Headless;
 
 namespace VerifyTests;
 
@@ -6,13 +8,10 @@ public static partial class VerifyAvalonia
 {
     public static bool Initialized { get; private set; }
 
-    public static void WriteAvaloniaMember(this VerifyJsonWriter writer, Visual target, object? value, string name)
+    public static bool ShouldIncludeProperty(this AvaloniaObject target, AvaloniaProperty property)
     {
-        if (IsMemberValueInherited(target, name, value))
-        {
-            return;
-        }
-        writer.WriteMember(target, value, name);
+        var diagnostic = target.GetDiagnostic(property);
+        return diagnostic.Priority == BindingPriority.LocalValue;
     }
 
     public static void Initialize()

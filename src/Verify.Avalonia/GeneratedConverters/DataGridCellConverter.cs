@@ -15,6 +15,7 @@ class DataGridCellConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridCell value)
     {
+        if (value.ShouldIncludeProperty(DataGridCell.IsValidProperty))
         if (!object.Equals(DataGridCell.IsValidProperty.GetUnsetValue(typeof(DataGridCell)), value.IsValid))
         {
             writer.WriteMember(value, value.IsValid, "IsValid");

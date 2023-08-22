@@ -15,15 +15,18 @@ class WindowBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WindowBase value)
     {
+        if (value.ShouldIncludeProperty(WindowBase.IsActiveProperty))
         if (!object.Equals(WindowBase.IsActiveProperty.GetUnsetValue(typeof(WindowBase)), value.IsActive))
         {
             writer.WriteMember(value, value.IsActive, "IsActive");
         }
         writer.WriteMember(value, value.Screens, "Screens");
+        if (value.ShouldIncludeProperty(WindowBase.OwnerProperty))
         if (!object.Equals(WindowBase.OwnerProperty.GetUnsetValue(typeof(WindowBase)), value.Owner))
         {
             writer.WriteMember(value, value.Owner, "Owner");
         }
+        if (value.ShouldIncludeProperty(WindowBase.TopmostProperty))
         if (!object.Equals(WindowBase.TopmostProperty.GetDefaultValue(typeof(WindowBase)), value.Topmost))
         {
             writer.WriteMember(value, value.Topmost, "Topmost");

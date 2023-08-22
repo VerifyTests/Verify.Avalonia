@@ -15,42 +15,52 @@ class TrackConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Track value)
     {
+        if (value.ShouldIncludeProperty(Track.MinimumProperty))
         if (!object.Equals(Track.MinimumProperty.GetDefaultValue(typeof(Track)), value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");
         }
+        if (value.ShouldIncludeProperty(Track.MaximumProperty))
         if (!object.Equals(Track.MaximumProperty.GetDefaultValue(typeof(Track)), value.Maximum))
         {
             writer.WriteMember(value, value.Maximum, "Maximum");
         }
+        if (value.ShouldIncludeProperty(Track.ValueProperty))
         if (!object.Equals(Track.ValueProperty.GetDefaultValue(typeof(Track)), value.Value))
         {
             writer.WriteMember(value, value.Value, "Value");
         }
+        if (value.ShouldIncludeProperty(Track.ViewportSizeProperty))
         if (!object.Equals(Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)), value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
         }
+        if (value.ShouldIncludeProperty(Track.OrientationProperty))
         if (!object.Equals(Track.OrientationProperty.GetDefaultValue(typeof(Track)), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
+        if (value.ShouldIncludeProperty(Track.ThumbProperty))
         if (!object.Equals(Track.ThumbProperty.GetDefaultValue(typeof(Track)), value.Thumb))
         {
             writer.WriteMember(value, value.Thumb, "Thumb");
         }
+        if (value.ShouldIncludeProperty(Track.IncreaseButtonProperty))
         if (!object.Equals(Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)), value.IncreaseButton))
         {
             writer.WriteMember(value, value.IncreaseButton, "IncreaseButton");
         }
+        if (value.ShouldIncludeProperty(Track.DecreaseButtonProperty))
         if (!object.Equals(Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)), value.DecreaseButton))
         {
             writer.WriteMember(value, value.DecreaseButton, "DecreaseButton");
         }
+        if (value.ShouldIncludeProperty(Track.IsDirectionReversedProperty))
         if (!object.Equals(Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)), value.IsDirectionReversed))
         {
             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
         }
+        if (value.ShouldIncludeProperty(Track.IgnoreThumbDragProperty))
         if (!object.Equals(Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)), value.IgnoreThumbDrag))
         {
             writer.WriteMember(value, value.IgnoreThumbDrag, "IgnoreThumbDrag");

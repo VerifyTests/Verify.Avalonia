@@ -227,6 +227,7 @@ public class Tests
 
         builder.AppendLine(
             $$"""
+                      if (value.ShouldIncludeProperty({{type.Name}}.{{name}}Property))
                       if (!object.Equals({{type.Name}}.{{name}}Property.{{getDefault}}(typeof({{type.Name}})), value.{{name}}))
                       {
                           writer.WriteMember(value, value.{{name}}, "{{name}}");

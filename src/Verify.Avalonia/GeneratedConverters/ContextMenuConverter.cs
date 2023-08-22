@@ -15,38 +15,47 @@ class ContextMenuConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContextMenu value)
     {
+        if (value.ShouldIncludeProperty(ContextMenu.HorizontalOffsetProperty))
         if (!object.Equals(ContextMenu.HorizontalOffsetProperty.GetDefaultValue(typeof(ContextMenu)), value.HorizontalOffset))
         {
             writer.WriteMember(value, value.HorizontalOffset, "HorizontalOffset");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.VerticalOffsetProperty))
         if (!object.Equals(ContextMenu.VerticalOffsetProperty.GetDefaultValue(typeof(ContextMenu)), value.VerticalOffset))
         {
             writer.WriteMember(value, value.VerticalOffset, "VerticalOffset");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementAnchorProperty))
         if (!object.Equals(ContextMenu.PlacementAnchorProperty.GetDefaultValue(typeof(ContextMenu)), value.PlacementAnchor))
         {
             writer.WriteMember(value, value.PlacementAnchor, "PlacementAnchor");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementConstraintAdjustmentProperty))
         if (!object.Equals(ContextMenu.PlacementConstraintAdjustmentProperty.GetDefaultValue(typeof(ContextMenu)), value.PlacementConstraintAdjustment))
         {
             writer.WriteMember(value, value.PlacementConstraintAdjustment, "PlacementConstraintAdjustment");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementGravityProperty))
         if (!object.Equals(ContextMenu.PlacementGravityProperty.GetDefaultValue(typeof(ContextMenu)), value.PlacementGravity))
         {
             writer.WriteMember(value, value.PlacementGravity, "PlacementGravity");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementProperty))
         if (!object.Equals(ContextMenu.PlacementProperty.GetDefaultValue(typeof(ContextMenu)), value.Placement))
         {
             writer.WriteMember(value, value.Placement, "Placement");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.WindowManagerAddShadowHintProperty))
         if (!object.Equals(ContextMenu.WindowManagerAddShadowHintProperty.GetDefaultValue(typeof(ContextMenu)), value.WindowManagerAddShadowHint))
         {
             writer.WriteMember(value, value.WindowManagerAddShadowHint, "WindowManagerAddShadowHint");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementRectProperty))
         if (!object.Equals(ContextMenu.PlacementRectProperty.GetDefaultValue(typeof(ContextMenu)), value.PlacementRect))
         {
             writer.WriteMember(value, value.PlacementRect, "PlacementRect");
         }
+        if (value.ShouldIncludeProperty(ContextMenu.PlacementTargetProperty))
         if (!object.Equals(ContextMenu.PlacementTargetProperty.GetDefaultValue(typeof(ContextMenu)), value.PlacementTarget))
         {
             writer.WriteMember(value, value.PlacementTarget, "PlacementTarget");

@@ -16,62 +16,77 @@ class WindowConverter :
     public static void WriteMembers(VerifyJsonWriter writer, Window value)
     {
         writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
+        if (value.ShouldIncludeProperty(Window.SizeToContentProperty))
         if (!object.Equals(Window.SizeToContentProperty.GetDefaultValue(typeof(Window)), value.SizeToContent))
         {
             writer.WriteMember(value, value.SizeToContent, "SizeToContent");
         }
+        if (value.ShouldIncludeProperty(Window.TitleProperty))
         if (!object.Equals(Window.TitleProperty.GetDefaultValue(typeof(Window)), value.Title))
         {
             writer.WriteMember(value, value.Title, "Title");
         }
+        if (value.ShouldIncludeProperty(Window.ExtendClientAreaToDecorationsHintProperty))
         if (!object.Equals(Window.ExtendClientAreaToDecorationsHintProperty.GetDefaultValue(typeof(Window)), value.ExtendClientAreaToDecorationsHint))
         {
             writer.WriteMember(value, value.ExtendClientAreaToDecorationsHint, "ExtendClientAreaToDecorationsHint");
         }
+        if (value.ShouldIncludeProperty(Window.ExtendClientAreaChromeHintsProperty))
         if (!object.Equals(Window.ExtendClientAreaChromeHintsProperty.GetDefaultValue(typeof(Window)), value.ExtendClientAreaChromeHints))
         {
             writer.WriteMember(value, value.ExtendClientAreaChromeHints, "ExtendClientAreaChromeHints");
         }
+        if (value.ShouldIncludeProperty(Window.ExtendClientAreaTitleBarHeightHintProperty))
         if (!object.Equals(Window.ExtendClientAreaTitleBarHeightHintProperty.GetDefaultValue(typeof(Window)), value.ExtendClientAreaTitleBarHeightHint))
         {
             writer.WriteMember(value, value.ExtendClientAreaTitleBarHeightHint, "ExtendClientAreaTitleBarHeightHint");
         }
+        if (value.ShouldIncludeProperty(Window.IsExtendedIntoWindowDecorationsProperty))
         if (!object.Equals(Window.IsExtendedIntoWindowDecorationsProperty.GetUnsetValue(typeof(Window)), value.IsExtendedIntoWindowDecorations))
         {
             writer.WriteMember(value, value.IsExtendedIntoWindowDecorations, "IsExtendedIntoWindowDecorations");
         }
+        if (value.ShouldIncludeProperty(Window.WindowDecorationMarginProperty))
         if (!object.Equals(Window.WindowDecorationMarginProperty.GetUnsetValue(typeof(Window)), value.WindowDecorationMargin))
         {
             writer.WriteMember(value, value.WindowDecorationMargin, "WindowDecorationMargin");
         }
+        if (value.ShouldIncludeProperty(Window.OffScreenMarginProperty))
         if (!object.Equals(Window.OffScreenMarginProperty.GetUnsetValue(typeof(Window)), value.OffScreenMargin))
         {
             writer.WriteMember(value, value.OffScreenMargin, "OffScreenMargin");
         }
+        if (value.ShouldIncludeProperty(Window.SystemDecorationsProperty))
         if (!object.Equals(Window.SystemDecorationsProperty.GetDefaultValue(typeof(Window)), value.SystemDecorations))
         {
             writer.WriteMember(value, value.SystemDecorations, "SystemDecorations");
         }
+        if (value.ShouldIncludeProperty(Window.ShowActivatedProperty))
         if (!object.Equals(Window.ShowActivatedProperty.GetDefaultValue(typeof(Window)), value.ShowActivated))
         {
             writer.WriteMember(value, value.ShowActivated, "ShowActivated");
         }
+        if (value.ShouldIncludeProperty(Window.ShowInTaskbarProperty))
         if (!object.Equals(Window.ShowInTaskbarProperty.GetDefaultValue(typeof(Window)), value.ShowInTaskbar))
         {
             writer.WriteMember(value, value.ShowInTaskbar, "ShowInTaskbar");
         }
+        if (value.ShouldIncludeProperty(Window.WindowStateProperty))
         if (!object.Equals(Window.WindowStateProperty.GetDefaultValue(typeof(Window)), value.WindowState))
         {
             writer.WriteMember(value, value.WindowState, "WindowState");
         }
+        if (value.ShouldIncludeProperty(Window.CanResizeProperty))
         if (!object.Equals(Window.CanResizeProperty.GetDefaultValue(typeof(Window)), value.CanResize))
         {
             writer.WriteMember(value, value.CanResize, "CanResize");
         }
+        if (value.ShouldIncludeProperty(Window.IconProperty))
         if (!object.Equals(Window.IconProperty.GetDefaultValue(typeof(Window)), value.Icon))
         {
             writer.WriteMember(value, value.Icon, "Icon");
         }
+        if (value.ShouldIncludeProperty(Window.WindowStartupLocationProperty))
         if (!object.Equals(Window.WindowStartupLocationProperty.GetDefaultValue(typeof(Window)), value.WindowStartupLocation))
         {
             writer.WriteMember(value, value.WindowStartupLocation, "WindowStartupLocation");

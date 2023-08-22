@@ -15,14 +15,17 @@ class TreeViewItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TreeViewItem value)
     {
+        if (value.ShouldIncludeProperty(TreeViewItem.IsExpandedProperty))
         if (!object.Equals(TreeViewItem.IsExpandedProperty.GetDefaultValue(typeof(TreeViewItem)), value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
+        if (value.ShouldIncludeProperty(TreeViewItem.IsSelectedProperty))
         if (!object.Equals(TreeViewItem.IsSelectedProperty.GetDefaultValue(typeof(TreeViewItem)), value.IsSelected))
         {
             writer.WriteMember(value, value.IsSelected, "IsSelected");
         }
+        if (value.ShouldIncludeProperty(TreeViewItem.LevelProperty))
         if (!object.Equals(TreeViewItem.LevelProperty.GetUnsetValue(typeof(TreeViewItem)), value.Level))
         {
             writer.WriteMember(value, value.Level, "Level");

@@ -15,6 +15,7 @@ class ItemsPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsPresenter value)
     {
+        if (value.ShouldIncludeProperty(ItemsPresenter.ItemsPanelProperty))
         if (!object.Equals(ItemsPresenter.ItemsPanelProperty.GetDefaultValue(typeof(ItemsPresenter)), value.ItemsPanel))
         {
             writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");

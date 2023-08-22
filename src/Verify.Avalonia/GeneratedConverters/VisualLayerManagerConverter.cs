@@ -17,6 +17,7 @@ class VisualLayerManagerConverter :
     {
         writer.WriteMember(value, value.IsPopup, "IsPopup");
         writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
+        if (value.ShouldIncludeProperty(VisualLayerManager.ChromeOverlayLayerProperty))
         if (!object.Equals(VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(typeof(VisualLayerManager)), value.ChromeOverlayLayer))
         {
             writer.WriteMember(value, value.ChromeOverlayLayer, "ChromeOverlayLayer");

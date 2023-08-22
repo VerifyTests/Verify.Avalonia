@@ -15,10 +15,12 @@ class LineConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Line value)
     {
+        if (value.ShouldIncludeProperty(Line.StartPointProperty))
         if (!object.Equals(Line.StartPointProperty.GetDefaultValue(typeof(Line)), value.StartPoint))
         {
             writer.WriteMember(value, value.StartPoint, "StartPoint");
         }
+        if (value.ShouldIncludeProperty(Line.EndPointProperty))
         if (!object.Equals(Line.EndPointProperty.GetDefaultValue(typeof(Line)), value.EndPoint))
         {
             writer.WriteMember(value, value.EndPoint, "EndPoint");

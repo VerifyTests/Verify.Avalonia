@@ -17,34 +17,42 @@ class ShapeConverter :
     {
         writer.WriteMember(value, value.DefiningGeometry, "DefiningGeometry");
         writer.WriteMember(value, value.RenderedGeometry, "RenderedGeometry");
+        if (value.ShouldIncludeProperty(Shape.FillProperty))
         if (!object.Equals(Shape.FillProperty.GetDefaultValue(typeof(Shape)), value.Fill))
         {
             writer.WriteMember(value, value.Fill, "Fill");
         }
+        if (value.ShouldIncludeProperty(Shape.StretchProperty))
         if (!object.Equals(Shape.StretchProperty.GetDefaultValue(typeof(Shape)), value.Stretch))
         {
             writer.WriteMember(value, value.Stretch, "Stretch");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeProperty))
         if (!object.Equals(Shape.StrokeProperty.GetDefaultValue(typeof(Shape)), value.Stroke))
         {
             writer.WriteMember(value, value.Stroke, "Stroke");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeDashArrayProperty))
         if (!object.Equals(Shape.StrokeDashArrayProperty.GetDefaultValue(typeof(Shape)), value.StrokeDashArray))
         {
             writer.WriteMember(value, value.StrokeDashArray, "StrokeDashArray");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeDashOffsetProperty))
         if (!object.Equals(Shape.StrokeDashOffsetProperty.GetDefaultValue(typeof(Shape)), value.StrokeDashOffset))
         {
             writer.WriteMember(value, value.StrokeDashOffset, "StrokeDashOffset");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeThicknessProperty))
         if (!object.Equals(Shape.StrokeThicknessProperty.GetDefaultValue(typeof(Shape)), value.StrokeThickness))
         {
             writer.WriteMember(value, value.StrokeThickness, "StrokeThickness");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeLineCapProperty))
         if (!object.Equals(Shape.StrokeLineCapProperty.GetDefaultValue(typeof(Shape)), value.StrokeLineCap))
         {
             writer.WriteMember(value, value.StrokeLineCap, "StrokeLineCap");
         }
+        if (value.ShouldIncludeProperty(Shape.StrokeJoinProperty))
         if (!object.Equals(Shape.StrokeJoinProperty.GetDefaultValue(typeof(Shape)), value.StrokeJoin))
         {
             writer.WriteMember(value, value.StrokeJoin, "StrokeJoin");

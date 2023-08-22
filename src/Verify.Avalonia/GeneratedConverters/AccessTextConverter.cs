@@ -16,6 +16,7 @@ class AccessTextConverter :
     public static void WriteMembers(VerifyJsonWriter writer, AccessText value)
     {
         writer.WriteMember(value, value.AccessKey, "AccessKey");
+        if (value.ShouldIncludeProperty(AccessText.ShowAccessKeyProperty))
         if (!object.Equals(AccessText.ShowAccessKeyProperty.GetDefaultValue(typeof(AccessText)), value.ShowAccessKey))
         {
             writer.WriteMember(value, value.ShowAccessKey, "ShowAccessKey");

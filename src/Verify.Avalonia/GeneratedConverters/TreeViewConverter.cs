@@ -16,18 +16,22 @@ class TreeViewConverter :
     public static void WriteMembers(VerifyJsonWriter writer, TreeView value)
     {
         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
+        if (value.ShouldIncludeProperty(TreeView.AutoScrollToSelectedItemProperty))
         if (!object.Equals(TreeView.AutoScrollToSelectedItemProperty.GetDefaultValue(typeof(TreeView)), value.AutoScrollToSelectedItem))
         {
             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");
         }
+        if (value.ShouldIncludeProperty(TreeView.SelectionModeProperty))
         if (!object.Equals(TreeView.SelectionModeProperty.GetDefaultValue(typeof(TreeView)), value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }
+        if (value.ShouldIncludeProperty(TreeView.SelectedItemProperty))
         if (!object.Equals(TreeView.SelectedItemProperty.GetUnsetValue(typeof(TreeView)), value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
         }
+        if (value.ShouldIncludeProperty(TreeView.SelectedItemsProperty))
         if (!object.Equals(TreeView.SelectedItemsProperty.GetUnsetValue(typeof(TreeView)), value.SelectedItems))
         {
             writer.WriteMember(value, value.SelectedItems, "SelectedItems");

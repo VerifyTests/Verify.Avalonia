@@ -15,6 +15,7 @@ class ThemeVariantScopeConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ThemeVariantScope value)
     {
+        if (value.ShouldIncludeProperty(ThemeVariantScope.RequestedThemeVariantProperty))
         if (!object.Equals(ThemeVariantScope.RequestedThemeVariantProperty.GetDefaultValue(typeof(ThemeVariantScope)), value.RequestedThemeVariant))
         {
             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
