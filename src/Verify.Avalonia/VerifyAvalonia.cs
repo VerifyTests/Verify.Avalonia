@@ -6,6 +6,15 @@ public static partial class VerifyAvalonia
 {
     public static bool Initialized { get; private set; }
 
+    public static void WriteAvaloniaMember(this VerifyJsonWriter writer, Visual target, object? value, string name)
+    {
+        if (IsMemberValueInherited(target, name, value))
+        {
+            return;
+        }
+        writer.WriteMember(target, value, name);
+    }
+
     public static void Initialize()
     {
         if (Initialized)
