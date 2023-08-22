@@ -14,53 +14,54 @@ class TrackConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Track value)
     {
+        var type = typeof(Track);
         if (value.ShouldIncludeProperty(Track.MinimumProperty))
-        if (!object.Equals(Track.MinimumProperty.GetDefaultValue(typeof(Track)), value.Minimum))
+        if (!object.Equals(Track.MinimumProperty.GetDefaultValue(type), value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");
         }
         if (value.ShouldIncludeProperty(Track.MaximumProperty))
-        if (!object.Equals(Track.MaximumProperty.GetDefaultValue(typeof(Track)), value.Maximum))
+        if (!object.Equals(Track.MaximumProperty.GetDefaultValue(type), value.Maximum))
         {
             writer.WriteMember(value, value.Maximum, "Maximum");
         }
         if (value.ShouldIncludeProperty(Track.ValueProperty))
-        if (!object.Equals(Track.ValueProperty.GetDefaultValue(typeof(Track)), value.Value))
+        if (!object.Equals(Track.ValueProperty.GetDefaultValue(type), value.Value))
         {
             writer.WriteMember(value, value.Value, "Value");
         }
         if (value.ShouldIncludeProperty(Track.ViewportSizeProperty))
-        if (!object.Equals(Track.ViewportSizeProperty.GetDefaultValue(typeof(Track)), value.ViewportSize))
+        if (!object.Equals(Track.ViewportSizeProperty.GetDefaultValue(type), value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
         }
         if (value.ShouldIncludeProperty(Track.OrientationProperty))
-        if (!object.Equals(Track.OrientationProperty.GetDefaultValue(typeof(Track)), value.Orientation))
+        if (!object.Equals(Track.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
         if (value.ShouldIncludeProperty(Track.ThumbProperty))
-        if (!object.Equals(Track.ThumbProperty.GetDefaultValue(typeof(Track)), value.Thumb))
+        if (!object.Equals(Track.ThumbProperty.GetDefaultValue(type), value.Thumb))
         {
             writer.WriteMember(value, value.Thumb, "Thumb");
         }
         if (value.ShouldIncludeProperty(Track.IncreaseButtonProperty))
-        if (!object.Equals(Track.IncreaseButtonProperty.GetDefaultValue(typeof(Track)), value.IncreaseButton))
+        if (!object.Equals(Track.IncreaseButtonProperty.GetDefaultValue(type), value.IncreaseButton))
         {
             writer.WriteMember(value, value.IncreaseButton, "IncreaseButton");
         }
         if (value.ShouldIncludeProperty(Track.DecreaseButtonProperty))
-        if (!object.Equals(Track.DecreaseButtonProperty.GetDefaultValue(typeof(Track)), value.DecreaseButton))
+        if (!object.Equals(Track.DecreaseButtonProperty.GetDefaultValue(type), value.DecreaseButton))
         {
             writer.WriteMember(value, value.DecreaseButton, "DecreaseButton");
         }
         if (value.ShouldIncludeProperty(Track.IsDirectionReversedProperty))
-        if (!object.Equals(Track.IsDirectionReversedProperty.GetDefaultValue(typeof(Track)), value.IsDirectionReversed))
+        if (!object.Equals(Track.IsDirectionReversedProperty.GetDefaultValue(type), value.IsDirectionReversed))
         {
             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
         }
         if (value.ShouldIncludeProperty(Track.IgnoreThumbDragProperty))
-        if (!object.Equals(Track.IgnoreThumbDragProperty.GetDefaultValue(typeof(Track)), value.IgnoreThumbDrag))
+        if (!object.Equals(Track.IgnoreThumbDragProperty.GetDefaultValue(type), value.IgnoreThumbDrag))
         {
             writer.WriteMember(value, value.IgnoreThumbDrag, "IgnoreThumbDrag");
         }

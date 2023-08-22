@@ -14,5 +14,6 @@ class CheckBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CheckBox value)
     {
+        var type = typeof(CheckBox);
     }
 }

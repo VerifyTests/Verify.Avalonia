@@ -14,5 +14,6 @@ class InteractiveConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Interactive value)
     {
+        var type = typeof(Interactive);
     }
 }

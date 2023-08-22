@@ -14,33 +14,34 @@ class GridSplitterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
     {
+        var type = typeof(GridSplitter);
         if (value.ShouldIncludeProperty(GridSplitter.ResizeDirectionProperty))
-        if (!object.Equals(GridSplitter.ResizeDirectionProperty.GetDefaultValue(typeof(GridSplitter)), value.ResizeDirection))
+        if (!object.Equals(GridSplitter.ResizeDirectionProperty.GetDefaultValue(type), value.ResizeDirection))
         {
             writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");
         }
         if (value.ShouldIncludeProperty(GridSplitter.ResizeBehaviorProperty))
-        if (!object.Equals(GridSplitter.ResizeBehaviorProperty.GetDefaultValue(typeof(GridSplitter)), value.ResizeBehavior))
+        if (!object.Equals(GridSplitter.ResizeBehaviorProperty.GetDefaultValue(type), value.ResizeBehavior))
         {
             writer.WriteMember(value, value.ResizeBehavior, "ResizeBehavior");
         }
         if (value.ShouldIncludeProperty(GridSplitter.ShowsPreviewProperty))
-        if (!object.Equals(GridSplitter.ShowsPreviewProperty.GetDefaultValue(typeof(GridSplitter)), value.ShowsPreview))
+        if (!object.Equals(GridSplitter.ShowsPreviewProperty.GetDefaultValue(type), value.ShowsPreview))
         {
             writer.WriteMember(value, value.ShowsPreview, "ShowsPreview");
         }
         if (value.ShouldIncludeProperty(GridSplitter.KeyboardIncrementProperty))
-        if (!object.Equals(GridSplitter.KeyboardIncrementProperty.GetDefaultValue(typeof(GridSplitter)), value.KeyboardIncrement))
+        if (!object.Equals(GridSplitter.KeyboardIncrementProperty.GetDefaultValue(type), value.KeyboardIncrement))
         {
             writer.WriteMember(value, value.KeyboardIncrement, "KeyboardIncrement");
         }
         if (value.ShouldIncludeProperty(GridSplitter.DragIncrementProperty))
-        if (!object.Equals(GridSplitter.DragIncrementProperty.GetDefaultValue(typeof(GridSplitter)), value.DragIncrement))
+        if (!object.Equals(GridSplitter.DragIncrementProperty.GetDefaultValue(type), value.DragIncrement))
         {
             writer.WriteMember(value, value.DragIncrement, "DragIncrement");
         }
         if (value.ShouldIncludeProperty(GridSplitter.PreviewContentProperty))
-        if (!object.Equals(GridSplitter.PreviewContentProperty.GetDefaultValue(typeof(GridSplitter)), value.PreviewContent))
+        if (!object.Equals(GridSplitter.PreviewContentProperty.GetDefaultValue(type), value.PreviewContent))
         {
             writer.WriteMember(value, value.PreviewContent, "PreviewContent");
         }

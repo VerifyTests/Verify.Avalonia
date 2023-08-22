@@ -14,6 +14,7 @@ class RemoteWidgetConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RemoteWidget value)
     {
+        var type = typeof(RemoteWidget);
         writer.WriteMember(value, value.Mode, "Mode");
     }
 }

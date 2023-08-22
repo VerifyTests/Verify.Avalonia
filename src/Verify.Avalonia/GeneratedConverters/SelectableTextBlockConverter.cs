@@ -14,28 +14,29 @@ class SelectableTextBlockConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectableTextBlock value)
     {
+        var type = typeof(SelectableTextBlock);
         if (value.ShouldIncludeProperty(SelectableTextBlock.SelectionBrushProperty))
-        if (!object.Equals(SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(typeof(SelectableTextBlock)), value.SelectionBrush))
+        if (!object.Equals(SelectableTextBlock.SelectionBrushProperty.GetDefaultValue(type), value.SelectionBrush))
         {
             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
         }
         if (value.ShouldIncludeProperty(SelectableTextBlock.SelectionStartProperty))
-        if (!object.Equals(SelectableTextBlock.SelectionStartProperty.GetDefaultValue(typeof(SelectableTextBlock)), value.SelectionStart))
+        if (!object.Equals(SelectableTextBlock.SelectionStartProperty.GetDefaultValue(type), value.SelectionStart))
         {
             writer.WriteMember(value, value.SelectionStart, "SelectionStart");
         }
         if (value.ShouldIncludeProperty(SelectableTextBlock.SelectionEndProperty))
-        if (!object.Equals(SelectableTextBlock.SelectionEndProperty.GetDefaultValue(typeof(SelectableTextBlock)), value.SelectionEnd))
+        if (!object.Equals(SelectableTextBlock.SelectionEndProperty.GetDefaultValue(type), value.SelectionEnd))
         {
             writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
         }
         if (value.ShouldIncludeProperty(SelectableTextBlock.SelectedTextProperty))
-        if (!object.Equals(SelectableTextBlock.SelectedTextProperty.GetUnsetValue(typeof(SelectableTextBlock)), value.SelectedText))
+        if (!object.Equals(SelectableTextBlock.SelectedTextProperty.GetUnsetValue(type), value.SelectedText))
         {
             writer.WriteMember(value, value.SelectedText, "SelectedText");
         }
         if (value.ShouldIncludeProperty(SelectableTextBlock.CanCopyProperty))
-        if (!object.Equals(SelectableTextBlock.CanCopyProperty.GetUnsetValue(typeof(SelectableTextBlock)), value.CanCopy))
+        if (!object.Equals(SelectableTextBlock.CanCopyProperty.GetUnsetValue(type), value.CanCopy))
         {
             writer.WriteMember(value, value.CanCopy, "CanCopy");
         }

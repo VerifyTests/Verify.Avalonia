@@ -14,5 +14,6 @@ class CaptionButtonsConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CaptionButtons value)
     {
+        var type = typeof(CaptionButtons);
     }
 }

@@ -14,18 +14,19 @@ class ButtonSpinnerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ButtonSpinner value)
     {
+        var type = typeof(ButtonSpinner);
         if (value.ShouldIncludeProperty(ButtonSpinner.AllowSpinProperty))
-        if (!object.Equals(ButtonSpinner.AllowSpinProperty.GetDefaultValue(typeof(ButtonSpinner)), value.AllowSpin))
+        if (!object.Equals(ButtonSpinner.AllowSpinProperty.GetDefaultValue(type), value.AllowSpin))
         {
             writer.WriteMember(value, value.AllowSpin, "AllowSpin");
         }
         if (value.ShouldIncludeProperty(ButtonSpinner.ShowButtonSpinnerProperty))
-        if (!object.Equals(ButtonSpinner.ShowButtonSpinnerProperty.GetDefaultValue(typeof(ButtonSpinner)), value.ShowButtonSpinner))
+        if (!object.Equals(ButtonSpinner.ShowButtonSpinnerProperty.GetDefaultValue(type), value.ShowButtonSpinner))
         {
             writer.WriteMember(value, value.ShowButtonSpinner, "ShowButtonSpinner");
         }
         if (value.ShouldIncludeProperty(ButtonSpinner.ButtonSpinnerLocationProperty))
-        if (!object.Equals(ButtonSpinner.ButtonSpinnerLocationProperty.GetDefaultValue(typeof(ButtonSpinner)), value.ButtonSpinnerLocation))
+        if (!object.Equals(ButtonSpinner.ButtonSpinnerLocationProperty.GetDefaultValue(type), value.ButtonSpinnerLocation))
         {
             writer.WriteMember(value, value.ButtonSpinnerLocation, "ButtonSpinnerLocation");
         }

@@ -14,48 +14,49 @@ class TickBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TickBar value)
     {
+        var type = typeof(TickBar);
         if (value.ShouldIncludeProperty(TickBar.FillProperty))
-        if (!object.Equals(TickBar.FillProperty.GetDefaultValue(typeof(TickBar)), value.Fill))
+        if (!object.Equals(TickBar.FillProperty.GetDefaultValue(type), value.Fill))
         {
             writer.WriteMember(value, value.Fill, "Fill");
         }
         if (value.ShouldIncludeProperty(TickBar.MinimumProperty))
-        if (!object.Equals(TickBar.MinimumProperty.GetDefaultValue(typeof(TickBar)), value.Minimum))
+        if (!object.Equals(TickBar.MinimumProperty.GetDefaultValue(type), value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");
         }
         if (value.ShouldIncludeProperty(TickBar.MaximumProperty))
-        if (!object.Equals(TickBar.MaximumProperty.GetDefaultValue(typeof(TickBar)), value.Maximum))
+        if (!object.Equals(TickBar.MaximumProperty.GetDefaultValue(type), value.Maximum))
         {
             writer.WriteMember(value, value.Maximum, "Maximum");
         }
         if (value.ShouldIncludeProperty(TickBar.TickFrequencyProperty))
-        if (!object.Equals(TickBar.TickFrequencyProperty.GetDefaultValue(typeof(TickBar)), value.TickFrequency))
+        if (!object.Equals(TickBar.TickFrequencyProperty.GetDefaultValue(type), value.TickFrequency))
         {
             writer.WriteMember(value, value.TickFrequency, "TickFrequency");
         }
         if (value.ShouldIncludeProperty(TickBar.OrientationProperty))
-        if (!object.Equals(TickBar.OrientationProperty.GetDefaultValue(typeof(TickBar)), value.Orientation))
+        if (!object.Equals(TickBar.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
         if (value.ShouldIncludeProperty(TickBar.TicksProperty))
-        if (!object.Equals(TickBar.TicksProperty.GetDefaultValue(typeof(TickBar)), value.Ticks))
+        if (!object.Equals(TickBar.TicksProperty.GetDefaultValue(type), value.Ticks))
         {
             writer.WriteMember(value, value.Ticks, "Ticks");
         }
         if (value.ShouldIncludeProperty(TickBar.IsDirectionReversedProperty))
-        if (!object.Equals(TickBar.IsDirectionReversedProperty.GetDefaultValue(typeof(TickBar)), value.IsDirectionReversed))
+        if (!object.Equals(TickBar.IsDirectionReversedProperty.GetDefaultValue(type), value.IsDirectionReversed))
         {
             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
         }
         if (value.ShouldIncludeProperty(TickBar.PlacementProperty))
-        if (!object.Equals(TickBar.PlacementProperty.GetDefaultValue(typeof(TickBar)), value.Placement))
+        if (!object.Equals(TickBar.PlacementProperty.GetDefaultValue(type), value.Placement))
         {
             writer.WriteMember(value, value.Placement, "Placement");
         }
         if (value.ShouldIncludeProperty(TickBar.ReservedSpaceProperty))
-        if (!object.Equals(TickBar.ReservedSpaceProperty.GetDefaultValue(typeof(TickBar)), value.ReservedSpace))
+        if (!object.Equals(TickBar.ReservedSpaceProperty.GetDefaultValue(type), value.ReservedSpace))
         {
             writer.WriteMember(value, value.ReservedSpace, "ReservedSpace");
         }

@@ -14,6 +14,7 @@ class VirtualizingPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VirtualizingPanel value)
     {
+        var type = typeof(VirtualizingPanel);
         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
     }
 }

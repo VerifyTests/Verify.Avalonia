@@ -14,38 +14,39 @@ class ScrollBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
+        var type = typeof(ScrollBar);
         if (value.ShouldIncludeProperty(ScrollBar.ViewportSizeProperty))
-        if (!object.Equals(ScrollBar.ViewportSizeProperty.GetDefaultValue(typeof(ScrollBar)), value.ViewportSize))
+        if (!object.Equals(ScrollBar.ViewportSizeProperty.GetDefaultValue(type), value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");
         }
         if (value.ShouldIncludeProperty(ScrollBar.VisibilityProperty))
-        if (!object.Equals(ScrollBar.VisibilityProperty.GetDefaultValue(typeof(ScrollBar)), value.Visibility))
+        if (!object.Equals(ScrollBar.VisibilityProperty.GetDefaultValue(type), value.Visibility))
         {
             writer.WriteMember(value, value.Visibility, "Visibility");
         }
         if (value.ShouldIncludeProperty(ScrollBar.OrientationProperty))
-        if (!object.Equals(ScrollBar.OrientationProperty.GetDefaultValue(typeof(ScrollBar)), value.Orientation))
+        if (!object.Equals(ScrollBar.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
         if (value.ShouldIncludeProperty(ScrollBar.IsExpandedProperty))
-        if (!object.Equals(ScrollBar.IsExpandedProperty.GetUnsetValue(typeof(ScrollBar)), value.IsExpanded))
+        if (!object.Equals(ScrollBar.IsExpandedProperty.GetUnsetValue(type), value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
         if (value.ShouldIncludeProperty(ScrollBar.AllowAutoHideProperty))
-        if (!object.Equals(ScrollBar.AllowAutoHideProperty.GetDefaultValue(typeof(ScrollBar)), value.AllowAutoHide))
+        if (!object.Equals(ScrollBar.AllowAutoHideProperty.GetDefaultValue(type), value.AllowAutoHide))
         {
             writer.WriteMember(value, value.AllowAutoHide, "AllowAutoHide");
         }
         if (value.ShouldIncludeProperty(ScrollBar.HideDelayProperty))
-        if (!object.Equals(ScrollBar.HideDelayProperty.GetDefaultValue(typeof(ScrollBar)), value.HideDelay))
+        if (!object.Equals(ScrollBar.HideDelayProperty.GetDefaultValue(type), value.HideDelay))
         {
             writer.WriteMember(value, value.HideDelay, "HideDelay");
         }
         if (value.ShouldIncludeProperty(ScrollBar.ShowDelayProperty))
-        if (!object.Equals(ScrollBar.ShowDelayProperty.GetDefaultValue(typeof(ScrollBar)), value.ShowDelay))
+        if (!object.Equals(ScrollBar.ShowDelayProperty.GetDefaultValue(type), value.ShowDelay))
         {
             writer.WriteMember(value, value.ShowDelay, "ShowDelay");
         }

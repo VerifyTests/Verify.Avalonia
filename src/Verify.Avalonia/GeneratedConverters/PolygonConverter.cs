@@ -14,8 +14,9 @@ class PolygonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Polygon value)
     {
+        var type = typeof(Polygon);
         if (value.ShouldIncludeProperty(Polygon.PointsProperty))
-        if (!object.Equals(Polygon.PointsProperty.GetDefaultValue(typeof(Polygon)), value.Points))
+        if (!object.Equals(Polygon.PointsProperty.GetDefaultValue(type), value.Points))
         {
             writer.WriteMember(value, value.Points, "Points");
         }

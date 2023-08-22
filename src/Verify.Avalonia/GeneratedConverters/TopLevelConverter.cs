@@ -14,33 +14,34 @@ class TopLevelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
+        var type = typeof(TopLevel);
         if (value.ShouldIncludeProperty(TopLevel.ClientSizeProperty))
-        if (!object.Equals(TopLevel.ClientSizeProperty.GetUnsetValue(typeof(TopLevel)), value.ClientSize))
+        if (!object.Equals(TopLevel.ClientSizeProperty.GetUnsetValue(type), value.ClientSize))
         {
             writer.WriteMember(value, value.ClientSize, "ClientSize");
         }
         if (value.ShouldIncludeProperty(TopLevel.FrameSizeProperty))
-        if (!object.Equals(TopLevel.FrameSizeProperty.GetUnsetValue(typeof(TopLevel)), value.FrameSize))
+        if (!object.Equals(TopLevel.FrameSizeProperty.GetUnsetValue(type), value.FrameSize))
         {
             writer.WriteMember(value, value.FrameSize, "FrameSize");
         }
         if (value.ShouldIncludeProperty(TopLevel.TransparencyLevelHintProperty))
-        if (!object.Equals(TopLevel.TransparencyLevelHintProperty.GetDefaultValue(typeof(TopLevel)), value.TransparencyLevelHint))
+        if (!object.Equals(TopLevel.TransparencyLevelHintProperty.GetDefaultValue(type), value.TransparencyLevelHint))
         {
             writer.WriteMember(value, value.TransparencyLevelHint, "TransparencyLevelHint");
         }
         if (value.ShouldIncludeProperty(TopLevel.ActualTransparencyLevelProperty))
-        if (!object.Equals(TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(typeof(TopLevel)), value.ActualTransparencyLevel))
+        if (!object.Equals(TopLevel.ActualTransparencyLevelProperty.GetUnsetValue(type), value.ActualTransparencyLevel))
         {
             writer.WriteMember(value, value.ActualTransparencyLevel, "ActualTransparencyLevel");
         }
         if (value.ShouldIncludeProperty(TopLevel.TransparencyBackgroundFallbackProperty))
-        if (!object.Equals(TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(typeof(TopLevel)), value.TransparencyBackgroundFallback))
+        if (!object.Equals(TopLevel.TransparencyBackgroundFallbackProperty.GetDefaultValue(type), value.TransparencyBackgroundFallback))
         {
             writer.WriteMember(value, value.TransparencyBackgroundFallback, "TransparencyBackgroundFallback");
         }
         if (value.ShouldIncludeProperty(TopLevel.RequestedThemeVariantProperty))
-        if (!object.Equals(TopLevel.RequestedThemeVariantProperty.GetDefaultValue(typeof(TopLevel)), value.RequestedThemeVariant))
+        if (!object.Equals(TopLevel.RequestedThemeVariantProperty.GetDefaultValue(type), value.RequestedThemeVariant))
         {
             writer.WriteMember(value, value.RequestedThemeVariant, "RequestedThemeVariant");
         }

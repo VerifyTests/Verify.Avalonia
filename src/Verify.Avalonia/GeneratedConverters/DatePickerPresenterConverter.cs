@@ -14,48 +14,49 @@ class DatePickerPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DatePickerPresenter value)
     {
+        var type = typeof(DatePickerPresenter);
         if (value.ShouldIncludeProperty(DatePickerPresenter.DateProperty))
-        if (!object.Equals(DatePickerPresenter.DateProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.Date))
+        if (!object.Equals(DatePickerPresenter.DateProperty.GetDefaultValue(type), value.Date))
         {
             writer.WriteMember(value, value.Date, "Date");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.DayFormatProperty))
-        if (!object.Equals(DatePickerPresenter.DayFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.DayFormat))
+        if (!object.Equals(DatePickerPresenter.DayFormatProperty.GetDefaultValue(type), value.DayFormat))
         {
             writer.WriteMember(value, value.DayFormat, "DayFormat");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.DayVisibleProperty))
-        if (!object.Equals(DatePickerPresenter.DayVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.DayVisible))
+        if (!object.Equals(DatePickerPresenter.DayVisibleProperty.GetDefaultValue(type), value.DayVisible))
         {
             writer.WriteMember(value, value.DayVisible, "DayVisible");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.MaxYearProperty))
-        if (!object.Equals(DatePickerPresenter.MaxYearProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MaxYear))
+        if (!object.Equals(DatePickerPresenter.MaxYearProperty.GetDefaultValue(type), value.MaxYear))
         {
             writer.WriteMember(value, value.MaxYear, "MaxYear");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.MinYearProperty))
-        if (!object.Equals(DatePickerPresenter.MinYearProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MinYear))
+        if (!object.Equals(DatePickerPresenter.MinYearProperty.GetDefaultValue(type), value.MinYear))
         {
             writer.WriteMember(value, value.MinYear, "MinYear");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.MonthFormatProperty))
-        if (!object.Equals(DatePickerPresenter.MonthFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MonthFormat))
+        if (!object.Equals(DatePickerPresenter.MonthFormatProperty.GetDefaultValue(type), value.MonthFormat))
         {
             writer.WriteMember(value, value.MonthFormat, "MonthFormat");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.MonthVisibleProperty))
-        if (!object.Equals(DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.MonthVisible))
+        if (!object.Equals(DatePickerPresenter.MonthVisibleProperty.GetDefaultValue(type), value.MonthVisible))
         {
             writer.WriteMember(value, value.MonthVisible, "MonthVisible");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.YearFormatProperty))
-        if (!object.Equals(DatePickerPresenter.YearFormatProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.YearFormat))
+        if (!object.Equals(DatePickerPresenter.YearFormatProperty.GetDefaultValue(type), value.YearFormat))
         {
             writer.WriteMember(value, value.YearFormat, "YearFormat");
         }
         if (value.ShouldIncludeProperty(DatePickerPresenter.YearVisibleProperty))
-        if (!object.Equals(DatePickerPresenter.YearVisibleProperty.GetDefaultValue(typeof(DatePickerPresenter)), value.YearVisible))
+        if (!object.Equals(DatePickerPresenter.YearVisibleProperty.GetDefaultValue(type), value.YearVisible))
         {
             writer.WriteMember(value, value.YearVisible, "YearVisible");
         }

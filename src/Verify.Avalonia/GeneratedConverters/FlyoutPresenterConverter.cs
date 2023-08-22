@@ -14,5 +14,6 @@ class FlyoutPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, FlyoutPresenter value)
     {
+        var type = typeof(FlyoutPresenter);
     }
 }

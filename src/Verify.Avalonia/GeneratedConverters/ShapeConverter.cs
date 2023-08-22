@@ -14,45 +14,46 @@ class ShapeConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Shape value)
     {
+        var type = typeof(Shape);
         writer.WriteMember(value, value.DefiningGeometry, "DefiningGeometry");
         writer.WriteMember(value, value.RenderedGeometry, "RenderedGeometry");
         if (value.ShouldIncludeProperty(Shape.FillProperty))
-        if (!object.Equals(Shape.FillProperty.GetDefaultValue(typeof(Shape)), value.Fill))
+        if (!object.Equals(Shape.FillProperty.GetDefaultValue(type), value.Fill))
         {
             writer.WriteMember(value, value.Fill, "Fill");
         }
         if (value.ShouldIncludeProperty(Shape.StretchProperty))
-        if (!object.Equals(Shape.StretchProperty.GetDefaultValue(typeof(Shape)), value.Stretch))
+        if (!object.Equals(Shape.StretchProperty.GetDefaultValue(type), value.Stretch))
         {
             writer.WriteMember(value, value.Stretch, "Stretch");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeProperty))
-        if (!object.Equals(Shape.StrokeProperty.GetDefaultValue(typeof(Shape)), value.Stroke))
+        if (!object.Equals(Shape.StrokeProperty.GetDefaultValue(type), value.Stroke))
         {
             writer.WriteMember(value, value.Stroke, "Stroke");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeDashArrayProperty))
-        if (!object.Equals(Shape.StrokeDashArrayProperty.GetDefaultValue(typeof(Shape)), value.StrokeDashArray))
+        if (!object.Equals(Shape.StrokeDashArrayProperty.GetDefaultValue(type), value.StrokeDashArray))
         {
             writer.WriteMember(value, value.StrokeDashArray, "StrokeDashArray");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeDashOffsetProperty))
-        if (!object.Equals(Shape.StrokeDashOffsetProperty.GetDefaultValue(typeof(Shape)), value.StrokeDashOffset))
+        if (!object.Equals(Shape.StrokeDashOffsetProperty.GetDefaultValue(type), value.StrokeDashOffset))
         {
             writer.WriteMember(value, value.StrokeDashOffset, "StrokeDashOffset");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeThicknessProperty))
-        if (!object.Equals(Shape.StrokeThicknessProperty.GetDefaultValue(typeof(Shape)), value.StrokeThickness))
+        if (!object.Equals(Shape.StrokeThicknessProperty.GetDefaultValue(type), value.StrokeThickness))
         {
             writer.WriteMember(value, value.StrokeThickness, "StrokeThickness");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeLineCapProperty))
-        if (!object.Equals(Shape.StrokeLineCapProperty.GetDefaultValue(typeof(Shape)), value.StrokeLineCap))
+        if (!object.Equals(Shape.StrokeLineCapProperty.GetDefaultValue(type), value.StrokeLineCap))
         {
             writer.WriteMember(value, value.StrokeLineCap, "StrokeLineCap");
         }
         if (value.ShouldIncludeProperty(Shape.StrokeJoinProperty))
-        if (!object.Equals(Shape.StrokeJoinProperty.GetDefaultValue(typeof(Shape)), value.StrokeJoin))
+        if (!object.Equals(Shape.StrokeJoinProperty.GetDefaultValue(type), value.StrokeJoin))
         {
             writer.WriteMember(value, value.StrokeJoin, "StrokeJoin");
         }

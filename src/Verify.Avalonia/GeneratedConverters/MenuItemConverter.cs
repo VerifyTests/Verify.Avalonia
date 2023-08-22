@@ -14,39 +14,40 @@ class MenuItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MenuItem value)
     {
+        var type = typeof(MenuItem);
         if (value.ShouldIncludeProperty(MenuItem.CommandProperty))
-        if (!object.Equals(MenuItem.CommandProperty.GetDefaultValue(typeof(MenuItem)), value.Command))
+        if (!object.Equals(MenuItem.CommandProperty.GetDefaultValue(type), value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");
         }
         if (value.ShouldIncludeProperty(MenuItem.HotKeyProperty))
-        if (!object.Equals(MenuItem.HotKeyProperty.GetDefaultValue(typeof(MenuItem)), value.HotKey))
+        if (!object.Equals(MenuItem.HotKeyProperty.GetDefaultValue(type), value.HotKey))
         {
             writer.WriteMember(value, value.HotKey, "HotKey");
         }
         if (value.ShouldIncludeProperty(MenuItem.CommandParameterProperty))
-        if (!object.Equals(MenuItem.CommandParameterProperty.GetDefaultValue(typeof(MenuItem)), value.CommandParameter))
+        if (!object.Equals(MenuItem.CommandParameterProperty.GetDefaultValue(type), value.CommandParameter))
         {
             writer.WriteMember(value, value.CommandParameter, "CommandParameter");
         }
         if (value.ShouldIncludeProperty(MenuItem.IconProperty))
-        if (!object.Equals(MenuItem.IconProperty.GetDefaultValue(typeof(MenuItem)), value.Icon))
+        if (!object.Equals(MenuItem.IconProperty.GetDefaultValue(type), value.Icon))
         {
             writer.WriteMember(value, value.Icon, "Icon");
         }
         if (value.ShouldIncludeProperty(MenuItem.InputGestureProperty))
-        if (!object.Equals(MenuItem.InputGestureProperty.GetDefaultValue(typeof(MenuItem)), value.InputGesture))
+        if (!object.Equals(MenuItem.InputGestureProperty.GetDefaultValue(type), value.InputGesture))
         {
             writer.WriteMember(value, value.InputGesture, "InputGesture");
         }
         writer.WriteMember(value, value.IsSelected, "IsSelected");
         if (value.ShouldIncludeProperty(MenuItem.IsSubMenuOpenProperty))
-        if (!object.Equals(MenuItem.IsSubMenuOpenProperty.GetDefaultValue(typeof(MenuItem)), value.IsSubMenuOpen))
+        if (!object.Equals(MenuItem.IsSubMenuOpenProperty.GetDefaultValue(type), value.IsSubMenuOpen))
         {
             writer.WriteMember(value, value.IsSubMenuOpen, "IsSubMenuOpen");
         }
         if (value.ShouldIncludeProperty(MenuItem.StaysOpenOnClickProperty))
-        if (!object.Equals(MenuItem.StaysOpenOnClickProperty.GetDefaultValue(typeof(MenuItem)), value.StaysOpenOnClick))
+        if (!object.Equals(MenuItem.StaysOpenOnClickProperty.GetDefaultValue(type), value.StaysOpenOnClick))
         {
             writer.WriteMember(value, value.StaysOpenOnClick, "StaysOpenOnClick");
         }

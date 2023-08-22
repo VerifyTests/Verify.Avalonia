@@ -14,58 +14,59 @@ class TemplatedControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TemplatedControl value)
     {
+        var type = typeof(TemplatedControl);
         if (value.ShouldIncludeProperty(TemplatedControl.BackgroundProperty))
-        if (!object.Equals(TemplatedControl.BackgroundProperty.GetDefaultValue(typeof(TemplatedControl)), value.Background))
+        if (!object.Equals(TemplatedControl.BackgroundProperty.GetDefaultValue(type), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.BorderBrushProperty))
-        if (!object.Equals(TemplatedControl.BorderBrushProperty.GetDefaultValue(typeof(TemplatedControl)), value.BorderBrush))
+        if (!object.Equals(TemplatedControl.BorderBrushProperty.GetDefaultValue(type), value.BorderBrush))
         {
             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.BorderThicknessProperty))
-        if (!object.Equals(TemplatedControl.BorderThicknessProperty.GetDefaultValue(typeof(TemplatedControl)), value.BorderThickness))
+        if (!object.Equals(TemplatedControl.BorderThicknessProperty.GetDefaultValue(type), value.BorderThickness))
         {
             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.CornerRadiusProperty))
-        if (!object.Equals(TemplatedControl.CornerRadiusProperty.GetDefaultValue(typeof(TemplatedControl)), value.CornerRadius))
+        if (!object.Equals(TemplatedControl.CornerRadiusProperty.GetDefaultValue(type), value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.FontFamilyProperty))
-        if (!object.Equals(TemplatedControl.FontFamilyProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontFamily))
+        if (!object.Equals(TemplatedControl.FontFamilyProperty.GetDefaultValue(type), value.FontFamily))
         {
             writer.WriteMember(value, value.FontFamily, "FontFamily");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.FontSizeProperty))
-        if (!object.Equals(TemplatedControl.FontSizeProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontSize))
+        if (!object.Equals(TemplatedControl.FontSizeProperty.GetDefaultValue(type), value.FontSize))
         {
             writer.WriteMember(value, value.FontSize, "FontSize");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.FontStyleProperty))
-        if (!object.Equals(TemplatedControl.FontStyleProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontStyle))
+        if (!object.Equals(TemplatedControl.FontStyleProperty.GetDefaultValue(type), value.FontStyle))
         {
             writer.WriteMember(value, value.FontStyle, "FontStyle");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.FontWeightProperty))
-        if (!object.Equals(TemplatedControl.FontWeightProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontWeight))
+        if (!object.Equals(TemplatedControl.FontWeightProperty.GetDefaultValue(type), value.FontWeight))
         {
             writer.WriteMember(value, value.FontWeight, "FontWeight");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.FontStretchProperty))
-        if (!object.Equals(TemplatedControl.FontStretchProperty.GetDefaultValue(typeof(TemplatedControl)), value.FontStretch))
+        if (!object.Equals(TemplatedControl.FontStretchProperty.GetDefaultValue(type), value.FontStretch))
         {
             writer.WriteMember(value, value.FontStretch, "FontStretch");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.ForegroundProperty))
-        if (!object.Equals(TemplatedControl.ForegroundProperty.GetDefaultValue(typeof(TemplatedControl)), value.Foreground))
+        if (!object.Equals(TemplatedControl.ForegroundProperty.GetDefaultValue(type), value.Foreground))
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
         if (value.ShouldIncludeProperty(TemplatedControl.PaddingProperty))
-        if (!object.Equals(TemplatedControl.PaddingProperty.GetDefaultValue(typeof(TemplatedControl)), value.Padding))
+        if (!object.Equals(TemplatedControl.PaddingProperty.GetDefaultValue(type), value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }

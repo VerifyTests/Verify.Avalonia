@@ -14,10 +14,11 @@ class VisualLayerManagerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VisualLayerManager value)
     {
+        var type = typeof(VisualLayerManager);
         writer.WriteMember(value, value.IsPopup, "IsPopup");
         writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
         if (value.ShouldIncludeProperty(VisualLayerManager.ChromeOverlayLayerProperty))
-        if (!object.Equals(VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(typeof(VisualLayerManager)), value.ChromeOverlayLayer))
+        if (!object.Equals(VisualLayerManager.ChromeOverlayLayerProperty.GetDefaultValue(type), value.ChromeOverlayLayer))
         {
             writer.WriteMember(value, value.ChromeOverlayLayer, "ChromeOverlayLayer");
         }

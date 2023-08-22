@@ -14,33 +14,34 @@ class SliderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Slider value)
     {
+        var type = typeof(Slider);
         if (value.ShouldIncludeProperty(Slider.TicksProperty))
-        if (!object.Equals(Slider.TicksProperty.GetDefaultValue(typeof(Slider)), value.Ticks))
+        if (!object.Equals(Slider.TicksProperty.GetDefaultValue(type), value.Ticks))
         {
             writer.WriteMember(value, value.Ticks, "Ticks");
         }
         if (value.ShouldIncludeProperty(Slider.OrientationProperty))
-        if (!object.Equals(Slider.OrientationProperty.GetDefaultValue(typeof(Slider)), value.Orientation))
+        if (!object.Equals(Slider.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
         if (value.ShouldIncludeProperty(Slider.IsDirectionReversedProperty))
-        if (!object.Equals(Slider.IsDirectionReversedProperty.GetDefaultValue(typeof(Slider)), value.IsDirectionReversed))
+        if (!object.Equals(Slider.IsDirectionReversedProperty.GetDefaultValue(type), value.IsDirectionReversed))
         {
             writer.WriteMember(value, value.IsDirectionReversed, "IsDirectionReversed");
         }
         if (value.ShouldIncludeProperty(Slider.IsSnapToTickEnabledProperty))
-        if (!object.Equals(Slider.IsSnapToTickEnabledProperty.GetDefaultValue(typeof(Slider)), value.IsSnapToTickEnabled))
+        if (!object.Equals(Slider.IsSnapToTickEnabledProperty.GetDefaultValue(type), value.IsSnapToTickEnabled))
         {
             writer.WriteMember(value, value.IsSnapToTickEnabled, "IsSnapToTickEnabled");
         }
         if (value.ShouldIncludeProperty(Slider.TickFrequencyProperty))
-        if (!object.Equals(Slider.TickFrequencyProperty.GetDefaultValue(typeof(Slider)), value.TickFrequency))
+        if (!object.Equals(Slider.TickFrequencyProperty.GetDefaultValue(type), value.TickFrequency))
         {
             writer.WriteMember(value, value.TickFrequency, "TickFrequency");
         }
         if (value.ShouldIncludeProperty(Slider.TickPlacementProperty))
-        if (!object.Equals(Slider.TickPlacementProperty.GetDefaultValue(typeof(Slider)), value.TickPlacement))
+        if (!object.Equals(Slider.TickPlacementProperty.GetDefaultValue(type), value.TickPlacement))
         {
             writer.WriteMember(value, value.TickPlacement, "TickPlacement");
         }

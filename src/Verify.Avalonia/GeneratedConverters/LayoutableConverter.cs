@@ -14,60 +14,61 @@ class LayoutableConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Layoutable value)
     {
+        var type = typeof(Layoutable);
         if (value.ShouldIncludeProperty(Layoutable.WidthProperty))
-        if (!object.Equals(Layoutable.WidthProperty.GetDefaultValue(typeof(Layoutable)), value.Width))
+        if (!object.Equals(Layoutable.WidthProperty.GetDefaultValue(type), value.Width))
         {
             writer.WriteMember(value, value.Width, "Width");
         }
         if (value.ShouldIncludeProperty(Layoutable.HeightProperty))
-        if (!object.Equals(Layoutable.HeightProperty.GetDefaultValue(typeof(Layoutable)), value.Height))
+        if (!object.Equals(Layoutable.HeightProperty.GetDefaultValue(type), value.Height))
         {
             writer.WriteMember(value, value.Height, "Height");
         }
         if (value.ShouldIncludeProperty(Layoutable.MinWidthProperty))
-        if (!object.Equals(Layoutable.MinWidthProperty.GetDefaultValue(typeof(Layoutable)), value.MinWidth))
+        if (!object.Equals(Layoutable.MinWidthProperty.GetDefaultValue(type), value.MinWidth))
         {
             writer.WriteMember(value, value.MinWidth, "MinWidth");
         }
         if (value.ShouldIncludeProperty(Layoutable.MaxWidthProperty))
-        if (!object.Equals(Layoutable.MaxWidthProperty.GetDefaultValue(typeof(Layoutable)), value.MaxWidth))
+        if (!object.Equals(Layoutable.MaxWidthProperty.GetDefaultValue(type), value.MaxWidth))
         {
             writer.WriteMember(value, value.MaxWidth, "MaxWidth");
         }
         if (value.ShouldIncludeProperty(Layoutable.MinHeightProperty))
-        if (!object.Equals(Layoutable.MinHeightProperty.GetDefaultValue(typeof(Layoutable)), value.MinHeight))
+        if (!object.Equals(Layoutable.MinHeightProperty.GetDefaultValue(type), value.MinHeight))
         {
             writer.WriteMember(value, value.MinHeight, "MinHeight");
         }
         if (value.ShouldIncludeProperty(Layoutable.MaxHeightProperty))
-        if (!object.Equals(Layoutable.MaxHeightProperty.GetDefaultValue(typeof(Layoutable)), value.MaxHeight))
+        if (!object.Equals(Layoutable.MaxHeightProperty.GetDefaultValue(type), value.MaxHeight))
         {
             writer.WriteMember(value, value.MaxHeight, "MaxHeight");
         }
         if (value.ShouldIncludeProperty(Layoutable.MarginProperty))
-        if (!object.Equals(Layoutable.MarginProperty.GetDefaultValue(typeof(Layoutable)), value.Margin))
+        if (!object.Equals(Layoutable.MarginProperty.GetDefaultValue(type), value.Margin))
         {
             writer.WriteMember(value, value.Margin, "Margin");
         }
         if (value.ShouldIncludeProperty(Layoutable.HorizontalAlignmentProperty))
-        if (!object.Equals(Layoutable.HorizontalAlignmentProperty.GetDefaultValue(typeof(Layoutable)), value.HorizontalAlignment))
+        if (!object.Equals(Layoutable.HorizontalAlignmentProperty.GetDefaultValue(type), value.HorizontalAlignment))
         {
             writer.WriteMember(value, value.HorizontalAlignment, "HorizontalAlignment");
         }
         if (value.ShouldIncludeProperty(Layoutable.VerticalAlignmentProperty))
-        if (!object.Equals(Layoutable.VerticalAlignmentProperty.GetDefaultValue(typeof(Layoutable)), value.VerticalAlignment))
+        if (!object.Equals(Layoutable.VerticalAlignmentProperty.GetDefaultValue(type), value.VerticalAlignment))
         {
             writer.WriteMember(value, value.VerticalAlignment, "VerticalAlignment");
         }
         if (value.ShouldIncludeProperty(Layoutable.DesiredSizeProperty))
-        if (!object.Equals(Layoutable.DesiredSizeProperty.GetUnsetValue(typeof(Layoutable)), value.DesiredSize))
+        if (!object.Equals(Layoutable.DesiredSizeProperty.GetUnsetValue(type), value.DesiredSize))
         {
             writer.WriteMember(value, value.DesiredSize, "DesiredSize");
         }
         writer.WriteMember(value, value.IsMeasureValid, "IsMeasureValid");
         writer.WriteMember(value, value.IsArrangeValid, "IsArrangeValid");
         if (value.ShouldIncludeProperty(Layoutable.UseLayoutRoundingProperty))
-        if (!object.Equals(Layoutable.UseLayoutRoundingProperty.GetDefaultValue(typeof(Layoutable)), value.UseLayoutRounding))
+        if (!object.Equals(Layoutable.UseLayoutRoundingProperty.GetDefaultValue(type), value.UseLayoutRounding))
         {
             writer.WriteMember(value, value.UseLayoutRounding, "UseLayoutRounding");
         }

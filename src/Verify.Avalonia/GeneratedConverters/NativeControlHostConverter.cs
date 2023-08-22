@@ -14,5 +14,6 @@ class NativeControlHostConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NativeControlHost value)
     {
+        var type = typeof(NativeControlHost);
     }
 }

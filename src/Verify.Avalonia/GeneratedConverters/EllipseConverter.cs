@@ -14,5 +14,6 @@ class EllipseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Ellipse value)
     {
+        var type = typeof(Ellipse);
     }
 }

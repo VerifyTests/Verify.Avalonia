@@ -14,23 +14,24 @@ class DataGridRowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRow value)
     {
+        var type = typeof(DataGridRow);
         if (value.ShouldIncludeProperty(DataGridRow.HeaderProperty))
-        if (!object.Equals(DataGridRow.HeaderProperty.GetDefaultValue(typeof(DataGridRow)), value.Header))
+        if (!object.Equals(DataGridRow.HeaderProperty.GetDefaultValue(type), value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");
         }
         if (value.ShouldIncludeProperty(DataGridRow.IsValidProperty))
-        if (!object.Equals(DataGridRow.IsValidProperty.GetUnsetValue(typeof(DataGridRow)), value.IsValid))
+        if (!object.Equals(DataGridRow.IsValidProperty.GetUnsetValue(type), value.IsValid))
         {
             writer.WriteMember(value, value.IsValid, "IsValid");
         }
         if (value.ShouldIncludeProperty(DataGridRow.DetailsTemplateProperty))
-        if (!object.Equals(DataGridRow.DetailsTemplateProperty.GetDefaultValue(typeof(DataGridRow)), value.DetailsTemplate))
+        if (!object.Equals(DataGridRow.DetailsTemplateProperty.GetDefaultValue(type), value.DetailsTemplate))
         {
             writer.WriteMember(value, value.DetailsTemplate, "DetailsTemplate");
         }
         if (value.ShouldIncludeProperty(DataGridRow.AreDetailsVisibleProperty))
-        if (!object.Equals(DataGridRow.AreDetailsVisibleProperty.GetDefaultValue(typeof(DataGridRow)), value.AreDetailsVisible))
+        if (!object.Equals(DataGridRow.AreDetailsVisibleProperty.GetDefaultValue(type), value.AreDetailsVisible))
         {
             writer.WriteMember(value, value.AreDetailsVisible, "AreDetailsVisible");
         }

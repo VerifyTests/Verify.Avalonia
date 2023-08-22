@@ -14,5 +14,6 @@ class ColorPickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorPicker value)
     {
+        var type = typeof(ColorPicker);
     }
 }

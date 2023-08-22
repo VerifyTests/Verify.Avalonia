@@ -14,29 +14,30 @@ class ProgressBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ProgressBar value)
     {
+        var type = typeof(ProgressBar);
         if (value.ShouldIncludeProperty(ProgressBar.PercentageProperty))
-        if (!object.Equals(ProgressBar.PercentageProperty.GetUnsetValue(typeof(ProgressBar)), value.Percentage))
+        if (!object.Equals(ProgressBar.PercentageProperty.GetUnsetValue(type), value.Percentage))
         {
             writer.WriteMember(value, value.Percentage, "Percentage");
         }
         writer.WriteMember(value, value.TemplateSettings, "TemplateSettings");
         if (value.ShouldIncludeProperty(ProgressBar.IsIndeterminateProperty))
-        if (!object.Equals(ProgressBar.IsIndeterminateProperty.GetDefaultValue(typeof(ProgressBar)), value.IsIndeterminate))
+        if (!object.Equals(ProgressBar.IsIndeterminateProperty.GetDefaultValue(type), value.IsIndeterminate))
         {
             writer.WriteMember(value, value.IsIndeterminate, "IsIndeterminate");
         }
         if (value.ShouldIncludeProperty(ProgressBar.ShowProgressTextProperty))
-        if (!object.Equals(ProgressBar.ShowProgressTextProperty.GetDefaultValue(typeof(ProgressBar)), value.ShowProgressText))
+        if (!object.Equals(ProgressBar.ShowProgressTextProperty.GetDefaultValue(type), value.ShowProgressText))
         {
             writer.WriteMember(value, value.ShowProgressText, "ShowProgressText");
         }
         if (value.ShouldIncludeProperty(ProgressBar.ProgressTextFormatProperty))
-        if (!object.Equals(ProgressBar.ProgressTextFormatProperty.GetDefaultValue(typeof(ProgressBar)), value.ProgressTextFormat))
+        if (!object.Equals(ProgressBar.ProgressTextFormatProperty.GetDefaultValue(type), value.ProgressTextFormat))
         {
             writer.WriteMember(value, value.ProgressTextFormat, "ProgressTextFormat");
         }
         if (value.ShouldIncludeProperty(ProgressBar.OrientationProperty))
-        if (!object.Equals(ProgressBar.OrientationProperty.GetDefaultValue(typeof(ProgressBar)), value.Orientation))
+        if (!object.Equals(ProgressBar.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }

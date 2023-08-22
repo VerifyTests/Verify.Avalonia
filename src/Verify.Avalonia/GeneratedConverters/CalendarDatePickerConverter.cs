@@ -14,74 +14,75 @@ class CalendarDatePickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CalendarDatePicker value)
     {
+        var type = typeof(CalendarDatePicker);
         writer.WriteMember(value, value.BlackoutDates, "BlackoutDates");
         if (value.ShouldIncludeProperty(CalendarDatePicker.DisplayDateProperty))
-        if (!object.Equals(CalendarDatePicker.DisplayDateProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.DisplayDate))
+        if (!object.Equals(CalendarDatePicker.DisplayDateProperty.GetDefaultValue(type), value.DisplayDate))
         {
             writer.WriteMember(value, value.DisplayDate, "DisplayDate");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.DisplayDateStartProperty))
-        if (!object.Equals(CalendarDatePicker.DisplayDateStartProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.DisplayDateStart))
+        if (!object.Equals(CalendarDatePicker.DisplayDateStartProperty.GetDefaultValue(type), value.DisplayDateStart))
         {
             writer.WriteMember(value, value.DisplayDateStart, "DisplayDateStart");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.DisplayDateEndProperty))
-        if (!object.Equals(CalendarDatePicker.DisplayDateEndProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.DisplayDateEnd))
+        if (!object.Equals(CalendarDatePicker.DisplayDateEndProperty.GetDefaultValue(type), value.DisplayDateEnd))
         {
             writer.WriteMember(value, value.DisplayDateEnd, "DisplayDateEnd");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.FirstDayOfWeekProperty))
-        if (!object.Equals(CalendarDatePicker.FirstDayOfWeekProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.FirstDayOfWeek))
+        if (!object.Equals(CalendarDatePicker.FirstDayOfWeekProperty.GetDefaultValue(type), value.FirstDayOfWeek))
         {
             writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.IsDropDownOpenProperty))
-        if (!object.Equals(CalendarDatePicker.IsDropDownOpenProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.IsDropDownOpen))
+        if (!object.Equals(CalendarDatePicker.IsDropDownOpenProperty.GetDefaultValue(type), value.IsDropDownOpen))
         {
             writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.IsTodayHighlightedProperty))
-        if (!object.Equals(CalendarDatePicker.IsTodayHighlightedProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.IsTodayHighlighted))
+        if (!object.Equals(CalendarDatePicker.IsTodayHighlightedProperty.GetDefaultValue(type), value.IsTodayHighlighted))
         {
             writer.WriteMember(value, value.IsTodayHighlighted, "IsTodayHighlighted");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.SelectedDateProperty))
-        if (!object.Equals(CalendarDatePicker.SelectedDateProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.SelectedDate))
+        if (!object.Equals(CalendarDatePicker.SelectedDateProperty.GetDefaultValue(type), value.SelectedDate))
         {
             writer.WriteMember(value, value.SelectedDate, "SelectedDate");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.SelectedDateFormatProperty))
-        if (!object.Equals(CalendarDatePicker.SelectedDateFormatProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.SelectedDateFormat))
+        if (!object.Equals(CalendarDatePicker.SelectedDateFormatProperty.GetDefaultValue(type), value.SelectedDateFormat))
         {
             writer.WriteMember(value, value.SelectedDateFormat, "SelectedDateFormat");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.CustomDateFormatStringProperty))
-        if (!object.Equals(CalendarDatePicker.CustomDateFormatStringProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.CustomDateFormatString))
+        if (!object.Equals(CalendarDatePicker.CustomDateFormatStringProperty.GetDefaultValue(type), value.CustomDateFormatString))
         {
             writer.WriteMember(value, value.CustomDateFormatString, "CustomDateFormatString");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.TextProperty))
-        if (!object.Equals(CalendarDatePicker.TextProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.Text))
+        if (!object.Equals(CalendarDatePicker.TextProperty.GetDefaultValue(type), value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.WatermarkProperty))
-        if (!object.Equals(CalendarDatePicker.WatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.Watermark))
+        if (!object.Equals(CalendarDatePicker.WatermarkProperty.GetDefaultValue(type), value.Watermark))
         {
             writer.WriteMember(value, value.Watermark, "Watermark");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.UseFloatingWatermarkProperty))
-        if (!object.Equals(CalendarDatePicker.UseFloatingWatermarkProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.UseFloatingWatermark))
+        if (!object.Equals(CalendarDatePicker.UseFloatingWatermarkProperty.GetDefaultValue(type), value.UseFloatingWatermark))
         {
             writer.WriteMember(value, value.UseFloatingWatermark, "UseFloatingWatermark");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.HorizontalContentAlignmentProperty))
-        if (!object.Equals(CalendarDatePicker.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.HorizontalContentAlignment))
+        if (!object.Equals(CalendarDatePicker.HorizontalContentAlignmentProperty.GetDefaultValue(type), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
         if (value.ShouldIncludeProperty(CalendarDatePicker.VerticalContentAlignmentProperty))
-        if (!object.Equals(CalendarDatePicker.VerticalContentAlignmentProperty.GetDefaultValue(typeof(CalendarDatePicker)), value.VerticalContentAlignment))
+        if (!object.Equals(CalendarDatePicker.VerticalContentAlignmentProperty.GetDefaultValue(type), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }

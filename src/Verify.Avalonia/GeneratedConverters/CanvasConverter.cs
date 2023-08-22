@@ -14,5 +14,6 @@ class CanvasConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Canvas value)
     {
+        var type = typeof(Canvas);
     }
 }

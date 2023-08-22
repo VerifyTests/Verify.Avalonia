@@ -14,23 +14,24 @@ class DateTimePickerPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DateTimePickerPanel value)
     {
+        var type = typeof(DateTimePickerPanel);
         if (value.ShouldIncludeProperty(DateTimePickerPanel.PanelTypeProperty))
-        if (!object.Equals(DateTimePickerPanel.PanelTypeProperty.GetDefaultValue(typeof(DateTimePickerPanel)), value.PanelType))
+        if (!object.Equals(DateTimePickerPanel.PanelTypeProperty.GetDefaultValue(type), value.PanelType))
         {
             writer.WriteMember(value, value.PanelType, "PanelType");
         }
         if (value.ShouldIncludeProperty(DateTimePickerPanel.ItemHeightProperty))
-        if (!object.Equals(DateTimePickerPanel.ItemHeightProperty.GetDefaultValue(typeof(DateTimePickerPanel)), value.ItemHeight))
+        if (!object.Equals(DateTimePickerPanel.ItemHeightProperty.GetDefaultValue(type), value.ItemHeight))
         {
             writer.WriteMember(value, value.ItemHeight, "ItemHeight");
         }
         if (value.ShouldIncludeProperty(DateTimePickerPanel.ItemFormatProperty))
-        if (!object.Equals(DateTimePickerPanel.ItemFormatProperty.GetDefaultValue(typeof(DateTimePickerPanel)), value.ItemFormat))
+        if (!object.Equals(DateTimePickerPanel.ItemFormatProperty.GetDefaultValue(type), value.ItemFormat))
         {
             writer.WriteMember(value, value.ItemFormat, "ItemFormat");
         }
         if (value.ShouldIncludeProperty(DateTimePickerPanel.ShouldLoopProperty))
-        if (!object.Equals(DateTimePickerPanel.ShouldLoopProperty.GetDefaultValue(typeof(DateTimePickerPanel)), value.ShouldLoop))
+        if (!object.Equals(DateTimePickerPanel.ShouldLoopProperty.GetDefaultValue(type), value.ShouldLoop))
         {
             writer.WriteMember(value, value.ShouldLoop, "ShouldLoop");
         }

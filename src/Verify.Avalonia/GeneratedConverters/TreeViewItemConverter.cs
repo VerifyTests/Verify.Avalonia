@@ -14,18 +14,19 @@ class TreeViewItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TreeViewItem value)
     {
+        var type = typeof(TreeViewItem);
         if (value.ShouldIncludeProperty(TreeViewItem.IsExpandedProperty))
-        if (!object.Equals(TreeViewItem.IsExpandedProperty.GetDefaultValue(typeof(TreeViewItem)), value.IsExpanded))
+        if (!object.Equals(TreeViewItem.IsExpandedProperty.GetDefaultValue(type), value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");
         }
         if (value.ShouldIncludeProperty(TreeViewItem.IsSelectedProperty))
-        if (!object.Equals(TreeViewItem.IsSelectedProperty.GetDefaultValue(typeof(TreeViewItem)), value.IsSelected))
+        if (!object.Equals(TreeViewItem.IsSelectedProperty.GetDefaultValue(type), value.IsSelected))
         {
             writer.WriteMember(value, value.IsSelected, "IsSelected");
         }
         if (value.ShouldIncludeProperty(TreeViewItem.LevelProperty))
-        if (!object.Equals(TreeViewItem.LevelProperty.GetUnsetValue(typeof(TreeViewItem)), value.Level))
+        if (!object.Equals(TreeViewItem.LevelProperty.GetUnsetValue(type), value.Level))
         {
             writer.WriteMember(value, value.Level, "Level");
         }

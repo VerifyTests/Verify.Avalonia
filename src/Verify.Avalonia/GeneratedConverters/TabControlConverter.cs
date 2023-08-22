@@ -14,33 +14,34 @@ class TabControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabControl value)
     {
+        var type = typeof(TabControl);
         if (value.ShouldIncludeProperty(TabControl.HorizontalContentAlignmentProperty))
-        if (!object.Equals(TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)), value.HorizontalContentAlignment))
+        if (!object.Equals(TabControl.HorizontalContentAlignmentProperty.GetDefaultValue(type), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
         if (value.ShouldIncludeProperty(TabControl.VerticalContentAlignmentProperty))
-        if (!object.Equals(TabControl.VerticalContentAlignmentProperty.GetDefaultValue(typeof(TabControl)), value.VerticalContentAlignment))
+        if (!object.Equals(TabControl.VerticalContentAlignmentProperty.GetDefaultValue(type), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }
         if (value.ShouldIncludeProperty(TabControl.TabStripPlacementProperty))
-        if (!object.Equals(TabControl.TabStripPlacementProperty.GetDefaultValue(typeof(TabControl)), value.TabStripPlacement))
+        if (!object.Equals(TabControl.TabStripPlacementProperty.GetDefaultValue(type), value.TabStripPlacement))
         {
             writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");
         }
         if (value.ShouldIncludeProperty(TabControl.ContentTemplateProperty))
-        if (!object.Equals(TabControl.ContentTemplateProperty.GetDefaultValue(typeof(TabControl)), value.ContentTemplate))
+        if (!object.Equals(TabControl.ContentTemplateProperty.GetDefaultValue(type), value.ContentTemplate))
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
         if (value.ShouldIncludeProperty(TabControl.SelectedContentProperty))
-        if (!object.Equals(TabControl.SelectedContentProperty.GetUnsetValue(typeof(TabControl)), value.SelectedContent))
+        if (!object.Equals(TabControl.SelectedContentProperty.GetUnsetValue(type), value.SelectedContent))
         {
             writer.WriteMember(value, value.SelectedContent, "SelectedContent");
         }
         if (value.ShouldIncludeProperty(TabControl.SelectedContentTemplateProperty))
-        if (!object.Equals(TabControl.SelectedContentTemplateProperty.GetUnsetValue(typeof(TabControl)), value.SelectedContentTemplate))
+        if (!object.Equals(TabControl.SelectedContentTemplateProperty.GetUnsetValue(type), value.SelectedContentTemplate))
         {
             writer.WriteMember(value, value.SelectedContentTemplate, "SelectedContentTemplate");
         }

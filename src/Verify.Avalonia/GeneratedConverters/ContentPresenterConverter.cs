@@ -14,118 +14,119 @@ class ContentPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContentPresenter value)
     {
+        var type = typeof(ContentPresenter);
         if (value.ShouldIncludeProperty(ContentPresenter.BackgroundProperty))
-        if (!object.Equals(ContentPresenter.BackgroundProperty.GetDefaultValue(typeof(ContentPresenter)), value.Background))
+        if (!object.Equals(ContentPresenter.BackgroundProperty.GetDefaultValue(type), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.BorderBrushProperty))
-        if (!object.Equals(ContentPresenter.BorderBrushProperty.GetDefaultValue(typeof(ContentPresenter)), value.BorderBrush))
+        if (!object.Equals(ContentPresenter.BorderBrushProperty.GetDefaultValue(type), value.BorderBrush))
         {
             writer.WriteMember(value, value.BorderBrush, "BorderBrush");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.BorderThicknessProperty))
-        if (!object.Equals(ContentPresenter.BorderThicknessProperty.GetDefaultValue(typeof(ContentPresenter)), value.BorderThickness))
+        if (!object.Equals(ContentPresenter.BorderThicknessProperty.GetDefaultValue(type), value.BorderThickness))
         {
             writer.WriteMember(value, value.BorderThickness, "BorderThickness");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.CornerRadiusProperty))
-        if (!object.Equals(ContentPresenter.CornerRadiusProperty.GetDefaultValue(typeof(ContentPresenter)), value.CornerRadius))
+        if (!object.Equals(ContentPresenter.CornerRadiusProperty.GetDefaultValue(type), value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.BoxShadowProperty))
-        if (!object.Equals(ContentPresenter.BoxShadowProperty.GetDefaultValue(typeof(ContentPresenter)), value.BoxShadow))
+        if (!object.Equals(ContentPresenter.BoxShadowProperty.GetDefaultValue(type), value.BoxShadow))
         {
             writer.WriteMember(value, value.BoxShadow, "BoxShadow");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.ForegroundProperty))
-        if (!object.Equals(ContentPresenter.ForegroundProperty.GetDefaultValue(typeof(ContentPresenter)), value.Foreground))
+        if (!object.Equals(ContentPresenter.ForegroundProperty.GetDefaultValue(type), value.Foreground))
         {
             writer.WriteMember(value, value.Foreground, "Foreground");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.FontFamilyProperty))
-        if (!object.Equals(ContentPresenter.FontFamilyProperty.GetDefaultValue(typeof(ContentPresenter)), value.FontFamily))
+        if (!object.Equals(ContentPresenter.FontFamilyProperty.GetDefaultValue(type), value.FontFamily))
         {
             writer.WriteMember(value, value.FontFamily, "FontFamily");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.FontSizeProperty))
-        if (!object.Equals(ContentPresenter.FontSizeProperty.GetDefaultValue(typeof(ContentPresenter)), value.FontSize))
+        if (!object.Equals(ContentPresenter.FontSizeProperty.GetDefaultValue(type), value.FontSize))
         {
             writer.WriteMember(value, value.FontSize, "FontSize");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.FontStyleProperty))
-        if (!object.Equals(ContentPresenter.FontStyleProperty.GetDefaultValue(typeof(ContentPresenter)), value.FontStyle))
+        if (!object.Equals(ContentPresenter.FontStyleProperty.GetDefaultValue(type), value.FontStyle))
         {
             writer.WriteMember(value, value.FontStyle, "FontStyle");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.FontWeightProperty))
-        if (!object.Equals(ContentPresenter.FontWeightProperty.GetDefaultValue(typeof(ContentPresenter)), value.FontWeight))
+        if (!object.Equals(ContentPresenter.FontWeightProperty.GetDefaultValue(type), value.FontWeight))
         {
             writer.WriteMember(value, value.FontWeight, "FontWeight");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.FontStretchProperty))
-        if (!object.Equals(ContentPresenter.FontStretchProperty.GetDefaultValue(typeof(ContentPresenter)), value.FontStretch))
+        if (!object.Equals(ContentPresenter.FontStretchProperty.GetDefaultValue(type), value.FontStretch))
         {
             writer.WriteMember(value, value.FontStretch, "FontStretch");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.TextAlignmentProperty))
-        if (!object.Equals(ContentPresenter.TextAlignmentProperty.GetDefaultValue(typeof(ContentPresenter)), value.TextAlignment))
+        if (!object.Equals(ContentPresenter.TextAlignmentProperty.GetDefaultValue(type), value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.TextWrappingProperty))
-        if (!object.Equals(ContentPresenter.TextWrappingProperty.GetDefaultValue(typeof(ContentPresenter)), value.TextWrapping))
+        if (!object.Equals(ContentPresenter.TextWrappingProperty.GetDefaultValue(type), value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.TextTrimmingProperty))
-        if (!object.Equals(ContentPresenter.TextTrimmingProperty.GetDefaultValue(typeof(ContentPresenter)), value.TextTrimming))
+        if (!object.Equals(ContentPresenter.TextTrimmingProperty.GetDefaultValue(type), value.TextTrimming))
         {
             writer.WriteMember(value, value.TextTrimming, "TextTrimming");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.LineHeightProperty))
-        if (!object.Equals(ContentPresenter.LineHeightProperty.GetDefaultValue(typeof(ContentPresenter)), value.LineHeight))
+        if (!object.Equals(ContentPresenter.LineHeightProperty.GetDefaultValue(type), value.LineHeight))
         {
             writer.WriteMember(value, value.LineHeight, "LineHeight");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.MaxLinesProperty))
-        if (!object.Equals(ContentPresenter.MaxLinesProperty.GetDefaultValue(typeof(ContentPresenter)), value.MaxLines))
+        if (!object.Equals(ContentPresenter.MaxLinesProperty.GetDefaultValue(type), value.MaxLines))
         {
             writer.WriteMember(value, value.MaxLines, "MaxLines");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.ChildProperty))
-        if (!object.Equals(ContentPresenter.ChildProperty.GetUnsetValue(typeof(ContentPresenter)), value.Child))
+        if (!object.Equals(ContentPresenter.ChildProperty.GetUnsetValue(type), value.Child))
         {
             writer.WriteMember(value, value.Child, "Child");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.ContentProperty))
-        if (!object.Equals(ContentPresenter.ContentProperty.GetDefaultValue(typeof(ContentPresenter)), value.Content))
+        if (!object.Equals(ContentPresenter.ContentProperty.GetDefaultValue(type), value.Content))
         {
             writer.WriteMember(value, value.Content, "Content");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.ContentTemplateProperty))
-        if (!object.Equals(ContentPresenter.ContentTemplateProperty.GetDefaultValue(typeof(ContentPresenter)), value.ContentTemplate))
+        if (!object.Equals(ContentPresenter.ContentTemplateProperty.GetDefaultValue(type), value.ContentTemplate))
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.HorizontalContentAlignmentProperty))
-        if (!object.Equals(ContentPresenter.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentPresenter)), value.HorizontalContentAlignment))
+        if (!object.Equals(ContentPresenter.HorizontalContentAlignmentProperty.GetDefaultValue(type), value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.VerticalContentAlignmentProperty))
-        if (!object.Equals(ContentPresenter.VerticalContentAlignmentProperty.GetDefaultValue(typeof(ContentPresenter)), value.VerticalContentAlignment))
+        if (!object.Equals(ContentPresenter.VerticalContentAlignmentProperty.GetDefaultValue(type), value.VerticalContentAlignment))
         {
             writer.WriteMember(value, value.VerticalContentAlignment, "VerticalContentAlignment");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.PaddingProperty))
-        if (!object.Equals(ContentPresenter.PaddingProperty.GetDefaultValue(typeof(ContentPresenter)), value.Padding))
+        if (!object.Equals(ContentPresenter.PaddingProperty.GetDefaultValue(type), value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");
         }
         if (value.ShouldIncludeProperty(ContentPresenter.RecognizesAccessKeyProperty))
-        if (!object.Equals(ContentPresenter.RecognizesAccessKeyProperty.GetDefaultValue(typeof(ContentPresenter)), value.RecognizesAccessKey))
+        if (!object.Equals(ContentPresenter.RecognizesAccessKeyProperty.GetDefaultValue(type), value.RecognizesAccessKey))
         {
             writer.WriteMember(value, value.RecognizesAccessKey, "RecognizesAccessKey");
         }

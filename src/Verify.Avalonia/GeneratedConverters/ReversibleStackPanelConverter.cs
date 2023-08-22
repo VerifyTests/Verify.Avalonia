@@ -14,8 +14,9 @@ class ReversibleStackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ReversibleStackPanel value)
     {
+        var type = typeof(ReversibleStackPanel);
         if (value.ShouldIncludeProperty(ReversibleStackPanel.ReverseOrderProperty))
-        if (!object.Equals(ReversibleStackPanel.ReverseOrderProperty.GetDefaultValue(typeof(ReversibleStackPanel)), value.ReverseOrder))
+        if (!object.Equals(ReversibleStackPanel.ReverseOrderProperty.GetDefaultValue(type), value.ReverseOrder))
         {
             writer.WriteMember(value, value.ReverseOrder, "ReverseOrder");
         }

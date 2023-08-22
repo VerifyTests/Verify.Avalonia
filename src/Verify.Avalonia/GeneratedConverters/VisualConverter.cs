@@ -13,64 +13,65 @@ class VisualConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Visual value)
     {
+        var type = typeof(Visual);
         if (value.ShouldIncludeProperty(Visual.BoundsProperty))
-        if (!object.Equals(Visual.BoundsProperty.GetUnsetValue(typeof(Visual)), value.Bounds))
+        if (!object.Equals(Visual.BoundsProperty.GetUnsetValue(type), value.Bounds))
         {
             writer.WriteMember(value, value.Bounds, "Bounds");
         }
         if (value.ShouldIncludeProperty(Visual.ClipToBoundsProperty))
-        if (!object.Equals(Visual.ClipToBoundsProperty.GetDefaultValue(typeof(Visual)), value.ClipToBounds))
+        if (!object.Equals(Visual.ClipToBoundsProperty.GetDefaultValue(type), value.ClipToBounds))
         {
             writer.WriteMember(value, value.ClipToBounds, "ClipToBounds");
         }
         if (value.ShouldIncludeProperty(Visual.ClipProperty))
-        if (!object.Equals(Visual.ClipProperty.GetDefaultValue(typeof(Visual)), value.Clip))
+        if (!object.Equals(Visual.ClipProperty.GetDefaultValue(type), value.Clip))
         {
             writer.WriteMember(value, value.Clip, "Clip");
         }
         writer.WriteMember(value, value.IsEffectivelyVisible, "IsEffectivelyVisible");
         if (value.ShouldIncludeProperty(Visual.IsVisibleProperty))
-        if (!object.Equals(Visual.IsVisibleProperty.GetDefaultValue(typeof(Visual)), value.IsVisible))
+        if (!object.Equals(Visual.IsVisibleProperty.GetDefaultValue(type), value.IsVisible))
         {
             writer.WriteMember(value, value.IsVisible, "IsVisible");
         }
         if (value.ShouldIncludeProperty(Visual.OpacityProperty))
-        if (!object.Equals(Visual.OpacityProperty.GetDefaultValue(typeof(Visual)), value.Opacity))
+        if (!object.Equals(Visual.OpacityProperty.GetDefaultValue(type), value.Opacity))
         {
             writer.WriteMember(value, value.Opacity, "Opacity");
         }
         if (value.ShouldIncludeProperty(Visual.OpacityMaskProperty))
-        if (!object.Equals(Visual.OpacityMaskProperty.GetDefaultValue(typeof(Visual)), value.OpacityMask))
+        if (!object.Equals(Visual.OpacityMaskProperty.GetDefaultValue(type), value.OpacityMask))
         {
             writer.WriteMember(value, value.OpacityMask, "OpacityMask");
         }
         if (value.ShouldIncludeProperty(Visual.EffectProperty))
-        if (!object.Equals(Visual.EffectProperty.GetDefaultValue(typeof(Visual)), value.Effect))
+        if (!object.Equals(Visual.EffectProperty.GetDefaultValue(type), value.Effect))
         {
             writer.WriteMember(value, value.Effect, "Effect");
         }
         if (value.ShouldIncludeProperty(Visual.HasMirrorTransformProperty))
-        if (!object.Equals(Visual.HasMirrorTransformProperty.GetUnsetValue(typeof(Visual)), value.HasMirrorTransform))
+        if (!object.Equals(Visual.HasMirrorTransformProperty.GetUnsetValue(type), value.HasMirrorTransform))
         {
             writer.WriteMember(value, value.HasMirrorTransform, "HasMirrorTransform");
         }
         if (value.ShouldIncludeProperty(Visual.RenderTransformProperty))
-        if (!object.Equals(Visual.RenderTransformProperty.GetDefaultValue(typeof(Visual)), value.RenderTransform))
+        if (!object.Equals(Visual.RenderTransformProperty.GetDefaultValue(type), value.RenderTransform))
         {
             writer.WriteMember(value, value.RenderTransform, "RenderTransform");
         }
         if (value.ShouldIncludeProperty(Visual.RenderTransformOriginProperty))
-        if (!object.Equals(Visual.RenderTransformOriginProperty.GetDefaultValue(typeof(Visual)), value.RenderTransformOrigin))
+        if (!object.Equals(Visual.RenderTransformOriginProperty.GetDefaultValue(type), value.RenderTransformOrigin))
         {
             writer.WriteMember(value, value.RenderTransformOrigin, "RenderTransformOrigin");
         }
         if (value.ShouldIncludeProperty(Visual.FlowDirectionProperty))
-        if (!object.Equals(Visual.FlowDirectionProperty.GetDefaultValue(typeof(Visual)), value.FlowDirection))
+        if (!object.Equals(Visual.FlowDirectionProperty.GetDefaultValue(type), value.FlowDirection))
         {
             writer.WriteMember(value, value.FlowDirection, "FlowDirection");
         }
         if (value.ShouldIncludeProperty(Visual.ZIndexProperty))
-        if (!object.Equals(Visual.ZIndexProperty.GetDefaultValue(typeof(Visual)), value.ZIndex))
+        if (!object.Equals(Visual.ZIndexProperty.GetDefaultValue(type), value.ZIndex))
         {
             writer.WriteMember(value, value.ZIndex, "ZIndex");
         }

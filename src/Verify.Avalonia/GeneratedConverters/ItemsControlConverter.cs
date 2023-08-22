@@ -14,35 +14,36 @@ class ItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsControl value)
     {
+        var type = typeof(ItemsControl);
         if (value.ShouldIncludeProperty(ItemsControl.DisplayMemberBindingProperty))
-        if (!object.Equals(ItemsControl.DisplayMemberBindingProperty.GetDefaultValue(typeof(ItemsControl)), value.DisplayMemberBinding))
+        if (!object.Equals(ItemsControl.DisplayMemberBindingProperty.GetDefaultValue(type), value.DisplayMemberBinding))
         {
             writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");
         }
         writer.WriteMember(value, value.ItemContainerGenerator, "ItemContainerGenerator");
         writer.WriteMember(value, value.Items, "Items");
         if (value.ShouldIncludeProperty(ItemsControl.ItemContainerThemeProperty))
-        if (!object.Equals(ItemsControl.ItemContainerThemeProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemContainerTheme))
+        if (!object.Equals(ItemsControl.ItemContainerThemeProperty.GetDefaultValue(type), value.ItemContainerTheme))
         {
             writer.WriteMember(value, value.ItemContainerTheme, "ItemContainerTheme");
         }
         if (value.ShouldIncludeProperty(ItemsControl.ItemCountProperty))
-        if (!object.Equals(ItemsControl.ItemCountProperty.GetUnsetValue(typeof(ItemsControl)), value.ItemCount))
+        if (!object.Equals(ItemsControl.ItemCountProperty.GetUnsetValue(type), value.ItemCount))
         {
             writer.WriteMember(value, value.ItemCount, "ItemCount");
         }
         if (value.ShouldIncludeProperty(ItemsControl.ItemsPanelProperty))
-        if (!object.Equals(ItemsControl.ItemsPanelProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemsPanel))
+        if (!object.Equals(ItemsControl.ItemsPanelProperty.GetDefaultValue(type), value.ItemsPanel))
         {
             writer.WriteMember(value, value.ItemsPanel, "ItemsPanel");
         }
         if (value.ShouldIncludeProperty(ItemsControl.ItemsSourceProperty))
-        if (!object.Equals(ItemsControl.ItemsSourceProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemsSource))
+        if (!object.Equals(ItemsControl.ItemsSourceProperty.GetDefaultValue(type), value.ItemsSource))
         {
             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
         }
         if (value.ShouldIncludeProperty(ItemsControl.ItemTemplateProperty))
-        if (!object.Equals(ItemsControl.ItemTemplateProperty.GetDefaultValue(typeof(ItemsControl)), value.ItemTemplate))
+        if (!object.Equals(ItemsControl.ItemTemplateProperty.GetDefaultValue(type), value.ItemTemplate))
         {
             writer.WriteMember(value, value.ItemTemplate, "ItemTemplate");
         }

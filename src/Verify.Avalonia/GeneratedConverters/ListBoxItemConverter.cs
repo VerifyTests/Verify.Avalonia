@@ -14,8 +14,9 @@ class ListBoxItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ListBoxItem value)
     {
+        var type = typeof(ListBoxItem);
         if (value.ShouldIncludeProperty(ListBoxItem.IsSelectedProperty))
-        if (!object.Equals(ListBoxItem.IsSelectedProperty.GetDefaultValue(typeof(ListBoxItem)), value.IsSelected))
+        if (!object.Equals(ListBoxItem.IsSelectedProperty.GetDefaultValue(type), value.IsSelected))
         {
             writer.WriteMember(value, value.IsSelected, "IsSelected");
         }

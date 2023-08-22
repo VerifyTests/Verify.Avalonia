@@ -14,8 +14,9 @@ class AdornerLayerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, AdornerLayer value)
     {
+        var type = typeof(AdornerLayer);
         if (value.ShouldIncludeProperty(AdornerLayer.DefaultFocusAdornerProperty))
-        if (!object.Equals(AdornerLayer.DefaultFocusAdornerProperty.GetDefaultValue(typeof(AdornerLayer)), value.DefaultFocusAdorner))
+        if (!object.Equals(AdornerLayer.DefaultFocusAdornerProperty.GetDefaultValue(type), value.DefaultFocusAdorner))
         {
             writer.WriteMember(value, value.DefaultFocusAdorner, "DefaultFocusAdorner");
         }

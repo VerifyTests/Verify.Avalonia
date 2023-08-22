@@ -14,18 +14,19 @@ class TextPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TextPresenter value)
     {
+        var type = typeof(TextPresenter);
         if (value.ShouldIncludeProperty(TextPresenter.BackgroundProperty))
-        if (!object.Equals(TextPresenter.BackgroundProperty.GetDefaultValue(typeof(TextPresenter)), value.Background))
+        if (!object.Equals(TextPresenter.BackgroundProperty.GetDefaultValue(type), value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");
         }
         if (value.ShouldIncludeProperty(TextPresenter.TextProperty))
-        if (!object.Equals(TextPresenter.TextProperty.GetDefaultValue(typeof(TextPresenter)), value.Text))
+        if (!object.Equals(TextPresenter.TextProperty.GetDefaultValue(type), value.Text))
         {
             writer.WriteMember(value, value.Text, "Text");
         }
         if (value.ShouldIncludeProperty(TextPresenter.PreeditTextProperty))
-        if (!object.Equals(TextPresenter.PreeditTextProperty.GetDefaultValue(typeof(TextPresenter)), value.PreeditText))
+        if (!object.Equals(TextPresenter.PreeditTextProperty.GetDefaultValue(type), value.PreeditText))
         {
             writer.WriteMember(value, value.PreeditText, "PreeditText");
         }
@@ -36,62 +37,62 @@ class TextPresenterConverter :
         writer.WriteMember(value, value.FontStretch, "FontStretch");
         writer.WriteMember(value, value.Foreground, "Foreground");
         if (value.ShouldIncludeProperty(TextPresenter.TextWrappingProperty))
-        if (!object.Equals(TextPresenter.TextWrappingProperty.GetDefaultValue(typeof(TextPresenter)), value.TextWrapping))
+        if (!object.Equals(TextPresenter.TextWrappingProperty.GetDefaultValue(type), value.TextWrapping))
         {
             writer.WriteMember(value, value.TextWrapping, "TextWrapping");
         }
         if (value.ShouldIncludeProperty(TextPresenter.LineHeightProperty))
-        if (!object.Equals(TextPresenter.LineHeightProperty.GetDefaultValue(typeof(TextPresenter)), value.LineHeight))
+        if (!object.Equals(TextPresenter.LineHeightProperty.GetDefaultValue(type), value.LineHeight))
         {
             writer.WriteMember(value, value.LineHeight, "LineHeight");
         }
         if (value.ShouldIncludeProperty(TextPresenter.LetterSpacingProperty))
-        if (!object.Equals(TextPresenter.LetterSpacingProperty.GetDefaultValue(typeof(TextPresenter)), value.LetterSpacing))
+        if (!object.Equals(TextPresenter.LetterSpacingProperty.GetDefaultValue(type), value.LetterSpacing))
         {
             writer.WriteMember(value, value.LetterSpacing, "LetterSpacing");
         }
         if (value.ShouldIncludeProperty(TextPresenter.TextAlignmentProperty))
-        if (!object.Equals(TextPresenter.TextAlignmentProperty.GetDefaultValue(typeof(TextPresenter)), value.TextAlignment))
+        if (!object.Equals(TextPresenter.TextAlignmentProperty.GetDefaultValue(type), value.TextAlignment))
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
         if (value.ShouldIncludeProperty(TextPresenter.CaretIndexProperty))
-        if (!object.Equals(TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)), value.CaretIndex))
+        if (!object.Equals(TextPresenter.CaretIndexProperty.GetDefaultValue(type), value.CaretIndex))
         {
             writer.WriteMember(value, value.CaretIndex, "CaretIndex");
         }
         if (value.ShouldIncludeProperty(TextPresenter.PasswordCharProperty))
-        if (!object.Equals(TextPresenter.PasswordCharProperty.GetDefaultValue(typeof(TextPresenter)), value.PasswordChar))
+        if (!object.Equals(TextPresenter.PasswordCharProperty.GetDefaultValue(type), value.PasswordChar))
         {
             writer.WriteMember(value, value.PasswordChar, "PasswordChar");
         }
         if (value.ShouldIncludeProperty(TextPresenter.RevealPasswordProperty))
-        if (!object.Equals(TextPresenter.RevealPasswordProperty.GetDefaultValue(typeof(TextPresenter)), value.RevealPassword))
+        if (!object.Equals(TextPresenter.RevealPasswordProperty.GetDefaultValue(type), value.RevealPassword))
         {
             writer.WriteMember(value, value.RevealPassword, "RevealPassword");
         }
         if (value.ShouldIncludeProperty(TextPresenter.SelectionBrushProperty))
-        if (!object.Equals(TextPresenter.SelectionBrushProperty.GetDefaultValue(typeof(TextPresenter)), value.SelectionBrush))
+        if (!object.Equals(TextPresenter.SelectionBrushProperty.GetDefaultValue(type), value.SelectionBrush))
         {
             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");
         }
         if (value.ShouldIncludeProperty(TextPresenter.SelectionForegroundBrushProperty))
-        if (!object.Equals(TextPresenter.SelectionForegroundBrushProperty.GetDefaultValue(typeof(TextPresenter)), value.SelectionForegroundBrush))
+        if (!object.Equals(TextPresenter.SelectionForegroundBrushProperty.GetDefaultValue(type), value.SelectionForegroundBrush))
         {
             writer.WriteMember(value, value.SelectionForegroundBrush, "SelectionForegroundBrush");
         }
         if (value.ShouldIncludeProperty(TextPresenter.CaretBrushProperty))
-        if (!object.Equals(TextPresenter.CaretBrushProperty.GetDefaultValue(typeof(TextPresenter)), value.CaretBrush))
+        if (!object.Equals(TextPresenter.CaretBrushProperty.GetDefaultValue(type), value.CaretBrush))
         {
             writer.WriteMember(value, value.CaretBrush, "CaretBrush");
         }
         if (value.ShouldIncludeProperty(TextPresenter.SelectionStartProperty))
-        if (!object.Equals(TextPresenter.SelectionStartProperty.GetDefaultValue(typeof(TextPresenter)), value.SelectionStart))
+        if (!object.Equals(TextPresenter.SelectionStartProperty.GetDefaultValue(type), value.SelectionStart))
         {
             writer.WriteMember(value, value.SelectionStart, "SelectionStart");
         }
         if (value.ShouldIncludeProperty(TextPresenter.SelectionEndProperty))
-        if (!object.Equals(TextPresenter.SelectionEndProperty.GetDefaultValue(typeof(TextPresenter)), value.SelectionEnd))
+        if (!object.Equals(TextPresenter.SelectionEndProperty.GetDefaultValue(type), value.SelectionEnd))
         {
             writer.WriteMember(value, value.SelectionEnd, "SelectionEnd");
         }

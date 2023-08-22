@@ -14,23 +14,24 @@ class StackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, StackPanel value)
     {
+        var type = typeof(StackPanel);
         if (value.ShouldIncludeProperty(StackPanel.SpacingProperty))
-        if (!object.Equals(StackPanel.SpacingProperty.GetDefaultValue(typeof(StackPanel)), value.Spacing))
+        if (!object.Equals(StackPanel.SpacingProperty.GetDefaultValue(type), value.Spacing))
         {
             writer.WriteMember(value, value.Spacing, "Spacing");
         }
         if (value.ShouldIncludeProperty(StackPanel.OrientationProperty))
-        if (!object.Equals(StackPanel.OrientationProperty.GetDefaultValue(typeof(StackPanel)), value.Orientation))
+        if (!object.Equals(StackPanel.OrientationProperty.GetDefaultValue(type), value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");
         }
         if (value.ShouldIncludeProperty(StackPanel.AreHorizontalSnapPointsRegularProperty))
-        if (!object.Equals(StackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(typeof(StackPanel)), value.AreHorizontalSnapPointsRegular))
+        if (!object.Equals(StackPanel.AreHorizontalSnapPointsRegularProperty.GetDefaultValue(type), value.AreHorizontalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreHorizontalSnapPointsRegular, "AreHorizontalSnapPointsRegular");
         }
         if (value.ShouldIncludeProperty(StackPanel.AreVerticalSnapPointsRegularProperty))
-        if (!object.Equals(StackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(typeof(StackPanel)), value.AreVerticalSnapPointsRegular))
+        if (!object.Equals(StackPanel.AreVerticalSnapPointsRegularProperty.GetDefaultValue(type), value.AreVerticalSnapPointsRegular))
         {
             writer.WriteMember(value, value.AreVerticalSnapPointsRegular, "AreVerticalSnapPointsRegular");
         }

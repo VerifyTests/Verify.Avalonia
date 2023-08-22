@@ -14,13 +14,14 @@ class ExperimentalAcrylicBorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ExperimentalAcrylicBorder value)
     {
+        var type = typeof(ExperimentalAcrylicBorder);
         if (value.ShouldIncludeProperty(ExperimentalAcrylicBorder.CornerRadiusProperty))
-        if (!object.Equals(ExperimentalAcrylicBorder.CornerRadiusProperty.GetDefaultValue(typeof(ExperimentalAcrylicBorder)), value.CornerRadius))
+        if (!object.Equals(ExperimentalAcrylicBorder.CornerRadiusProperty.GetDefaultValue(type), value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
         }
         if (value.ShouldIncludeProperty(ExperimentalAcrylicBorder.MaterialProperty))
-        if (!object.Equals(ExperimentalAcrylicBorder.MaterialProperty.GetDefaultValue(typeof(ExperimentalAcrylicBorder)), value.Material))
+        if (!object.Equals(ExperimentalAcrylicBorder.MaterialProperty.GetDefaultValue(type), value.Material))
         {
             writer.WriteMember(value, value.Material, "Material");
         }

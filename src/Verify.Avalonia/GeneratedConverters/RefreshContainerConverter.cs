@@ -14,13 +14,14 @@ class RefreshContainerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RefreshContainer value)
     {
+        var type = typeof(RefreshContainer);
         if (value.ShouldIncludeProperty(RefreshContainer.VisualizerProperty))
-        if (!object.Equals(RefreshContainer.VisualizerProperty.GetUnsetValue(typeof(RefreshContainer)), value.Visualizer))
+        if (!object.Equals(RefreshContainer.VisualizerProperty.GetUnsetValue(type), value.Visualizer))
         {
             writer.WriteMember(value, value.Visualizer, "Visualizer");
         }
         if (value.ShouldIncludeProperty(RefreshContainer.PullDirectionProperty))
-        if (!object.Equals(RefreshContainer.PullDirectionProperty.GetDefaultValue(typeof(RefreshContainer)), value.PullDirection))
+        if (!object.Equals(RefreshContainer.PullDirectionProperty.GetDefaultValue(type), value.PullDirection))
         {
             writer.WriteMember(value, value.PullDirection, "PullDirection");
         }

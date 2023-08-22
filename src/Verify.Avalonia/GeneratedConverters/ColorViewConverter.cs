@@ -14,143 +14,144 @@ class ColorViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorView value)
     {
+        var type = typeof(ColorView);
         if (value.ShouldIncludeProperty(ColorView.ColorProperty))
-        if (!object.Equals(ColorView.ColorProperty.GetDefaultValue(typeof(ColorView)), value.Color))
+        if (!object.Equals(ColorView.ColorProperty.GetDefaultValue(type), value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");
         }
         if (value.ShouldIncludeProperty(ColorView.ColorModelProperty))
-        if (!object.Equals(ColorView.ColorModelProperty.GetDefaultValue(typeof(ColorView)), value.ColorModel))
+        if (!object.Equals(ColorView.ColorModelProperty.GetDefaultValue(type), value.ColorModel))
         {
             writer.WriteMember(value, value.ColorModel, "ColorModel");
         }
         if (value.ShouldIncludeProperty(ColorView.ColorSpectrumComponentsProperty))
-        if (!object.Equals(ColorView.ColorSpectrumComponentsProperty.GetDefaultValue(typeof(ColorView)), value.ColorSpectrumComponents))
+        if (!object.Equals(ColorView.ColorSpectrumComponentsProperty.GetDefaultValue(type), value.ColorSpectrumComponents))
         {
             writer.WriteMember(value, value.ColorSpectrumComponents, "ColorSpectrumComponents");
         }
         if (value.ShouldIncludeProperty(ColorView.ColorSpectrumShapeProperty))
-        if (!object.Equals(ColorView.ColorSpectrumShapeProperty.GetDefaultValue(typeof(ColorView)), value.ColorSpectrumShape))
+        if (!object.Equals(ColorView.ColorSpectrumShapeProperty.GetDefaultValue(type), value.ColorSpectrumShape))
         {
             writer.WriteMember(value, value.ColorSpectrumShape, "ColorSpectrumShape");
         }
         if (value.ShouldIncludeProperty(ColorView.HexInputAlphaPositionProperty))
-        if (!object.Equals(ColorView.HexInputAlphaPositionProperty.GetDefaultValue(typeof(ColorView)), value.HexInputAlphaPosition))
+        if (!object.Equals(ColorView.HexInputAlphaPositionProperty.GetDefaultValue(type), value.HexInputAlphaPosition))
         {
             writer.WriteMember(value, value.HexInputAlphaPosition, "HexInputAlphaPosition");
         }
         if (value.ShouldIncludeProperty(ColorView.HsvColorProperty))
-        if (!object.Equals(ColorView.HsvColorProperty.GetDefaultValue(typeof(ColorView)), value.HsvColor))
+        if (!object.Equals(ColorView.HsvColorProperty.GetDefaultValue(type), value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");
         }
         if (value.ShouldIncludeProperty(ColorView.IsAccentColorsVisibleProperty))
-        if (!object.Equals(ColorView.IsAccentColorsVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsAccentColorsVisible))
+        if (!object.Equals(ColorView.IsAccentColorsVisibleProperty.GetDefaultValue(type), value.IsAccentColorsVisible))
         {
             writer.WriteMember(value, value.IsAccentColorsVisible, "IsAccentColorsVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsAlphaEnabledProperty))
-        if (!object.Equals(ColorView.IsAlphaEnabledProperty.GetDefaultValue(typeof(ColorView)), value.IsAlphaEnabled))
+        if (!object.Equals(ColorView.IsAlphaEnabledProperty.GetDefaultValue(type), value.IsAlphaEnabled))
         {
             writer.WriteMember(value, value.IsAlphaEnabled, "IsAlphaEnabled");
         }
         if (value.ShouldIncludeProperty(ColorView.IsAlphaVisibleProperty))
-        if (!object.Equals(ColorView.IsAlphaVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsAlphaVisible))
+        if (!object.Equals(ColorView.IsAlphaVisibleProperty.GetDefaultValue(type), value.IsAlphaVisible))
         {
             writer.WriteMember(value, value.IsAlphaVisible, "IsAlphaVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorComponentsVisibleProperty))
-        if (!object.Equals(ColorView.IsColorComponentsVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorComponentsVisible))
+        if (!object.Equals(ColorView.IsColorComponentsVisibleProperty.GetDefaultValue(type), value.IsColorComponentsVisible))
         {
             writer.WriteMember(value, value.IsColorComponentsVisible, "IsColorComponentsVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorModelVisibleProperty))
-        if (!object.Equals(ColorView.IsColorModelVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorModelVisible))
+        if (!object.Equals(ColorView.IsColorModelVisibleProperty.GetDefaultValue(type), value.IsColorModelVisible))
         {
             writer.WriteMember(value, value.IsColorModelVisible, "IsColorModelVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorPaletteVisibleProperty))
-        if (!object.Equals(ColorView.IsColorPaletteVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorPaletteVisible))
+        if (!object.Equals(ColorView.IsColorPaletteVisibleProperty.GetDefaultValue(type), value.IsColorPaletteVisible))
         {
             writer.WriteMember(value, value.IsColorPaletteVisible, "IsColorPaletteVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorPreviewVisibleProperty))
-        if (!object.Equals(ColorView.IsColorPreviewVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorPreviewVisible))
+        if (!object.Equals(ColorView.IsColorPreviewVisibleProperty.GetDefaultValue(type), value.IsColorPreviewVisible))
         {
             writer.WriteMember(value, value.IsColorPreviewVisible, "IsColorPreviewVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorSpectrumVisibleProperty))
-        if (!object.Equals(ColorView.IsColorSpectrumVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorSpectrumVisible))
+        if (!object.Equals(ColorView.IsColorSpectrumVisibleProperty.GetDefaultValue(type), value.IsColorSpectrumVisible))
         {
             writer.WriteMember(value, value.IsColorSpectrumVisible, "IsColorSpectrumVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsColorSpectrumSliderVisibleProperty))
-        if (!object.Equals(ColorView.IsColorSpectrumSliderVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsColorSpectrumSliderVisible))
+        if (!object.Equals(ColorView.IsColorSpectrumSliderVisibleProperty.GetDefaultValue(type), value.IsColorSpectrumSliderVisible))
         {
             writer.WriteMember(value, value.IsColorSpectrumSliderVisible, "IsColorSpectrumSliderVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsComponentSliderVisibleProperty))
-        if (!object.Equals(ColorView.IsComponentSliderVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsComponentSliderVisible))
+        if (!object.Equals(ColorView.IsComponentSliderVisibleProperty.GetDefaultValue(type), value.IsComponentSliderVisible))
         {
             writer.WriteMember(value, value.IsComponentSliderVisible, "IsComponentSliderVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsComponentTextInputVisibleProperty))
-        if (!object.Equals(ColorView.IsComponentTextInputVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsComponentTextInputVisible))
+        if (!object.Equals(ColorView.IsComponentTextInputVisibleProperty.GetDefaultValue(type), value.IsComponentTextInputVisible))
         {
             writer.WriteMember(value, value.IsComponentTextInputVisible, "IsComponentTextInputVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.IsHexInputVisibleProperty))
-        if (!object.Equals(ColorView.IsHexInputVisibleProperty.GetDefaultValue(typeof(ColorView)), value.IsHexInputVisible))
+        if (!object.Equals(ColorView.IsHexInputVisibleProperty.GetDefaultValue(type), value.IsHexInputVisible))
         {
             writer.WriteMember(value, value.IsHexInputVisible, "IsHexInputVisible");
         }
         if (value.ShouldIncludeProperty(ColorView.MaxHueProperty))
-        if (!object.Equals(ColorView.MaxHueProperty.GetDefaultValue(typeof(ColorView)), value.MaxHue))
+        if (!object.Equals(ColorView.MaxHueProperty.GetDefaultValue(type), value.MaxHue))
         {
             writer.WriteMember(value, value.MaxHue, "MaxHue");
         }
         if (value.ShouldIncludeProperty(ColorView.MaxSaturationProperty))
-        if (!object.Equals(ColorView.MaxSaturationProperty.GetDefaultValue(typeof(ColorView)), value.MaxSaturation))
+        if (!object.Equals(ColorView.MaxSaturationProperty.GetDefaultValue(type), value.MaxSaturation))
         {
             writer.WriteMember(value, value.MaxSaturation, "MaxSaturation");
         }
         if (value.ShouldIncludeProperty(ColorView.MaxValueProperty))
-        if (!object.Equals(ColorView.MaxValueProperty.GetDefaultValue(typeof(ColorView)), value.MaxValue))
+        if (!object.Equals(ColorView.MaxValueProperty.GetDefaultValue(type), value.MaxValue))
         {
             writer.WriteMember(value, value.MaxValue, "MaxValue");
         }
         if (value.ShouldIncludeProperty(ColorView.MinHueProperty))
-        if (!object.Equals(ColorView.MinHueProperty.GetDefaultValue(typeof(ColorView)), value.MinHue))
+        if (!object.Equals(ColorView.MinHueProperty.GetDefaultValue(type), value.MinHue))
         {
             writer.WriteMember(value, value.MinHue, "MinHue");
         }
         if (value.ShouldIncludeProperty(ColorView.MinSaturationProperty))
-        if (!object.Equals(ColorView.MinSaturationProperty.GetDefaultValue(typeof(ColorView)), value.MinSaturation))
+        if (!object.Equals(ColorView.MinSaturationProperty.GetDefaultValue(type), value.MinSaturation))
         {
             writer.WriteMember(value, value.MinSaturation, "MinSaturation");
         }
         if (value.ShouldIncludeProperty(ColorView.MinValueProperty))
-        if (!object.Equals(ColorView.MinValueProperty.GetDefaultValue(typeof(ColorView)), value.MinValue))
+        if (!object.Equals(ColorView.MinValueProperty.GetDefaultValue(type), value.MinValue))
         {
             writer.WriteMember(value, value.MinValue, "MinValue");
         }
         if (value.ShouldIncludeProperty(ColorView.PaletteColorsProperty))
-        if (!object.Equals(ColorView.PaletteColorsProperty.GetDefaultValue(typeof(ColorView)), value.PaletteColors))
+        if (!object.Equals(ColorView.PaletteColorsProperty.GetDefaultValue(type), value.PaletteColors))
         {
             writer.WriteMember(value, value.PaletteColors, "PaletteColors");
         }
         if (value.ShouldIncludeProperty(ColorView.PaletteColumnCountProperty))
-        if (!object.Equals(ColorView.PaletteColumnCountProperty.GetDefaultValue(typeof(ColorView)), value.PaletteColumnCount))
+        if (!object.Equals(ColorView.PaletteColumnCountProperty.GetDefaultValue(type), value.PaletteColumnCount))
         {
             writer.WriteMember(value, value.PaletteColumnCount, "PaletteColumnCount");
         }
         if (value.ShouldIncludeProperty(ColorView.PaletteProperty))
-        if (!object.Equals(ColorView.PaletteProperty.GetDefaultValue(typeof(ColorView)), value.Palette))
+        if (!object.Equals(ColorView.PaletteProperty.GetDefaultValue(type), value.Palette))
         {
             writer.WriteMember(value, value.Palette, "Palette");
         }
         if (value.ShouldIncludeProperty(ColorView.SelectedIndexProperty))
-        if (!object.Equals(ColorView.SelectedIndexProperty.GetDefaultValue(typeof(ColorView)), value.SelectedIndex))
+        if (!object.Equals(ColorView.SelectedIndexProperty.GetDefaultValue(type), value.SelectedIndex))
         {
             writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
         }

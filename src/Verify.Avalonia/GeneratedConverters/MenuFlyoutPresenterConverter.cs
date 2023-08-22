@@ -14,5 +14,6 @@ class MenuFlyoutPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MenuFlyoutPresenter value)
     {
+        var type = typeof(MenuFlyoutPresenter);
     }
 }

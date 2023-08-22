@@ -14,8 +14,9 @@ class ToggleSplitButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ToggleSplitButton value)
     {
+        var type = typeof(ToggleSplitButton);
         if (value.ShouldIncludeProperty(ToggleSplitButton.IsCheckedProperty))
-        if (!object.Equals(ToggleSplitButton.IsCheckedProperty.GetDefaultValue(typeof(ToggleSplitButton)), value.IsChecked))
+        if (!object.Equals(ToggleSplitButton.IsCheckedProperty.GetDefaultValue(type), value.IsChecked))
         {
             writer.WriteMember(value, value.IsChecked, "IsChecked");
         }

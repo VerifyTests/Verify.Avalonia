@@ -14,5 +14,6 @@ class RelativePanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RelativePanel value)
     {
+        var type = typeof(RelativePanel);
     }
 }

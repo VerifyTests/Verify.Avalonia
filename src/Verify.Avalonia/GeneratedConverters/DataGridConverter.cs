@@ -14,173 +14,174 @@ class DataGridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGrid value)
     {
+        var type = typeof(DataGrid);
         if (value.ShouldIncludeProperty(DataGrid.CanUserReorderColumnsProperty))
-        if (!object.Equals(DataGrid.CanUserReorderColumnsProperty.GetDefaultValue(typeof(DataGrid)), value.CanUserReorderColumns))
+        if (!object.Equals(DataGrid.CanUserReorderColumnsProperty.GetDefaultValue(type), value.CanUserReorderColumns))
         {
             writer.WriteMember(value, value.CanUserReorderColumns, "CanUserReorderColumns");
         }
         if (value.ShouldIncludeProperty(DataGrid.CanUserResizeColumnsProperty))
-        if (!object.Equals(DataGrid.CanUserResizeColumnsProperty.GetDefaultValue(typeof(DataGrid)), value.CanUserResizeColumns))
+        if (!object.Equals(DataGrid.CanUserResizeColumnsProperty.GetDefaultValue(type), value.CanUserResizeColumns))
         {
             writer.WriteMember(value, value.CanUserResizeColumns, "CanUserResizeColumns");
         }
         if (value.ShouldIncludeProperty(DataGrid.CanUserSortColumnsProperty))
-        if (!object.Equals(DataGrid.CanUserSortColumnsProperty.GetDefaultValue(typeof(DataGrid)), value.CanUserSortColumns))
+        if (!object.Equals(DataGrid.CanUserSortColumnsProperty.GetDefaultValue(type), value.CanUserSortColumns))
         {
             writer.WriteMember(value, value.CanUserSortColumns, "CanUserSortColumns");
         }
         if (value.ShouldIncludeProperty(DataGrid.ColumnHeaderHeightProperty))
-        if (!object.Equals(DataGrid.ColumnHeaderHeightProperty.GetDefaultValue(typeof(DataGrid)), value.ColumnHeaderHeight))
+        if (!object.Equals(DataGrid.ColumnHeaderHeightProperty.GetDefaultValue(type), value.ColumnHeaderHeight))
         {
             writer.WriteMember(value, value.ColumnHeaderHeight, "ColumnHeaderHeight");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowThemeProperty))
-        if (!object.Equals(DataGrid.RowThemeProperty.GetDefaultValue(typeof(DataGrid)), value.RowTheme))
+        if (!object.Equals(DataGrid.RowThemeProperty.GetDefaultValue(type), value.RowTheme))
         {
             writer.WriteMember(value, value.RowTheme, "RowTheme");
         }
         if (value.ShouldIncludeProperty(DataGrid.CellThemeProperty))
-        if (!object.Equals(DataGrid.CellThemeProperty.GetDefaultValue(typeof(DataGrid)), value.CellTheme))
+        if (!object.Equals(DataGrid.CellThemeProperty.GetDefaultValue(type), value.CellTheme))
         {
             writer.WriteMember(value, value.CellTheme, "CellTheme");
         }
         if (value.ShouldIncludeProperty(DataGrid.ColumnHeaderThemeProperty))
-        if (!object.Equals(DataGrid.ColumnHeaderThemeProperty.GetDefaultValue(typeof(DataGrid)), value.ColumnHeaderTheme))
+        if (!object.Equals(DataGrid.ColumnHeaderThemeProperty.GetDefaultValue(type), value.ColumnHeaderTheme))
         {
             writer.WriteMember(value, value.ColumnHeaderTheme, "ColumnHeaderTheme");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowGroupThemeProperty))
-        if (!object.Equals(DataGrid.RowGroupThemeProperty.GetDefaultValue(typeof(DataGrid)), value.RowGroupTheme))
+        if (!object.Equals(DataGrid.RowGroupThemeProperty.GetDefaultValue(type), value.RowGroupTheme))
         {
             writer.WriteMember(value, value.RowGroupTheme, "RowGroupTheme");
         }
         if (value.ShouldIncludeProperty(DataGrid.ColumnWidthProperty))
-        if (!object.Equals(DataGrid.ColumnWidthProperty.GetDefaultValue(typeof(DataGrid)), value.ColumnWidth))
+        if (!object.Equals(DataGrid.ColumnWidthProperty.GetDefaultValue(type), value.ColumnWidth))
         {
             writer.WriteMember(value, value.ColumnWidth, "ColumnWidth");
         }
         if (value.ShouldIncludeProperty(DataGrid.FrozenColumnCountProperty))
-        if (!object.Equals(DataGrid.FrozenColumnCountProperty.GetDefaultValue(typeof(DataGrid)), value.FrozenColumnCount))
+        if (!object.Equals(DataGrid.FrozenColumnCountProperty.GetDefaultValue(type), value.FrozenColumnCount))
         {
             writer.WriteMember(value, value.FrozenColumnCount, "FrozenColumnCount");
         }
         if (value.ShouldIncludeProperty(DataGrid.GridLinesVisibilityProperty))
-        if (!object.Equals(DataGrid.GridLinesVisibilityProperty.GetDefaultValue(typeof(DataGrid)), value.GridLinesVisibility))
+        if (!object.Equals(DataGrid.GridLinesVisibilityProperty.GetDefaultValue(type), value.GridLinesVisibility))
         {
             writer.WriteMember(value, value.GridLinesVisibility, "GridLinesVisibility");
         }
         if (value.ShouldIncludeProperty(DataGrid.HeadersVisibilityProperty))
-        if (!object.Equals(DataGrid.HeadersVisibilityProperty.GetDefaultValue(typeof(DataGrid)), value.HeadersVisibility))
+        if (!object.Equals(DataGrid.HeadersVisibilityProperty.GetDefaultValue(type), value.HeadersVisibility))
         {
             writer.WriteMember(value, value.HeadersVisibility, "HeadersVisibility");
         }
         if (value.ShouldIncludeProperty(DataGrid.HorizontalGridLinesBrushProperty))
-        if (!object.Equals(DataGrid.HorizontalGridLinesBrushProperty.GetDefaultValue(typeof(DataGrid)), value.HorizontalGridLinesBrush))
+        if (!object.Equals(DataGrid.HorizontalGridLinesBrushProperty.GetDefaultValue(type), value.HorizontalGridLinesBrush))
         {
             writer.WriteMember(value, value.HorizontalGridLinesBrush, "HorizontalGridLinesBrush");
         }
         if (value.ShouldIncludeProperty(DataGrid.HorizontalScrollBarVisibilityProperty))
-        if (!object.Equals(DataGrid.HorizontalScrollBarVisibilityProperty.GetDefaultValue(typeof(DataGrid)), value.HorizontalScrollBarVisibility))
+        if (!object.Equals(DataGrid.HorizontalScrollBarVisibilityProperty.GetDefaultValue(type), value.HorizontalScrollBarVisibility))
         {
             writer.WriteMember(value, value.HorizontalScrollBarVisibility, "HorizontalScrollBarVisibility");
         }
         if (value.ShouldIncludeProperty(DataGrid.IsReadOnlyProperty))
-        if (!object.Equals(DataGrid.IsReadOnlyProperty.GetDefaultValue(typeof(DataGrid)), value.IsReadOnly))
+        if (!object.Equals(DataGrid.IsReadOnlyProperty.GetDefaultValue(type), value.IsReadOnly))
         {
             writer.WriteMember(value, value.IsReadOnly, "IsReadOnly");
         }
         if (value.ShouldIncludeProperty(DataGrid.AreRowGroupHeadersFrozenProperty))
-        if (!object.Equals(DataGrid.AreRowGroupHeadersFrozenProperty.GetDefaultValue(typeof(DataGrid)), value.AreRowGroupHeadersFrozen))
+        if (!object.Equals(DataGrid.AreRowGroupHeadersFrozenProperty.GetDefaultValue(type), value.AreRowGroupHeadersFrozen))
         {
             writer.WriteMember(value, value.AreRowGroupHeadersFrozen, "AreRowGroupHeadersFrozen");
         }
         if (value.ShouldIncludeProperty(DataGrid.IsValidProperty))
-        if (!object.Equals(DataGrid.IsValidProperty.GetUnsetValue(typeof(DataGrid)), value.IsValid))
+        if (!object.Equals(DataGrid.IsValidProperty.GetUnsetValue(type), value.IsValid))
         {
             writer.WriteMember(value, value.IsValid, "IsValid");
         }
         if (value.ShouldIncludeProperty(DataGrid.MaxColumnWidthProperty))
-        if (!object.Equals(DataGrid.MaxColumnWidthProperty.GetDefaultValue(typeof(DataGrid)), value.MaxColumnWidth))
+        if (!object.Equals(DataGrid.MaxColumnWidthProperty.GetDefaultValue(type), value.MaxColumnWidth))
         {
             writer.WriteMember(value, value.MaxColumnWidth, "MaxColumnWidth");
         }
         if (value.ShouldIncludeProperty(DataGrid.MinColumnWidthProperty))
-        if (!object.Equals(DataGrid.MinColumnWidthProperty.GetDefaultValue(typeof(DataGrid)), value.MinColumnWidth))
+        if (!object.Equals(DataGrid.MinColumnWidthProperty.GetDefaultValue(type), value.MinColumnWidth))
         {
             writer.WriteMember(value, value.MinColumnWidth, "MinColumnWidth");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowBackgroundProperty))
-        if (!object.Equals(DataGrid.RowBackgroundProperty.GetDefaultValue(typeof(DataGrid)), value.RowBackground))
+        if (!object.Equals(DataGrid.RowBackgroundProperty.GetDefaultValue(type), value.RowBackground))
         {
             writer.WriteMember(value, value.RowBackground, "RowBackground");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowHeightProperty))
-        if (!object.Equals(DataGrid.RowHeightProperty.GetDefaultValue(typeof(DataGrid)), value.RowHeight))
+        if (!object.Equals(DataGrid.RowHeightProperty.GetDefaultValue(type), value.RowHeight))
         {
             writer.WriteMember(value, value.RowHeight, "RowHeight");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowHeaderWidthProperty))
-        if (!object.Equals(DataGrid.RowHeaderWidthProperty.GetDefaultValue(typeof(DataGrid)), value.RowHeaderWidth))
+        if (!object.Equals(DataGrid.RowHeaderWidthProperty.GetDefaultValue(type), value.RowHeaderWidth))
         {
             writer.WriteMember(value, value.RowHeaderWidth, "RowHeaderWidth");
         }
         if (value.ShouldIncludeProperty(DataGrid.SelectionModeProperty))
-        if (!object.Equals(DataGrid.SelectionModeProperty.GetDefaultValue(typeof(DataGrid)), value.SelectionMode))
+        if (!object.Equals(DataGrid.SelectionModeProperty.GetDefaultValue(type), value.SelectionMode))
         {
             writer.WriteMember(value, value.SelectionMode, "SelectionMode");
         }
         if (value.ShouldIncludeProperty(DataGrid.VerticalGridLinesBrushProperty))
-        if (!object.Equals(DataGrid.VerticalGridLinesBrushProperty.GetDefaultValue(typeof(DataGrid)), value.VerticalGridLinesBrush))
+        if (!object.Equals(DataGrid.VerticalGridLinesBrushProperty.GetDefaultValue(type), value.VerticalGridLinesBrush))
         {
             writer.WriteMember(value, value.VerticalGridLinesBrush, "VerticalGridLinesBrush");
         }
         if (value.ShouldIncludeProperty(DataGrid.VerticalScrollBarVisibilityProperty))
-        if (!object.Equals(DataGrid.VerticalScrollBarVisibilityProperty.GetDefaultValue(typeof(DataGrid)), value.VerticalScrollBarVisibility))
+        if (!object.Equals(DataGrid.VerticalScrollBarVisibilityProperty.GetDefaultValue(type), value.VerticalScrollBarVisibility))
         {
             writer.WriteMember(value, value.VerticalScrollBarVisibility, "VerticalScrollBarVisibility");
         }
         if (value.ShouldIncludeProperty(DataGrid.DropLocationIndicatorTemplateProperty))
-        if (!object.Equals(DataGrid.DropLocationIndicatorTemplateProperty.GetDefaultValue(typeof(DataGrid)), value.DropLocationIndicatorTemplate))
+        if (!object.Equals(DataGrid.DropLocationIndicatorTemplateProperty.GetDefaultValue(type), value.DropLocationIndicatorTemplate))
         {
             writer.WriteMember(value, value.DropLocationIndicatorTemplate, "DropLocationIndicatorTemplate");
         }
         if (value.ShouldIncludeProperty(DataGrid.SelectedIndexProperty))
-        if (!object.Equals(DataGrid.SelectedIndexProperty.GetUnsetValue(typeof(DataGrid)), value.SelectedIndex))
+        if (!object.Equals(DataGrid.SelectedIndexProperty.GetUnsetValue(type), value.SelectedIndex))
         {
             writer.WriteMember(value, value.SelectedIndex, "SelectedIndex");
         }
         if (value.ShouldIncludeProperty(DataGrid.SelectedItemProperty))
-        if (!object.Equals(DataGrid.SelectedItemProperty.GetUnsetValue(typeof(DataGrid)), value.SelectedItem))
+        if (!object.Equals(DataGrid.SelectedItemProperty.GetUnsetValue(type), value.SelectedItem))
         {
             writer.WriteMember(value, value.SelectedItem, "SelectedItem");
         }
         if (value.ShouldIncludeProperty(DataGrid.ClipboardCopyModeProperty))
-        if (!object.Equals(DataGrid.ClipboardCopyModeProperty.GetDefaultValue(typeof(DataGrid)), value.ClipboardCopyMode))
+        if (!object.Equals(DataGrid.ClipboardCopyModeProperty.GetDefaultValue(type), value.ClipboardCopyMode))
         {
             writer.WriteMember(value, value.ClipboardCopyMode, "ClipboardCopyMode");
         }
         if (value.ShouldIncludeProperty(DataGrid.AutoGenerateColumnsProperty))
-        if (!object.Equals(DataGrid.AutoGenerateColumnsProperty.GetDefaultValue(typeof(DataGrid)), value.AutoGenerateColumns))
+        if (!object.Equals(DataGrid.AutoGenerateColumnsProperty.GetDefaultValue(type), value.AutoGenerateColumns))
         {
             writer.WriteMember(value, value.AutoGenerateColumns, "AutoGenerateColumns");
         }
         if (value.ShouldIncludeProperty(DataGrid.ItemsSourceProperty))
-        if (!object.Equals(DataGrid.ItemsSourceProperty.GetDefaultValue(typeof(DataGrid)), value.ItemsSource))
+        if (!object.Equals(DataGrid.ItemsSourceProperty.GetDefaultValue(type), value.ItemsSource))
         {
             writer.WriteMember(value, value.ItemsSource, "ItemsSource");
         }
         if (value.ShouldIncludeProperty(DataGrid.AreRowDetailsFrozenProperty))
-        if (!object.Equals(DataGrid.AreRowDetailsFrozenProperty.GetDefaultValue(typeof(DataGrid)), value.AreRowDetailsFrozen))
+        if (!object.Equals(DataGrid.AreRowDetailsFrozenProperty.GetDefaultValue(type), value.AreRowDetailsFrozen))
         {
             writer.WriteMember(value, value.AreRowDetailsFrozen, "AreRowDetailsFrozen");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowDetailsTemplateProperty))
-        if (!object.Equals(DataGrid.RowDetailsTemplateProperty.GetDefaultValue(typeof(DataGrid)), value.RowDetailsTemplate))
+        if (!object.Equals(DataGrid.RowDetailsTemplateProperty.GetDefaultValue(type), value.RowDetailsTemplate))
         {
             writer.WriteMember(value, value.RowDetailsTemplate, "RowDetailsTemplate");
         }
         if (value.ShouldIncludeProperty(DataGrid.RowDetailsVisibilityModeProperty))
-        if (!object.Equals(DataGrid.RowDetailsVisibilityModeProperty.GetDefaultValue(typeof(DataGrid)), value.RowDetailsVisibilityMode))
+        if (!object.Equals(DataGrid.RowDetailsVisibilityModeProperty.GetDefaultValue(type), value.RowDetailsVisibilityMode))
         {
             writer.WriteMember(value, value.RowDetailsVisibilityMode, "RowDetailsVisibilityMode");
         }

@@ -133,6 +133,7 @@ public class Tests
               
                   public static void WriteMembers(VerifyJsonWriter writer, {{type.Name}} value)
                   {
+                      var type = typeof({{type.Name}});
               """);
         foreach (var property in GetPropertiesToProcess(type))
         {
@@ -166,7 +167,7 @@ public class Tests
         builder.AppendLine(
             $$"""
                       if (value.ShouldIncludeProperty({{type.Name}}.{{name}}Property))
-                      if (!object.Equals({{type.Name}}.{{name}}Property.{{getDefault}}(typeof({{type.Name}})), value.{{name}}))
+                      if (!object.Equals({{type.Name}}.{{name}}Property.{{getDefault}}(type), value.{{name}}))
                       {
                           writer.WriteMember(value, value.{{name}}, "{{name}}");
                       }

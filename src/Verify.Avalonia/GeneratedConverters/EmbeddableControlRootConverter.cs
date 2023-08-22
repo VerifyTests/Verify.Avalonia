@@ -14,5 +14,6 @@ class EmbeddableControlRootConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, EmbeddableControlRoot value)
     {
+        var type = typeof(EmbeddableControlRoot);
     }
 }

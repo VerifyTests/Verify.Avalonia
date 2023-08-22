@@ -14,49 +14,50 @@ class MaskedTextBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MaskedTextBox value)
     {
+        var type = typeof(MaskedTextBox);
         if (value.ShouldIncludeProperty(MaskedTextBox.AsciiOnlyProperty))
-        if (!object.Equals(MaskedTextBox.AsciiOnlyProperty.GetDefaultValue(typeof(MaskedTextBox)), value.AsciiOnly))
+        if (!object.Equals(MaskedTextBox.AsciiOnlyProperty.GetDefaultValue(type), value.AsciiOnly))
         {
             writer.WriteMember(value, value.AsciiOnly, "AsciiOnly");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.CultureProperty))
-        if (!object.Equals(MaskedTextBox.CultureProperty.GetDefaultValue(typeof(MaskedTextBox)), value.Culture))
+        if (!object.Equals(MaskedTextBox.CultureProperty.GetDefaultValue(type), value.Culture))
         {
             writer.WriteMember(value, value.Culture, "Culture");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.HidePromptOnLeaveProperty))
-        if (!object.Equals(MaskedTextBox.HidePromptOnLeaveProperty.GetDefaultValue(typeof(MaskedTextBox)), value.HidePromptOnLeave))
+        if (!object.Equals(MaskedTextBox.HidePromptOnLeaveProperty.GetDefaultValue(type), value.HidePromptOnLeave))
         {
             writer.WriteMember(value, value.HidePromptOnLeave, "HidePromptOnLeave");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.MaskProperty))
-        if (!object.Equals(MaskedTextBox.MaskProperty.GetDefaultValue(typeof(MaskedTextBox)), value.Mask))
+        if (!object.Equals(MaskedTextBox.MaskProperty.GetDefaultValue(type), value.Mask))
         {
             writer.WriteMember(value, value.Mask, "Mask");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.MaskCompletedProperty))
-        if (!object.Equals(MaskedTextBox.MaskCompletedProperty.GetUnsetValue(typeof(MaskedTextBox)), value.MaskCompleted))
+        if (!object.Equals(MaskedTextBox.MaskCompletedProperty.GetUnsetValue(type), value.MaskCompleted))
         {
             writer.WriteMember(value, value.MaskCompleted, "MaskCompleted");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.MaskFullProperty))
-        if (!object.Equals(MaskedTextBox.MaskFullProperty.GetUnsetValue(typeof(MaskedTextBox)), value.MaskFull))
+        if (!object.Equals(MaskedTextBox.MaskFullProperty.GetUnsetValue(type), value.MaskFull))
         {
             writer.WriteMember(value, value.MaskFull, "MaskFull");
         }
         writer.WriteMember(value, value.MaskProvider, "MaskProvider");
         if (value.ShouldIncludeProperty(MaskedTextBox.PromptCharProperty))
-        if (!object.Equals(MaskedTextBox.PromptCharProperty.GetDefaultValue(typeof(MaskedTextBox)), value.PromptChar))
+        if (!object.Equals(MaskedTextBox.PromptCharProperty.GetDefaultValue(type), value.PromptChar))
         {
             writer.WriteMember(value, value.PromptChar, "PromptChar");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.ResetOnPromptProperty))
-        if (!object.Equals(MaskedTextBox.ResetOnPromptProperty.GetDefaultValue(typeof(MaskedTextBox)), value.ResetOnPrompt))
+        if (!object.Equals(MaskedTextBox.ResetOnPromptProperty.GetDefaultValue(type), value.ResetOnPrompt))
         {
             writer.WriteMember(value, value.ResetOnPrompt, "ResetOnPrompt");
         }
         if (value.ShouldIncludeProperty(MaskedTextBox.ResetOnSpaceProperty))
-        if (!object.Equals(MaskedTextBox.ResetOnSpaceProperty.GetDefaultValue(typeof(MaskedTextBox)), value.ResetOnSpace))
+        if (!object.Equals(MaskedTextBox.ResetOnSpaceProperty.GetDefaultValue(type), value.ResetOnSpace))
         {
             writer.WriteMember(value, value.ResetOnSpace, "ResetOnSpace");
         }
