@@ -14,7 +14,6 @@ class DataGridRowGroupHeaderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRowGroupHeader value)
     {
-        var type = typeof(DataGridRowGroupHeader);
         if (DataGridRowGroupHeader.IsItemCountVisibleProperty.ShouldIncludeProperty(value, value.IsItemCountVisible))
         {
             writer.WriteMember(value, value.IsItemCountVisible, "IsItemCountVisible");

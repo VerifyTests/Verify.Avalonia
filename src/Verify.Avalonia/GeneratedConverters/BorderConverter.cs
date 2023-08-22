@@ -14,7 +14,6 @@ class BorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Border value)
     {
-        var type = typeof(Border);
         if (Border.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");

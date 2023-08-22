@@ -14,7 +14,6 @@ class VisualLayerManagerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VisualLayerManager value)
     {
-        var type = typeof(VisualLayerManager);
         writer.WriteMember(value, value.IsPopup, "IsPopup");
         writer.WriteMember(value, value.AdornerLayer, "AdornerLayer");
         if (VisualLayerManager.ChromeOverlayLayerProperty.ShouldIncludeProperty(value, value.ChromeOverlayLayer))

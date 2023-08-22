@@ -14,7 +14,6 @@ class DataGridRowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRow value)
     {
-        var type = typeof(DataGridRow);
         if (DataGridRow.HeaderProperty.ShouldIncludeProperty(value, value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");

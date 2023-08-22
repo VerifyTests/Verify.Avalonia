@@ -14,7 +14,6 @@ class ComboBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ComboBox value)
     {
-        var type = typeof(ComboBox);
         if (ComboBox.IsDropDownOpenProperty.ShouldIncludeProperty(value, value.IsDropDownOpen))
         {
             writer.WriteMember(value, value.IsDropDownOpen, "IsDropDownOpen");

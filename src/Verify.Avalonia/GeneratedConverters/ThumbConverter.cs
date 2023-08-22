@@ -14,6 +14,5 @@ class ThumbConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Thumb value)
     {
-        var type = typeof(Thumb);
     }
 }

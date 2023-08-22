@@ -14,7 +14,6 @@ class HeaderedItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, HeaderedItemsControl value)
     {
-        var type = typeof(HeaderedItemsControl);
         if (HeaderedItemsControl.HeaderProperty.ShouldIncludeProperty(value, value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");

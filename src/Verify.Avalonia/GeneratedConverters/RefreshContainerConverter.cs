@@ -14,7 +14,6 @@ class RefreshContainerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RefreshContainer value)
     {
-        var type = typeof(RefreshContainer);
         if (RefreshContainer.VisualizerProperty.ShouldIncludeProperty(value, value.Visualizer))
         {
             writer.WriteMember(value, value.Visualizer, "Visualizer");

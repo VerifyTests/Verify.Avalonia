@@ -14,7 +14,6 @@ class DataGridColumnHeaderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridColumnHeader value)
     {
-        var type = typeof(DataGridColumnHeader);
         if (DataGridColumnHeader.SeparatorBrushProperty.ShouldIncludeProperty(value, value.SeparatorBrush))
         {
             writer.WriteMember(value, value.SeparatorBrush, "SeparatorBrush");

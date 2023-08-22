@@ -14,6 +14,5 @@ class DataGridCellsPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridCellsPresenter value)
     {
-        var type = typeof(DataGridCellsPresenter);
     }
 }

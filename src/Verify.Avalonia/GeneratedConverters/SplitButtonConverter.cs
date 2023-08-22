@@ -14,7 +14,6 @@ class SplitButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SplitButton value)
     {
-        var type = typeof(SplitButton);
         if (SplitButton.CommandProperty.ShouldIncludeProperty(value, value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");

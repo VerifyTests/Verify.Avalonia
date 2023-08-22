@@ -14,7 +14,6 @@ class ItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ItemsControl value)
     {
-        var type = typeof(ItemsControl);
         if (ItemsControl.DisplayMemberBindingProperty.ShouldIncludeProperty(value, value.DisplayMemberBinding))
         {
             writer.WriteMember(value, value.DisplayMemberBinding, "DisplayMemberBinding");

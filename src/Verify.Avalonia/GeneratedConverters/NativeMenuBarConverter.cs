@@ -14,6 +14,5 @@ class NativeMenuBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NativeMenuBar value)
     {
-        var type = typeof(NativeMenuBar);
     }
 }

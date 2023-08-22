@@ -14,6 +14,5 @@ class TabStripItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabStripItem value)
     {
-        var type = typeof(TabStripItem);
     }
 }

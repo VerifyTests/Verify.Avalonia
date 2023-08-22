@@ -14,7 +14,6 @@ class ImageConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Image value)
     {
-        var type = typeof(Image);
         if (Image.SourceProperty.ShouldIncludeProperty(value, value.Source))
         {
             writer.WriteMember(value, value.Source, "Source");

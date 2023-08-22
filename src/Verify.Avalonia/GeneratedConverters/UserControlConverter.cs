@@ -14,6 +14,5 @@ class UserControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, UserControl value)
     {
-        var type = typeof(UserControl);
     }
 }

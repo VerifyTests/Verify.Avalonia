@@ -14,7 +14,6 @@ class OverlayLayerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, OverlayLayer value)
     {
-        var type = typeof(OverlayLayer);
         writer.WriteMember(value, value.AvailableSize, "AvailableSize");
     }
 }

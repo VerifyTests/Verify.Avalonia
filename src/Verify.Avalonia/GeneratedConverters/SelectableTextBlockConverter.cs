@@ -14,7 +14,6 @@ class SelectableTextBlockConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectableTextBlock value)
     {
-        var type = typeof(SelectableTextBlock);
         if (SelectableTextBlock.SelectionBrushProperty.ShouldIncludeProperty(value, value.SelectionBrush))
         {
             writer.WriteMember(value, value.SelectionBrush, "SelectionBrush");

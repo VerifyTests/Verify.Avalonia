@@ -14,7 +14,6 @@ class DataValidationErrorsConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataValidationErrors value)
     {
-        var type = typeof(DataValidationErrors);
         if (DataValidationErrors.OwnerProperty.ShouldIncludeProperty(value, value.Owner))
         {
             writer.WriteMember(value, value.Owner, "Owner");

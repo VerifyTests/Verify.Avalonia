@@ -14,7 +14,6 @@ class DataGridRowHeaderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridRowHeader value)
     {
-        var type = typeof(DataGridRowHeader);
         if (DataGridRowHeader.SeparatorBrushProperty.ShouldIncludeProperty(value, value.SeparatorBrush))
         {
             writer.WriteMember(value, value.SeparatorBrush, "SeparatorBrush");

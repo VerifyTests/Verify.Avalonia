@@ -13,7 +13,6 @@ class VisualConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Visual value)
     {
-        var type = typeof(Visual);
         if (Visual.BoundsProperty.ShouldIncludeProperty(value, value.Bounds))
         {
             writer.WriteMember(value, value.Bounds, "Bounds");

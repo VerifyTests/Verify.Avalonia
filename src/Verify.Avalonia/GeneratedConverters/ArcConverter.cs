@@ -14,7 +14,6 @@ class ArcConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Arc value)
     {
-        var type = typeof(Arc);
         if (Arc.StartAngleProperty.ShouldIncludeProperty(value, value.StartAngle))
         {
             writer.WriteMember(value, value.StartAngle, "StartAngle");

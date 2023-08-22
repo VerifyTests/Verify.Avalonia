@@ -14,7 +14,6 @@ class CalendarItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CalendarItem value)
     {
-        var type = typeof(CalendarItem);
         if (CalendarItem.HeaderBackgroundProperty.ShouldIncludeProperty(value, value.HeaderBackground))
         {
             writer.WriteMember(value, value.HeaderBackground, "HeaderBackground");

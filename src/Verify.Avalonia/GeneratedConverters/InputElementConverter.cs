@@ -14,7 +14,6 @@ class InputElementConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, InputElement value)
     {
-        var type = typeof(InputElement);
         if (InputElement.FocusableProperty.ShouldIncludeProperty(value, value.Focusable))
         {
             writer.WriteMember(value, value.Focusable, "Focusable");

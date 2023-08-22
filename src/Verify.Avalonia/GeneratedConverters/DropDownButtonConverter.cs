@@ -14,6 +14,5 @@ class DropDownButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DropDownButton value)
     {
-        var type = typeof(DropDownButton);
     }
 }

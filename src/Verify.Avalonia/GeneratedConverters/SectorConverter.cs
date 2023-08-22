@@ -14,7 +14,6 @@ class SectorConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Sector value)
     {
-        var type = typeof(Sector);
         if (Sector.StartAngleProperty.ShouldIncludeProperty(value, value.StartAngle))
         {
             writer.WriteMember(value, value.StartAngle, "StartAngle");

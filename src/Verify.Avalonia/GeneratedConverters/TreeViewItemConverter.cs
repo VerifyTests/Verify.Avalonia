@@ -14,7 +14,6 @@ class TreeViewItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TreeViewItem value)
     {
-        var type = typeof(TreeViewItem);
         if (TreeViewItem.IsExpandedProperty.ShouldIncludeProperty(value, value.IsExpanded))
         {
             writer.WriteMember(value, value.IsExpanded, "IsExpanded");

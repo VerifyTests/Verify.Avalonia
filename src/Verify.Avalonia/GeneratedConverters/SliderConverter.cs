@@ -14,7 +14,6 @@ class SliderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Slider value)
     {
-        var type = typeof(Slider);
         if (Slider.TicksProperty.ShouldIncludeProperty(value, value.Ticks))
         {
             writer.WriteMember(value, value.Ticks, "Ticks");

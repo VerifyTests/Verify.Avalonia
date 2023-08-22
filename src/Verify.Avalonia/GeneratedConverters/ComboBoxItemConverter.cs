@@ -14,6 +14,5 @@ class ComboBoxItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ComboBoxItem value)
     {
-        var type = typeof(ComboBoxItem);
     }
 }

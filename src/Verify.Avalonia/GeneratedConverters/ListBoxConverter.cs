@@ -14,7 +14,6 @@ class ListBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ListBox value)
     {
-        var type = typeof(ListBox);
         if (ListBox.ScrollProperty.ShouldIncludeProperty(value, value.Scroll))
         {
             writer.WriteMember(value, value.Scroll, "Scroll");

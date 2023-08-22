@@ -14,7 +14,6 @@ class DataGridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGrid value)
     {
-        var type = typeof(DataGrid);
         if (DataGrid.CanUserReorderColumnsProperty.ShouldIncludeProperty(value, value.CanUserReorderColumns))
         {
             writer.WriteMember(value, value.CanUserReorderColumns, "CanUserReorderColumns");

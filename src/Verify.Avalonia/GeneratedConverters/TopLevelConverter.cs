@@ -14,7 +14,6 @@ class TopLevelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TopLevel value)
     {
-        var type = typeof(TopLevel);
         if (TopLevel.ClientSizeProperty.ShouldIncludeProperty(value, value.ClientSize))
         {
             writer.WriteMember(value, value.ClientSize, "ClientSize");

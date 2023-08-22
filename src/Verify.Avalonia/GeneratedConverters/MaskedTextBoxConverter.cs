@@ -14,7 +14,6 @@ class MaskedTextBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MaskedTextBox value)
     {
-        var type = typeof(MaskedTextBox);
         if (MaskedTextBox.AsciiOnlyProperty.ShouldIncludeProperty(value, value.AsciiOnly))
         {
             writer.WriteMember(value, value.AsciiOnly, "AsciiOnly");

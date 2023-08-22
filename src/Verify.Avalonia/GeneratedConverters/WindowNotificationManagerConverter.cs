@@ -14,7 +14,6 @@ class WindowNotificationManagerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WindowNotificationManager value)
     {
-        var type = typeof(WindowNotificationManager);
         if (WindowNotificationManager.PositionProperty.ShouldIncludeProperty(value, value.Position))
         {
             writer.WriteMember(value, value.Position, "Position");

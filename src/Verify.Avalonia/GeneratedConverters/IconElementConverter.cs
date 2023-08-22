@@ -14,6 +14,5 @@ class IconElementConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, IconElement value)
     {
-        var type = typeof(IconElement);
     }
 }

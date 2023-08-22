@@ -14,6 +14,5 @@ class CalendarButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, CalendarButton value)
     {
-        var type = typeof(CalendarButton);
     }
 }

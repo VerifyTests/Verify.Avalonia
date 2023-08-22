@@ -14,7 +14,6 @@ class SplitViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SplitView value)
     {
-        var type = typeof(SplitView);
         if (SplitView.CompactPaneLengthProperty.ShouldIncludeProperty(value, value.CompactPaneLength))
         {
             writer.WriteMember(value, value.CompactPaneLength, "CompactPaneLength");

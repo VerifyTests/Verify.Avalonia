@@ -14,6 +14,5 @@ class TitleBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TitleBar value)
     {
-        var type = typeof(TitleBar);
     }
 }

@@ -14,6 +14,5 @@ class DataGridColumnHeadersPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridColumnHeadersPresenter value)
     {
-        var type = typeof(DataGridColumnHeadersPresenter);
     }
 }

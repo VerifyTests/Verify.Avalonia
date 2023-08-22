@@ -14,7 +14,6 @@ class ColorSpectrumConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorSpectrum value)
     {
-        var type = typeof(ColorSpectrum);
         if (ColorSpectrum.ColorProperty.ShouldIncludeProperty(value, value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");

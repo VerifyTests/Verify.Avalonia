@@ -14,7 +14,6 @@ class TickBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TickBar value)
     {
-        var type = typeof(TickBar);
         if (TickBar.FillProperty.ShouldIncludeProperty(value, value.Fill))
         {
             writer.WriteMember(value, value.Fill, "Fill");

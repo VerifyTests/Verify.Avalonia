@@ -14,7 +14,6 @@ class TabItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabItem value)
     {
-        var type = typeof(TabItem);
         if (TabItem.TabStripPlacementProperty.ShouldIncludeProperty(value, value.TabStripPlacement))
         {
             writer.WriteMember(value, value.TabStripPlacement, "TabStripPlacement");

@@ -14,7 +14,6 @@ class ToggleButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ToggleButton value)
     {
-        var type = typeof(ToggleButton);
         if (ToggleButton.IsCheckedProperty.ShouldIncludeProperty(value, value.IsChecked))
         {
             writer.WriteMember(value, value.IsChecked, "IsChecked");

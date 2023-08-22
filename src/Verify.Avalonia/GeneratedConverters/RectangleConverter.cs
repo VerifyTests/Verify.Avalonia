@@ -14,7 +14,6 @@ class RectangleConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Rectangle value)
     {
-        var type = typeof(Rectangle);
         if (Rectangle.RadiusXProperty.ShouldIncludeProperty(value, value.RadiusX))
         {
             writer.WriteMember(value, value.RadiusX, "RadiusX");

@@ -14,7 +14,6 @@ class ContextMenuConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContextMenu value)
     {
-        var type = typeof(ContextMenu);
         if (ContextMenu.HorizontalOffsetProperty.ShouldIncludeProperty(value, value.HorizontalOffset))
         {
             writer.WriteMember(value, value.HorizontalOffset, "HorizontalOffset");

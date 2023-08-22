@@ -14,7 +14,6 @@ class ColorSliderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorSlider value)
     {
-        var type = typeof(ColorSlider);
         if (ColorSlider.ColorProperty.ShouldIncludeProperty(value, value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");

@@ -14,7 +14,6 @@ class ButtonSpinnerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ButtonSpinner value)
     {
-        var type = typeof(ButtonSpinner);
         if (ButtonSpinner.AllowSpinProperty.ShouldIncludeProperty(value, value.AllowSpin))
         {
             writer.WriteMember(value, value.AllowSpin, "AllowSpin");

@@ -14,7 +14,6 @@ class MenuItemConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, MenuItem value)
     {
-        var type = typeof(MenuItem);
         if (MenuItem.CommandProperty.ShouldIncludeProperty(value, value.Command))
         {
             writer.WriteMember(value, value.Command, "Command");

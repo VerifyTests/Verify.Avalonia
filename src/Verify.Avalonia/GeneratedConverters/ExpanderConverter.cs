@@ -14,7 +14,6 @@ class ExpanderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Expander value)
     {
-        var type = typeof(Expander);
         if (Expander.ContentTransitionProperty.ShouldIncludeProperty(value, value.ContentTransition))
         {
             writer.WriteMember(value, value.ContentTransition, "ContentTransition");

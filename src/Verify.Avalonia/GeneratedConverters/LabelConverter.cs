@@ -14,7 +14,6 @@ class LabelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Label value)
     {
-        var type = typeof(Label);
         if (Label.TargetProperty.ShouldIncludeProperty(value, value.Target))
         {
             writer.WriteMember(value, value.Target, "Target");

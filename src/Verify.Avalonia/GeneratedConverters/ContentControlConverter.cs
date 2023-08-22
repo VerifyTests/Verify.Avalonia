@@ -14,7 +14,6 @@ class ContentControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ContentControl value)
     {
-        var type = typeof(ContentControl);
         if (ContentControl.ContentProperty.ShouldIncludeProperty(value, value.Content))
         {
             writer.WriteMember(value, value.Content, "Content");

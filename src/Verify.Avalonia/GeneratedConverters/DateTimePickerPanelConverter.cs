@@ -14,7 +14,6 @@ class DateTimePickerPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DateTimePickerPanel value)
     {
-        var type = typeof(DateTimePickerPanel);
         if (DateTimePickerPanel.PanelTypeProperty.ShouldIncludeProperty(value, value.PanelType))
         {
             writer.WriteMember(value, value.PanelType, "PanelType");

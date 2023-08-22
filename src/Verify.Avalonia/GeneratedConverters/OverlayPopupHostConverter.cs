@@ -14,7 +14,6 @@ class OverlayPopupHostConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, OverlayPopupHost value)
     {
-        var type = typeof(OverlayPopupHost);
         writer.WriteMember(value, value.HostedVisualTreeRoot, "HostedVisualTreeRoot");
         if (OverlayPopupHost.TransformProperty.ShouldIncludeProperty(value, value.Transform))
         {

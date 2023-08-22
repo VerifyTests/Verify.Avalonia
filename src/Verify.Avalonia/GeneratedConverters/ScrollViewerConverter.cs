@@ -14,7 +14,6 @@ class ScrollViewerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollViewer value)
     {
-        var type = typeof(ScrollViewer);
         if (ScrollViewer.BringIntoViewOnFocusChangeProperty.ShouldIncludeProperty(value, value.BringIntoViewOnFocusChange))
         {
             writer.WriteMember(value, value.BringIntoViewOnFocusChange, "BringIntoViewOnFocusChange");

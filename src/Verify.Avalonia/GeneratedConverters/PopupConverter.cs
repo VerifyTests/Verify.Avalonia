@@ -14,7 +14,6 @@ class PopupConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Popup value)
     {
-        var type = typeof(Popup);
         writer.WriteMember(value, value.Host, "Host");
         if (Popup.WindowManagerAddShadowHintProperty.ShouldIncludeProperty(value, value.WindowManagerAddShadowHint))
         {

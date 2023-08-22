@@ -14,7 +14,6 @@ class LineConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Line value)
     {
-        var type = typeof(Line);
         if (Line.StartPointProperty.ShouldIncludeProperty(value, value.StartPoint))
         {
             writer.WriteMember(value, value.StartPoint, "StartPoint");

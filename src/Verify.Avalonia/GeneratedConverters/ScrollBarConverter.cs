@@ -14,7 +14,6 @@ class ScrollBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollBar value)
     {
-        var type = typeof(ScrollBar);
         if (ScrollBar.ViewportSizeProperty.ShouldIncludeProperty(value, value.ViewportSize))
         {
             writer.WriteMember(value, value.ViewportSize, "ViewportSize");

@@ -14,6 +14,5 @@ class ChromeOverlayLayerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ChromeOverlayLayer value)
     {
-        var type = typeof(ChromeOverlayLayer);
     }
 }

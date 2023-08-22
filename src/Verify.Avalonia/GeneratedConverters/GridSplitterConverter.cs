@@ -14,7 +14,6 @@ class GridSplitterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, GridSplitter value)
     {
-        var type = typeof(GridSplitter);
         if (GridSplitter.ResizeDirectionProperty.ShouldIncludeProperty(value, value.ResizeDirection))
         {
             writer.WriteMember(value, value.ResizeDirection, "ResizeDirection");

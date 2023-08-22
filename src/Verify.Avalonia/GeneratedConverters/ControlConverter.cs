@@ -14,7 +14,6 @@ class ControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Control value)
     {
-        var type = typeof(Control);
         if (Control.FocusAdornerProperty.ShouldIncludeProperty(value, value.FocusAdorner))
         {
             writer.WriteMember(value, value.FocusAdorner, "FocusAdorner");

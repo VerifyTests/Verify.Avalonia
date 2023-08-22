@@ -14,7 +14,6 @@ class ButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Button value)
     {
-        var type = typeof(Button);
         if (Button.ClickModeProperty.ShouldIncludeProperty(value, value.ClickMode))
         {
             writer.WriteMember(value, value.ClickMode, "ClickMode");

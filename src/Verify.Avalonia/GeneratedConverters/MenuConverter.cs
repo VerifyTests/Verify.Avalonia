@@ -14,6 +14,5 @@ class MenuConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Menu value)
     {
-        var type = typeof(Menu);
     }
 }

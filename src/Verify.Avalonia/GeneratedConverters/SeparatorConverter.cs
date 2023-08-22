@@ -14,6 +14,5 @@ class SeparatorConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Separator value)
     {
-        var type = typeof(Separator);
     }
 }

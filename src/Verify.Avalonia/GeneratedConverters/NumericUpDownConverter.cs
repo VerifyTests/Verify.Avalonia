@@ -14,7 +14,6 @@ class NumericUpDownConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NumericUpDown value)
     {
-        var type = typeof(NumericUpDown);
         if (NumericUpDown.AllowSpinProperty.ShouldIncludeProperty(value, value.AllowSpin))
         {
             writer.WriteMember(value, value.AllowSpin, "AllowSpin");

@@ -14,7 +14,6 @@ class TextPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TextPresenter value)
     {
-        var type = typeof(TextPresenter);
         if (TextPresenter.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");

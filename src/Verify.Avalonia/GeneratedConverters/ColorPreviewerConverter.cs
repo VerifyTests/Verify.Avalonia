@@ -14,7 +14,6 @@ class ColorPreviewerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorPreviewer value)
     {
-        var type = typeof(ColorPreviewer);
         if (ColorPreviewer.HsvColorProperty.ShouldIncludeProperty(value, value.HsvColor))
         {
             writer.WriteMember(value, value.HsvColor, "HsvColor");

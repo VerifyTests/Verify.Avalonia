@@ -14,7 +14,6 @@ class HeaderedSelectingItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, HeaderedSelectingItemsControl value)
     {
-        var type = typeof(HeaderedSelectingItemsControl);
         if (HeaderedSelectingItemsControl.HeaderProperty.ShouldIncludeProperty(value, value.Header))
         {
             writer.WriteMember(value, value.Header, "Header");

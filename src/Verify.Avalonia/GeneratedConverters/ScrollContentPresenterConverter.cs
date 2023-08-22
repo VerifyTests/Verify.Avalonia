@@ -14,7 +14,6 @@ class ScrollContentPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ScrollContentPresenter value)
     {
-        var type = typeof(ScrollContentPresenter);
         if (ScrollContentPresenter.CanHorizontallyScrollProperty.ShouldIncludeProperty(value, value.CanHorizontallyScroll))
         {
             writer.WriteMember(value, value.CanHorizontallyScroll, "CanHorizontallyScroll");

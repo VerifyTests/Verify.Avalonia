@@ -14,7 +14,6 @@ class UniformGridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, UniformGrid value)
     {
-        var type = typeof(UniformGrid);
         if (UniformGrid.RowsProperty.ShouldIncludeProperty(value, value.Rows))
         {
             writer.WriteMember(value, value.Rows, "Rows");

@@ -14,7 +14,6 @@ class SelectingItemsControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, SelectingItemsControl value)
     {
-        var type = typeof(SelectingItemsControl);
         if (SelectingItemsControl.AutoScrollToSelectedItemProperty.ShouldIncludeProperty(value, value.AutoScrollToSelectedItem))
         {
             writer.WriteMember(value, value.AutoScrollToSelectedItem, "AutoScrollToSelectedItem");

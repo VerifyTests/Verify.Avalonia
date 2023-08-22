@@ -14,7 +14,6 @@ class WrapPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WrapPanel value)
     {
-        var type = typeof(WrapPanel);
         if (WrapPanel.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");

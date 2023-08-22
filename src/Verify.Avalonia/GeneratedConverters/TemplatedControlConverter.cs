@@ -14,7 +14,6 @@ class TemplatedControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TemplatedControl value)
     {
-        var type = typeof(TemplatedControl);
         if (TemplatedControl.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {
             writer.WriteMember(value, value.Background, "Background");

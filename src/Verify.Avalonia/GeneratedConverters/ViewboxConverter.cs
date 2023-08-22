@@ -14,7 +14,6 @@ class ViewboxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Viewbox value)
     {
-        var type = typeof(Viewbox);
         if (Viewbox.StretchProperty.ShouldIncludeProperty(value, value.Stretch))
         {
             writer.WriteMember(value, value.Stretch, "Stretch");

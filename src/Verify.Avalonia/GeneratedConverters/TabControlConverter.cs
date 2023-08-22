@@ -14,7 +14,6 @@ class TabControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TabControl value)
     {
-        var type = typeof(TabControl);
         if (TabControl.HorizontalContentAlignmentProperty.ShouldIncludeProperty(value, value.HorizontalContentAlignment))
         {
             writer.WriteMember(value, value.HorizontalContentAlignment, "HorizontalContentAlignment");

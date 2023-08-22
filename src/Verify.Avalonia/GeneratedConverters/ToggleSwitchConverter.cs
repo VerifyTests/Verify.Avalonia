@@ -14,7 +14,6 @@ class ToggleSwitchConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ToggleSwitch value)
     {
-        var type = typeof(ToggleSwitch);
         if (ToggleSwitch.OnContentProperty.ShouldIncludeProperty(value, value.OnContent))
         {
             writer.WriteMember(value, value.OnContent, "OnContent");

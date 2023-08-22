@@ -14,7 +14,6 @@ class ShapeConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Shape value)
     {
-        var type = typeof(Shape);
         writer.WriteMember(value, value.DefiningGeometry, "DefiningGeometry");
         writer.WriteMember(value, value.RenderedGeometry, "RenderedGeometry");
         if (Shape.FillProperty.ShouldIncludeProperty(value, value.Fill))

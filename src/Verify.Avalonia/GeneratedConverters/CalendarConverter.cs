@@ -14,7 +14,6 @@ class CalendarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Calendar value)
     {
-        var type = typeof(Calendar);
         if (Calendar.FirstDayOfWeekProperty.ShouldIncludeProperty(value, value.FirstDayOfWeek))
         {
             writer.WriteMember(value, value.FirstDayOfWeek, "FirstDayOfWeek");

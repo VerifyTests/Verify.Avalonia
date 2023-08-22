@@ -14,6 +14,5 @@ class VirtualizingCarouselPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VirtualizingCarouselPanel value)
     {
-        var type = typeof(VirtualizingCarouselPanel);
     }
 }

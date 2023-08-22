@@ -14,7 +14,6 @@ class DockPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DockPanel value)
     {
-        var type = typeof(DockPanel);
         if (DockPanel.LastChildFillProperty.ShouldIncludeProperty(value, value.LastChildFill))
         {
             writer.WriteMember(value, value.LastChildFill, "LastChildFill");

@@ -14,7 +14,6 @@ class WindowBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, WindowBase value)
     {
-        var type = typeof(WindowBase);
         if (WindowBase.IsActiveProperty.ShouldIncludeProperty(value, value.IsActive))
         {
             writer.WriteMember(value, value.IsActive, "IsActive");

@@ -14,7 +14,6 @@ class NotificationCardConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, NotificationCard value)
     {
-        var type = typeof(NotificationCard);
         if (NotificationCard.IsClosingProperty.ShouldIncludeProperty(value, value.IsClosing))
         {
             writer.WriteMember(value, value.IsClosing, "IsClosing");

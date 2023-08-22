@@ -14,7 +14,6 @@ class VirtualizingStackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, VirtualizingStackPanel value)
     {
-        var type = typeof(VirtualizingStackPanel);
         if (VirtualizingStackPanel.OrientationProperty.ShouldIncludeProperty(value, value.Orientation))
         {
             writer.WriteMember(value, value.Orientation, "Orientation");

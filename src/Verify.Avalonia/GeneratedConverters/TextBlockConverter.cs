@@ -14,7 +14,6 @@ class TextBlockConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TextBlock value)
     {
-        var type = typeof(TextBlock);
         if (TextBlock.PaddingProperty.ShouldIncludeProperty(value, value.Padding))
         {
             writer.WriteMember(value, value.Padding, "Padding");

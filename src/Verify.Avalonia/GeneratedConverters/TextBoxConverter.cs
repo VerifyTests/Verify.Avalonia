@@ -14,7 +14,6 @@ class TextBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TextBox value)
     {
-        var type = typeof(TextBox);
         if (TextBox.AcceptsReturnProperty.ShouldIncludeProperty(value, value.AcceptsReturn))
         {
             writer.WriteMember(value, value.AcceptsReturn, "AcceptsReturn");

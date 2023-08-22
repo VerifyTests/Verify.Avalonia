@@ -14,7 +14,6 @@ class DecoratorConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Decorator value)
     {
-        var type = typeof(Decorator);
         if (Decorator.ChildProperty.ShouldIncludeProperty(value, value.Child))
         {
             writer.WriteMember(value, value.Child, "Child");

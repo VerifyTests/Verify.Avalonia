@@ -14,7 +14,6 @@ class LayoutTransformControlConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, LayoutTransformControl value)
     {
-        var type = typeof(LayoutTransformControl);
         if (LayoutTransformControl.LayoutTransformProperty.ShouldIncludeProperty(value, value.LayoutTransform))
         {
             writer.WriteMember(value, value.LayoutTransform, "LayoutTransform");

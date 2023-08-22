@@ -14,7 +14,6 @@ class PanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Panel value)
     {
-        var type = typeof(Panel);
         writer.WriteMember(value, value.Children, "Children");
         if (Panel.BackgroundProperty.ShouldIncludeProperty(value, value.Background))
         {

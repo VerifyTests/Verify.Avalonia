@@ -14,7 +14,6 @@ class ColorViewConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ColorView value)
     {
-        var type = typeof(ColorView);
         if (ColorView.ColorProperty.ShouldIncludeProperty(value, value.Color))
         {
             writer.WriteMember(value, value.Color, "Color");

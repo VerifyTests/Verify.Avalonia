@@ -14,6 +14,5 @@ class PickerPresenterBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, PickerPresenterBase value)
     {
-        var type = typeof(PickerPresenterBase);
     }
 }

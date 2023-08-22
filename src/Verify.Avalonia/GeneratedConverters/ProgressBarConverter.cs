@@ -14,7 +14,6 @@ class ProgressBarConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ProgressBar value)
     {
-        var type = typeof(ProgressBar);
         if (ProgressBar.PercentageProperty.ShouldIncludeProperty(value, value.Percentage))
         {
             writer.WriteMember(value, value.Percentage, "Percentage");

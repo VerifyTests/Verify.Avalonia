@@ -14,7 +14,6 @@ class TimePickerPresenterConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, TimePickerPresenter value)
     {
-        var type = typeof(TimePickerPresenter);
         if (TimePickerPresenter.MinuteIncrementProperty.ShouldIncludeProperty(value, value.MinuteIncrement))
         {
             writer.WriteMember(value, value.MinuteIncrement, "MinuteIncrement");

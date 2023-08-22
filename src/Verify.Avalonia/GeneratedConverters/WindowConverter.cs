@@ -14,7 +14,6 @@ class WindowConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Window value)
     {
-        var type = typeof(Window);
         writer.WriteMember(value, value.OwnedWindows, "OwnedWindows");
         if (Window.SizeToContentProperty.ShouldIncludeProperty(value, value.SizeToContent))
         {

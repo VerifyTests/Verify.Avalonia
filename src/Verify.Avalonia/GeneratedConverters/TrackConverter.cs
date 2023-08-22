@@ -14,7 +14,6 @@ class TrackConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Track value)
     {
-        var type = typeof(Track);
         if (Track.MinimumProperty.ShouldIncludeProperty(value, value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");

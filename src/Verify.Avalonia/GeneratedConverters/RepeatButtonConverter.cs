@@ -14,7 +14,6 @@ class RepeatButtonConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RepeatButton value)
     {
-        var type = typeof(RepeatButton);
         if (RepeatButton.IntervalProperty.ShouldIncludeProperty(value, value.Interval))
         {
             writer.WriteMember(value, value.Interval, "Interval");

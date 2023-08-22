@@ -14,6 +14,5 @@ class DataGridFrozenGridConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DataGridFrozenGrid value)
     {
-        var type = typeof(DataGridFrozenGrid);
     }
 }

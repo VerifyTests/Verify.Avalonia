@@ -14,7 +14,6 @@ class DatePickerConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, DatePicker value)
     {
-        var type = typeof(DatePicker);
         if (DatePicker.DayFormatProperty.ShouldIncludeProperty(value, value.DayFormat))
         {
             writer.WriteMember(value, value.DayFormat, "DayFormat");

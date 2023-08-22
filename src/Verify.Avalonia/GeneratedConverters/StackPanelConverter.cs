@@ -14,7 +14,6 @@ class StackPanelConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, StackPanel value)
     {
-        var type = typeof(StackPanel);
         if (StackPanel.SpacingProperty.ShouldIncludeProperty(value, value.Spacing))
         {
             writer.WriteMember(value, value.Spacing, "Spacing");

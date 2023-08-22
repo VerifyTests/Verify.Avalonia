@@ -14,7 +14,6 @@ class LayoutableConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, Layoutable value)
     {
-        var type = typeof(Layoutable);
         if (Layoutable.WidthProperty.ShouldIncludeProperty(value, value.Width))
         {
             writer.WriteMember(value, value.Width, "Width");

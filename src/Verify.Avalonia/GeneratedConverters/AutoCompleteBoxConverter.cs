@@ -14,7 +14,6 @@ class AutoCompleteBoxConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, AutoCompleteBox value)
     {
-        var type = typeof(AutoCompleteBox);
         if (AutoCompleteBox.MinimumPrefixLengthProperty.ShouldIncludeProperty(value, value.MinimumPrefixLength))
         {
             writer.WriteMember(value, value.MinimumPrefixLength, "MinimumPrefixLength");

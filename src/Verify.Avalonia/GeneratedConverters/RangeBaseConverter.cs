@@ -14,7 +14,6 @@ class RangeBaseConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, RangeBase value)
     {
-        var type = typeof(RangeBase);
         if (RangeBase.MinimumProperty.ShouldIncludeProperty(value, value.Minimum))
         {
             writer.WriteMember(value, value.Minimum, "Minimum");

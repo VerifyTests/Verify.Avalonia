@@ -14,6 +14,5 @@ class ToolTipConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ToolTip value)
     {
-        var type = typeof(ToolTip);
     }
 }

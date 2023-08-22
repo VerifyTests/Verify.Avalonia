@@ -133,7 +133,6 @@ public class Tests
               
                   public static void WriteMembers(VerifyJsonWriter writer, {{type.Name}} value)
                   {
-                      var type = typeof({{type.Name}});
               """);
         foreach (var property in GetPropertiesToProcess(type))
         {

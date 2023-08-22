@@ -14,7 +14,6 @@ class ExperimentalAcrylicBorderConverter :
 
     public static void WriteMembers(VerifyJsonWriter writer, ExperimentalAcrylicBorder value)
     {
-        var type = typeof(ExperimentalAcrylicBorder);
         if (ExperimentalAcrylicBorder.CornerRadiusProperty.ShouldIncludeProperty(value, value.CornerRadius))
         {
             writer.WriteMember(value, value.CornerRadius, "CornerRadius");
