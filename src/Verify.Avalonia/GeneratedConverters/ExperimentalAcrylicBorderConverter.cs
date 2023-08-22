@@ -34,6 +34,7 @@ class ExperimentalAcrylicBorderConverter :
         {
             return object.Equals(target.Material, value);
         }
+        DecoratorConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

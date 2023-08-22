@@ -74,6 +74,7 @@ class SelectingItemsControlConverter :
         {
             return object.Equals(target.WrapSelection, value);
         }
+        ItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

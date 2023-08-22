@@ -26,6 +26,7 @@ class MenuBaseConverter :
         {
             return object.Equals(target.IsOpen, value);
         }
+        SelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

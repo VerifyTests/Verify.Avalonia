@@ -34,6 +34,7 @@ class TabItemConverter :
         {
             return object.Equals(target.IsSelected, value);
         }
+        HeaderedContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

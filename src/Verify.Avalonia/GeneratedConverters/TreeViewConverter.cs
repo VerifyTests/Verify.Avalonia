@@ -55,6 +55,7 @@ class TreeViewConverter :
         {
             return object.Equals(target.SelectedItems, value);
         }
+        ItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

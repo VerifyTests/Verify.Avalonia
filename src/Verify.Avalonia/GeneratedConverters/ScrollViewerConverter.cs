@@ -159,6 +159,7 @@ class ScrollViewerConverter :
         {
             return object.Equals(target.IsScrollInertiaEnabled, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

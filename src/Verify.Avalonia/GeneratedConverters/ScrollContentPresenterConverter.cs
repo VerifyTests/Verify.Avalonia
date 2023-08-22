@@ -98,6 +98,7 @@ class ScrollContentPresenterConverter :
         {
             return object.Equals(target.IsScrollChainingEnabled, value);
         }
+        ContentPresenterConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

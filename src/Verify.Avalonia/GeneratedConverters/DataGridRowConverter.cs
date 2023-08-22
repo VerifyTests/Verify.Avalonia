@@ -50,6 +50,7 @@ class DataGridRowConverter :
         {
             return object.Equals(target.AreDetailsVisible, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

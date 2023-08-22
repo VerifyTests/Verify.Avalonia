@@ -164,6 +164,11 @@ public class Tests
                   """);
         }
 
+        if (type != typeof(Visual))
+        {
+            builder.AppendLine($"        {type.BaseType!.Name}Converter.MemberHasValue(target, member, value);");
+        }
+
         builder.AppendLine(
             """
                     throw new($"Member not found: {member}");

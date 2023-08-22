@@ -23,6 +23,7 @@ class LightDismissOverlayLayerConverter :
         {
             return object.Equals(target.InputPassThroughElement, value);
         }
+        BorderConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

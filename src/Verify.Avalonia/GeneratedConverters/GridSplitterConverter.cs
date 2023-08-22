@@ -66,6 +66,7 @@ class GridSplitterConverter :
         {
             return object.Equals(target.PreviewContent, value);
         }
+        ThumbConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

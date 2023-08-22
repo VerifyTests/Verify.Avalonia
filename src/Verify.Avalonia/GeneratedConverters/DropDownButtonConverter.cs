@@ -18,6 +18,7 @@ class DropDownButtonConverter :
 
     public static bool MemberHasValue(DropDownButton target, string member, object? value)
     {
+        ButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

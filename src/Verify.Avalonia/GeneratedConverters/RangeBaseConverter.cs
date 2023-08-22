@@ -58,6 +58,7 @@ class RangeBaseConverter :
         {
             return object.Equals(target.LargeChange, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

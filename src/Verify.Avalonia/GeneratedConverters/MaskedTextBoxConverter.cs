@@ -95,6 +95,7 @@ class MaskedTextBoxConverter :
         {
             return object.Equals(target.ResetOnSpace, value);
         }
+        TextBoxConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

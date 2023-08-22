@@ -106,6 +106,7 @@ class TopLevelConverter :
         {
             return object.Equals(target.PlatformSettings, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

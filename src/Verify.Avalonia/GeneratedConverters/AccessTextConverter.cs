@@ -31,6 +31,7 @@ class AccessTextConverter :
         {
             return object.Equals(target.ShowAccessKey, value);
         }
+        TextBlockConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

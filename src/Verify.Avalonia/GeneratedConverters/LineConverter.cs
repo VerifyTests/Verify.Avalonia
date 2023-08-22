@@ -34,6 +34,7 @@ class LineConverter :
         {
             return object.Equals(target.EndPoint, value);
         }
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

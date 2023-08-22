@@ -26,6 +26,7 @@ class CarouselConverter :
         {
             return object.Equals(target.PageTransition, value);
         }
+        SelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

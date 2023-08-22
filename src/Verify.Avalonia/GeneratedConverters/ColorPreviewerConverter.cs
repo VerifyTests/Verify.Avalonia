@@ -34,6 +34,7 @@ class ColorPreviewerConverter :
         {
             return object.Equals(target.IsAccentColorsVisible, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

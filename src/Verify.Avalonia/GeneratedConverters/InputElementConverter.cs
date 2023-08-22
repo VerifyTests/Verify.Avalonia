@@ -108,6 +108,7 @@ class InputElementConverter :
         {
             return object.Equals(target.GestureRecognizers, value);
         }
+        InteractiveConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

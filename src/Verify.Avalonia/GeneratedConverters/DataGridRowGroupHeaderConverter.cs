@@ -50,6 +50,7 @@ class DataGridRowGroupHeaderConverter :
         {
             return object.Equals(target.SublevelIndent, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

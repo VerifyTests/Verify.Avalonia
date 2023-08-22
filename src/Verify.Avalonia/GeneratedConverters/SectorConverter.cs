@@ -34,6 +34,7 @@ class SectorConverter :
         {
             return object.Equals(target.SweepAngle, value);
         }
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

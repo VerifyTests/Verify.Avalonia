@@ -18,6 +18,7 @@ class CanvasConverter :
 
     public static bool MemberHasValue(Canvas target, string member, object? value)
     {
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

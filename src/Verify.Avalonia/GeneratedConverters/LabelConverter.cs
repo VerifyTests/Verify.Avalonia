@@ -26,6 +26,7 @@ class LabelConverter :
         {
             return object.Equals(target.Target, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -18,6 +18,7 @@ class PickerPresenterBaseConverter :
 
     public static bool MemberHasValue(PickerPresenterBase target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

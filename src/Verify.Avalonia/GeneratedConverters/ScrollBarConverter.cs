@@ -74,6 +74,7 @@ class ScrollBarConverter :
         {
             return object.Equals(target.ShowDelay, value);
         }
+        RangeBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

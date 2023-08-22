@@ -26,6 +26,7 @@ class DataGridCellConverter :
         {
             return object.Equals(target.IsValid, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

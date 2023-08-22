@@ -39,6 +39,7 @@ class LayoutTransformControlConverter :
         {
             return object.Equals(target.TransformRoot, value);
         }
+        DecoratorConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

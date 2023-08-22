@@ -279,6 +279,7 @@ class TextBoxConverter :
         {
             return object.Equals(target.CanRedo, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

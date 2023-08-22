@@ -34,6 +34,7 @@ class RepeatButtonConverter :
         {
             return object.Equals(target.Delay, value);
         }
+        ButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -18,6 +18,7 @@ class UserControlConverter :
 
     public static bool MemberHasValue(UserControl target, string member, object? value)
     {
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

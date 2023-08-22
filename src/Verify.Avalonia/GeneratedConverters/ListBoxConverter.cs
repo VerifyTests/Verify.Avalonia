@@ -50,6 +50,7 @@ class ListBoxConverter :
         {
             return object.Equals(target.SelectionMode, value);
         }
+        SelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -26,6 +26,7 @@ class TransitioningContentControlConverter :
         {
             return object.Equals(target.PageTransition, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

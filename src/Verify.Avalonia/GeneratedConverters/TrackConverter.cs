@@ -98,6 +98,7 @@ class TrackConverter :
         {
             return object.Equals(target.IgnoreThumbDrag, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

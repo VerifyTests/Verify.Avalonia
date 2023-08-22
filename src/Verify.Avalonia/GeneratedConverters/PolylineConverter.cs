@@ -26,6 +26,7 @@ class PolylineConverter :
         {
             return object.Equals(target.Points, value);
         }
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -106,6 +106,7 @@ class ColorSpectrumConverter :
         {
             return object.Equals(target.ThirdComponent, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

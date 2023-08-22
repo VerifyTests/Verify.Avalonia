@@ -90,6 +90,7 @@ class DatePickerPresenterConverter :
         {
             return object.Equals(target.YearVisible, value);
         }
+        PickerPresenterBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

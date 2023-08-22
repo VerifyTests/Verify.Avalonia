@@ -23,6 +23,7 @@ class VirtualizingPanelConverter :
         {
             return object.Equals(target.ItemContainerGenerator, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

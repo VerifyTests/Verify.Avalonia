@@ -26,6 +26,7 @@ class ToggleSplitButtonConverter :
         {
             return object.Equals(target.IsChecked, value);
         }
+        SplitButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

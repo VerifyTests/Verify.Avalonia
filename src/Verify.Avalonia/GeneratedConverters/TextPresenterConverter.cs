@@ -173,6 +173,7 @@ class TextPresenterConverter :
         {
             return object.Equals(target.SelectionEnd, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

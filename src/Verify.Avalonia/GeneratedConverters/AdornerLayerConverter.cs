@@ -26,6 +26,7 @@ class AdornerLayerConverter :
         {
             return object.Equals(target.DefaultFocusAdorner, value);
         }
+        CanvasConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

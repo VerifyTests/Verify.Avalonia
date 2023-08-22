@@ -42,6 +42,7 @@ class ViewboxConverter :
         {
             return object.Equals(target.Child, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -106,6 +106,7 @@ class TemplatedControlConverter :
         {
             return object.Equals(target.Padding, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

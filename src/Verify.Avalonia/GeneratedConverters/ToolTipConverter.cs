@@ -18,6 +18,7 @@ class ToolTipConverter :
 
     public static bool MemberHasValue(ToolTip target, string member, object? value)
     {
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

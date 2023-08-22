@@ -34,6 +34,7 @@ class DataGridRowHeaderConverter :
         {
             return object.Equals(target.AreSeparatorsVisible, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

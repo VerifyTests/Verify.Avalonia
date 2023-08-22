@@ -26,6 +26,7 @@ class PathIconConverter :
         {
             return object.Equals(target.Data, value);
         }
+        IconElementConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

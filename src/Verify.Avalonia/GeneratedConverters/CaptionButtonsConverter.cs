@@ -18,6 +18,7 @@ class CaptionButtonsConverter :
 
     public static bool MemberHasValue(CaptionButtons target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

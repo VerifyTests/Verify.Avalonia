@@ -42,6 +42,7 @@ class TimePickerPresenterConverter :
         {
             return object.Equals(target.Time, value);
         }
+        PickerPresenterBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

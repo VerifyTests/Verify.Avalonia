@@ -148,6 +148,7 @@ class WindowConverter :
         {
             return object.Equals(target.Position, value);
         }
+        WindowBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

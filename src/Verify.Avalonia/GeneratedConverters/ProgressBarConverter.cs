@@ -63,6 +63,7 @@ class ProgressBarConverter :
         {
             return object.Equals(target.Orientation, value);
         }
+        RangeBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

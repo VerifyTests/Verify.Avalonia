@@ -167,6 +167,7 @@ class TextBlockConverter :
         {
             return object.Equals(target.BaselineOffset, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

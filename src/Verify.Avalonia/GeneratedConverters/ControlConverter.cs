@@ -60,6 +60,7 @@ class ControlConverter :
         {
             return object.Equals(target.Tag, value);
         }
+        InputElementConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

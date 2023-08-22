@@ -100,6 +100,7 @@ class CalendarConverter :
         {
             return object.Equals(target.DisplayDateEnd, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

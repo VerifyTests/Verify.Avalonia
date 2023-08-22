@@ -26,6 +26,7 @@ class ReversibleStackPanelConverter :
         {
             return object.Equals(target.ReverseOrder, value);
         }
+        StackPanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

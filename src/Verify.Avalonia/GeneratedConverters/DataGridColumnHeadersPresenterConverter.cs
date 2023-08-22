@@ -18,6 +18,7 @@ class DataGridColumnHeadersPresenterConverter :
 
     public static bool MemberHasValue(DataGridColumnHeadersPresenter target, string member, object? value)
     {
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

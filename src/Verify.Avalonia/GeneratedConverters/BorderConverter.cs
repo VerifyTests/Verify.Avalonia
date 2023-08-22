@@ -63,6 +63,7 @@ class BorderConverter :
         {
             return object.Equals(target.ClipToBoundsRadius, value);
         }
+        DecoratorConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

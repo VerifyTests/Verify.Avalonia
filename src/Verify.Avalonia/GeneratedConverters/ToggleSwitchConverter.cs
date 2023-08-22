@@ -68,6 +68,7 @@ class ToggleSwitchConverter :
         {
             return object.Equals(target.KnobTransitions, value);
         }
+        ToggleButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

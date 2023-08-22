@@ -18,6 +18,7 @@ class CheckBoxConverter :
 
     public static bool MemberHasValue(CheckBox target, string member, object? value)
     {
+        ToggleButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -42,6 +42,7 @@ class ExpanderConverter :
         {
             return object.Equals(target.IsExpanded, value);
         }
+        HeaderedContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

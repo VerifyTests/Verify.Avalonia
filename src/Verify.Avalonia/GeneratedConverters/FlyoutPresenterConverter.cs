@@ -18,6 +18,7 @@ class FlyoutPresenterConverter :
 
     public static bool MemberHasValue(FlyoutPresenter target, string member, object? value)
     {
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

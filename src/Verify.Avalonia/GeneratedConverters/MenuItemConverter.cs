@@ -89,6 +89,7 @@ class MenuItemConverter :
         {
             return object.Equals(target.IsTopLevel, value);
         }
+        HeaderedSelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

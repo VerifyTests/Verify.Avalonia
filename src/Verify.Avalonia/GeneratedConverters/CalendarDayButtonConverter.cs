@@ -18,6 +18,7 @@ class CalendarDayButtonConverter :
 
     public static bool MemberHasValue(CalendarDayButton target, string member, object? value)
     {
+        ButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

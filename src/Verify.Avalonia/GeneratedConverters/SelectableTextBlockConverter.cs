@@ -58,6 +58,7 @@ class SelectableTextBlockConverter :
         {
             return object.Equals(target.CanCopy, value);
         }
+        TextBlockConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

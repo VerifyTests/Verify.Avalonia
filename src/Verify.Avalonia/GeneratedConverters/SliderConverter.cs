@@ -66,6 +66,7 @@ class SliderConverter :
         {
             return object.Equals(target.TickPlacement, value);
         }
+        RangeBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

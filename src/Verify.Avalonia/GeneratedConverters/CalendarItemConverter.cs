@@ -34,6 +34,7 @@ class CalendarItemConverter :
         {
             return object.Equals(target.DayTitleTemplate, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

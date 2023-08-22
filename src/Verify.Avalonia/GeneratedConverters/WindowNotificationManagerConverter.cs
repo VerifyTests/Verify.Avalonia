@@ -34,6 +34,7 @@ class WindowNotificationManagerConverter :
         {
             return object.Equals(target.MaxItems, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -34,6 +34,7 @@ class NotificationCardConverter :
         {
             return object.Equals(target.IsClosed, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

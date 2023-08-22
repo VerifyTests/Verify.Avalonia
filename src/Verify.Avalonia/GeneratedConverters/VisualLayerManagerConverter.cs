@@ -46,6 +46,7 @@ class VisualLayerManagerConverter :
         {
             return object.Equals(target.LightDismissOverlayLayer, value);
         }
+        DecoratorConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -34,6 +34,7 @@ class ArcConverter :
         {
             return object.Equals(target.SweepAngle, value);
         }
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

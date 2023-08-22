@@ -305,6 +305,7 @@ class DataGridConverter :
         {
             return object.Equals(target.SelectedItems, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

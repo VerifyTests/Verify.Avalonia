@@ -26,6 +26,7 @@ class PathConverter :
         {
             return object.Equals(target.Data, value);
         }
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -92,6 +92,7 @@ class ShapeConverter :
         {
             return object.Equals(target.StrokeJoin, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

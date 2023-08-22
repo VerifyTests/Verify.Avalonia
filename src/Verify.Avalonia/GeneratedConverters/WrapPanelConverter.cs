@@ -42,6 +42,7 @@ class WrapPanelConverter :
         {
             return object.Equals(target.ItemHeight, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

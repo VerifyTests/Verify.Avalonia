@@ -31,6 +31,7 @@ class PopupRootConverter :
         {
             return object.Equals(target.ParentTopLevel, value);
         }
+        WindowBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

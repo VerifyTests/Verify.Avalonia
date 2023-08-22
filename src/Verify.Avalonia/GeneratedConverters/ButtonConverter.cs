@@ -82,6 +82,7 @@ class ButtonConverter :
         {
             return object.Equals(target.Flyout, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

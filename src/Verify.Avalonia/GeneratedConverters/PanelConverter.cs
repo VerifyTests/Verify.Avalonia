@@ -36,6 +36,7 @@ class PanelConverter :
         {
             return object.Equals(target.IsItemsHost, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

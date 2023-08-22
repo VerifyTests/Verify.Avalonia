@@ -116,6 +116,7 @@ class LayoutableConverter :
         {
             return object.Equals(target.UseLayoutRounding, value);
         }
+        VisualConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

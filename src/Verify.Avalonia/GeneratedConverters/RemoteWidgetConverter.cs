@@ -23,6 +23,7 @@ class RemoteWidgetConverter :
         {
             return object.Equals(target.Mode, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

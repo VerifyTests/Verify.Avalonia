@@ -26,6 +26,7 @@ class SpinnerConverter :
         {
             return object.Equals(target.ValidSpinDirection, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

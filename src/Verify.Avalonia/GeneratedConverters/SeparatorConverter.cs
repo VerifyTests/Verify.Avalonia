@@ -18,6 +18,7 @@ class SeparatorConverter :
 
     public static bool MemberHasValue(Separator target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

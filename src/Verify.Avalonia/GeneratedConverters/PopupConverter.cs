@@ -161,6 +161,7 @@ class PopupConverter :
         {
             return object.Equals(target.IsPointerOverPopup, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

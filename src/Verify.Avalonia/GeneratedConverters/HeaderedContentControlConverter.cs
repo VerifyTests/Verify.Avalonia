@@ -39,6 +39,7 @@ class HeaderedContentControlConverter :
         {
             return object.Equals(target.HeaderTemplate, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

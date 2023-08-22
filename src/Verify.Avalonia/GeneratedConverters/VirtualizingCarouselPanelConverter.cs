@@ -18,6 +18,7 @@ class VirtualizingCarouselPanelConverter :
 
     public static bool MemberHasValue(VirtualizingCarouselPanel target, string member, object? value)
     {
+        VirtualizingPanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

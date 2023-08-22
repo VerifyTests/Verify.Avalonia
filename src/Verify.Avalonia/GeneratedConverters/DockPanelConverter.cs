@@ -26,6 +26,7 @@ class DockPanelConverter :
         {
             return object.Equals(target.LastChildFill, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

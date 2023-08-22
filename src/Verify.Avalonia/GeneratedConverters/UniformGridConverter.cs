@@ -42,6 +42,7 @@ class UniformGridConverter :
         {
             return object.Equals(target.FirstColumn, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

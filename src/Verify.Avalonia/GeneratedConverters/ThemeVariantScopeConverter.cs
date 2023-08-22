@@ -26,6 +26,7 @@ class ThemeVariantScopeConverter :
         {
             return object.Equals(target.RequestedThemeVariant, value);
         }
+        DecoratorConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

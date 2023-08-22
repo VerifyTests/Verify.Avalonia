@@ -42,6 +42,7 @@ class ImageConverter :
         {
             return object.Equals(target.StretchDirection, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

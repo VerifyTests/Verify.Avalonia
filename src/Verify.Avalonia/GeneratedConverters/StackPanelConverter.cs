@@ -50,6 +50,7 @@ class StackPanelConverter :
         {
             return object.Equals(target.AreVerticalSnapPointsRegular, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

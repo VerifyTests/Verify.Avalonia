@@ -18,6 +18,7 @@ class TabStripItemConverter :
 
     public static bool MemberHasValue(TabStripItem target, string member, object? value)
     {
+        ListBoxItemConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

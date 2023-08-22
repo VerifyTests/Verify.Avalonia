@@ -18,6 +18,7 @@ class DataGridCellsPresenterConverter :
 
     public static bool MemberHasValue(DataGridCellsPresenter target, string member, object? value)
     {
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

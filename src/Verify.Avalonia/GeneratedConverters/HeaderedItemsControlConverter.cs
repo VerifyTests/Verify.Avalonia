@@ -39,6 +39,7 @@ class HeaderedItemsControlConverter :
         {
             return object.Equals(target.HeaderPresenter, value);
         }
+        ItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -18,6 +18,7 @@ class NativeMenuBarConverter :
 
     public static bool MemberHasValue(NativeMenuBar target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

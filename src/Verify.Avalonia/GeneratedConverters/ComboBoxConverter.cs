@@ -74,6 +74,7 @@ class ComboBoxConverter :
         {
             return object.Equals(target.VerticalContentAlignment, value);
         }
+        SelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

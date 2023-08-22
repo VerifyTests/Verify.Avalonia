@@ -90,6 +90,7 @@ class DatePickerConverter :
         {
             return object.Equals(target.SelectedDate, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

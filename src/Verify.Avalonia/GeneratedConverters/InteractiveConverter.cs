@@ -18,6 +18,7 @@ class InteractiveConverter :
 
     public static bool MemberHasValue(Interactive target, string member, object? value)
     {
+        LayoutableConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

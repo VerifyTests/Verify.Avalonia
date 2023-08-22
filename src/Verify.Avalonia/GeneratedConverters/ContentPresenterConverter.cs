@@ -202,6 +202,7 @@ class ContentPresenterConverter :
         {
             return object.Equals(target.RecognizesAccessKey, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

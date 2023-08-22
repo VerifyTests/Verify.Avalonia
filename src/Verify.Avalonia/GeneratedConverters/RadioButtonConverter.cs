@@ -26,6 +26,7 @@ class RadioButtonConverter :
         {
             return object.Equals(target.GroupName, value);
         }
+        ToggleButtonConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

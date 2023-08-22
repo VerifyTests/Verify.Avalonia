@@ -31,6 +31,7 @@ class ItemsPresenterConverter :
         {
             return object.Equals(target.Panel, value);
         }
+        ControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

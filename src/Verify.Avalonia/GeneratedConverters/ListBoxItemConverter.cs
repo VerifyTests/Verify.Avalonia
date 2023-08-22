@@ -26,6 +26,7 @@ class ListBoxItemConverter :
         {
             return object.Equals(target.IsSelected, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

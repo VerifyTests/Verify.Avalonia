@@ -18,6 +18,7 @@ class ComboBoxItemConverter :
 
     public static bool MemberHasValue(ComboBoxItem target, string member, object? value)
     {
+        ListBoxItemConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

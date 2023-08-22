@@ -18,6 +18,7 @@ class MenuConverter :
 
     public static bool MemberHasValue(Menu target, string member, object? value)
     {
+        MenuBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

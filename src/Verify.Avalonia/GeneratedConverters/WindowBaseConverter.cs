@@ -52,6 +52,7 @@ class WindowBaseConverter :
         {
             return object.Equals(target.DesktopScaling, value);
         }
+        TopLevelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

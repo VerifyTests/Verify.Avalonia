@@ -18,6 +18,7 @@ class DataGridFrozenGridConverter :
 
     public static bool MemberHasValue(DataGridFrozenGrid target, string member, object? value)
     {
+        GridConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

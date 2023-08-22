@@ -42,6 +42,7 @@ class TimePickerConverter :
         {
             return object.Equals(target.SelectedTime, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

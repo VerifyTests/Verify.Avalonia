@@ -18,6 +18,7 @@ class ChromeOverlayLayerConverter :
 
     public static bool MemberHasValue(ChromeOverlayLayer target, string member, object? value)
     {
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

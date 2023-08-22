@@ -91,6 +91,7 @@ class ItemsControlConverter :
         {
             return object.Equals(target.ItemsView, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

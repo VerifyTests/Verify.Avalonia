@@ -159,6 +159,7 @@ class AutoCompleteBoxConverter :
         {
             return object.Equals(target.ItemsSource, value);
         }
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

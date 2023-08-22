@@ -98,6 +98,7 @@ class SplitViewConverter :
         {
             return object.Equals(target.TemplateSettings, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

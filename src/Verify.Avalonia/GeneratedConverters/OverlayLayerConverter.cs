@@ -23,6 +23,7 @@ class OverlayLayerConverter :
         {
             return object.Equals(target.AvailableSize, value);
         }
+        CanvasConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

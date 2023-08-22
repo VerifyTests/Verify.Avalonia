@@ -90,6 +90,7 @@ class ContextMenuConverter :
         {
             return object.Equals(target.PlacementTarget, value);
         }
+        MenuBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

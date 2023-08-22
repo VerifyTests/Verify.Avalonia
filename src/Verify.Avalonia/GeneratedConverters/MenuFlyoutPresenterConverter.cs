@@ -18,6 +18,7 @@ class MenuFlyoutPresenterConverter :
 
     public static bool MemberHasValue(MenuFlyoutPresenter target, string member, object? value)
     {
+        MenuBaseConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

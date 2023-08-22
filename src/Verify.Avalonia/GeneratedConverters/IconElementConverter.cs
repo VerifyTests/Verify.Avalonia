@@ -18,6 +18,7 @@ class IconElementConverter :
 
     public static bool MemberHasValue(IconElement target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

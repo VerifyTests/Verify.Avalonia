@@ -18,6 +18,7 @@ class EllipseConverter :
 
     public static bool MemberHasValue(Ellipse target, string member, object? value)
     {
+        ShapeConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

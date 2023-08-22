@@ -18,6 +18,7 @@ class ThumbConverter :
 
     public static bool MemberHasValue(Thumb target, string member, object? value)
     {
+        TemplatedControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

@@ -42,6 +42,7 @@ class ButtonSpinnerConverter :
         {
             return object.Equals(target.ButtonSpinnerLocation, value);
         }
+        SpinnerConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

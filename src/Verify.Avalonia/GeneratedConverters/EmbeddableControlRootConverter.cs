@@ -18,6 +18,7 @@ class EmbeddableControlRootConverter :
 
     public static bool MemberHasValue(EmbeddableControlRoot target, string member, object? value)
     {
+        TopLevelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

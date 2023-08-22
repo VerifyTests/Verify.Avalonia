@@ -34,6 +34,7 @@ class DataValidationErrorsConverter :
         {
             return object.Equals(target.ErrorTemplate, value);
         }
+        ContentControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

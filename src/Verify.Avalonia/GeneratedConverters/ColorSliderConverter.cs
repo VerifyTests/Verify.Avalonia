@@ -74,6 +74,7 @@ class ColorSliderConverter :
         {
             return object.Equals(target.IsRoundingEnabled, value);
         }
+        SliderConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

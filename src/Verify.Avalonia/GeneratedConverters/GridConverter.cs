@@ -36,6 +36,7 @@ class GridConverter :
         {
             return object.Equals(target.RowDefinitions, value);
         }
+        PanelConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }

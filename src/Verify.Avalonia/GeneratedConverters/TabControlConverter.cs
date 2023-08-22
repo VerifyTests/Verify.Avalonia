@@ -66,6 +66,7 @@ class TabControlConverter :
         {
             return object.Equals(target.SelectedContentTemplate, value);
         }
+        SelectingItemsControlConverter.MemberHasValue(target, member, value);
         throw new($"Member not found: {member}");
     }
 }
