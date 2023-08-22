@@ -24,8 +24,6 @@ class ToggleSwitchConverter :
         {
             writer.WriteMember(value, value.OffContent, "OffContent");
         }
-        writer.WriteMember(value, value.OffContentPresenter, "OffContentPresenter");
-        writer.WriteMember(value, value.OnContentPresenter, "OnContentPresenter");
         if (value.ShouldIncludeProperty(ToggleSwitch.OffContentTemplateProperty))
         if (!object.Equals(ToggleSwitch.OffContentTemplateProperty.GetDefaultValue(typeof(ToggleSwitch)), value.OffContentTemplate))
         {

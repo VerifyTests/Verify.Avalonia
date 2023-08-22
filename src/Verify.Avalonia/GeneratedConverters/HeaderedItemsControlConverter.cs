@@ -24,6 +24,5 @@ class HeaderedItemsControlConverter :
         {
             writer.WriteMember(value, value.HeaderTemplate, "HeaderTemplate");
         }
-        writer.WriteMember(value, value.HeaderPresenter, "HeaderPresenter");
     }
 }

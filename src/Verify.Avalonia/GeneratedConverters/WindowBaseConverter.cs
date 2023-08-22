@@ -19,7 +19,6 @@ class WindowBaseConverter :
         {
             writer.WriteMember(value, value.IsActive, "IsActive");
         }
-        writer.WriteMember(value, value.Screens, "Screens");
         if (value.ShouldIncludeProperty(WindowBase.OwnerProperty))
         if (!object.Equals(WindowBase.OwnerProperty.GetUnsetValue(typeof(WindowBase)), value.Owner))
         {

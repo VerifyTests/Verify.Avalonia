@@ -1,5 +1,7 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Controls.Presenters;
 using Avalonia.Controls.Templates;
+using Avalonia.Media.TextFormatting;
 using Avalonia.Platform;
 
 [TestFixture]
@@ -8,7 +10,10 @@ public class Tests
     static List<Type> ignoredTypes = new()
     {
         typeof(IWindowBaseImpl),
-        typeof(IControlTemplate)
+        typeof(IControlTemplate),
+        typeof(ContentPresenter),
+        typeof(TextLayout),
+        typeof(Screens),
     };
 
     [Test]

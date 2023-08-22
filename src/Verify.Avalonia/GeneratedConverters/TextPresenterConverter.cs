@@ -55,7 +55,6 @@ class TextPresenterConverter :
         {
             writer.WriteMember(value, value.TextAlignment, "TextAlignment");
         }
-        writer.WriteMember(value, value.TextLayout, "TextLayout");
         if (value.ShouldIncludeProperty(TextPresenter.CaretIndexProperty))
         if (!object.Equals(TextPresenter.CaretIndexProperty.GetDefaultValue(typeof(TextPresenter)), value.CaretIndex))
         {

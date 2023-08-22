@@ -1,5 +1,3 @@
-using Argon;
-
 [TestFixture]
 public class CalculatorTests
 {
@@ -22,7 +20,7 @@ public class CalculatorTests
         window.KeyPress(Key.Enter, RawInputModifiers.None);
 
         Assert.That(window.ResultBox.Text, Is.EqualTo("30"));
-        return Verify(window).AddExtraSettings(_=>_.TypeNameHandling = TypeNameHandling.All);
+        return Verify(window);
     }
 
     // [AvaloniaTest]

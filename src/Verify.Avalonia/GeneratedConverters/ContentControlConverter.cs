@@ -24,7 +24,6 @@ class ContentControlConverter :
         {
             writer.WriteMember(value, value.ContentTemplate, "ContentTemplate");
         }
-        writer.WriteMember(value, value.Presenter, "Presenter");
         if (value.ShouldIncludeProperty(ContentControl.HorizontalContentAlignmentProperty))
         if (!object.Equals(ContentControl.HorizontalContentAlignmentProperty.GetDefaultValue(typeof(ContentControl)), value.HorizontalContentAlignment))
         {
