@@ -1,12 +1,73 @@
 ﻿{
+  Type: MainWindow,
   SizeToContent: WidthAndHeight,
   Title: Simple Calculator,
   Icon: {},
   CanResize: false,
   Content: {
+    Type: StackPanel,
     Spacing: 10.0,
-    Margin: 10,10,10,10,
-    HorizontalAlignment: Left
+    Margin: 10,
+    HorizontalAlignment: Left,
+    Children: [
+      {
+        Type: TextBox,
+        Watermark: Operand 1,
+        Name: FirstOperandInput
+      },
+      {
+        Type: TextBox,
+        Text: 0,
+        Watermark: Operand 2,
+        Name: SecondOperandInput
+      },
+      {
+        Type: UniformGrid,
+        Columns: 4,
+        Children: [
+          {
+            Type: Button,
+            Command: {},
+            Content: +,
+            Name: AddButton
+          },
+          {
+            Type: Button,
+            Command: {},
+            Content: -,
+            Name: SubtractButton
+          },
+          {
+            Type: Button,
+            Command: {},
+            Content: *,
+            Name: MultiplyButton
+          },
+          {
+            Type: Button,
+            Command: {},
+            Content: /,
+            Name: DivideButton
+          }
+        ]
+      },
+      {
+        Type: StackPanel,
+        Spacing: 10.0,
+        Orientation: Horizontal,
+        Children: [
+          {
+            Type: TextBlock,
+            Text: Result:
+          },
+          {
+            Type: TextBlock,
+            Text: Cannot divide by zero!,
+            Name: ResultBox
+          }
+        ]
+      }
+    ]
   },
   Background: LightGray,
   Width: 300.0,
@@ -19,31 +80,5 @@
     SubtractCommand: {},
     MultiplyCommand: {},
     DivideCommand: {}
-  },
-  FirstOperandInput: {
-    Watermark: Operand 1
-  },
-  SecondOperandInput: {
-    Text: 0,
-    Watermark: Operand 2
-  },
-  AddButton: {
-    Command: {},
-    Content: +
-  },
-  SubtractButton: {
-    Command: {},
-    Content: -
-  },
-  MultiplyButton: {
-    Command: {},
-    Content: *
-  },
-  DivideButton: {
-    Command: {},
-    Content: /
-  },
-  ResultBox: {
-    Text: Cannot divide by zero!
   }
 }

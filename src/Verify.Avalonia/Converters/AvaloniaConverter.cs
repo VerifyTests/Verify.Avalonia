@@ -10,13 +10,13 @@ public class AvaloniaConverter<T> :
     static AvaloniaProperty[] properties =
         AvaloniaPropertyRegistry
             .Instance.GetRegistered(typeof(T))
-            .Where(_ => !_.IsReadOnly &&
-                        _.Name != "Name")
+            .Where(_ => !_.IsReadOnly)
             .ToArray();
 
     public override void Write(VerifyJsonWriter writer, T value)
     {
         writer.WriteStartObject();
+        writer.WriteMember(value, value.GetType(), "Type");
         foreach (var property in properties)
         {
             var diagnostic = value.GetDiagnostic(property);
@@ -26,7 +26,11 @@ public class AvaloniaConverter<T> :
             }
         }
 
-        VerifyAvalonia.WriteGeneratedMembers(writer, value);
+        if (value is Panel panel)
+        {
+            writer.WriteMember(value, panel.Children, "Children");
+        }
+
         writer.WriteEndObject();
     }
 }
