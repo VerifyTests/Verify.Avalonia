@@ -30,7 +30,11 @@ public static void Init() =>
 <sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-A visual element (Window/Page/Control etc) can then be verified as follows:
+
+### Verify.CommunityToolkit.Mvvm
+
+Many Avalonia projects use [CommunityToolkit.Mvvm](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/). To ensure proper serialization of MVVM commands, use [Verify.CommunityToolkit.Mvvm](https://github.com/VerifyTests/Verify.CommunityToolkit.Mvvm).
+
 
 
 ## InternalsVisibleTo
