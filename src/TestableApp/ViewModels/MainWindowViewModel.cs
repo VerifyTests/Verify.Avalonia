@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace TestableApp.ViewModels;
+namespace TestableApp;
 
 public partial class MainWindowViewModel : ObservableObject
 {

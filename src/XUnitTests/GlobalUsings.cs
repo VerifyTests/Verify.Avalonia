@@ -5,5 +5,4 @@ global using Avalonia.Headless;
 global using Avalonia.Headless.XUnit;
 global using Avalonia.Input;
 global using TestableApp;
-global using TestableApp.ViewModels;
 global using TestableApp.Views;
