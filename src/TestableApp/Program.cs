@@ -1,16 +1,12 @@
 ﻿using Avalonia;
 
-namespace TestableApp;
-
-class Program
+static class Program
 {
     [STAThread]
-    public static void Main(string[] args) => BuildAvaloniaApp()
-        .StartWithClassicDesktopLifetime(args);
-
-    public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
+    public static void Main(string[] args) =>
+        AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
-            .LogToTrace();
+            .LogToTrace()
+            .StartWithClassicDesktopLifetime(args);
 }
