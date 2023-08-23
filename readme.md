@@ -135,7 +135,6 @@ public class CalculatorTests
   Type: MainWindow,
   SizeToContent: WidthAndHeight,
   Title: Simple Calculator,
-  Icon: {},
   CanResize: false,
   Content: {
     Type: StackPanel,
@@ -218,5 +217,5 @@ public class CalculatorTests
   }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L86' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L85' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
