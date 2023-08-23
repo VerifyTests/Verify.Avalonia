@@ -2,265 +2,52 @@ namespace VerifyTests;
 
 public static partial class VerifyAvalonia
 {
+    static List<WriteOnlyJsonConverter> converters = new();
+
+    static VerifyAvalonia()
+    {
+        var avaloniaObject = typeof(AvaloniaObject);
+        var assemblies = new List<Assembly>
+        {
+            //Avalonia.Controls
+            typeof(Window).Assembly,
+            //Avalonia.Base
+            typeof(InputElement).Assembly,
+            //Avalonia.Controls.ColorPicker
+            typeof(ColorPicker).Assembly,
+            //Avalonia.Controls.DataGrid
+            typeof(DataGrid).Assembly
+        };
+        var types = assemblies.SelectMany(_ => _.GetTypes())
+            .Where(_ => _.IsAssignableTo(avaloniaObject) &&
+                        _ is
+                        {
+                            IsPublic: true,
+                            IsAbstract: false
+                        })
+            .OrderByDescending(GetDepth)
+            .ToList();
+        var avaloniaConverter = typeof(AvaloniaConverter<>);
+        foreach (var type in types)
+        {
+            var genericType = avaloniaConverter.MakeGenericType(type);
+            converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
+        }
+    }
+
+    static int GetDepth(Type type)
+    {
+        var level = 0;
+        while (type != typeof(object))
+        {
+            level++;
+            type = type.BaseType!;
+        }
+
+        return level;
+    }
+
     static void AddConverters() =>
         VerifierSettings.AddExtraSettings(
-            _ =>
-            {
-                _.Converters.Add(new AvaloniaConverter<CheckBox>());
-                _.Converters.Add(new AvaloniaConverter<ContextMenu>());
-                _.Converters.Add(new AvaloniaConverter<MenuFlyoutPresenter>());
-                _.Converters.Add(new AvaloniaConverter<Menu>());
-                _.Converters.Add(new AvaloniaConverter<MenuItem>());
-                _.Converters.Add(new AvaloniaConverter<RadioButton>());
-                _.Converters.Add(new AvaloniaConverter<ToggleSwitch>());
-                _.Converters.Add(new AvaloniaConverter<Window>());
-                _.Converters.Add(new AvaloniaConverter<PopupRoot>());
-                _.Converters.Add(new AvaloniaConverter<ButtonSpinner>());
-                _.Converters.Add(new AvaloniaConverter<Carousel>());
-                _.Converters.Add(new AvaloniaConverter<ComboBox>());
-                _.Converters.Add(new AvaloniaConverter<ComboBoxItem>());
-                _.Converters.Add(new AvaloniaConverter<DropDownButton>());
-                _.Converters.Add(new AvaloniaConverter<Expander>());
-                _.Converters.Add(new AvaloniaConverter<ListBox>());
-                _.Converters.Add(new AvaloniaConverter<MenuBase>());
-                _.Converters.Add(new AvaloniaConverter<RepeatButton>());
-                _.Converters.Add(new AvaloniaConverter<ToggleSplitButton>());
-                _.Converters.Add(new AvaloniaConverter<TabControl>());
-                _.Converters.Add(new AvaloniaConverter<TabItem>());
-                _.Converters.Add(new AvaloniaConverter<TreeViewItem>());
-                _.Converters.Add(new AvaloniaConverter<WindowBase>());
-                _.Converters.Add(new AvaloniaConverter<EmbeddableControlRoot>());
-                _.Converters.Add(new AvaloniaConverter<CalendarButton>());
-                _.Converters.Add(new AvaloniaConverter<CalendarDayButton>());
-                _.Converters.Add(new AvaloniaConverter<HeaderedSelectingItemsControl>());
-                _.Converters.Add(new AvaloniaConverter<TabStrip>());
-                _.Converters.Add(new AvaloniaConverter<TabStripItem>());
-                _.Converters.Add(new AvaloniaConverter<ToggleButton>());
-                _.Converters.Add(new AvaloniaConverter<ColorSlider>());
-                _.Converters.Add(new AvaloniaConverter<Button>());
-                _.Converters.Add(new AvaloniaConverter<DataValidationErrors>());
-                _.Converters.Add(new AvaloniaConverter<DatePickerPresenter>());
-                _.Converters.Add(new AvaloniaConverter<TimePickerPresenter>());
-                _.Converters.Add(new AvaloniaConverter<FlyoutPresenter>());
-                _.Converters.Add(new AvaloniaConverter<GridSplitter>());
-                _.Converters.Add(new AvaloniaConverter<Label>());
-                _.Converters.Add(new AvaloniaConverter<ListBoxItem>());
-                _.Converters.Add(new AvaloniaConverter<MaskedTextBox>());
-                _.Converters.Add(new AvaloniaConverter<ReversibleStackPanel>());
-                _.Converters.Add(new AvaloniaConverter<PathIcon>());
-                _.Converters.Add(new AvaloniaConverter<ProgressBar>());
-                _.Converters.Add(new AvaloniaConverter<RefreshContainer>());
-                _.Converters.Add(new AvaloniaConverter<RefreshVisualizer>());
-                _.Converters.Add(new AvaloniaConverter<ScrollViewer>());
-                _.Converters.Add(new AvaloniaConverter<Slider>());
-                _.Converters.Add(new AvaloniaConverter<Spinner>());
-                _.Converters.Add(new AvaloniaConverter<SplitButton>());
-                _.Converters.Add(new AvaloniaConverter<SplitView>());
-                _.Converters.Add(new AvaloniaConverter<ToolTip>());
-                _.Converters.Add(new AvaloniaConverter<TopLevel>());
-                _.Converters.Add(new AvaloniaConverter<TransitioningContentControl>());
-                _.Converters.Add(new AvaloniaConverter<TreeView>());
-                _.Converters.Add(new AvaloniaConverter<UserControl>());
-                _.Converters.Add(new AvaloniaConverter<VirtualizingCarouselPanel>());
-                _.Converters.Add(new AvaloniaConverter<VirtualizingStackPanel>());
-                _.Converters.Add(new AvaloniaConverter<NotificationCard>());
-                _.Converters.Add(new AvaloniaConverter<AdornerLayer>());
-                _.Converters.Add(new AvaloniaConverter<HeaderedContentControl>());
-                _.Converters.Add(new AvaloniaConverter<HeaderedItemsControl>());
-                _.Converters.Add(new AvaloniaConverter<LightDismissOverlayLayer>());
-                _.Converters.Add(new AvaloniaConverter<OverlayLayer>());
-                _.Converters.Add(new AvaloniaConverter<OverlayPopupHost>());
-                _.Converters.Add(new AvaloniaConverter<ScrollBar>());
-                _.Converters.Add(new AvaloniaConverter<SelectingItemsControl>());
-                _.Converters.Add(new AvaloniaConverter<ColorPicker>());
-                _.Converters.Add(new AvaloniaConverter<DataGridCell>());
-                _.Converters.Add(new AvaloniaConverter<DataGridColumnHeader>());
-                _.Converters.Add(new AvaloniaConverter<DataGridRowHeader>());
-                _.Converters.Add(new AvaloniaConverter<DataGridFrozenGrid>());
-                _.Converters.Add(new AvaloniaConverter<AutoCompleteBox>());
-                _.Converters.Add(new AvaloniaConverter<Border>());
-                _.Converters.Add(new AvaloniaConverter<CalendarDatePicker>());
-                _.Converters.Add(new AvaloniaConverter<Calendar>());
-                _.Converters.Add(new AvaloniaConverter<Canvas>());
-                _.Converters.Add(new AvaloniaConverter<ContentControl>());
-                _.Converters.Add(new AvaloniaConverter<DatePicker>());
-                _.Converters.Add(new AvaloniaConverter<TimePicker>());
-                _.Converters.Add(new AvaloniaConverter<DockPanel>());
-                _.Converters.Add(new AvaloniaConverter<ExperimentalAcrylicBorder>());
-                _.Converters.Add(new AvaloniaConverter<Grid>());
-                _.Converters.Add(new AvaloniaConverter<IconElement>());
-                _.Converters.Add(new AvaloniaConverter<ItemsControl>());
-                _.Converters.Add(new AvaloniaConverter<LayoutTransformControl>());
-                _.Converters.Add(new AvaloniaConverter<NativeMenuBar>());
-                _.Converters.Add(new AvaloniaConverter<NumericUpDown>());
-                _.Converters.Add(new AvaloniaConverter<RelativePanel>());
-                _.Converters.Add(new AvaloniaConverter<SelectableTextBlock>());
-                _.Converters.Add(new AvaloniaConverter<Separator>());
-                _.Converters.Add(new AvaloniaConverter<StackPanel>());
-                _.Converters.Add(new AvaloniaConverter<TextBox>());
-                _.Converters.Add(new AvaloniaConverter<ThemeVariantScope>());
-                _.Converters.Add(new AvaloniaConverter<VirtualizingPanel>());
-                _.Converters.Add(new AvaloniaConverter<WrapPanel>());
-                _.Converters.Add(new AvaloniaConverter<Arc>());
-                _.Converters.Add(new AvaloniaConverter<Ellipse>());
-                _.Converters.Add(new AvaloniaConverter<Line>());
-                _.Converters.Add(new AvaloniaConverter<Path>());
-                _.Converters.Add(new AvaloniaConverter<Polygon>());
-                _.Converters.Add(new AvaloniaConverter<Polyline>());
-                _.Converters.Add(new AvaloniaConverter<Rectangle>());
-                _.Converters.Add(new AvaloniaConverter<Sector>());
-                _.Converters.Add(new AvaloniaConverter<ScrollContentPresenter>());
-                _.Converters.Add(new AvaloniaConverter<WindowNotificationManager>());
-                _.Converters.Add(new AvaloniaConverter<CaptionButtons>());
-                _.Converters.Add(new AvaloniaConverter<TitleBar>());
-                _.Converters.Add(new AvaloniaConverter<CalendarItem>());
-                _.Converters.Add(new AvaloniaConverter<DateTimePickerPanel>());
-                _.Converters.Add(new AvaloniaConverter<PickerPresenterBase>());
-                _.Converters.Add(new AvaloniaConverter<AccessText>());
-                _.Converters.Add(new AvaloniaConverter<ChromeOverlayLayer>());
-                _.Converters.Add(new AvaloniaConverter<RangeBase>());
-                _.Converters.Add(new AvaloniaConverter<Thumb>());
-                _.Converters.Add(new AvaloniaConverter<UniformGrid>());
-                _.Converters.Add(new AvaloniaConverter<VisualLayerManager>());
-                _.Converters.Add(new AvaloniaConverter<ColorView>());
-                _.Converters.Add(new AvaloniaConverter<ColorPreviewer>());
-                _.Converters.Add(new AvaloniaConverter<ColorSpectrum>());
-                _.Converters.Add(new AvaloniaConverter<DataGrid>());
-                _.Converters.Add(new AvaloniaConverter<DataGridRow>());
-                _.Converters.Add(new AvaloniaConverter<DataGridRowGroupHeader>());
-                _.Converters.Add(new AvaloniaConverter<DataGridCellsPresenter>());
-                _.Converters.Add(new AvaloniaConverter<DataGridColumnHeadersPresenter>());
-                _.Converters.Add(new AvaloniaConverter<DataGridDetailsPresenter>());
-                _.Converters.Add(new AvaloniaConverter<DataGridRowsPresenter>());
-                _.Converters.Add(new AvaloniaConverter<Decorator>());
-                _.Converters.Add(new AvaloniaConverter<Image>());
-                _.Converters.Add(new AvaloniaConverter<NativeControlHost>());
-                _.Converters.Add(new AvaloniaConverter<Panel>());
-                _.Converters.Add(new AvaloniaConverter<TextBlock>());
-                _.Converters.Add(new AvaloniaConverter<TickBar>());
-                _.Converters.Add(new AvaloniaConverter<Viewbox>());
-                _.Converters.Add(new AvaloniaConverter<Shape>());
-                _.Converters.Add(new AvaloniaConverter<RemoteWidget>());
-                _.Converters.Add(new AvaloniaConverter<ContentPresenter>());
-                _.Converters.Add(new AvaloniaConverter<ItemsPresenter>());
-                _.Converters.Add(new AvaloniaConverter<TextPresenter>());
-                _.Converters.Add(new AvaloniaConverter<Popup>());
-                _.Converters.Add(new AvaloniaConverter<TemplatedControl>());
-                _.Converters.Add(new AvaloniaConverter<Track>());
-                _.Converters.Add(new AvaloniaConverter<Control>());
-                _.Converters.Add(new AvaloniaConverter<Bold>());
-                _.Converters.Add(new AvaloniaConverter<Italic>());
-                _.Converters.Add(new AvaloniaConverter<Underline>());
-                _.Converters.Add(new AvaloniaConverter<InputElement>());
-                _.Converters.Add(new AvaloniaConverter<InlineUIContainer>());
-                _.Converters.Add(new AvaloniaConverter<LineBreak>());
-                _.Converters.Add(new AvaloniaConverter<Run>());
-                _.Converters.Add(new AvaloniaConverter<Span>());
-                _.Converters.Add(new AvaloniaConverter<Interactive>());
-                _.Converters.Add(new AvaloniaConverter<Inline>());
-                _.Converters.Add(new AvaloniaConverter<Layoutable>());
-                _.Converters.Add(new AvaloniaConverter<PinchGestureRecognizer>());
-                _.Converters.Add(new AvaloniaConverter<PullGestureRecognizer>());
-                _.Converters.Add(new AvaloniaConverter<ScrollGestureRecognizer>());
-                _.Converters.Add(new AvaloniaConverter<ConicGradientBrush>());
-                _.Converters.Add(new AvaloniaConverter<DrawingBrush>());
-                _.Converters.Add(new AvaloniaConverter<DropShadowEffect>());
-                _.Converters.Add(new AvaloniaConverter<DropShadowDirectionEffect>());
-                _.Converters.Add(new AvaloniaConverter<ImageBrush>());
-                _.Converters.Add(new AvaloniaConverter<LinearGradientBrush>());
-                _.Converters.Add(new AvaloniaConverter<RadialGradientBrush>());
-                _.Converters.Add(new AvaloniaConverter<VisualBrush>());
-                _.Converters.Add(new AvaloniaConverter<Flyout>());
-                _.Converters.Add(new AvaloniaConverter<MenuFlyout>());
-                _.Converters.Add(new AvaloniaConverter<NativeMenuItemSeparator>());
-                _.Converters.Add(new AvaloniaConverter<TextElement>());
-                _.Converters.Add(new AvaloniaConverter<Visual>());
-                _.Converters.Add(new AvaloniaConverter<GestureRecognizer>());
-                _.Converters.Add(new AvaloniaConverter<BlurEffect>());
-                _.Converters.Add(new AvaloniaConverter<DropShadowEffectBase>());
-                _.Converters.Add(new AvaloniaConverter<GradientBrush>());
-                _.Converters.Add(new AvaloniaConverter<MatrixTransform>());
-                _.Converters.Add(new AvaloniaConverter<PathGeometry>());
-                _.Converters.Add(new AvaloniaConverter<RotateTransform>());
-                _.Converters.Add(new AvaloniaConverter<ScaleTransform>());
-                _.Converters.Add(new AvaloniaConverter<SkewTransform>());
-                _.Converters.Add(new AvaloniaConverter<SolidColorBrush>());
-                _.Converters.Add(new AvaloniaConverter<TileBrush>());
-                _.Converters.Add(new AvaloniaConverter<TransformGroup>());
-                _.Converters.Add(new AvaloniaConverter<TranslateTransform>());
-                _.Converters.Add(new AvaloniaConverter<Rotate3DTransform>());
-                _.Converters.Add(new AvaloniaConverter<DataGridCheckBoxColumn>());
-                _.Converters.Add(new AvaloniaConverter<DataGridTextColumn>());
-                _.Converters.Add(new AvaloniaConverter<ColumnDefinition>());
-                _.Converters.Add(new AvaloniaConverter<NativeMenuItem>());
-                _.Converters.Add(new AvaloniaConverter<RowDefinition>());
-                _.Converters.Add(new AvaloniaConverter<PopupFlyoutBase>());
-                _.Converters.Add(new AvaloniaConverter<StyledElement>());
-                _.Converters.Add(new AvaloniaConverter<ControlTheme>());
-                _.Converters.Add(new AvaloniaConverter<Style>());
-                _.Converters.Add(new AvaloniaConverter<CombinedGeometry>());
-                _.Converters.Add(new AvaloniaConverter<ArcSegment>());
-                _.Converters.Add(new AvaloniaConverter<BezierSegment>());
-                _.Converters.Add(new AvaloniaConverter<Brush>());
-                _.Converters.Add(new AvaloniaConverter<DashStyle>());
-                _.Converters.Add(new AvaloniaConverter<DrawingGroup>());
-                _.Converters.Add(new AvaloniaConverter<Effect>());
-                _.Converters.Add(new AvaloniaConverter<EllipseGeometry>());
-                _.Converters.Add(new AvaloniaConverter<GeometryDrawing>());
-                _.Converters.Add(new AvaloniaConverter<GeometryGroup>());
-                _.Converters.Add(new AvaloniaConverter<GlyphRunDrawing>());
-                _.Converters.Add(new AvaloniaConverter<ImageDrawing>());
-                _.Converters.Add(new AvaloniaConverter<LineGeometry>());
-                _.Converters.Add(new AvaloniaConverter<LineSegment>());
-                _.Converters.Add(new AvaloniaConverter<PolylineGeometry>());
-                _.Converters.Add(new AvaloniaConverter<PolyLineSegment>());
-                _.Converters.Add(new AvaloniaConverter<QuadraticBezierSegment>());
-                _.Converters.Add(new AvaloniaConverter<RectangleGeometry>());
-                _.Converters.Add(new AvaloniaConverter<StreamGeometry>());
-                _.Converters.Add(new AvaloniaConverter<Transform>());
-                _.Converters.Add(new AvaloniaConverter<InterpolatingTransitionBase`1>());
-                _.Converters.Add(new AvaloniaConverter<BoxShadowsTransition>());
-                _.Converters.Add(new AvaloniaConverter<BrushTransition>());
-                _.Converters.Add(new AvaloniaConverter<ColorTransition>());
-                _.Converters.Add(new AvaloniaConverter<CornerRadiusTransition>());
-                _.Converters.Add(new AvaloniaConverter<DoubleTransition>());
-                _.Converters.Add(new AvaloniaConverter<FloatTransition>());
-                _.Converters.Add(new AvaloniaConverter<IntegerTransition>());
-                _.Converters.Add(new AvaloniaConverter<PointTransition>());
-                _.Converters.Add(new AvaloniaConverter<RelativePointTransition>());
-                _.Converters.Add(new AvaloniaConverter<SizeTransition>());
-                _.Converters.Add(new AvaloniaConverter<ThicknessTransition>());
-                _.Converters.Add(new AvaloniaConverter<TransformOperationsTransition>());
-                _.Converters.Add(new AvaloniaConverter<VectorTransition>());
-                _.Converters.Add(new AvaloniaConverter<EffectTransition>());
-                _.Converters.Add(new AvaloniaConverter<DataGridBoundColumn>());
-                _.Converters.Add(new AvaloniaConverter<DataGridTemplateColumn>());
-                _.Converters.Add(new AvaloniaConverter<Application>());
-                _.Converters.Add(new AvaloniaConverter<DefinitionBase>());
-                _.Converters.Add(new AvaloniaConverter<NativeMenu>());
-                _.Converters.Add(new AvaloniaConverter<NativeMenuItemBase>());
-                _.Converters.Add(new AvaloniaConverter<TrayIcon>());
-                _.Converters.Add(new AvaloniaConverter<FlyoutBase>());
-                _.Converters.Add(new AvaloniaConverter<SplitViewTemplateSettings>());
-                _.Converters.Add(new AvaloniaConverter<StyleBase>());
-                _.Converters.Add(new AvaloniaConverter<Styles>());
-                _.Converters.Add(new AvaloniaConverter<KeyBinding>());
-                _.Converters.Add(new AvaloniaConverter<Drawing>());
-                _.Converters.Add(new AvaloniaConverter<DrawingImage>());
-                _.Converters.Add(new AvaloniaConverter<ExperimentalAcrylicMaterial>());
-                _.Converters.Add(new AvaloniaConverter<Geometry>());
-                _.Converters.Add(new AvaloniaConverter<GradientStop>());
-                _.Converters.Add(new AvaloniaConverter<PathFigure>());
-                _.Converters.Add(new AvaloniaConverter<PathSegment>());
-                _.Converters.Add(new AvaloniaConverter<Pen>());
-                _.Converters.Add(new AvaloniaConverter<TextDecoration>());
-                _.Converters.Add(new AvaloniaConverter<CroppedBitmap>());
-                _.Converters.Add(new AvaloniaConverter<Animatable>());
-                _.Converters.Add(new AvaloniaConverter<Animation>());
-                _.Converters.Add(new AvaloniaConverter<KeyFrame>());
-                _.Converters.Add(new AvaloniaConverter<KeySpline>());
-                _.Converters.Add(new AvaloniaConverter<Transition`1>());
-                _.Converters.Add(new AvaloniaConverter<DataGridColumn>());
-                _.Converters.Add(new AvaloniaConverter<AvaloniaObject>());
-             });
+            _ => _.Converters.AddRange(converters));
 }
