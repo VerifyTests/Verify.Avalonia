@@ -4,10 +4,13 @@ using CommunityToolkit.Mvvm.Input;
 public partial class MainWindowViewModel : ObservableObject
 {
     [ObservableProperty]
-    double? _firstOperand, _secondOperand;
+    double? firstOperand;
 
     [ObservableProperty]
-    string? _result;
+    double? secondOperand;
+
+    [ObservableProperty]
+    string? result;
 
     [RelayCommand]
     void Add() =>
