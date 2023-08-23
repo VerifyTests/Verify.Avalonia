@@ -1,7 +1,3 @@
-using Argon;
-using Avalonia.Data;
-using Avalonia.Diagnostics;
-
 namespace VerifyTests;
 
 public class AvaloniaConverter<T> :
