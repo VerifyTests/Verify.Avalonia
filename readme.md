@@ -48,17 +48,8 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
   <InternalsVisibleTo Include="NUnitTests" />
   <InternalsVisibleTo Include="XUnitTests" />
 </ItemGroup>
-<ItemGroup>
-  <UpToDateCheckInput Remove="Assets\avalonia-logo.ico" />
-</ItemGroup>
-<ItemGroup>
-  <Compile Update="MainWindow.axaml.cs">
-    <DependentUpon>MainWindow.axaml</DependentUpon>
-    <SubType>Code</SubType>
-  </Compile>
-</ItemGroup>
 ```
-<sup><a href='/src/TestableApp/TestableApp.csproj#L21-L35' title='Snippet source file'>snippet source</a> | <a href='#snippet-internalsvisibleto' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/TestableApp/TestableApp.csproj#L21-L26' title='Snippet source file'>snippet source</a> | <a href='#snippet-internalsvisibleto' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

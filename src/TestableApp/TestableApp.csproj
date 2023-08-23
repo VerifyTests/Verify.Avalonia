@@ -23,14 +23,5 @@
     <InternalsVisibleTo Include="NUnitTests" />
     <InternalsVisibleTo Include="XUnitTests" />
   </ItemGroup>
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Assets\avalonia-logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="MainWindow.axaml.cs">
-      <DependentUpon>MainWindow.axaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
   <!-- end-snippet -->
 </Project>
