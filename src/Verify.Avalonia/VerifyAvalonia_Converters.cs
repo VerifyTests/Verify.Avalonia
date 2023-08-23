@@ -24,12 +24,13 @@ public static partial class VerifyAvalonia
             typeof(DataGrid).Assembly
         };
         var types = assemblies.SelectMany(_ => _.GetTypes())
-            .Where(_ => _.IsAssignableTo(avaloniaObject) &&
-                        _ is
-                        {
-                            IsPublic: true,
-                            IsAbstract: false
-                        })
+            .Where(_ =>
+                _.IsAssignableTo(avaloniaObject) &&
+                _ is
+                {
+                    IsPublic: true,
+                    IsAbstract: false
+                })
             .OrderByDescending(GetDepth)
             .ToList();
         var avaloniaConverter = typeof(AvaloniaConverter<>);
