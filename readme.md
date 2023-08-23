@@ -158,41 +158,25 @@ public class CalculatorTests
         Children: [
           {
             Type: Button,
-            Command: {
-              Type: Action,
-              Target: MainWindowViewModel,
-              Method: Void Add()
-            },
+            Command: MainWindowViewModel.Add(),
             Content: +,
             Name: AddButton
           },
           {
             Type: Button,
-            Command: {
-              Type: Action,
-              Target: MainWindowViewModel,
-              Method: Void Subtract()
-            },
+            Command: MainWindowViewModel.Subtract(),
             Content: -,
             Name: SubtractButton
           },
           {
             Type: Button,
-            Command: {
-              Type: Action,
-              Target: MainWindowViewModel,
-              Method: Void Multiply()
-            },
+            Command: MainWindowViewModel.Multiply(),
             Content: *,
             Name: MultiplyButton
           },
           {
             Type: Button,
-            Command: {
-              Type: Action,
-              Target: MainWindowViewModel,
-              Method: Void Divide()
-            },
+            Command: MainWindowViewModel.Divide(),
             Content: /,
             Name: DivideButton
           }
@@ -224,28 +208,12 @@ public class CalculatorTests
     FirstOperand: 10.0,
     SecondOperand: 20.0,
     Result: 30,
-    AddCommand: {
-      Type: Action,
-      Target: MainWindowViewModel,
-      Method: Void Add()
-    },
-    SubtractCommand: {
-      Type: Action,
-      Target: MainWindowViewModel,
-      Method: Void Subtract()
-    },
-    MultiplyCommand: {
-      Type: Action,
-      Target: MainWindowViewModel,
-      Method: Void Multiply()
-    },
-    DivideCommand: {
-      Type: Action,
-      Target: MainWindowViewModel,
-      Method: Void Divide()
-    }
+    AddCommand: MainWindowViewModel.Add(),
+    SubtractCommand: MainWindowViewModel.Subtract(),
+    MultiplyCommand: MainWindowViewModel.Multiply(),
+    DivideCommand: MainWindowViewModel.Divide()
   }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L86' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
