@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <IsTestProject>true</IsTestProject>
-    <RootNamespace>TestableApp.Headless.XUnit</RootNamespace>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
