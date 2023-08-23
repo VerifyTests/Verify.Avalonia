@@ -32,12 +32,6 @@ public class AvaloniaConverter<T> :
                 continue;
             }
 
-            if (property.Name == "Command")
-            {
-                
-                writer.WriteMember(value, diagnostic.Value, property.Name);
-                continue;
-            }
             writer.WriteMember(value, diagnostic.Value, property.Name);
         }
 
