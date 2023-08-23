@@ -8,7 +8,7 @@ public class Tests
     {
         var solutionDirectory = AttributeReader.GetSolutionDirectory();
 
-        var visual = typeof(Visual);
+        var avaloniaObject = typeof(AvaloniaObject);
         var types =
             //Avalonia.Controls
             typeof(Window).Assembly.GetTypes()
@@ -22,7 +22,7 @@ public class Tests
                     //Avalonia.Controls.DataGrid
                     typeof(DataGrid).Assembly.GetTypes())
 
-                .Where(_ => _.IsAssignableTo(visual) && _.IsPublic)
+                .Where(_ => _.IsAssignableTo(avaloniaObject) && _.IsPublic)
                 .OrderByDescending(GetDepth)
                 .ToList();
 
