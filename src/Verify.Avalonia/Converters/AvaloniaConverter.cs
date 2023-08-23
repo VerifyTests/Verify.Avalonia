@@ -10,7 +10,8 @@ public class AvaloniaConverter<T> :
 {
     static AvaloniaProperty[] properties =
         AvaloniaPropertyRegistry
-            .Instance.GetRegistered(typeof(T))
+            .Instance
+            .GetRegistered(typeof(T))
             .Where(_ => !_.IsReadOnly)
             .ToArray();
 
