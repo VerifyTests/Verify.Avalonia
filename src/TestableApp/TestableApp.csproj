@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
     <PackageReference Include="Avalonia" Version="11.0.4" />
     <PackageReference Include="Avalonia.Desktop" Version="11.0.4" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.4" />
@@ -23,6 +22,9 @@
   <ItemGroup>
     <InternalsVisibleTo Include="NUnitTests" />
     <InternalsVisibleTo Include="XUnitTests" />
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Assets\avalonia-logo.ico" />
   </ItemGroup>
   <!-- end-snippet -->
 </Project>

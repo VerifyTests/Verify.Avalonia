@@ -2,7 +2,6 @@
   Type: MainWindow,
   SizeToContent: WidthAndHeight,
   Title: Simple Calculator,
-  Icon: {},
   CanResize: false,
   Content: {
     Type: StackPanel,
