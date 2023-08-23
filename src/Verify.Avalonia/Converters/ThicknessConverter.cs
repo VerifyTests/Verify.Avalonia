@@ -1,8 +1,4 @@
-﻿using System.Globalization;
-
-namespace VerifyTests;
-
-public class ThicknessConverter :
+﻿class ThicknessConverter :
     WriteOnlyJsonConverter<Thickness>
 {
     public override void Write(VerifyJsonWriter writer, Thickness value)

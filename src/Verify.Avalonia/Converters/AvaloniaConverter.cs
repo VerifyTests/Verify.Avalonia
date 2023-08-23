@@ -1,6 +1,4 @@
-namespace VerifyTests;
-
-public class AvaloniaConverter<T> :
+class AvaloniaConverter<T> :
     WriteOnlyJsonConverter<T>
     where T : AvaloniaObject
 {

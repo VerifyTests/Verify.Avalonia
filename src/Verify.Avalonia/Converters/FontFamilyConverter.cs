@@ -1,8 +1,4 @@
-﻿using Avalonia.Media;
-
-namespace VerifyTests;
-
-public class FontFamilyConverter :
+﻿class FontFamilyConverter :
     WriteOnlyJsonConverter<FontFamily>
 {
     public override void Write(VerifyJsonWriter writer, FontFamily value) =>

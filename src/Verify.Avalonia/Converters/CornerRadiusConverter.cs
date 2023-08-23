@@ -1,6 +1,4 @@
-﻿namespace VerifyTests;
-
-public class CornerRadiusConverter :
+﻿class CornerRadiusConverter :
     WriteOnlyJsonConverter<CornerRadius>
 {
     public override void Write(VerifyJsonWriter writer, CornerRadius value) =>
