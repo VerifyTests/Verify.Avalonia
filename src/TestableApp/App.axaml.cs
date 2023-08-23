@@ -4,8 +4,6 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 // ReSharper disable PartialTypeWithSinglePart
 
-namespace TestableApp;
-
 public partial class App : Application
 {
     public override void Initialize() =>
