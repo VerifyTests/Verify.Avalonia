@@ -22,6 +22,15 @@ public partial class MainWindowViewModel : ObservableObject
         Result = (FirstOperand * SecondOperand)?.ToString();
 
     [RelayCommand]
-    void Divide() =>
-        Result = SecondOperand == 0 ? "Cannot divide by zero!" : (FirstOperand / SecondOperand)?.ToString();
+    void Divide()
+    {
+        if (SecondOperand == 0)
+        {
+            Result = "Cannot divide by zero!";
+        }
+        else
+        {
+            Result = (FirstOperand / SecondOperand)?.ToString();
+        }
+    }
 }
