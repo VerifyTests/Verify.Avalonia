@@ -1,0 +1,16 @@
+﻿{
+  Type: RecursiveWindow,
+  SizeToContent: WidthAndHeight,
+  Title: RecursiveWindow,
+  CanResize: false,
+  Content: {
+    Type: StackPanel,
+    Spacing: 10.0,
+    Margin: 10,
+    HorizontalAlignment: Left
+  },
+  Background: LightGray,
+  Width: 20.0,
+  Height: 20.0,
+  IsVisible: true
+}
