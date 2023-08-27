@@ -27,7 +27,13 @@ class AvaloniaConverter<T> :
                 continue;
             }
 
-            writer.WriteMember(value, diagnostic.Value, property.Name);
+            var propertyValue = diagnostic.Value;
+            if (ReferenceEquals(propertyValue, value))
+            {
+                continue;
+            }
+
+            writer.WriteMember(value, propertyValue, property.Name);
         }
 
         if (value is Panel panel)
