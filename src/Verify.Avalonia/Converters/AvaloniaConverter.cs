@@ -21,19 +21,7 @@ class AvaloniaConverter<T> :
 
         foreach (var property in properties)
         {
-            var diagnostic = value.GetDiagnostic(property);
-            if (diagnostic.Priority != BindingPriority.LocalValue)
-            {
-                continue;
-            }
-
-            var propertyValue = diagnostic.Value;
-            if (ReferenceEquals(propertyValue, value))
-            {
-                continue;
-            }
-
-            writer.WriteMember(value, propertyValue, property.Name);
+            WriteProperty(writer, value, property);
         }
 
         if (value is Panel panel)
@@ -42,5 +30,22 @@ class AvaloniaConverter<T> :
         }
 
         writer.WriteEndObject();
+    }
+
+    static void WriteProperty(VerifyJsonWriter writer, T value, AvaloniaProperty property)
+    {
+        var diagnostic = value.GetDiagnostic(property);
+        if (diagnostic.Priority != BindingPriority.LocalValue)
+        {
+            return;
+        }
+
+        var propertyValue = diagnostic.Value;
+        if (ReferenceEquals(propertyValue, value))
+        {
+            return;
+        }
+
+        writer.WriteMember(value, propertyValue, property.Name);
     }
 }
