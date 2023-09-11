@@ -3,7 +3,7 @@
     <TargetFramework>net7</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.7.2" />
+    <PackageReference Include="Argon" Version="0.9.0" />
     <PackageReference Include="Avalonia.Controls.ColorPicker" Version="11.0.4" />
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.4" />
     <PackageReference Include="Avalonia.Headless" Version="11.0.4" />
