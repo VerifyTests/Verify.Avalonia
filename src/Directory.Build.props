@@ -8,5 +8,6 @@
     <PackageTags>Avalonia, Verify</PackageTags>
     <ImplicitUsings>enable</ImplicitUsings>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Avalonia bits.</Description>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
