@@ -16,7 +16,7 @@
     <PackageReference Include="Verify.Xunit" Version="22.1.4" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" PrivateAssets="all" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.100" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.101" PrivateAssets="all" />
     <ProjectReference Include="..\TestableApp\TestableApp.csproj" />
     <ProjectReference Include="..\Verify.Avalonia\Verify.Avalonia.csproj" />
   </ItemGroup>
