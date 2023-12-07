@@ -17,7 +17,7 @@ public class CalculatorTests
 
         // Raise click event on the button:
         window.AddButton.Focus();
-        window.KeyPress(Key.Enter, RawInputModifiers.None);
+        window.KeyPressQwerty(PhysicalKey.Enter, RawInputModifiers.None);
 
         Assert.Equal("30", window.ResultBox.Text);
         return Verify(window);
