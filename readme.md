@@ -38,7 +38,6 @@ public static void Init() =>
 Many Avalonia projects use [CommunityToolkit.Mvvm](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/). To ensure proper serialization of MVVM commands, use [Verify.CommunityToolkit.Mvvm](https://github.com/VerifyTests/Verify.CommunityToolkit.Mvvm).
 
 
-
 ## InternalsVisibleTo
 
 Ensure tests projects have InternalsVisibleTo configured in the target app so tests can use generated controls by name.
