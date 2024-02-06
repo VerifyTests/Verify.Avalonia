@@ -31,8 +31,7 @@ public static partial class VerifyAvalonia
                     IsPublic: true,
                     IsAbstract: false
                 })
-            .OrderByDescending(GetDepth)
-            .ToList();
+            .OrderByDescending(GetDepth);
         var avaloniaConverter = typeof(AvaloniaConverter<>);
         foreach (var type in types)
         {
