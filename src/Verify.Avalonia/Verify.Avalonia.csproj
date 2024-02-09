@@ -4,9 +4,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.15.0" />
-    <PackageReference Include="Avalonia.Controls.ColorPicker" Version="11.0.7" />
-    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.7" />
-    <PackageReference Include="Avalonia.Headless" Version="11.0.7" />
+    <PackageReference Include="Avalonia.Controls.ColorPicker" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Headless" Version="11.0.9" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="Verify" Version="23.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.109" PrivateAssets="all" />
