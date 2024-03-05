@@ -2,12 +2,12 @@ namespace VerifyTests;
 
 public static partial class VerifyAvalonia
 {
-    static List<WriteOnlyJsonConverter> converters = new()
-    {
+    static List<WriteOnlyJsonConverter> converters =
+    [
         new ThicknessConverter(),
         new CornerRadiusConverter(),
         new FontFamilyConverter()
-    };
+    ];
 
     static VerifyAvalonia()
     {
