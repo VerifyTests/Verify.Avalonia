@@ -23,13 +23,13 @@ https://nuget.org/packages/Verify.Avalonia/
 ## Enable
 
 <!-- snippet: Enable -->
-<a id='snippet-enable'></a>
+<a id='snippet-Enable'></a>
 ```cs
 [ModuleInitializer]
 public static void Init() =>
     VerifyAvalonia.Initialize();
 ```
-<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -43,14 +43,14 @@ Many Avalonia projects use [CommunityToolkit.Mvvm](https://learn.microsoft.com/e
 Ensure tests projects have InternalsVisibleTo configured in the target app so tests can use generated controls by name.
 
 <!-- snippet: InternalsVisibleTo -->
-<a id='snippet-internalsvisibleto'></a>
+<a id='snippet-InternalsVisibleTo'></a>
 ```csproj
 <ItemGroup>
   <InternalsVisibleTo Include="NUnitTests" />
   <InternalsVisibleTo Include="XUnitTests" />
 </ItemGroup>
 ```
-<sup><a href='/src/TestableApp/TestableApp.csproj#L19-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-internalsvisibleto' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/TestableApp/TestableApp.csproj#L19-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-InternalsVisibleTo' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
