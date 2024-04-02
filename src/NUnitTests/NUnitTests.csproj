@@ -16,7 +16,7 @@
     <PackageReference Include="Verify.DiffPlex" Version="2.3.0" />
     <PackageReference Include="Verify.ImageSharp.Compare" Version="3.0.0" />
     <ProjectReference Include="..\TestableApp\TestableApp.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.125" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.126" PrivateAssets="all" />
     <ProjectReference Include="..\Verify.Avalonia\Verify.Avalonia.csproj" />
   </ItemGroup>
 
