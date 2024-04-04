@@ -10,8 +10,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="NUnit" Version="4.1.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-    <PackageReference Include="Verify" Version="23.7.0" />
-    <PackageReference Include="Verify.NUnit" Version="23.7.0" />
+    <PackageReference Include="Verify" Version="23.7.1" />
+    <PackageReference Include="Verify.NUnit" Version="23.7.1" />
     <PackageReference Include="Verify.CommunityToolkit.Mvvm" Version="0.1.0" />
     <PackageReference Include="Verify.DiffPlex" Version="2.3.0" />
     <PackageReference Include="Verify.ImageSharp.Compare" Version="3.0.0" />
