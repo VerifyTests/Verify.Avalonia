@@ -3,12 +3,11 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.17.0" />
     <PackageReference Include="Avalonia.Controls.ColorPicker" Version="11.0.10" />
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
     <PackageReference Include="Avalonia.Headless" Version="11.0.10" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="Verify" Version="23.7.1" />
+    <PackageReference Include="Verify" Version="23.7.2" />
     <PackageReference Include="ProjectDefaults" Version="1.0.126" PrivateAssets="all" />
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="27.0.2" PrivateAssets="all" />
   </ItemGroup>
