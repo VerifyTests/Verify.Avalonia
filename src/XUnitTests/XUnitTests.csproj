@@ -14,7 +14,7 @@
     <PackageReference Include="Verify.ImageSharp.Compare" Version="3.0.1" />
     <PackageReference Include="Verify.Xunit" Version="24.2.0" />
     <PackageReference Include="Xunit" Version="2.8.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.0" PrivateAssets="all" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.1" PrivateAssets="all" />
     <PackageReference Include="ProjectDefaults" Version="1.0.127" PrivateAssets="all" />
     <ProjectReference Include="..\TestableApp\TestableApp.csproj" />
     <ProjectReference Include="..\Verify.Avalonia\Verify.Avalonia.csproj" />
