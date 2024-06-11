@@ -20,7 +20,7 @@
     <PackageVersion Include="NUnit" Version="4.1.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.127" />
-    <PackageVersion Include="Verify" Version="25.0.1" />
+    <PackageVersion Include="Verify" Version="25.0.2" />
     <PackageVersion Include="Verify.CommunityToolkit.Mvvm" Version="0.1.0" />
     <PackageVersion Include="Verify.DiffPlex" Version="3.0.0" />
     <PackageVersion Include="Verify.ImageSharp.Compare" Version="3.0.1" />
