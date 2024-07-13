@@ -1,0 +1,11 @@
+﻿{
+  Type: Window,
+  SizeToContent: WidthAndHeight,
+  Content: {
+    Type: Button,
+    Content: Click me!
+  },
+  Width: 78.0,
+  Height: 27.0,
+  IsVisible: true
+}
