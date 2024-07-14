@@ -6,6 +6,47 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of [Avalonia UIs](https://avaloniaui.net/).
 
+## Getting Started
+
+The test project needs a `ModuleInitializer` and an Avalonia application with a styleg.
+
+<!-- snippet: src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs -->
+<a id='snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs'></a>
+```cs
+[assembly: AvaloniaTestApplication(typeof(VerifyAvaloniaSetupApplication))]
+
+public class VerifyAvaloniaSetupApplication : Application
+{
+    [ModuleInitializer]
+    public static void Init() =>
+        VerifyAvalonia.Initialize();
+
+    public static AppBuilder BuildAvaloniaApp() =>
+        AppBuilder
+            .Configure<VerifyAvaloniaSetupApplication>()
+            .UseSkia()
+            .UseHeadless(new()
+            {
+                UseHeadlessDrawing = false
+            });
+
+    public VerifyAvaloniaSetupApplication() =>
+        this.Styles.Add(new FluentTheme());
+}
+```
+<sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+And add the following NuGet packages:
+
+- Add NuGet packages
+    - https://nuget.org/packages/Verify.Avalonia/
+    - https://nuget.org/packages/Avalonia.Headless.XUnit/
+    - https://nuget.org/packages/Avalonia.Themes.Fluent/
+    - https://nuget.org/packages/Avalonia.Skia/
+
+## More details
+
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 **Currently only supported in XUnit since [AvaloniaTestAttribute results in incorrect TestContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
@@ -15,12 +56,7 @@ Leverages [Avalonia Headless Testing](https://docs.avaloniaui.net/docs/next/conc
 See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-xunit) and [Headless Testing with NUnit](https://docs.avaloniaui.net/docs/next/concepts/headless/headless-nunit) for more information.
 
 
-## NuGet package
-
-https://nuget.org/packages/Verify.Avalonia/
-
-
-## Enable
+### ModuleInitializer
 
 <!-- snippet: Enable -->
 <a id='snippet-Enable'></a>
@@ -38,7 +74,7 @@ public static void Init() =>
 Many Avalonia projects use [CommunityToolkit.Mvvm](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/). To ensure proper serialization of MVVM commands, use [Verify.CommunityToolkit.Mvvm](https://github.com/VerifyTests/Verify.CommunityToolkit.Mvvm).
 
 
-## InternalsVisibleTo
+### InternalsVisibleTo
 
 Ensure tests projects have InternalsVisibleTo configured in the target app so tests can use generated controls by name.
 
@@ -54,7 +90,7 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
 <!-- endSnippet -->
 
 
-## Initialize AvaloniaTestApplication
+### Initialize AvaloniaTestApplication
 
 The `[AvaloniaTestApplication]` attribute wires the tests in the current project with the specific application. It needs to be defined once per project in any file. Verify.Avalonia requires that `UseHeadlessDrawing` is disabled and `.UseSkia()` is set.
 
@@ -79,7 +115,7 @@ public static class TestAppBuilder
 <!-- endSnippet -->
 
 
-## Test
+### Test
 
 <!-- snippet: XunitTests/CalculatorTests.cs -->
 <a id='snippet-XunitTests/CalculatorTests.cs'></a>
@@ -113,17 +149,17 @@ public class CalculatorTests
 <!-- endSnippet -->
 
 
-## Result in the following snapshots
+### Result in the following snapshots
 
 
-### Image
+#### Image
 
 [Should_Add_Numbers.verified.verified.png](/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png):
 
 <img src="/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.png" width="250px">
 
 
-### Text
+#### Text
 
 <!-- snippet: XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt -->
 <a id='snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt'></a>
