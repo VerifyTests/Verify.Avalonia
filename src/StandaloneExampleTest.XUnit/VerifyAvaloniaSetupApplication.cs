@@ -17,5 +17,5 @@ public class VerifyAvaloniaSetupApplication : Application
                 });
 
     public VerifyAvaloniaSetupApplication() =>
-        this.Styles.Add(new FluentTheme());
+        Styles.Add(new FluentTheme());
 }

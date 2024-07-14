@@ -18,7 +18,14 @@ public static partial class VerifyAvalonia
         AddConverters();
     }
 
-    static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context)
+    static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context) =>
+        new(
+            topLevel,
+            [
+                new("png", TopLevelToImage(topLevel))
+            ]);
+
+    static MemoryStream TopLevelToImage(TopLevel topLevel)
     {
         using var bitmap = topLevel.CaptureRenderedFrame();
         var stream = new MemoryStream();
@@ -28,11 +35,6 @@ public static partial class VerifyAvalonia
         }
 
         bitmap.Save(stream);
-        return new(
-            topLevel,
-            new List<Target>
-            {
-                new("png", stream)
-            });
+        return stream;
     }
 }

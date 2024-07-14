@@ -32,7 +32,7 @@ public class VerifyAvaloniaSetupApplication : Application
                 });
 
     public VerifyAvaloniaSetupApplication() =>
-        this.Styles.Add(new FluentTheme());
+        Styles.Add(new FluentTheme());
 }
 ```
 <sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
