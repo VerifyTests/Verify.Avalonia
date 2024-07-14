@@ -19,22 +19,5 @@ public static partial class VerifyAvalonia
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context) =>
-        new(
-            topLevel,
-            [
-                new("png", TopLevelToImage(topLevel))
-            ]);
-
-    static MemoryStream TopLevelToImage(TopLevel topLevel)
-    {
-        using var bitmap = topLevel.CaptureRenderedFrame();
-        var stream = new MemoryStream();
-        if (bitmap == null)
-        {
-            throw new("No RenderedFrame");
-        }
-
-        bitmap.Save(stream);
-        return stream;
-    }
+        new(topLevel, [new("png", topLevel.ToImage())]);
 }
