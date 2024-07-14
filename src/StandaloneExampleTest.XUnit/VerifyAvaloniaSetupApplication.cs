@@ -10,10 +10,11 @@ public class VerifyAvaloniaSetupApplication : Application
         AppBuilder
             .Configure<VerifyAvaloniaSetupApplication>()
             .UseSkia()
-            .UseHeadless(new()
-            {
-                UseHeadlessDrawing = false
-            });
+            .UseHeadless(
+                new()
+                {
+                    UseHeadlessDrawing = false
+                });
 
     public VerifyAvaloniaSetupApplication() =>
         this.Styles.Add(new FluentTheme());

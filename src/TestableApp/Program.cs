@@ -1,6 +1,4 @@
-﻿using Avalonia;
-
-static class Program
+﻿static class Program
 {
     [STAThread]
     public static void Main(string[] args) =>

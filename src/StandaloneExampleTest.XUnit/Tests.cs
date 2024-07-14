@@ -1,5 +1,3 @@
-using Avalonia.Controls;
-
 public class Tests
 {
     [AvaloniaFact]

@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-
-public partial class MainWindowViewModel : ObservableObject
+﻿public partial class MainWindowViewModel : ObservableObject
 {
     [ObservableProperty]
     double? firstOperand;
