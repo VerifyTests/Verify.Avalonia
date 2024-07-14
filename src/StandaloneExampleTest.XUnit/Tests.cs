@@ -13,14 +13,7 @@ public class Tests
             Content = testSubject,
             SizeToContent = SizeToContent.WidthAndHeight,
         };
-        try
-        {
-            window.Show();
-            return Verify(window);
-        }
-        finally
-        {
-            window.Close();
-        }
+
+        return Verify(window);
     }
 }

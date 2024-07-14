@@ -5,8 +5,6 @@ public class Tests
     {
         var window = new RecursiveWindow();
 
-        window.Show();
-
         return Verify(window);
     }
 }
