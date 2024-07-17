@@ -8,7 +8,7 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 
 ## Getting Started
 
-The test project needs a `ModuleInitializer` and an Avalonia application with a styleg.
+The test project needs a `ModuleInitializer` and an Avalonia application with a `Style`.
 
 <!-- snippet: src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs -->
 <a id='snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs'></a>
