@@ -3,7 +3,7 @@
     [ModuleInitializer]
     public static void InitOther()
     {
-        VerifyImageSharpCompare.Initialize();
+        VerifyImageMagick.Initialize();
         VerifierSettings.InitializePlugins();
     }
 }

@@ -14,7 +14,7 @@
     <PackageReference Include="Verify.NUnit" />
     <PackageReference Include="Verify.CommunityToolkit.Mvvm" />
     <PackageReference Include="Verify.DiffPlex" />
-    <PackageReference Include="Verify.ImageSharp.Compare" />
+    <PackageReference Include="Verify.ImageMagick" />
     <ProjectReference Include="..\TestableApp\TestableApp.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <ProjectReference Include="..\Verify.Avalonia\Verify.Avalonia.csproj" />

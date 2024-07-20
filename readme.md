@@ -20,7 +20,7 @@ public class VerifyAvaloniaSetupApplication : Application
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageSharpCompare.Initialize();
+        VerifyImageMagick.Initialize();
         VerifierSettings.InitializePlugins();
     }
 
@@ -68,20 +68,21 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageSharpCompare.RegisterComparers();
+    VerifyImageMagick.RegisterComparers();
     VerifyAvalonia.Initialize();
 }
 ```
 <sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-This sample uses [Verify.ImageSharp.Compare](https://github.com/VerifyTests/Verify.ImageSharp.Compare) to ignore small rendering differences that are expected between differens operating systesm.
+This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between differens operating systesm.
 
 Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
 
  * https://github.com/VerifyTests/Verify.ImageHash
  * https://github.com/VerifyTests/Verify.ImageMagick
  * https://github.com/VerifyTests/Verify.Phash
+ * https://github.com/VerifyTests/Verify.ImageSharp.Compare
 
 
 ### Verify.CommunityToolkit.Mvvm
