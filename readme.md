@@ -18,8 +18,11 @@ The test project needs a `ModuleInitializer` and an Avalonia application with a 
 public class VerifyAvaloniaSetupApplication : Application
 {
     [ModuleInitializer]
-    public static void Init() =>
+    public static void Init()
+    {
+        VerifyImageSharpCompare.Initialize();
         VerifierSettings.InitializePlugins();
+    }
 
     public static AppBuilder BuildAvaloniaApp() =>
         AppBuilder
@@ -35,7 +38,7 @@ public class VerifyAvaloniaSetupApplication : Application
         Styles.Add(new FluentTheme());
 }
 ```
-<sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 And add the following NuGet packages:
@@ -65,7 +68,7 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageSharpCompare.RegisterComparers(threshold: 0);
+    VerifyImageSharpCompare.RegisterComparers();
     VerifyAvalonia.Initialize();
 }
 ```
