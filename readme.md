@@ -19,7 +19,7 @@ public class VerifyAvaloniaSetupApplication : Application
 {
     [ModuleInitializer]
     public static void Init() =>
-        VerifyAvalonia.Initialize();
+        VerifierSettings.InitializePlugins();
 
     public static AppBuilder BuildAvaloniaApp() =>
         AppBuilder
