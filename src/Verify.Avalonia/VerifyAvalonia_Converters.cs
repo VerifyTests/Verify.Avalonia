@@ -23,7 +23,8 @@ public static partial class VerifyAvalonia
             //Avalonia.Controls.DataGrid
             typeof(DataGrid).Assembly
         };
-        var types = assemblies.SelectMany(_ => _.GetTypes())
+        var types = assemblies
+            .SelectMany(_ => _.GetTypes())
             .Where(_ =>
                 _.IsAssignableTo(avaloniaObject) &&
                 _ is
