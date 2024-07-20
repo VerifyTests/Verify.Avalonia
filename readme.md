@@ -40,11 +40,11 @@ public class VerifyAvaloniaSetupApplication : Application
 
 And add the following NuGet packages:
 
-- Add NuGet packages
-    - https://nuget.org/packages/Verify.Avalonia/
-    - https://nuget.org/packages/Avalonia.Headless.XUnit/
-    - https://nuget.org/packages/Avalonia.Themes.Fluent/
-    - https://nuget.org/packages/Avalonia.Skia/
+  - https://nuget.org/packages/Verify.Avalonia/
+  - https://nuget.org/packages/Avalonia.Headless.XUnit/
+  - https://nuget.org/packages/Avalonia.Themes.Fluent/
+  - https://nuget.org/packages/Avalonia.Skia/
+
 
 ## More details
 
@@ -71,6 +71,14 @@ public static void Init()
 ```
 <sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+This sample uses [Verify.ImageSharp.Compare](https://github.com/VerifyTests/Verify.ImageSharp.Compare) to ignore small rendering differences that are expected between differens operating systesm.
+
+Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
+
+ * https://github.com/VerifyTests/Verify.ImageHash
+ * https://github.com/VerifyTests/Verify.ImageMagick
+ * https://github.com/VerifyTests/Verify.Phash
 
 
 ### Verify.CommunityToolkit.Mvvm

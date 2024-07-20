@@ -6,6 +6,8 @@
   Content: {
     Type: StackPanel,
     Spacing: 10.0,
+    Width: 280.0,
+    Height: 175.0,
     Margin: 10,
     HorizontalAlignment: Left,
     Children: [
@@ -71,7 +73,7 @@
   },
   Background: LightGray,
   Width: 300.0,
-  Height: 185.0,
+  Height: 195.0,
   IsVisible: true,
   DataContext: {
     FirstOperand: 10.0,
