@@ -5,7 +5,7 @@ public class VerifyAvaloniaSetupApplication : Application
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageMagick.Initialize();
+        VerifyImageMagick.RegisterComparers(.097);
         VerifierSettings.InitializePlugins();
     }
 
