@@ -20,7 +20,7 @@ public class VerifyAvaloniaSetupApplication : Application
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageMagick.Initialize();
+        VerifyImageMagick.RegisterComparers(.24);
         VerifierSettings.InitializePlugins();
     }
 
@@ -68,7 +68,7 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageMagick.RegisterComparers();
+    VerifyImageMagick.RegisterComparers(.097);
     VerifyAvalonia.Initialize();
 }
 ```
