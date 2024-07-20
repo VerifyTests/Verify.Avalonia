@@ -3,8 +3,11 @@
     #region Enable
 
     [ModuleInitializer]
-    public static void Init() =>
+    public static void Init()
+    {
+        VerifyImageSharpCompare.RegisterComparers(threshold: 0);
         VerifyAvalonia.Initialize();
+    }
 
     #endregion
 
