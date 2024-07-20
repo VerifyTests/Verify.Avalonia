@@ -63,10 +63,13 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 <a id='snippet-Enable'></a>
 ```cs
 [ModuleInitializer]
-public static void Init() =>
+public static void Init()
+{
+    VerifyImageSharpCompare.RegisterComparers(threshold: 0);
     VerifyAvalonia.Initialize();
+}
 ```
-<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
