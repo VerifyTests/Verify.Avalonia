@@ -5,7 +5,7 @@
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageSharpCompare.RegisterComparers(threshold: 0);
+        VerifyImageSharpCompare.RegisterComparers();
         VerifyAvalonia.Initialize();
     }
 

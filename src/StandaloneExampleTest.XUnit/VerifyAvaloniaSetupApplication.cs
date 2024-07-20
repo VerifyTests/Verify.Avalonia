@@ -3,8 +3,11 @@
 public class VerifyAvaloniaSetupApplication : Application
 {
     [ModuleInitializer]
-    public static void Init() =>
+    public static void Init()
+    {
+        VerifyImageSharpCompare.Initialize();
         VerifierSettings.InitializePlugins();
+    }
 
     public static AppBuilder BuildAvaloniaApp() =>
         AppBuilder
