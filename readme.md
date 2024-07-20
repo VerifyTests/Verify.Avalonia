@@ -184,6 +184,8 @@ public class CalculatorTests
   Content: {
     Type: StackPanel,
     Spacing: 10.0,
+    Width: 280.0,
+    Height: 175.0,
     Margin: 10,
     HorizontalAlignment: Left,
     Children: [
@@ -249,7 +251,7 @@ public class CalculatorTests
   },
   Background: LightGray,
   Width: 300.0,
-  Height: 185.0,
+  Height: 195.0,
   IsVisible: true,
   DataContext: {
     FirstOperand: 10.0,
@@ -262,5 +264,5 @@ public class CalculatorTests
   }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L85' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
