@@ -18,8 +18,11 @@ The test project needs a `ModuleInitializer` and an Avalonia application with a 
 public class VerifyAvaloniaSetupApplication : Application
 {
     [ModuleInitializer]
-    public static void Init() =>
+    public static void Init()
+    {
+        VerifyImageMagick.RegisterComparers(.24);
         VerifierSettings.InitializePlugins();
+    }
 
     public static AppBuilder BuildAvaloniaApp() =>
         AppBuilder
@@ -35,16 +38,16 @@ public class VerifyAvaloniaSetupApplication : Application
         Styles.Add(new FluentTheme());
 }
 ```
-<sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs#L1-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-src/StandaloneExampleTest.XUnit/VerifyAvaloniaSetupApplication.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 And add the following NuGet packages:
 
-- Add NuGet packages
-    - https://nuget.org/packages/Verify.Avalonia/
-    - https://nuget.org/packages/Avalonia.Headless.XUnit/
-    - https://nuget.org/packages/Avalonia.Themes.Fluent/
-    - https://nuget.org/packages/Avalonia.Skia/
+  - https://nuget.org/packages/Verify.Avalonia/
+  - https://nuget.org/packages/Avalonia.Headless.XUnit/
+  - https://nuget.org/packages/Avalonia.Themes.Fluent/
+  - https://nuget.org/packages/Avalonia.Skia/
+
 
 ## More details
 
@@ -63,11 +66,23 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 <a id='snippet-Enable'></a>
 ```cs
 [ModuleInitializer]
-public static void Init() =>
+public static void Init()
+{
+    VerifyImageMagick.RegisterComparers(.097);
     VerifyAvalonia.Initialize();
+}
 ```
-<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between differens operating systesm.
+
+Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
+
+ * https://github.com/VerifyTests/Verify.ImageHash
+ * https://github.com/VerifyTests/Verify.ImageMagick
+ * https://github.com/VerifyTests/Verify.Phash
+ * https://github.com/VerifyTests/Verify.ImageSharp.Compare
 
 
 ### Verify.CommunityToolkit.Mvvm
@@ -173,6 +188,8 @@ public class CalculatorTests
   Content: {
     Type: StackPanel,
     Spacing: 10.0,
+    Width: 280.0,
+    Height: 175.0,
     Margin: 10,
     HorizontalAlignment: Left,
     Children: [
@@ -238,7 +255,7 @@ public class CalculatorTests
   },
   Background: LightGray,
   Width: 300.0,
-  Height: 185.0,
+  Height: 195.0,
   IsVisible: true,
   DataContext: {
     FirstOperand: 10.0,
@@ -251,5 +268,5 @@ public class CalculatorTests
   }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L85' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

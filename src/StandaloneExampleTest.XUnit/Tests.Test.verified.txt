@@ -3,7 +3,9 @@
   SizeToContent: WidthAndHeight,
   Content: {
     Type: Button,
-    Content: Click me!
+    Content: Click me!,
+    Width: 75.0,
+    Height: 32.0
   },
   Width: 75.0,
   Height: 32.0,

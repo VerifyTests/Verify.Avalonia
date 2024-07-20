@@ -5,7 +5,9 @@ public class Tests
     {
         var testSubject = new Button
         {
-            Content = "Click me!"
+            Content = "Click me!",
+            Width= 75,
+            Height= 32
         };
 
         var window = new Window

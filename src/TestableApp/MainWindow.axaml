@@ -3,14 +3,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:global="clr-namespace:"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:Height="300"
         x:Class="TestableApp.MainWindow"
         x:DataType="global:MainWindowViewModel"
         Title="Simple Calculator"
         SizeToContent="WidthAndHeight"
         Background="LightGray"
         CanResize="False">
-  <StackPanel Spacing="10" Margin="10" HorizontalAlignment="Left">
+  <StackPanel Spacing="10" Margin="10" HorizontalAlignment="Left" Width="280" Height="175">
     <TextBox Name="FirstOperandInput" Text="{Binding FirstOperand, Mode=TwoWay}" Watermark="Operand 1" />
     <TextBox Name="SecondOperandInput" Text="{Binding SecondOperand, Mode=TwoWay}" Watermark="Operand 2" />
 
