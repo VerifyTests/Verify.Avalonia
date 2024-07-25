@@ -77,7 +77,7 @@ public static void Init()
 
 This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between different operating systems.
 
-Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
+Other [comparers](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
 
  * https://github.com/VerifyTests/Verify.ImageHash
  * https://github.com/VerifyTests/Verify.ImageMagick
