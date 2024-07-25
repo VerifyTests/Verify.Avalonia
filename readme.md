@@ -75,7 +75,7 @@ public static void Init()
 <sup><a href='/src/NUnitTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between differens operating systesm.
+This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between different operating systems.
 
 Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
 
