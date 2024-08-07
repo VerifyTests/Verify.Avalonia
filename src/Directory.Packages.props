@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Avalonia" Version="11.1.1" />
+    <PackageVersion Include="Avalonia" Version="11.1.2" />
     <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="11.1.1" />
     <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.1.1" />
     <PackageVersion Include="Avalonia.Desktop" Version="11.1.1" />
