@@ -136,6 +136,7 @@ public static class TestAppBuilder
 <!-- snippet: XunitTests/CalculatorTests.cs -->
 <a id='snippet-XunitTests/CalculatorTests.cs'></a>
 ```cs
+[SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class CalculatorTests
 {
     [AvaloniaFact]
@@ -161,7 +162,7 @@ public class CalculatorTests
     }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
