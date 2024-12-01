@@ -4,16 +4,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Avalonia" Version="11.2.2" />
-    <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="11.2.1" />
-    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.2.1" />
-    <PackageVersion Include="Avalonia.Desktop" Version="11.2.1" />
-    <PackageVersion Include="Avalonia.Diagnostics" Version="11.2.0" />
-    <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+    <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Desktop" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Diagnostics" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.2.2" />
     <PackageVersion Include="Avalonia.Headless" Version="11.2.2" />
     <PackageVersion Include="Avalonia.Headless.NUnit" Version="11.2.2" />
-    <PackageVersion Include="Avalonia.Headless.XUnit" Version="11.2.1" />
-    <PackageVersion Include="Avalonia.Skia" Version="11.2.1" />
-    <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageVersion Include="Avalonia.Headless.XUnit" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Skia" Version="11.2.2" />
+    <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.2.2" />
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="27.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
@@ -24,8 +24,8 @@
     <PackageVersion Include="Verify.CommunityToolkit.Mvvm" Version="0.1.0" />
     <PackageVersion Include="Verify.DiffPlex" Version="3.1.2" />
     <PackageVersion Include="Verify.ImageMagick" Version="3.6.0" />
-    <PackageVersion Include="Verify.NUnit" Version="28.3.2" />
-    <PackageVersion Include="Verify.XunitV3" Version="28.3.2" />
+    <PackageVersion Include="Verify.NUnit" Version="28.4.0" />
+    <PackageVersion Include="Verify.XunitV3" Version="28.4.0" />
     <PackageVersion Include="xunit.v3" Version="0.7.0-pre.15" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.0-pre.49" />
   </ItemGroup>
