@@ -7,7 +7,7 @@
     <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="11.2.6" />
     <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.2.6" />
     <PackageVersion Include="Avalonia.Desktop" Version="11.2.6" />
-    <PackageVersion Include="Avalonia.Diagnostics" Version="11.2.5" />
+    <PackageVersion Include="Avalonia.Diagnostics" Version="11.2.6" />
     <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.2.6" />
     <PackageVersion Include="Avalonia.Headless" Version="11.2.6" />
     <PackageVersion Include="Avalonia.Headless.NUnit" Version="11.2.6" />
@@ -26,7 +26,7 @@
     <PackageVersion Include="Verify.ImageMagick" Version="3.6.0" />
     <PackageVersion Include="Verify.NUnit" Version="29.2.0" />
     <PackageVersion Include="Verify.XunitV3" Version="29.2.0" />
-    <PackageVersion Include="xunit.v3" Version="2.0.0" />
+    <PackageVersion Include="xunit.v3" Version="2.0.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.2" />
   </ItemGroup>
 </Project>
