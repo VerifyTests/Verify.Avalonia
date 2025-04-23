@@ -1,5 +1,3 @@
-using Avalonia.Controls;
-
 namespace TestableApp;
 
 public partial class MainWindow : Window

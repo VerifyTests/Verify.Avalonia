@@ -1,6 +1,6 @@
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
-using Avalonia.Markup.Xaml;
+
 // ReSharper disable PartialTypeWithSinglePart
 
 public partial class App : Application
