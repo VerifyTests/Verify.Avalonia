@@ -130,7 +130,7 @@ public static class TestAppBuilder
 <!-- endSnippet -->
 
 
-### Test
+### Window Test
 
 <!-- snippet: XunitTests/CalculatorTests.cs -->
 <a id='snippet-XunitTests/CalculatorTests.cs'></a>
@@ -268,4 +268,63 @@ public class CalculatorTests
 }
 ```
 <sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### UserControl Test
+
+<!-- snippet: XunitTests/MyUserControlTests.cs -->
+<a id='snippet-XunitTests/MyUserControlTests.cs'></a>
+```cs
+public class MyUserControlTests
+{
+    [AvaloniaFact]
+    public Task Render()
+    {
+        var control = new MyUserControl();
+        return Verify(control);
+    }
+}
+```
+<sup><a href='/src/XUnitTests/MyUserControlTests.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/MyUserControlTests.cs' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### Result in the following snapshots
+
+
+#### Image
+
+[Should_Add_Numbers.verified.verified.png](/src/XUnitTests/MyUserControlTests.Render.verified.png):
+
+<img src="/src/XUnitTests/MyUserControlTests.Render.verified.png" width="250px">
+
+
+#### Text
+
+<!-- snippet: XUnitTests/MyUserControlTests.Render.verified.txt -->
+<a id='snippet-XUnitTests/MyUserControlTests.Render.verified.txt'></a>
+```txt
+{
+  Type: MyUserControl,
+  Content: {
+    Type: StackPanel,
+    Spacing: 10.0,
+    Orientation: Horizontal,
+    Children: [
+      {
+        Type: TextBlock,
+        Text: Welcome to Avalonia!
+      },
+      {
+        Type: Button,
+        Content: Button
+      }
+    ]
+  },
+  Width: 200.0,
+  Height: 100.0
+}
+```
+<sup><a href='/src/XUnitTests/MyUserControlTests.Render.verified.txt#L1-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/MyUserControlTests.Render.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
