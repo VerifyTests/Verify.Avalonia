@@ -6,6 +6,7 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of [Avalonia UIs](https://avaloniaui.net/).
 
+
 ## Getting Started
 
 The test project needs a `ModuleInitializer` and an Avalonia application with a `Style`.
@@ -52,8 +53,6 @@ And add the following NuGet packages:
 ## More details
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
-
-**Currently only supported in XUnit since [AvaloniaTestAttribute results in incorrect TestContext.Test.MethodName in NUnit](https://github.com/AvaloniaUI/Avalonia/issues/12590)**
 
 Leverages [Avalonia Headless Testing](https://docs.avaloniaui.net/docs/next/concepts/headless).
 
