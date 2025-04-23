@@ -4,12 +4,6 @@ public class MyUserControlTests
     public Task Render()
     {
         var control = new MyUserControl();
-        var window = new Window
-        {
-            Content = control
-        };
-
-        window.Show();
-        return Verify(window);
+        return Verify(control);
     }
 }
