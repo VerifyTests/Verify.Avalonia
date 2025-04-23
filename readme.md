@@ -273,6 +273,26 @@ public class CalculatorTests
 
 ### UserControl Test
 
+Given the control:
+
+<!-- snippet: MyUserControl.axaml -->
+<a id='snippet-MyUserControl.axaml'></a>
+```axaml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="200" Height="100"
+             x:Class="TestableApp.MyUserControl">
+    <StackPanel Orientation="Horizontal" Spacing="10">
+        <TextBlock Text="Welcome to Avalonia!" />
+        <Button Content="Button" />
+    </StackPanel>
+</UserControl>
+```
+<sup><a href='/src/TestableApp/MyUserControl.axaml#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-MyUserControl.axaml' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+And the test:
+
 <!-- snippet: XunitTests/MyUserControlTests.cs -->
 <a id='snippet-XunitTests/MyUserControlTests.cs'></a>
 ```cs
