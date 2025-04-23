@@ -280,15 +280,17 @@ Given the control:
 ```axaml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Width="200" Height="100"
+             Width="200"
+             Height="100"
+             Background="LightGray"
              x:Class="TestableApp.MyUserControl">
-    <StackPanel Orientation="Horizontal" Spacing="10">
+    <StackPanel Spacing="10" Margin="10" HorizontalAlignment="Left" Orientation="Vertical">
         <TextBlock Text="Welcome to Avalonia!" />
         <Button Content="Button" />
     </StackPanel>
 </UserControl>
 ```
-<sup><a href='/src/TestableApp/MyUserControl.axaml#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-MyUserControl.axaml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/TestableApp/MyUserControl.axaml#L1-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-MyUserControl.axaml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 And the test:
@@ -330,7 +332,9 @@ public class MyUserControlTests
   Content: {
     Type: StackPanel,
     Spacing: 10.0,
-    Orientation: Horizontal,
+    Orientation: Vertical,
+    Margin: 10,
+    HorizontalAlignment: Left,
     Children: [
       {
         Type: TextBlock,
@@ -342,9 +346,10 @@ public class MyUserControlTests
       }
     ]
   },
+  Background: LightGray,
   Width: 200.0,
   Height: 100.0
 }
 ```
-<sup><a href='/src/XUnitTests/MyUserControlTests.Render.verified.txt#L1-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/MyUserControlTests.Render.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/MyUserControlTests.Render.verified.txt#L1-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/MyUserControlTests.Render.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

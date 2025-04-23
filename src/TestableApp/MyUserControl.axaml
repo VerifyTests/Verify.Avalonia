@@ -1,8 +1,10 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Width="200" Height="100"
+             Width="200"
+             Height="100"
+             Background="LightGray"
              x:Class="TestableApp.MyUserControl">
-    <StackPanel Orientation="Horizontal" Spacing="10">
+    <StackPanel Spacing="10" Margin="10" HorizontalAlignment="Left" Orientation="Vertical">
         <TextBlock Text="Welcome to Avalonia!" />
         <Button Content="Button" />
     </StackPanel>
