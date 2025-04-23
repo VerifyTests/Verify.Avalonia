@@ -3,7 +3,9 @@
   Content: {
     Type: StackPanel,
     Spacing: 10.0,
-    Orientation: Horizontal,
+    Orientation: Vertical,
+    Margin: 10,
+    HorizontalAlignment: Left,
     Children: [
       {
         Type: TextBlock,
@@ -15,6 +17,7 @@
       }
     ]
   },
+  Background: LightGray,
   Width: 200.0,
   Height: 100.0
 }
