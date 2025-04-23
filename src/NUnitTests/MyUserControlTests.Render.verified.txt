@@ -1,0 +1,8 @@
+﻿{
+  Type: Window,
+  Content: {
+    Type: MyUserControl,
+    Content: Welcome to Avalonia!
+  },
+  IsVisible: true
+}
