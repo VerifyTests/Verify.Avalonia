@@ -67,7 +67,7 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageMagick.RegisterComparers(.097);
+    VerifyImageMagick.RegisterComparers(0.17);
     VerifyAvalonia.Initialize();
 }
 ```
@@ -130,12 +130,11 @@ public static class TestAppBuilder
 <!-- endSnippet -->
 
 
-### Test
+### Window Test
 
 <!-- snippet: XunitTests/CalculatorTests.cs -->
 <a id='snippet-XunitTests/CalculatorTests.cs'></a>
 ```cs
-[SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class CalculatorTests
 {
     [AvaloniaFact]
@@ -161,7 +160,7 @@ public class CalculatorTests
     }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.cs#L1-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/CalculatorTests.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -269,4 +268,83 @@ public class CalculatorTests
 }
 ```
 <sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### UserControl Test
+
+Given the control:
+
+<!-- snippet: MyUserControl.axaml -->
+<a id='snippet-MyUserControl.axaml'></a>
+```axaml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="200" Height="100"
+             x:Class="TestableApp.MyUserControl">
+    <StackPanel Orientation="Horizontal" Spacing="10">
+        <TextBlock Text="Welcome to Avalonia!" />
+        <Button Content="Button" />
+    </StackPanel>
+</UserControl>
+```
+<sup><a href='/src/TestableApp/MyUserControl.axaml#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-MyUserControl.axaml' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+And the test:
+
+<!-- snippet: XunitTests/MyUserControlTests.cs -->
+<a id='snippet-XunitTests/MyUserControlTests.cs'></a>
+```cs
+public class MyUserControlTests
+{
+    [AvaloniaFact]
+    public Task Render()
+    {
+        var control = new MyUserControl();
+        return Verify(control);
+    }
+}
+```
+<sup><a href='/src/XUnitTests/MyUserControlTests.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitTests/MyUserControlTests.cs' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### Result in the following snapshots
+
+
+#### Image
+
+[Should_Add_Numbers.verified.verified.png](/src/XUnitTests/MyUserControlTests.Render.verified.png):
+
+<img src="/src/XUnitTests/MyUserControlTests.Render.verified.png" width="250px">
+
+
+#### Text
+
+<!-- snippet: XUnitTests/MyUserControlTests.Render.verified.txt -->
+<a id='snippet-XUnitTests/MyUserControlTests.Render.verified.txt'></a>
+```txt
+{
+  Type: MyUserControl,
+  Content: {
+    Type: StackPanel,
+    Spacing: 10.0,
+    Orientation: Horizontal,
+    Children: [
+      {
+        Type: TextBlock,
+        Text: Welcome to Avalonia!
+      },
+      {
+        Type: Button,
+        Content: Button
+      }
+    ]
+  },
+  Width: 200.0,
+  Height: 100.0
+}
+```
+<sup><a href='/src/XUnitTests/MyUserControlTests.Render.verified.txt#L1-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/MyUserControlTests.Render.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

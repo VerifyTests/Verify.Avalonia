@@ -1,0 +1,20 @@
+﻿{
+  Type: MyUserControl,
+  Content: {
+    Type: StackPanel,
+    Spacing: 10.0,
+    Orientation: Horizontal,
+    Children: [
+      {
+        Type: TextBlock,
+        Text: Welcome to Avalonia!
+      },
+      {
+        Type: Button,
+        Content: Button
+      }
+    ]
+  },
+  Width: 200.0,
+  Height: 100.0
+}

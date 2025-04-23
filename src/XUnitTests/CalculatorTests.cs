@@ -1,4 +1,3 @@
-[SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class CalculatorTests
 {
     [AvaloniaFact]
