@@ -24,7 +24,8 @@ public static partial class VerifyAvalonia
     {
         var window = new Window
         {
-            Content = control
+            Content = control,
+            SizeToContent = SizeToContent.WidthAndHeight,
         };
         window.Show();
         return new(
@@ -36,6 +37,7 @@ public static partial class VerifyAvalonia
                 return Task.CompletedTask;
             });
     }
+
     static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
     {
         window.Show();
