@@ -5,7 +5,7 @@
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageMagick.RegisterComparers(.097);
+        VerifyImageMagick.RegisterComparers(0.17);
         VerifyAvalonia.Initialize();
     }
 

@@ -16,7 +16,26 @@ public static partial class VerifyAvalonia
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<Window>(WindowToImage);
         VerifierSettings.RegisterFileConverter<TopLevel>(TopLevelToImage);
+        VerifierSettings.RegisterFileConverter<UserControl>(ControlToImage);
         AddConverters();
+    }
+
+    static ConversionResult ControlToImage(UserControl control, IReadOnlyDictionary<string, object> context)
+    {
+        var window = new Window
+        {
+            Content = control,
+            SizeToContent = SizeToContent.WidthAndHeight,
+        };
+        window.Show();
+        return new(
+            control,
+            [new("png", window.ToImage())],
+            () =>
+            {
+                window.Close();
+                return Task.CompletedTask;
+            });
     }
 
     static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
