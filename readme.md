@@ -67,7 +67,7 @@ See [Headless Testing with XUnit](https://docs.avaloniaui.net/docs/next/concepts
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageMagick.RegisterComparers(.097);
+    VerifyImageMagick.RegisterComparers(0.17);
     VerifyAvalonia.Initialize();
 }
 ```
