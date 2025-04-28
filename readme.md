@@ -374,6 +374,6 @@ public static void Init()
 
 Then given the same `CalculatorTests` will produce the `verified.txt` as above, but will also produce two pngs, the first for `ThemeVariant.Light` and the second for `ThemeVariant.Dark`:
 
-<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render#00.verified.png" width="250px">
+<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render%2300.verified.png" width="250px">
 
-<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render#01.verified.png" width="250px">
+<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render%2301.verified.png" width="250px">
