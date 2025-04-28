@@ -372,7 +372,7 @@ public static void Init()
 <sup><a href='/src/IncludeThemeVariantTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-EnableIncludeThemeVariant' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-Then given the same `CalculatorTests` will produce the `verified.txt` as above, but will also produce two pngs, the first for `ThemeVariant.Light` and the second for `ThemeVariant.Dark`:
+Then given the same `CalculatorTests` will produce the `verified.txt` as above, but will now produce two pngs, the first for `ThemeVariant.Light` and the second for `ThemeVariant.Dark`:
 
 <img src="/src/IncludeThemeVariantTests/CalculatorTests.Render%2300.verified.png" width="250px">
 
