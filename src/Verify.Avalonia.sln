@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{34E5995E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandaloneExampleTest.XUnit", "StandaloneExampleTest.XUnit\StandaloneExampleTest.XUnit.csproj", "{445C2DA8-74F4-4B6B-86FC-EC9D5AB87A9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncludeThemeVariantTests", "IncludeThemeVariantTests\IncludeThemeVariantTests.csproj", "{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{445C2DA8-74F4-4B6B-86FC-EC9D5AB87A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{445C2DA8-74F4-4B6B-86FC-EC9D5AB87A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{445C2DA8-74F4-4B6B-86FC-EC9D5AB87A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F4EE4471-8E97-428E-A25F-09A838712461} = {34E5995E-FC6C-449B-8FCA-EAE493025B81}
 		{AD731173-5BFC-4021-B834-AC391BBFDC40} = {34E5995E-FC6C-449B-8FCA-EAE493025B81}
+		{ED0510B7-5FEF-43E7-9899-C55A5AE3A65B} = {34E5995E-FC6C-449B-8FCA-EAE493025B81}
 	EndGlobalSection
 EndGlobal
