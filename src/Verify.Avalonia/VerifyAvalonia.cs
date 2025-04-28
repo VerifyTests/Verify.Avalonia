@@ -1,8 +1,18 @@
-﻿namespace VerifyTests;
+﻿using Avalonia.Styling;
+
+namespace VerifyTests;
 
 public static partial class VerifyAvalonia
 {
     public static bool Initialized { get; private set; }
+
+    public static void IncludeThemeVariant()
+    {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
+        ShouldIncludeThemeVariant = true;
+    }
+
+    internal static bool ShouldIncludeThemeVariant;
 
     public static void Initialize()
     {
@@ -30,27 +40,42 @@ public static partial class VerifyAvalonia
         window.Show();
         return new(
             control,
-            [new("png", window.ToImage())],
-            () =>
-            {
-                window.Close();
-                return Task.CompletedTask;
-            });
+            BuildWindowTargets(window),
+            Cleanup(window));
     }
+
+
+    static Func<Task> Cleanup(Window window) =>
+        () =>
+        {
+            window.Close();
+            return Task.CompletedTask;
+        };
 
     static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
     {
         window.Show();
         return new(
             window,
-            [new("png", window.ToImage())],
-            () =>
-            {
-                window.Close();
-                return Task.CompletedTask;
-            });
+            BuildWindowTargets(window),
+            Cleanup(window));
+    }
+
+    static IEnumerable<Target> BuildWindowTargets(TopLevel window)
+    {
+        if (ShouldIncludeThemeVariant)
+        {
+            var application = Application.Current!;
+            application.RequestedThemeVariant = ThemeVariant.Light;
+            var light = new Target("png", window.ToImage(), "light");
+            application.RequestedThemeVariant = ThemeVariant.Dark;
+            var dark = new Target("png", window.ToImage(), "dark");
+            return [light, dark];
+        }
+
+        return [new("png", window.ToImage())];
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context) =>
-        new(topLevel, [new("png", topLevel.ToImage())]);
+        new(topLevel, BuildWindowTargets(topLevel));
 }

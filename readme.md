@@ -101,7 +101,7 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
   <InternalsVisibleTo Include="XUnitTests" />
 </ItemGroup>
 ```
-<sup><a href='/src/TestableApp/TestableApp.csproj#L19-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-InternalsVisibleTo' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/TestableApp/TestableApp.csproj#L20-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-InternalsVisibleTo' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -353,3 +353,27 @@ public class MyUserControlTests
 ```
 <sup><a href='/src/XUnitTests/MyUserControlTests.Render.verified.txt#L1-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/MyUserControlTests.Render.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+
+## IncludeThemeVariant
+
+The `VerifyAvalonia.IncludeThemeVariant()` method is used to include both `ThemeVariant.Light` and `ThemeVariant.Dark` variants when rendering UIs.
+
+<!-- snippet: EnableIncludeThemeVariant -->
+<a id='snippet-EnableIncludeThemeVariant'></a>
+```cs
+[ModuleInitializer]
+public static void Init()
+{
+    VerifyAvalonia.IncludeThemeVariant();
+    VerifierSettings.InitializePlugins();
+}
+```
+<sup><a href='/src/IncludeThemeVariantTests/ModuleInit.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-EnableIncludeThemeVariant' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Then given the same `CalculatorTests` will produce the `verified.txt` as above, but will also produce two pngs, the first for `ThemeVariant.Light` and the second for `ThemeVariant.Dark`:
+
+<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render#00.verified.png" width="250px">
+
+<img src="/src/IncludeThemeVariantTests/CalculatorTests.Render#01.verified.png" width="250px">
