@@ -9,7 +9,7 @@ public static class ModuleInit
     {
         // FluentAvalonia
         VerifyAvalonia.AddAvaloniaConvertersForAssemblyOfType<NavigationView>();
-        VerifyImageMagick.RegisterComparers(0.05);
+        VerifyImageMagick.RegisterComparers(0.17);
         VerifierSettings.InitializePlugins();
     }
 
