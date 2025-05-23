@@ -2,6 +2,7 @@ namespace VerifyTests;
 
 public static partial class VerifyAvalonia
 {
+    static List<Assembly> avaloniaConverterAssemblies = [];
     static List<WriteOnlyJsonConverter> converters =
     [
         new ThicknessConverter(),
@@ -37,22 +38,8 @@ public static partial class VerifyAvalonia
     /// <param name="assembly"> The assembly to scan </param>
     public static void AddAvaloniaConvertersForAssembly(Assembly assembly)
     {
-        var avaloniaObjectType = typeof(AvaloniaObject);
-        var types = assembly.GetTypes()
-            .Where(_ =>
-                _.IsAssignableTo(avaloniaObjectType) &&
-                _ is
-                {
-                    IsPublic: true,
-                    IsAbstract: false
-                })
-            .OrderByDescending(GetDepth);
-        var avaloniaConverterType = typeof(AvaloniaConverter<>);
-        foreach (var type in types)
-        {
-            var genericType = avaloniaConverterType.MakeGenericType(type);
-            converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
-        }
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
+        avaloniaConverterAssemblies.Add(assembly);
     }
 
     static int GetDepth(Type type)
@@ -67,7 +54,25 @@ public static partial class VerifyAvalonia
         return level;
     }
 
-    static void AddConverters() =>
-        VerifierSettings.AddExtraSettings(
-            _ => _.Converters.AddRange(converters));
+    static void AddConverters()
+    {
+        var avaloniaObjectType = typeof(AvaloniaObject);
+        var types = avaloniaConverterAssemblies
+            .SelectMany(_ => _.GetTypes())
+            .Where(_ =>
+                _.IsAssignableTo(avaloniaObjectType) &&
+                _ is
+                {
+                    IsPublic: true,
+                    IsAbstract: false
+                })
+            .OrderByDescending(GetDepth);
+        var avaloniaConverterType = typeof(AvaloniaConverter<>);
+        foreach (var type in types)
+        {
+            var genericType = avaloniaConverterType.MakeGenericType(type);
+            converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
+        }
+        VerifierSettings.AddExtraSettings(_ => _.Converters.AddRange(converters));
+    }
 }

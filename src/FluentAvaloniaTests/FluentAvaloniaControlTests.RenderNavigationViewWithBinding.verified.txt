@@ -4,6 +4,11 @@
     Type: NavigationView,
     IsPaneOpen: false,
     IsSettingsVisible: true,
+    MenuItemsSource: [
+      1 Nav Item,
+      2 Nav Item,
+      3 Nav Item
+    ],
     PaneDisplayMode: LeftCompact,
     TemplateSettings: {
       Type: NavigationViewTemplateSettings,
@@ -19,6 +24,11 @@
       Type: TextBlock,
       Text: The Header
     },
-    Content: This is the content!
+    Content: This is the content!,
+    DataContext: [
+      1 Nav Item,
+      2 Nav Item,
+      3 Nav Item
+    ]
   }
 }
