@@ -1,0 +1,11 @@
+﻿{
+  Type: UserControl,
+  Content: {
+    Type: NavigationView,
+    Header: {
+      Type: TextBlock,
+      Text: The Header
+    },
+    Content: This is the content!
+  }
+}
