@@ -11,32 +11,46 @@ public static partial class VerifyAvalonia
 
     static VerifyAvalonia()
     {
-        var avaloniaObject = typeof(AvaloniaObject);
-        var assemblies = new List<Assembly>
-        {
-            //Avalonia.Controls
-            typeof(Window).Assembly,
-            //Avalonia.Base
-            typeof(InputElement).Assembly,
-            //Avalonia.Controls.ColorPicker
-            typeof(ColorPicker).Assembly,
-            //Avalonia.Controls.DataGrid
-            typeof(DataGrid).Assembly
-        };
-        var types = assemblies
-            .SelectMany(_ => _.GetTypes())
+        // Avalonia.Controls
+        AddAvaloniaConvertersForAssemblyOfType<Window>();
+        // Avalonia.Base
+        AddAvaloniaConvertersForAssemblyOfType<InputElement>();
+        // Avalonia.Controls.ColorPicker
+        AddAvaloniaConvertersForAssemblyOfType<ColorPicker>();
+        // Avalonia.Controls.DataGrid
+        AddAvaloniaConvertersForAssemblyOfType<DataGrid>();
+    }
+
+    /// <summary>
+    /// Add <see cref="AvaloniaConverter{T}"/> instances for all types
+    /// in the given assembly of the given type <typeparamref name="T"/>
+    /// that are assignable to <see cref="AvaloniaObject"/>
+    /// </summary>
+    /// <typeparam name="T"> The type of the assembly to scan </typeparam>
+    public static void AddAvaloniaConvertersForAssemblyOfType<T>() =>
+        AddAvaloniaConvertersForAssembly(typeof(T).Assembly);
+
+    /// <summary>
+    /// Add <see cref="AvaloniaConverter{T}"/> instances for all types
+    /// in the given <paramref name="assembly"/> that are assignable to <see cref="AvaloniaObject"/>
+    /// </summary>
+    /// <param name="assembly"> The assembly to scan </param>
+    public static void AddAvaloniaConvertersForAssembly(Assembly assembly)
+    {
+        var avaloniaObjectType = typeof(AvaloniaObject);
+        var types = assembly.GetTypes()
             .Where(_ =>
-                _.IsAssignableTo(avaloniaObject) &&
+                _.IsAssignableTo(avaloniaObjectType) &&
                 _ is
                 {
                     IsPublic: true,
                     IsAbstract: false
                 })
             .OrderByDescending(GetDepth);
-        var avaloniaConverter = typeof(AvaloniaConverter<>);
+        var avaloniaConverterType = typeof(AvaloniaConverter<>);
         foreach (var type in types)
         {
-            var genericType = avaloniaConverter.MakeGenericType(type);
+            var genericType = avaloniaConverterType.MakeGenericType(type);
             converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
         }
     }
