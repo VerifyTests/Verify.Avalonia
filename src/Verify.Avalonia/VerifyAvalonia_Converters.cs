@@ -3,6 +3,7 @@ namespace VerifyTests;
 public static partial class VerifyAvalonia
 {
     static List<Assembly> avaloniaConverterAssemblies = [];
+
     static List<WriteOnlyJsonConverter> converters =
     [
         new ThicknessConverter(),
@@ -54,9 +55,11 @@ public static partial class VerifyAvalonia
         return level;
     }
 
+    static Type avaloniaConverterType = typeof(AvaloniaConverter<>);
+    static Type avaloniaObjectType = typeof(AvaloniaObject);
+
     static void AddConverters()
     {
-        var avaloniaObjectType = typeof(AvaloniaObject);
         var types = avaloniaConverterAssemblies
             .SelectMany(_ => _.GetTypes())
             .Where(_ =>
@@ -67,12 +70,12 @@ public static partial class VerifyAvalonia
                     IsAbstract: false
                 })
             .OrderByDescending(GetDepth);
-        var avaloniaConverterType = typeof(AvaloniaConverter<>);
         foreach (var type in types)
         {
             var genericType = avaloniaConverterType.MakeGenericType(type);
             converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
         }
+
         VerifierSettings.AddExtraSettings(_ => _.Converters.AddRange(converters));
     }
 }
