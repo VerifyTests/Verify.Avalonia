@@ -1,29 +1,23 @@
 ﻿{
-  Type: UserControl,
-  Content: {
-    Type: NavigationView,
-    IsPaneOpen: false,
-    IsSettingsVisible: true,
-    MenuItemsSource: [
-      1 Nav Item,
-      2 Nav Item,
-      3 Nav Item
-    ],
-    PaneDisplayMode: LeftCompact,
-    TemplateSettings: {
-      Type: NavigationViewTemplateSettings,
-      BackButtonVisibility: false,
-      LeftPaneVisibility: true,
-      PaneToggleButtonVisibility: true,
-      PaneToggleButtonWidth: 48.0,
-      SmallerPaneToggleButtonWidth: 40.0,
-      TopPaneVisibility: false,
-      OpenPaneWidth: 320.0
-    },
-    Header: {
-      Type: TextBlock,
-      Text: The Header
-    },
-    Content: This is the content!
-  }
+  Type: NavigationView,
+  IsSettingsVisible: true,
+  MenuItemsSource: [
+    1 Nav Item,
+    2 Nav Item,
+    3 Nav Item
+  ],
+  PaneDisplayMode: LeftCompact,
+  TemplateSettings: {
+    Type: NavigationViewTemplateSettings,
+    LeftPaneVisibility: true,
+    PaneToggleButtonVisibility: true,
+    PaneToggleButtonWidth: 48.0,
+    SmallerPaneToggleButtonWidth: 40.0,
+    TopPaneVisibility: false
+  },
+  Header: {
+    Type: TextBlock,
+    Text: The Header
+  },
+  Content: This is the content!
 }

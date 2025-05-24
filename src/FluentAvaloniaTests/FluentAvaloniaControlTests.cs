@@ -33,11 +33,7 @@ public class FluentAvaloniaControlTests
             ],
             Content = "This is the content!",
         };
-        return Verify(
-            new UserControl
-            {
-                Content = control
-            });
+        return Verify(control);
     }
 
     [AvaloniaTest]
@@ -55,11 +51,7 @@ public class FluentAvaloniaControlTests
             MenuItemsSource = itemsSource,
             Content = "This is the content!",
         };
-        return Verify(
-            new UserControl
-            {
-                Content = control
-            });
+        return Verify(control);
     }
 
     [AvaloniaTest]
@@ -78,10 +70,6 @@ public class FluentAvaloniaControlTests
             Content = "This is the content!",
             DataContext = itemsSource,
         };
-        return Verify(
-            new UserControl
-            {
-                Content = control
-            });
+        return Verify(control);
     }
 }
