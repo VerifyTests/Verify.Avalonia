@@ -377,3 +377,22 @@ Then given the same `CalculatorTests` will produce the `verified.txt` as above, 
 <img src="/src/IncludeThemeVariantTests/CalculatorTests.Render%23light.verified.png" width="250px">
 
 <img src="/src/IncludeThemeVariantTests/CalculatorTests.Render%23dark.verified.png" width="250px">
+
+## Additional Control Libraries
+
+The `VerifyAvalonia.AddAvaloniaConvertersForAssembly` method is used to include converters for additional control assemblies.
+
+<!-- snippet: InitAddAvaloniaConvertersForAssembly -->
+<a id='snippet-InitAddAvaloniaConvertersForAssembly'></a>
+```cs
+[ModuleInitializer]
+public static void Init()
+{
+    // FluentAvalonia
+    VerifyAvalonia.AddAvaloniaConvertersForAssemblyOfType<NavigationView>();
+    VerifyImageMagick.RegisterComparers(0.17);
+    VerifierSettings.InitializePlugins();
+}
+```
+<sup><a href='/src/FluentAvaloniaTests/ModuleInit.cs#L5-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitAddAvaloniaConvertersForAssembly' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->

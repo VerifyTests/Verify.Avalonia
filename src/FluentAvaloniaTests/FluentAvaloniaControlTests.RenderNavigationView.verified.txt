@@ -1,0 +1,24 @@
+﻿{
+  Type: UserControl,
+  Content: {
+    Type: NavigationView,
+    IsPaneOpen: false,
+    IsSettingsVisible: true,
+    PaneDisplayMode: LeftCompact,
+    TemplateSettings: {
+      Type: NavigationViewTemplateSettings,
+      BackButtonVisibility: false,
+      LeftPaneVisibility: true,
+      PaneToggleButtonVisibility: true,
+      PaneToggleButtonWidth: 48.0,
+      SmallerPaneToggleButtonWidth: 40.0,
+      TopPaneVisibility: false,
+      OpenPaneWidth: 320.0
+    },
+    Header: {
+      Type: TextBlock,
+      Text: The Header
+    },
+    Content: This is the content!
+  }
+}

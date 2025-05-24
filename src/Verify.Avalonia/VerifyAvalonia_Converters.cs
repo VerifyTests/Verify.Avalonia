@@ -2,6 +2,7 @@ namespace VerifyTests;
 
 public static partial class VerifyAvalonia
 {
+    static List<Assembly> avaloniaConverterAssemblies = [];
     static List<WriteOnlyJsonConverter> converters =
     [
         new ThicknessConverter(),
@@ -11,34 +12,34 @@ public static partial class VerifyAvalonia
 
     static VerifyAvalonia()
     {
-        var avaloniaObject = typeof(AvaloniaObject);
-        var assemblies = new List<Assembly>
-        {
-            //Avalonia.Controls
-            typeof(Window).Assembly,
-            //Avalonia.Base
-            typeof(InputElement).Assembly,
-            //Avalonia.Controls.ColorPicker
-            typeof(ColorPicker).Assembly,
-            //Avalonia.Controls.DataGrid
-            typeof(DataGrid).Assembly
-        };
-        var types = assemblies
-            .SelectMany(_ => _.GetTypes())
-            .Where(_ =>
-                _.IsAssignableTo(avaloniaObject) &&
-                _ is
-                {
-                    IsPublic: true,
-                    IsAbstract: false
-                })
-            .OrderByDescending(GetDepth);
-        var avaloniaConverter = typeof(AvaloniaConverter<>);
-        foreach (var type in types)
-        {
-            var genericType = avaloniaConverter.MakeGenericType(type);
-            converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
-        }
+        // Avalonia.Controls
+        AddAvaloniaConvertersForAssemblyOfType<Window>();
+        // Avalonia.Base
+        AddAvaloniaConvertersForAssemblyOfType<InputElement>();
+        // Avalonia.Controls.ColorPicker
+        AddAvaloniaConvertersForAssemblyOfType<ColorPicker>();
+        // Avalonia.Controls.DataGrid
+        AddAvaloniaConvertersForAssemblyOfType<DataGrid>();
+    }
+
+    /// <summary>
+    /// Add <see cref="AvaloniaConverter{T}"/> instances for all types
+    /// in the given assembly of the given type <typeparamref name="T"/>
+    /// that are assignable to <see cref="AvaloniaObject"/>
+    /// </summary>
+    /// <typeparam name="T"> The type of the assembly to scan </typeparam>
+    public static void AddAvaloniaConvertersForAssemblyOfType<T>() =>
+        AddAvaloniaConvertersForAssembly(typeof(T).Assembly);
+
+    /// <summary>
+    /// Add <see cref="AvaloniaConverter{T}"/> instances for all types
+    /// in the given <paramref name="assembly"/> that are assignable to <see cref="AvaloniaObject"/>
+    /// </summary>
+    /// <param name="assembly"> The assembly to scan </param>
+    public static void AddAvaloniaConvertersForAssembly(Assembly assembly)
+    {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
+        avaloniaConverterAssemblies.Add(assembly);
     }
 
     static int GetDepth(Type type)
@@ -53,7 +54,25 @@ public static partial class VerifyAvalonia
         return level;
     }
 
-    static void AddConverters() =>
-        VerifierSettings.AddExtraSettings(
-            _ => _.Converters.AddRange(converters));
+    static void AddConverters()
+    {
+        var avaloniaObjectType = typeof(AvaloniaObject);
+        var types = avaloniaConverterAssemblies
+            .SelectMany(_ => _.GetTypes())
+            .Where(_ =>
+                _.IsAssignableTo(avaloniaObjectType) &&
+                _ is
+                {
+                    IsPublic: true,
+                    IsAbstract: false
+                })
+            .OrderByDescending(GetDepth);
+        var avaloniaConverterType = typeof(AvaloniaConverter<>);
+        foreach (var type in types)
+        {
+            var genericType = avaloniaConverterType.MakeGenericType(type);
+            converters.Add((WriteOnlyJsonConverter) Activator.CreateInstance(genericType)!);
+        }
+        VerifierSettings.AddExtraSettings(_ => _.Converters.AddRange(converters));
+    }
 }
