@@ -394,5 +394,5 @@ public static void Init()
     VerifierSettings.InitializePlugins();
 }
 ```
-<sup><a href='/src/FluentAvaloniaTests/ModuleInit.cs#L5-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitAddAvaloniaConvertersForAssembly' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/FluentAvaloniaTests/ModuleInit.cs#L3-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitAddAvaloniaConvertersForAssembly' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

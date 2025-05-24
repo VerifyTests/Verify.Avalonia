@@ -1,7 +1,3 @@
-using Avalonia.Controls;
-using Avalonia.Data;
-using FluentAvalonia.UI.Controls;
-
 [TestFixture]
 public class FluentAvaloniaControlTests
 {
@@ -12,20 +8,36 @@ public class FluentAvaloniaControlTests
         {
             PaneDisplayMode = NavigationViewPaneDisplayMode.LeftCompact,
             IsSettingsVisible = true,
-            Header = new TextBlock {Text = "The Header"},
+            Header = new TextBlock
+            {
+                Text = "The Header"
+            },
             MenuItems =
             [
-                new NavigationViewItem { Content = "1 Nav Item" },
+                new NavigationViewItem
+                {
+                    Content = "1 Nav Item"
+                },
                 new NavigationViewItem
                 {
                     Content = "2 Nav Item",
-                    IconSource = new SymbolIconSource {Symbol = Symbol.Admin}
+                    IconSource = new SymbolIconSource
+                    {
+                        Symbol = Symbol.Admin
+                    }
                 },
-                new NavigationViewItem { Content = "3 Nav Item" },
+                new NavigationViewItem
+                {
+                    Content = "3 Nav Item"
+                },
             ],
             Content = "This is the content!",
         };
-        return Verify(new UserControl { Content = control });
+        return Verify(
+            new UserControl
+            {
+                Content = control
+            });
     }
 
     [AvaloniaTest]
@@ -36,11 +48,18 @@ public class FluentAvaloniaControlTests
         {
             PaneDisplayMode = NavigationViewPaneDisplayMode.LeftCompact,
             IsSettingsVisible = true,
-            Header = new TextBlock {Text = "The Header"},
+            Header = new TextBlock
+            {
+                Text = "The Header"
+            },
             MenuItemsSource = itemsSource,
             Content = "This is the content!",
         };
-        return Verify(new UserControl { Content = control });
+        return Verify(
+            new UserControl
+            {
+                Content = control
+            });
     }
 
     [AvaloniaTest]
@@ -51,11 +70,18 @@ public class FluentAvaloniaControlTests
         {
             PaneDisplayMode = NavigationViewPaneDisplayMode.LeftCompact,
             IsSettingsVisible = true,
-            Header = new TextBlock {Text = "The Header"},
+            Header = new TextBlock
+            {
+                Text = "The Header"
+            },
             [!NavigationView.MenuItemsSourceProperty] = new Binding(""),
             Content = "This is the content!",
             DataContext = itemsSource,
         };
-        return Verify(new UserControl { Content = control });
+        return Verify(
+            new UserControl
+            {
+                Content = control
+            });
     }
 }

@@ -1,6 +1,4 @@
-﻿using FluentAvalonia.UI.Controls;
-
-public static class ModuleInit
+﻿public static class ModuleInit
 {
     #region InitAddAvaloniaConvertersForAssembly
 

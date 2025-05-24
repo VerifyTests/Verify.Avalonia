@@ -1,5 +1,3 @@
-using FluentAvalonia.Styling;
-
 [assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
 
 public static class TestAppBuilder
