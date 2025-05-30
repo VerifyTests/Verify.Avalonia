@@ -210,25 +210,25 @@ public class CalculatorTests
         Children: [
           {
             Type: Button,
-            Command: MainWindowViewModel.Add(),
+            Command: MainWindowViewModel.Add,
             Content: +,
             Name: AddButton
           },
           {
             Type: Button,
-            Command: MainWindowViewModel.Subtract(),
+            Command: MainWindowViewModel.Subtract,
             Content: -,
             Name: SubtractButton
           },
           {
             Type: Button,
-            Command: MainWindowViewModel.Multiply(),
+            Command: MainWindowViewModel.Multiply,
             Content: *,
             Name: MultiplyButton
           },
           {
             Type: Button,
-            Command: MainWindowViewModel.Divide(),
+            Command: MainWindowViewModel.Divide,
             Content: /,
             Name: DivideButton
           }
@@ -260,10 +260,10 @@ public class CalculatorTests
     FirstOperand: 10.0,
     SecondOperand: 20.0,
     Result: 30,
-    AddCommand: MainWindowViewModel.Add(),
-    SubtractCommand: MainWindowViewModel.Subtract(),
-    MultiplyCommand: MainWindowViewModel.Multiply(),
-    DivideCommand: MainWindowViewModel.Divide()
+    AddCommand: MainWindowViewModel.Add,
+    SubtractCommand: MainWindowViewModel.Subtract,
+    MultiplyCommand: MainWindowViewModel.Multiply,
+    DivideCommand: MainWindowViewModel.Divide
   }
 }
 ```
