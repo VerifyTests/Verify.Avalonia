@@ -7,6 +7,11 @@
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of [Avalonia UIs](https://avaloniaui.net/).
 
 
+## Sponsors
+
+include: zzz
+
+
 ## Getting Started
 
 The test project needs a `ModuleInitializer` and an Avalonia application with a `Style`.
