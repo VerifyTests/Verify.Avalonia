@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Avalonia" VersionOverride="11.3.6" />
+    <PackageReference Include="Avalonia.Diagnostics" VersionOverride="11.3.6" />
     <PackageReference Include="Avalonia.Headless.NUnit" />
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
