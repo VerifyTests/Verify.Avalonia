@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Headless.NUnit" />
+    <PackageReference Include="Avalonia.Skia" VersionOverride="11.3.6" />
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NUnit" />

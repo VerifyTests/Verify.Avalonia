@@ -19,6 +19,7 @@
 
   <!-- begin-snippet: InternalsVisibleTo -->
   <ItemGroup>
+    <PackageReference Include="Avalonia.Skia" />
     <InternalsVisibleTo Include="NUnitTests" />
     <InternalsVisibleTo Include="XUnitTests" />
   </ItemGroup>
