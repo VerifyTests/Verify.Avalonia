@@ -15,7 +15,7 @@
     <PackageVersion Include="Avalonia.Skia" Version="11.3.8" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.3.8" />
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-    <PackageVersion Include="FluentAvaloniaUI" Version="2.4.0" />
+    <PackageVersion Include="FluentAvaloniaUI" Version="2.4.1" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.0.0-beta.7" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="NUnit" Version="4.4.0" />
