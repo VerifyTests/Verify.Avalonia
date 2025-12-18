@@ -1,4 +1,5 @@
 ﻿global using System.Globalization;
+global using System.Windows.Input;
 global using Argon;
 global using Avalonia;
 global using Avalonia.Controls;

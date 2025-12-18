@@ -6,6 +6,7 @@ public static partial class VerifyAvalonia
 
     static List<WriteOnlyJsonConverter> converters =
     [
+        new CommandAwareObjectConverter(),
         new ThicknessConverter(),
         new CornerRadiusConverter(),
         new FontFamilyConverter()

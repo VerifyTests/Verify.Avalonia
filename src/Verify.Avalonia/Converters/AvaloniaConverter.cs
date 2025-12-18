@@ -1,3 +1,5 @@
+using System.Windows.Input;
+
 class AvaloniaConverter<T> :
     WriteOnlyJsonConverter<T>
     where T : AvaloniaObject
@@ -43,6 +45,14 @@ class AvaloniaConverter<T> :
         var value = diagnostic.Value;
         if (ReferenceEquals(value, parent))
         {
+            return;
+        }
+
+        // Handle ICommand specially - write as string to avoid TypeLoadException
+        // from WPF's CommandConverter which references internal .NET Framework types
+        if (value is ICommand command)
+        {
+            writer.WriteMember(parent, CommandNameResolver.GetCommandName(command), property.Name);
             return;
         }
 
