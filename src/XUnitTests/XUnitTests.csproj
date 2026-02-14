@@ -14,6 +14,10 @@
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.ImageMagick" />
     <PackageReference Include="Verify.Xunit" />
+    <PackageReference Include="Argon" />
+    <PackageReference Include="DiffEngine" />
+    <PackageReference Include="EmptyFiles" />
+    <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />

@@ -13,6 +13,10 @@
     <PackageReference Include="NUnit3TestAdapter" />
     <PackageReference Include="Verify" />
     <PackageReference Include="Verify.NUnit" />
+    <PackageReference Include="Argon" />
+    <PackageReference Include="DiffEngine" />
+    <PackageReference Include="EmptyFiles" />
+    <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="Verify.CommunityToolkit.Mvvm" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.ImageMagick" />
