@@ -1,10 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Avalonia.Headless.XUnit" />
     <PackageReference Include="CommunityToolkit.Mvvm" />
@@ -13,16 +11,15 @@
     <PackageReference Include="Verify.CommunityToolkit.Mvvm" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.ImageMagick" />
-    <PackageReference Include="Verify.Xunit" />
+    <PackageReference Include="Verify.XunitV3" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
     <PackageReference Include="EmptyFiles" />
     <PackageReference Include="SimpleInfoName" />
-    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.v3" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <ProjectReference Include="..\TestableApp\TestableApp.csproj" />
     <ProjectReference Include="..\Verify.Avalonia\Verify.Avalonia.csproj" />
   </ItemGroup>
-
 </Project>
