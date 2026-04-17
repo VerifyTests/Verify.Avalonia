@@ -13,7 +13,6 @@
     <File Path="nuget.md" />
   </Folder>
   <Folder Name="/Tests/">
-    <Project Path="FluentAvaloniaTests/FluentAvaloniaTests.csproj" />
     <Project Path="IncludeThemeVariantTests/IncludeThemeVariantTests.csproj" />
     <Project Path="NUnitTests/NUnitTests.csproj" />
     <Project Path="XUnitTests/XUnitTests.csproj" />

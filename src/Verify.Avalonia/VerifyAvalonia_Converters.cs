@@ -58,10 +58,22 @@ public static partial class VerifyAvalonia
     static Type avaloniaConverterType = typeof(AvaloniaConverter<>);
     static Type avaloniaObjectType = typeof(AvaloniaObject);
 
+    static IEnumerable<Type> GetLoadableTypes(Assembly assembly)
+    {
+        try
+        {
+            return assembly.GetTypes();
+        }
+        catch (ReflectionTypeLoadException exception)
+        {
+            return exception.Types.Where(_ => _ is not null)!;
+        }
+    }
+
     static void AddConverters()
     {
         var types = avaloniaConverterAssemblies
-            .SelectMany(_ => _.GetTypes())
+            .SelectMany(GetLoadableTypes)
             .Where(_ =>
                 _.IsAssignableTo(avaloniaObjectType) &&
                 _ is

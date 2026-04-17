@@ -1,6 +1,7 @@
 ﻿{
   Type: MainWindow,
   SizeToContent: WidthAndHeight,
+  WindowState: Normal,
   Title: Simple Calculator,
   CanResize: false,
   Content: {
@@ -13,12 +14,12 @@
     Children: [
       {
         Type: TextBox,
-        Watermark: Operand 1,
+        PlaceholderText: Operand 1,
         Name: FirstOperandInput
       },
       {
         Type: TextBox,
-        Watermark: Operand 2,
+        PlaceholderText: Operand 2,
         Name: SecondOperandInput
       },
       {

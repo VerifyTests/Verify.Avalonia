@@ -197,6 +197,7 @@ public class CalculatorTests
 {
   Type: MainWindow,
   SizeToContent: WidthAndHeight,
+  WindowState: Normal,
   Title: Simple Calculator,
   CanResize: false,
   Content: {
@@ -210,13 +211,13 @@ public class CalculatorTests
       {
         Type: TextBox,
         Text: 10,
-        Watermark: Operand 1,
+        PlaceholderText: Operand 1,
         Name: FirstOperandInput
       },
       {
         Type: TextBox,
         Text: 20,
-        Watermark: Operand 2,
+        PlaceholderText: Operand 2,
         Name: SecondOperandInput
       },
       {
@@ -282,7 +283,7 @@ public class CalculatorTests
   }
 }
 ```
-<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt#L1-L88' title='Snippet source file'>snippet source</a> | <a href='#snippet-XUnitTests/CalculatorTests.Should_Add_Numbers.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -397,17 +398,11 @@ Then given the same `CalculatorTests` will produce the `verified.txt` as above, 
 
 The `VerifyAvalonia.AddAvaloniaConvertersForAssembly` method is used to include converters for additional control assemblies.
 
-<!-- snippet: InitAddAvaloniaConvertersForAssembly -->
-<a id='snippet-InitAddAvaloniaConvertersForAssembly'></a>
 ```cs
 [ModuleInitializer]
 public static void Init()
 {
-    // FluentAvalonia
-    VerifyAvalonia.AddAvaloniaConvertersForAssemblyOfType<NavigationView>();
-    VerifyImageMagick.RegisterComparers(0.17);
+    VerifyAvalonia.AddAvaloniaConvertersForAssemblyOfType<SomeControl>();
     VerifierSettings.InitializePlugins();
 }
 ```
-<sup><a href='/src/FluentAvaloniaTests/ModuleInit.cs#L3-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitAddAvaloniaConvertersForAssembly' title='Start of snippet'>anchor</a></sup>
-<!-- endSnippet -->

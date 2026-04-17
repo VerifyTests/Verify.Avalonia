@@ -1,4 +1,6 @@
-﻿using Avalonia.Styling;
+﻿using System.ComponentModel;
+using System.Windows.Input;
+using Avalonia.Styling;
 
 namespace VerifyTests;
 
@@ -22,6 +24,12 @@ public static partial class VerifyAvalonia
         }
 
         Initialized = true;
+
+        // WindowsBase registers CommandConverter as the TypeConverter for ICommand,
+        // but on .NET 10 CommandConverter.CanConvertTo throws TypeLoadException for
+        // MS.Internal.SecurityCriticalDataForSet. Override with a no-op converter so
+        // Argon contract resolution can run without hitting the broken converter.
+        TypeDescriptor.AddAttributes(typeof(ICommand), new TypeConverterAttribute(typeof(TypeConverter)));
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<Window>(WindowToImage);
