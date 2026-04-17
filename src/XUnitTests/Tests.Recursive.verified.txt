@@ -1,6 +1,7 @@
 ﻿{
   Type: RecursiveWindow,
   SizeToContent: WidthAndHeight,
+  WindowState: Normal,
   Title: RecursiveWindow,
   CanResize: false,
   Content: {

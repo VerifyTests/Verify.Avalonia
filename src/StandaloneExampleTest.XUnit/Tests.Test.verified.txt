@@ -1,6 +1,7 @@
 ﻿{
   Type: Window,
   SizeToContent: WidthAndHeight,
+  WindowState: Normal,
   Content: {
     Type: Button,
     Content: Click me!,
