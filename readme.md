@@ -111,11 +111,12 @@ Ensure tests projects have InternalsVisibleTo configured in the target app so te
 <a id='snippet-InternalsVisibleTo'></a>
 ```csproj
 <ItemGroup>
+  <PackageReference Include="Avalonia.Controls.ColorPicker" />
   <InternalsVisibleTo Include="NUnitTests" />
   <InternalsVisibleTo Include="XUnitTests" />
 </ItemGroup>
 ```
-<sup><a href='/src/TestableApp/TestableApp.csproj#L20-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-InternalsVisibleTo' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/TestableApp/TestableApp.csproj#L20-L26' title='Snippet source file'>snippet source</a> | <a href='#snippet-InternalsVisibleTo' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
