@@ -6,6 +6,7 @@
     <PackageReference Include="Avalonia.Controls.ColorPicker" />
     <PackageReference Include="Avalonia.Controls.DataGrid" />
     <PackageReference Include="Avalonia.Headless" />
+  <PackageReference Include="DiffEngine" />
   <PackageReference Include="EmptyFiles" />
     <PackageReference Include="Verify" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
