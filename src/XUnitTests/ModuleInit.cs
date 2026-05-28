@@ -3,7 +3,7 @@
     [ModuleInitializer]
     public static void InitOther()
     {
-        VerifyImageMagick.RegisterComparers(0.17);
+        VerifierSettings.UseSsimForPng();
         VerifierSettings.InitializePlugins();
     }
 }
