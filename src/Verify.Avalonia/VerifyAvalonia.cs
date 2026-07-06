@@ -38,35 +38,65 @@ public static partial class VerifyAvalonia
         AddConverters();
     }
 
-    static ConversionResult ControlToImage(UserControl control, IReadOnlyDictionary<string, object> context)
-    {
-        var window = new Window
+    static ConversionResult ControlToImage(UserControl control, IReadOnlyDictionary<string, object> context) =>
+        Convert(() =>
         {
-            Content = control,
-            SizeToContent = SizeToContent.WidthAndHeight,
-        };
-        window.Show();
-        return new(
-            control,
-            BuildWindowTargets(window),
-            Cleanup(window));
-    }
+            var window = new Window
+            {
+                Content = control,
+                SizeToContent = SizeToContent.WidthAndHeight,
+            };
+            window.Show();
+            return new(
+                control,
+                BuildWindowTargets(window),
+                Cleanup(window));
+        });
 
 
     static Func<Task> Cleanup(Window window) =>
         () =>
         {
-            window.Close();
+            var syncContext = SynchronizationContext.Current;
+            try
+            {
+                window.Close();
+            }
+            finally
+            {
+                SynchronizationContext.SetSynchronizationContext(syncContext);
+            }
+
             return Task.CompletedTask;
         };
 
-    static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
+    static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context) =>
+        Convert(() =>
+        {
+            window.Show();
+            return new(
+                window,
+                BuildWindowTargets(window),
+                Cleanup(window));
+        });
+
+    // Showing an Avalonia window installs an AvaloniaSynchronizationContext as
+    // SynchronizationContext.Current on the current thread. Verify runs its pipeline free of any
+    // SynchronizationContext (it does async IO without ConfigureAwait(false); see
+    // SettingsTask.ToTask), so restore the previous context after rendering. Otherwise the leaked
+    // context would be captured by Verify's downstream async IO and its continuation posted to a
+    // message pump that is never run - deadlocking whenever a snapshot is new or mismatched.
+    static ConversionResult Convert(Func<ConversionResult> convert)
     {
-        window.Show();
-        return new(
-            window,
-            BuildWindowTargets(window),
-            Cleanup(window));
+        var syncContext = SynchronizationContext.Current;
+        try
+        {
+            return convert();
+        }
+        finally
+        {
+            SynchronizationContext.SetSynchronizationContext(syncContext);
+        }
     }
 
     static IEnumerable<Target> BuildWindowTargets(TopLevel window)
@@ -85,5 +115,5 @@ public static partial class VerifyAvalonia
     }
 
     static ConversionResult TopLevelToImage(TopLevel topLevel, IReadOnlyDictionary<string, object> context) =>
-        new(topLevel, BuildWindowTargets(topLevel));
+        Convert(() => new(topLevel, BuildWindowTargets(topLevel)));
 }
