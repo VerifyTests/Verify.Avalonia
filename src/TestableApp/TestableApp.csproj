@@ -6,17 +6,15 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Desktop" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="Avalonia.Fonts.Inter" />
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="AvaloniaUI.DiagnosticsSupport" />
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <InternalsVisibleTo Include="IncludeThemeVariantTests" />
   </ItemGroup>
-
   <!-- begin-snippet: InternalsVisibleTo -->
   <ItemGroup>
     <PackageReference Include="Avalonia.Controls.ColorPicker" />
