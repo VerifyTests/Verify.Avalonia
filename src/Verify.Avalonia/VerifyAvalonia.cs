@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
 using Avalonia.Styling;
+using Avalonia.Threading;
 
 namespace VerifyTests;
 
@@ -57,16 +58,11 @@ public static partial class VerifyAvalonia
     static Func<Task> Cleanup(Window window) =>
         () =>
         {
-            var syncContext = SynchronizationContext.Current;
-            try
-            {
-                window.Close();
-            }
-            finally
-            {
-                SynchronizationContext.SetSynchronizationContext(syncContext);
-            }
-
+            // Cleanup runs inside Verify's async pipeline, which runs free of any
+            // SynchronizationContext (see Convert), so the continuation can resume on a
+            // thread-pool thread. Avalonia enforces thread affinity, so marshal Close back
+            // onto the UI thread that owns the window.
+            Dispatcher.UIThread.Invoke(window.Close);
             return Task.CompletedTask;
         };
 
