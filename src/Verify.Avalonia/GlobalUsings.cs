@@ -7,3 +7,4 @@ global using Avalonia.Diagnostics;
 global using Avalonia.Headless;
 global using Avalonia.Input;
 global using Avalonia.Media;
+global using Avalonia.Media.Imaging;

@@ -9,7 +9,7 @@
         }
 
         var stream = new MemoryStream();
-        bitmap.Save(stream);
+        bitmap.Save(stream, PngBitmapEncoderOptions.Default);
         return stream;
     }
 }
