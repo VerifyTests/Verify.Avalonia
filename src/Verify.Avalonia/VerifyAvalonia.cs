@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
 using Avalonia.Styling;
+using Avalonia.Threading;
 
 namespace VerifyTests;
 
@@ -54,11 +55,10 @@ public static partial class VerifyAvalonia
 
 
     static Func<Task> Cleanup(Window window) =>
-        () =>
-        {
-            window.Close();
-            return Task.CompletedTask;
-        };
+        // Marshal the close onto the UI thread: Verify's awaits use ConfigureAwait(false),
+        // so the cleanup callback can run off the Avalonia UI thread, and Window.Close now
+        // touches thread-affine state (IsVisible) that throws when accessed cross-thread.
+        () => Dispatcher.UIThread.InvokeAsync(window.Close).GetTask();
 
     static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
     {
