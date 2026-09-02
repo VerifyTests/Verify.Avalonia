@@ -8,9 +8,9 @@
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="Avalonia.Skia" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
-    <PackageReference Include="Verify" VersionOverride="33.0.0-beta.3" />
+    <PackageReference Include="Verify" VersionOverride="33.0.0-beta.4" />
     <PackageReference Include="Verify.DiffPlex" />
-    <PackageReference Include="Verify.XunitV3" VersionOverride="33.0.0-beta.3" />
+    <PackageReference Include="Verify.XunitV3" VersionOverride="33.0.0-beta.4" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
     <PackageReference Include="EmptyFiles" />
