@@ -2,12 +2,12 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <SignAssembly>false</SignAssembly>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Headless.XUnit" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="Avalonia.Skia" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="Verify" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.XunitV3" />
